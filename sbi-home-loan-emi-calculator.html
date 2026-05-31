@@ -89,7 +89,18 @@
 </head>
 <body>
 
-<div data-include="_header.html"></div>
+<!-- HEADER -->
+<header>
+  <a href="index.html" class="logo a1"><div class="logo-icon">🧮</div>Calc<span>India</span></a>
+  <nav class="a2">
+    <a href="emi-calculator.html" data-page="emi">EMI</a>
+    <a href="sip-calculator.html" data-page="sip">SIP</a>
+    <a href="income-tax-calculator.html" data-page="tax">Tax</a>
+    <a href="gst-calculator.html" data-page="gst">GST</a>
+    <a href="ppf-fd-calculator.html" data-page="ppf">PPF/FD</a>
+  </nav>
+</header>
+<div class="ad-top"><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1234567890"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});<\/script></div>
 
 <!-- Top AdSense Leaderboard -->
 <div class="ad-slot ad-leaderboard">
@@ -101,7 +112,7 @@
 <nav class="breadcrumb container">
   <a href="/">Home</a> <span>›</span>
   <a href="/calculators">Calculators</a> <span>›</span>
-  <a href="/emi-calculator.html">EMI Calculator</a> <span>›</span>
+  <a href="emi-calculator.html">EMI Calculator</a> <span>›</span>
   <span class="current">SBI Home Loan EMI Calculator</span>
 </nav>
 
@@ -127,7 +138,30 @@
 <main class="layout container">
 
   <!-- LEFT NAV -->
-  <aside class="col-left" data-include="_leftnav.html"></aside>
+  <aside class="left-nav a3">
+  <span class="left-nav-label">Calculators</span>
+  <a href="emi-calculator.html" class="nav-card" data-nav="emi"><div class="nc-icon">🏠</div><div class="nc-info"><span class="nc-name">EMI</span><span class="nc-desc">Loan calculator</span></div></a>
+  <a href="sip-calculator.html" class="nav-card" data-nav="sip"><div class="nc-icon">📈</div><div class="nc-info"><span class="nc-name">SIP Returns</span><span class="nc-desc">Mutual fund growth</span></div></a>
+  <a href="income-tax-calculator.html" class="nav-card" data-nav="tax"><div class="nc-icon">💰</div><div class="nc-info"><span class="nc-name">Income Tax</span><span class="nc-desc">Old vs New regime</span></div></a>
+  <a href="gst-calculator.html" class="nav-card" data-nav="gst"><div class="nc-icon">🧾</div><div class="nc-info"><span class="nc-name">GST</span><span class="nc-desc">Add/remove tax</span></div></a>
+  <a href="ppf-fd-calculator.html" class="nav-card" data-nav="ppf"><div class="nc-icon">🏦</div><div class="nc-info"><span class="nc-name">PPF / FD</span><span class="nc-desc">Savings maturity</span></div></a>
+  <hr class="nav-divider"/>
+  <div class="bank-list">
+    <div class="bank-list-title">🏛️ Bank EMI Calculators</div>
+    <a class="bank-link" href="sbi-home-loan-emi-calculator.html">SBI Home Loan EMI</a>
+    <a class="bank-link" href="hdfc-home-loan-emi-calculator.html">HDFC Home Loan EMI</a>
+    <a class="bank-link" href="icici-home-loan-emi-calculator.html">ICICI Home Loan EMI</a>
+    <a class="bank-link" href="axis-home-loan-emi-calculator.html">Axis Home Loan EMI</a>
+  </div>
+  <hr class="nav-divider"/>
+  <div class="bank-list">
+    <div class="bank-list-title">🏦 Bank SIP Calculators</div>
+    <a class="bank-link" href="sbi-sip-calculator.html">SBI SIP</a>
+    <a class="bank-link" href="hdfc-sip-calculator.html">HDFC SIP</a>
+    <a class="bank-link" href="icici-sip-calculator.html">ICICI SIP</a>
+    <a class="bank-link" href="axis-sip-calculator.html">Axis SIP</a>
+  </div>
+</aside>
 
   <!-- CENTER: Calculator -->
   <section class="col-center">
@@ -421,17 +455,41 @@
   </section>
 
   <!-- RIGHT SIDEBAR -->
-  <aside class="col-right" data-include="_right.html"></aside>
+  <aside class="right-sidebar">
+  <div class="widget">
+    <div class="widget-title">📊 Live Rates · FY 2025-26</div>
+    <div class="rate-row"><span class="rate-label">RBI Repo Rate</span><span class="rate-val coral">6.50%</span></div>
+    <div class="rate-row"><span class="rate-label">SBI Home Loan</span><span class="rate-val teal">8.50%</span></div>
+    <div class="rate-row"><span class="rate-label">HDFC Home Loan</span><span class="rate-val teal">8.55%</span></div>
+    <div class="rate-row"><span class="rate-label">PPF Rate</span><span class="rate-val green">7.10%</span></div>
+    <div class="rate-row"><span class="rate-label">NSC Rate</span><span class="rate-val green">7.70%</span></div>
+    <div class="rate-row"><span class="rate-label">SBI Senior FD</span><span class="rate-val green">7.60%</span></div>
+  </div>
+  <div class="widget">
+    <div class="widget-title">⭐ Popular Calculators</div>
+    <a class="bank-link" href="emi-calculator.html">EMI Calculator</a>
+    <a class="bank-link" href="sip-calculator.html">SIP Calculator</a>
+    <a class="bank-link" href="income-tax-calculator.html">Income Tax Calculator</a>
+    <a class="bank-link" href="gst-calculator.html">GST Calculator</a>
+    <a class="bank-link" href="ppf-fd-calculator.html">PPF / FD Calculator</a>
+  </div>
+</aside>
 </main>
 
-<div data-include="_footer.html"></div>
+<section class="footer-links-section"><div class="container"><div class="footer-grid">
+  <div class="footer-col"><h4>🏠 EMI Calculators</h4><a href="emi-calculator.html">EMI Calculator</a><a href="sbi-home-loan-emi-calculator.html">SBI Home Loan EMI</a><a href="hdfc-home-loan-emi-calculator.html">HDFC Home Loan EMI</a><a href="personal-loan-emi-calculator.html">Personal Loan EMI</a></div>
+  <div class="footer-col"><h4>📈 SIP &amp; Investment</h4><a href="sip-calculator.html">SIP Calculator</a><a href="lumpsum-calculator.html">Lumpsum Calculator</a><a href="swp-calculator.html">SWP Calculator</a><a href="elss-calculator.html">ELSS Calculator</a></div>
+  <div class="footer-col"><h4>🏦 Savings &amp; Deposits</h4><a href="ppf-fd-calculator.html">PPF / FD Calculator</a><a href="rd-calculator.html">RD Calculator</a><a href="nsc-calculator.html">NSC Calculator</a><a href="epf-calculator.html">EPF Calculator</a></div>
+  <div class="footer-col"><h4>💰 Tax &amp; Business</h4><a href="income-tax-calculator.html">Income Tax Calculator</a><a href="gst-calculator.html">GST Calculator</a><a href="hra-calculator.html">HRA Calculator</a><a href="salary-calculator.html">Salary Calculator</a></div>
+</div></div></section>
+<footer><span>© 2025 CalcIndia · For informational purposes only · Not financial advice</span><div class="footer-bottom-links"><a href="about.html">About</a><a href="privacy-policy.html">Privacy Policy</a><a href="disclaimer.html">Disclaimer</a><a href="contact.html">Contact</a></div></footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script src="shared.js"></script>
 <script>
 // Include partials
 document.querySelectorAll('[data-include]').forEach(el=>{
-  fetch(el.dataset.include).then(r=>r.text()).then(html=>{ el.innerHTML=html; if(el.dataset.include==='_leftnav.html') highlightActive(); });
+  Promise.resolve('').then(r=>r.text()).then(html=>{ el.innerHTML=html; if(el.dataset.include==='_leftnav.html') highlightActive(); });
 });
 function highlightActive(){
   document.querySelectorAll('.nav-card').forEach(a=>{

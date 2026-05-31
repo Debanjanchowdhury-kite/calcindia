@@ -93,7 +93,18 @@
 </head>
 <body>
 
-<div data-include="_header.html"></div>
+<!-- HEADER -->
+<header>
+  <a href="index.html" class="logo a1"><div class="logo-icon">🧮</div>Calc<span>India</span></a>
+  <nav class="a2">
+    <a href="emi-calculator.html" data-page="emi">EMI</a>
+    <a href="sip-calculator.html" data-page="sip">SIP</a>
+    <a href="income-tax-calculator.html" data-page="tax">Tax</a>
+    <a href="gst-calculator.html" data-page="gst">GST</a>
+    <a href="ppf-fd-calculator.html" data-page="ppf">PPF/FD</a>
+  </nav>
+</header>
+<div class="ad-top"><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1234567890"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});<\/script></div>
 
 <!-- HERO -->
 <section class="home-hero">
@@ -224,11 +235,17 @@
   <p>We believe financial decisions shouldn't require a CA or financial planner for basic calculations. With CalcIndia, anyone can instantly understand their monthly EMI burden before signing a loan, see how a ₹5,000 SIP can grow to over ₹1 crore in 25 years, compare the Old vs New tax regime in seconds, or split GST correctly for their business invoices. All for free, with no sign-up.</p>
 </section>
 
-<div data-include="_footer.html"></div>
+<section class="footer-links-section"><div class="container"><div class="footer-grid">
+  <div class="footer-col"><h4>🏠 EMI Calculators</h4><a href="emi-calculator.html">EMI Calculator</a><a href="sbi-home-loan-emi-calculator.html">SBI Home Loan EMI</a><a href="hdfc-home-loan-emi-calculator.html">HDFC Home Loan EMI</a><a href="personal-loan-emi-calculator.html">Personal Loan EMI</a></div>
+  <div class="footer-col"><h4>📈 SIP &amp; Investment</h4><a href="sip-calculator.html">SIP Calculator</a><a href="lumpsum-calculator.html">Lumpsum Calculator</a><a href="swp-calculator.html">SWP Calculator</a><a href="elss-calculator.html">ELSS Calculator</a></div>
+  <div class="footer-col"><h4>🏦 Savings &amp; Deposits</h4><a href="ppf-fd-calculator.html">PPF / FD Calculator</a><a href="rd-calculator.html">RD Calculator</a><a href="nsc-calculator.html">NSC Calculator</a><a href="epf-calculator.html">EPF Calculator</a></div>
+  <div class="footer-col"><h4>💰 Tax &amp; Business</h4><a href="income-tax-calculator.html">Income Tax Calculator</a><a href="gst-calculator.html">GST Calculator</a><a href="hra-calculator.html">HRA Calculator</a><a href="salary-calculator.html">Salary Calculator</a></div>
+</div></div></section>
+<footer><span>© 2025 CalcIndia · For informational purposes only · Not financial advice</span><div class="footer-bottom-links"><a href="about.html">About</a><a href="privacy-policy.html">Privacy Policy</a><a href="disclaimer.html">Disclaimer</a><a href="contact.html">Contact</a></div></footer>
 
 <script>
 document.querySelectorAll('[data-include]').forEach(el=>{
-  fetch(el.dataset.include).then(r=>r.text()).then(html=>{ el.innerHTML=html; });
+  Promise.resolve('').then(r=>r.text()).then(html=>{ el.innerHTML=html; });
 });
 </script>
 </body>
