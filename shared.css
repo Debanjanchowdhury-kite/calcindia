@@ -12,7 +12,7 @@ html{scroll-behavior:smooth}
   --font-display:'Nunito',sans-serif;--font-body:'Mulish',sans-serif;
   --ease:cubic-bezier(0.34,1.06,0.64,1);
 }
-body{font-family:var(--font-body);background:var(--bg);color:var(--text);min-height:100vh;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);min-height:100vh;-webkit-font-smoothing:antialiased;text-align:justify}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 @keyframes scaleIn{from{opacity:0;transform:scale(0.96)}to{opacity:1;transform:scale(1)}}
@@ -64,8 +64,8 @@ nav a.active{color:var(--teal);background:var(--teal-bg)}
 main{padding:36px 40px 80px;min-width:0}
 
 .panel-top{margin-bottom:32px}
-.panel-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:50px;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:var(--teal-bg);color:var(--teal);border:1px solid rgba(13,148,136,0.25);margin-bottom:12px}
-.panel-title{font-family:var(--font-display);font-size:2rem;font-weight:900;line-height:1.2;color:var(--text);letter-spacing:-0.02em;margin-bottom:8px}
+.panel-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:50px;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:var(--teal-bg);color:var(--teal);border:1px solid rgba(13,148,136,0.25);margin-bottom:12px;text-align:left}
+.panel-title{font-family:var(--font-display);font-size:2rem;font-weight:900;line-height:1.2;color:var(--text);letter-spacing:-0.02em;margin-bottom:8px;text-align:left}
 .panel-sub{font-size:0.92rem;color:var(--muted);line-height:1.65}
 
 .calc-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:32px;box-shadow:var(--shadow);margin-bottom:20px}
@@ -189,26 +189,130 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
 .footer-bottom-links a{color:var(--muted);text-decoration:none;font-weight:600}
 .footer-bottom-links a:hover{color:var(--teal)}
 
+/* Override justify for elements that need specific alignment */
+nav,nav a,.go-btn,.cta-btn,.stat-card,.stat-label,.stat-val,.field label,.panel-badge,
+.amort-toggle,footer,.footer-bottom-links,.breadcrumb,.left-nav-label,.nc-name,.nc-desc,
+.results-divider span,.chart-title,.rv,.rate-row,.rate-label,.rate-val,.widget-title,
+.amort-table th,.amort-table td{text-align:initial}
+
 .hidden{display:none !important}
 
 .ad-top, .ad-mid, .ad-bottom, .ad-side, .cta-banner { display: none !important; }
 
-@media(max-width:1100px){.right-sidebar{display:none}.layout{grid-template-columns:210px 1fr}.footer-grid{grid-template-columns:repeat(2,1fr)}}
+/* Hamburger menu button */
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;border-radius:8px;transition:background 0.2s}
+.menu-toggle:hover{background:var(--surface-2)}
+.menu-toggle span{display:block;width:22px;height:2.5px;background:var(--text);border-radius:2px;transition:all 0.3s ease;margin:5px 0}
+.menu-toggle.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.menu-toggle.active span:nth-child(2){opacity:0}
+.menu-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+/* Mobile nav overlay */
+.mobile-nav-overlay{display:none;position:fixed;inset:0;top:64px;background:rgba(0,0,0,0.4);z-index:199;opacity:0;transition:opacity 0.3s}
+.mobile-nav-overlay.active{opacity:1}
+
+@media(max-width:1100px){
+  .right-sidebar{display:none}
+  .layout{grid-template-columns:210px 1fr}
+  .footer-grid{grid-template-columns:repeat(2,1fr)}
+}
+
 @media(max-width:700px){
+  /* Header & Navigation */
+  .menu-toggle{display:flex;flex-direction:column;justify-content:center}
+  header{flex-direction:row;align-items:center;height:56px;padding:0 16px;gap:0}
+  nav{display:none;position:fixed;top:56px;left:0;right:0;background:var(--surface);border-bottom:1px solid var(--border);padding:12px 16px;flex-direction:column;gap:4px;z-index:198;box-shadow:0 8px 24px rgba(0,0,0,0.1)}
+  nav.open{display:flex}
+  .mobile-nav-overlay.active{display:block}
+  nav a{white-space:nowrap;padding:12px 16px;font-size:0.92rem;border-radius:var(--r-sm);min-height:44px;display:flex;align-items:center}
+  nav a:hover,nav a:active{background:var(--surface-2)}
+
+  /* Layout */
   .left-nav{display:none}
   .layout{grid-template-columns:1fr}
-  main{padding:20px 14px 60px}
-  header{flex-direction:column;align-items:flex-start;height:auto;padding:12px 14px;gap:12px}
-  nav{width:100%;overflow-x:auto;padding-bottom:6px;-webkit-overflow-scrolling:touch}
-  nav a{white-space:nowrap;padding:8px 14px;font-size:0.85rem}
+  main{padding:20px 16px 60px}
+
+  /* Breadcrumb */
+  .breadcrumb{padding:10px 16px;font-size:0.78rem}
+
+  /* Panel */
+  .panel-title{font-size:1.5rem}
+  .panel-sub{font-size:0.85rem}
+  .panel-badge{font-size:0.68rem}
+
+  /* Calculator cards */
+  .calc-card{padding:20px 16px;border-radius:var(--r-sm)}
+  .form-grid{grid-template-columns:1fr;gap:18px}
+  .field input,.field select{font-size:16px !important;padding:13px 14px;min-height:48px}
+  .field label{font-size:0.72rem}
+  .range-wrap{gap:8px}
+  .rv{min-width:60px;font-size:0.78rem}
+  input[type=range]{height:6px}
+  .go-btn{width:100%;justify-content:center;padding:15px 24px;font-size:1rem;min-height:48px}
+
+  /* Stat grid */
+  .stat-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .stat-card{padding:14px 16px}
+  .stat-val{font-size:1.2rem}
+  .stat-label{font-size:0.66rem}
+
+  /* Charts */
+  .chart-area{padding:16px}
   .chart-area.two-col{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr;gap:24px}
-  footer{flex-direction:column;gap:16px;text-align:center}
-  .footer-bottom-links{flex-wrap:wrap;justify-content:center}
-  .cta-banner{flex-direction:column;text-align:center;padding:20px 16px}
-  .panel-title{font-size:1.6rem}
-  .calc-card{padding:20px 16px}
-  .info-section{padding:24px 16px}
-  .form-grid{grid-template-columns:1fr;gap:16px} .field input, .field select{font-size:16px !important}
-  .amort-header{flex-direction:column;align-items:flex-start}
+  .chart-title{font-size:0.82rem}
+
+  /* Amortization */
+  .amortization-section{padding:20px 12px}
+  .amort-header{flex-direction:column;align-items:flex-start;gap:10px}
+  .amort-title{font-size:1rem}
+  .amort-table{font-size:0.78rem}
+  .amort-table thead th{padding:9px 8px;font-size:0.7rem}
+  .amort-table tbody td{padding:8px}
+
+  /* Info section */
+  .info-section{padding:24px 16px;border-radius:var(--r-sm)}
+  .info-section h2{font-size:1.25rem}
+  .info-section h3{font-size:1rem}
+  .info-section p,.info-section ul,.info-section ol{font-size:0.88rem}
+  .formula{font-size:0.82rem;padding:12px 14px;overflow-x:auto;white-space:nowrap}
+
+  /* FAQ */
+  .faq-q{font-size:0.92rem;padding:10px 0;min-height:44px}
+  .faq-a{font-size:0.85rem}
+
+  /* CTA */
+  .cta-banner{flex-direction:column;text-align:center;padding:20px 16px;gap:14px}
+  .cta-btn{width:100%;text-align:center;display:block;padding:14px 20px}
+
+  /* Related grid */
+  .related-grid{grid-template-columns:1fr;gap:10px}
+  .related-card{padding:14px 12px}
+
+  /* Footer */
+  .footer-links-section{padding:28px 16px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:20px}
+  .footer-grid h4{font-size:0.78rem}
+  .footer-col a{font-size:0.82rem;padding:6px 0;min-height:36px;display:flex;align-items:center}
+  footer{flex-direction:column;gap:14px;text-align:center;padding:20px 16px}
+  .footer-bottom-links{flex-wrap:wrap;justify-content:center;gap:14px}
+  .footer-bottom-links a{min-height:44px;display:inline-flex;align-items:center}
+
+  /* Disclaimer */
+  .disclaimer{font-size:0.76rem;padding:12px 14px}
+
+  /* Smooth scrolling fix for iOS */
+  html{-webkit-overflow-scrolling:touch}
+
+  /* Better tap targets — minimum 44px */
+  a,button,.nav-card,.calc-tile,.bank-tile,.related-card{-webkit-tap-highlight-color:transparent}
+}
+
+/* Small phones */
+@media(max-width:380px){
+  header{padding:0 12px}
+  main{padding:16px 12px 50px}
+  .panel-title{font-size:1.3rem}
+  .stat-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .calc-card{padding:16px 12px}
 }

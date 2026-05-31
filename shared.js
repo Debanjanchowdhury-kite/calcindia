@@ -66,6 +66,36 @@ function makeLine(id,labels,datasets){
   });
 }
 
+// Mobile menu toggle
+function initMobileMenu(){
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('header nav');
+  const overlay = document.querySelector('.mobile-nav-overlay');
+  if(!toggle || !nav) return;
+  toggle.addEventListener('click',()=>{
+    toggle.classList.toggle('active');
+    nav.classList.toggle('open');
+    if(overlay) overlay.classList.toggle('active');
+    document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
+  });
+  if(overlay){
+    overlay.addEventListener('click',()=>{
+      toggle.classList.remove('active');
+      nav.classList.remove('open');
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  }
+  nav.querySelectorAll('a').forEach(a=>{
+    a.addEventListener('click',()=>{
+      toggle.classList.remove('active');
+      nav.classList.remove('open');
+      if(overlay) overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  });
+}
+
 // FAQ toggle
 function initFAQ(){
   document.querySelectorAll('.faq-item').forEach(item=>{
