@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About IndiCalculator - Free Indian Financial Calculator Tools | IndiCalculator</title>
+  <meta name="description" content="IndiCalculator offers free, accurate Indian financial calculators — EMI, SIP, Income Tax, GST, PPF &amp; FD. Built for Indian users, updated for 2025.">
+  <link rel="canonical" href="https://indicalculator.in/about.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://indicalculator.in/about.html">
+  <meta property="og:title" content="About IndiCalculator - Free Indian Financial Calculator Tools">
+  <meta property="og:description" content="IndiCalculator offers free, accurate Indian financial calculators — EMI, SIP, Income Tax, GST, PPF &amp; FD. Built for Indian users, updated for 2025.">
+  <meta property="og:site_name" content="IndiCalculator">
+  <meta property="og:image" content="https://indicalculator.in/logo.svg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="About IndiCalculator - Free Indian Financial Calculator Tools">
+  <meta name="twitter:description" content="Free, accurate Indian financial calculators — EMI, SIP, Income Tax, GST, PPF &amp; FD. Built for Indian users, updated for 2025.">
+
+  <!-- Schema: WebSite + BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://indicalculator.in/#website",
+        "url": "https://indicalculator.in/",
+        "name": "IndiCalculator",
+        "description": "Free Indian financial calculators — EMI, SIP, Income Tax, GST, PPF &amp; FD",
+        "inLanguage": "en-IN"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://indicalculator.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About",
+            "item": "https://indicalculator.in/about.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="shared.css">
+
+  <!-- Google AdSense Placeholder -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+
+  <!-- Google Analytics GA4 Placeholder -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script> -->
+
+  <!-- Page-specific styles -->
+  <style>
+    /* ── About Hero ── */
+    .about-hero {
+      background: linear-gradient(135deg, #0D9488 0%, #0F766E 60%, #065F46 100%);
+      padding: 64px 32px 56px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .about-hero .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      border-radius: 50px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 16px;
+    }
+    .about-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+    .about-hero .hero-sub {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.82);
+      max-width: 580px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+
+    /* ── Stats Row ── */
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 4px;
+    }
+    .stat-pill {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 16px 28px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 14px;
+      backdrop-filter: blur(8px);
+      min-width: 130px;
+    }
+    .stat-pill .sp-val {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    .stat-pill .sp-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.75);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-top: 4px;
+      text-align: center;
+    }
+
+    /* ── About Card (main content card) ── */
+    .about-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 36px;
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+    }
+    .about-card h2 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .about-card h2 .section-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--teal-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .about-card p {
+      font-size: 0.93rem;
+      color: var(--text-2);
+      line-height: 1.85;
+      margin-bottom: 12px;
+    }
+    .about-card p:last-child { margin-bottom: 0; }
+    .about-card strong { color: var(--text); font-weight: 700; }
+
+    /* ── Section divider ── */
+    .about-divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 28px 0 20px;
+    }
+    .about-divider::before, .about-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .about-divider span {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    /* ── Tool list ── */
+    .tool-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 8px;
+    }
+    .tool-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: var(--r-sm);
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.22s ease;
+    }
+    .tool-item:hover {
+      border-color: var(--teal);
+      background: var(--teal-bg);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+    .tool-item .ti-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+    .tool-item:hover .ti-icon {
+      background: rgba(13,148,136,0.12);
+      border-color: rgba(13,148,136,0.25);
+    }
+    .tool-item .ti-info { flex: 1; min-width: 0; }
+    .tool-item .ti-name {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text);
+      display: block;
+      margin-bottom: 2px;
+    }
+    .tool-item:hover .ti-name { color: var(--teal); }
+    .tool-item .ti-desc {
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+    .tool-item .ti-arrow {
+      font-size: 0.85rem;
+      color: var(--muted);
+      transition: transform 0.2s;
+    }
+    .tool-item:hover .ti-arrow {
+      color: var(--teal);
+      transform: translateX(3px);
+    }
+
+    /* ── Feature Cards ── */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin-top: 4px;
+    }
+    .feature-card {
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: var(--r);
+      padding: 22px 20px;
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: var(--r);
+      background: linear-gradient(135deg, rgba(13,148,136,0.06), transparent 60%);
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+    .feature-card:hover {
+      border-color: var(--teal);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(13,148,136,0.12);
+    }
+    .feature-card:hover::before { opacity: 1; }
+    .fc-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--teal-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 14px;
+      transition: transform 0.25s;
+    }
+    .feature-card:hover .fc-icon { transform: scale(1.08); }
+    .fc-title {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .fc-desc {
+      font-size: 0.82rem;
+      color: var(--text-2);
+      line-height: 1.7;
+    }
+
+    /* ── Team card ── */
+    .team-card {
+      background: linear-gradient(135deg, var(--teal-bg), #fff);
+      border: 1.5px solid rgba(13,148,136,0.2);
+      border-radius: var(--r);
+      padding: 28px 32px;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-top: 4px;
+    }
+    .team-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--teal), var(--teal-2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(13,148,136,0.3);
+    }
+    .team-body h3 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .team-body .team-role {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--teal);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 10px;
+    }
+    .team-body p {
+      font-size: 0.88rem;
+      color: var(--text-2);
+      line-height: 1.75;
+    }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: var(--r);
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+    .contact-icon-wrap {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: var(--teal-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+    .contact-body { flex: 1; min-width: 200px; }
+    .contact-body h3 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .contact-body p {
+      font-size: 0.86rem;
+      color: var(--text-2);
+      line-height: 1.7;
+    }
+    .contact-body a {
+      color: var(--teal);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .contact-body a:hover { text-decoration: underline; }
+    .contact-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 50px;
+      background: var(--teal-bg);
+      border: 1px solid rgba(13,148,136,0.25);
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--teal);
+      margin-top: 10px;
+    }
+
+    /* ── Main content column ── */
+    .col-center {
+      padding: 36px 40px 80px;
+      min-width: 0;
+    }
+
+    /* ── Right sidebar tool links ── */
+    .sidebar-tool-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: var(--r-sm);
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s;
+      margin-bottom: 4px;
+    }
+    .sidebar-tool-link:hover {
+      background: var(--teal-bg);
+      color: var(--teal);
+    }
+    .sidebar-tool-link .stl-icon {
+      font-size: 1rem;
+      width: 28px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+    .sidebar-tool-link span {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--text-2);
+    }
+    .sidebar-tool-link:hover span { color: var(--teal); }
+
+    /* Blog post list in sidebar */
+    .blog-post-item {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .blog-post-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .blog-post-item a {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-2);
+      text-decoration: none;
+      line-height: 1.5;
+      display: block;
+      transition: color 0.2s;
+    }
+    .blog-post-item a:hover { color: var(--teal); }
+    .blog-post-item .bpi-meta {
+      font-size: 0.7rem;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+
+    /* Responsive tweaks for about page */
+    @media (max-width: 900px) {
+      .team-card { flex-direction: column; }
+      .stats-row { gap: 8px; }
+      .stat-pill { min-width: 110px; padding: 12px 18px; }
+      .stat-pill .sp-val { font-size: 1.45rem; }
+    }
+    @media (max-width: 700px) {
+      .col-center { padding: 24px 18px 60px; }
+      .about-hero { padding: 40px 18px 36px; }
+      .about-card { padding: 22px 18px; }
+      .about-card h2 { font-size: 1.2rem; }
+      .contact-card { flex-direction: column; }
+      .feature-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 400px) {
+      .feature-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════ HEADER ═══════════════════════════════════════ -->
+  <header>
+    <a href="index.html" class="logo a1" style="gap:12px">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" fill="none" style="width:38px;height:38px;flex-shrink:0">
+        <rect width="44" height="44" rx="10" fill="url(#lg)"/>
+        <rect x="8" y="12" width="28" height="8" rx="3" fill="white" opacity="0.92"/>
+        <rect x="8" y="24" width="11" height="11" rx="3" fill="white" opacity="0.78"/>
+        <rect x="22" y="24" width="5" height="11" rx="2" fill="white" opacity="0.65"/>
+        <rect x="30" y="24" width="6" height="11" rx="2" fill="white" opacity="0.78"/>
+        <defs>
+          <linearGradient id="lg" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#0D9488"/>
+            <stop offset="100%" stop-color="#0F766E"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <span style="font-family:var(--font-display);font-size:1.35rem;font-weight:900;color:var(--text);letter-spacing:-0.02em">Indi<span style="color:var(--teal)">Calculator</span></span>
+    </a>
+    <nav class="a2">
+      <a href="emi-calculator.html">EMI</a>
+      <a href="sip-calculator.html">SIP</a>
+      <a href="income-tax-calculator.html">Tax</a>
+      <a href="gst-calculator.html">GST</a>
+      <a href="ppf-fd-calculator.html">PPF/FD</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </header>
+
+  <!-- ═══════════════════════════════════════ AD LEADERBOARD ═══════════════════════════════════════ -->
+  <div class="ad-top" aria-label="Advertisement">
+    <!-- AdSense leaderboard 728×90 -->
+    <!-- <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX"></ins> -->
+    <span style="font-size:0.7rem;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase">Advertisement</span>
+  </div>
+
+  <!-- ═══════════════════════════════════════ BREADCRUMB ═══════════════════════════════════════ -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span class="sep" aria-hidden="true">›</span>
+    <span class="current">About</span>
+  </nav>
+
+  <!-- ═══════════════════════════════════════ HERO ═══════════════════════════════════════ -->
+  <section class="about-hero" aria-labelledby="about-hero-title">
+    <div class="hero-badge">🇮🇳 Made for India · Updated 2025</div>
+    <h1 id="about-hero-title">About IndiCalculator</h1>
+    <p class="hero-sub">
+      Free, accurate, and beautifully simple financial calculators designed specifically for Indian users — so you can make smarter money decisions without paying a rupee.
+    </p>
+    <!-- Stats Row -->
+    <div class="stats-row" role="list" aria-label="Key statistics">
+      <div class="stat-pill" role="listitem">
+        <span class="sp-val">6+</span>
+        <span class="sp-label">Calculators</span>
+      </div>
+      <div class="stat-pill" role="listitem">
+        <span class="sp-val">10K+</span>
+        <span class="sp-label">Users / Month</span>
+      </div>
+      <div class="stat-pill" role="listitem">
+        <span class="sp-val">100%</span>
+        <span class="sp-label">Free Forever</span>
+      </div>
+      <div class="stat-pill" role="listitem">
+        <span class="sp-val">2025</span>
+        <span class="sp-label">Last Updated</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ 3-COLUMN LAYOUT ═══════════════════════════════════════ -->
+  <div class="layout container">
+
+    <!-- ─── LEFT NAV ─── -->
+    <aside class="left-nav a3" aria-label="Calculator navigation">
+      <span class="left-nav-label">Calculators</span>
+      <a href="emi-calculator.html" class="nav-card">
+        <div class="nc-icon">🏠</div>
+        <div class="nc-info"><span class="nc-name">EMI</span><span class="nc-desc">Loan calculator</span></div>
+      </a>
+      <a href="sip-calculator.html" class="nav-card">
+        <div class="nc-icon">📈</div>
+        <div class="nc-info"><span class="nc-name">SIP Returns</span><span class="nc-desc">Mutual fund growth</span></div>
+      </a>
+      <a href="income-tax-calculator.html" class="nav-card">
+        <div class="nc-icon">💰</div>
+        <div class="nc-info"><span class="nc-name">Income Tax</span><span class="nc-desc">Old vs New regime</span></div>
+      </a>
+      <a href="gst-calculator.html" class="nav-card">
+        <div class="nc-icon">🧾</div>
+        <div class="nc-info"><span class="nc-name">GST</span><span class="nc-desc">Add/remove tax</span></div>
+      </a>
+      <a href="ppf-fd-calculator.html" class="nav-card">
+        <div class="nc-icon">🏦</div>
+        <div class="nc-info"><span class="nc-name">PPF / FD</span><span class="nc-desc">Savings maturity</span></div>
+      </a>
+      <a href="sbi-home-loan-emi-calculator.html" class="nav-card">
+        <div class="nc-icon">🏛️</div>
+        <div class="nc-info"><span class="nc-name">SBI Home Loan</span><span class="nc-desc">Rate: 8.50%</span></div>
+      </a>
+      <hr class="nav-divider" aria-hidden="true">
+      <a href="blog.html" class="nav-card">
+        <div class="nc-icon">📝</div>
+        <div class="nc-info"><span class="nc-name">Blog</span><span class="nc-desc">Finance guides</span></div>
+      </a>
+    </aside>
+
+    <!-- ─── MAIN CONTENT ─── -->
+    <main class="col-center a4" id="main-content">
+
+      <!-- WHO WE ARE -->
+      <article class="about-card" aria-labelledby="about-who-title">
+        <h2 id="about-who-title"><span class="section-icon" aria-hidden="true">🌟</span> Who We Are</h2>
+        <p>
+          <strong>IndiCalculator</strong> is a free, independent financial tools website built entirely for Indian users. We started with a simple belief: every Indian deserves access to accurate, easy-to-use financial calculators — without paywalls, subscriptions, or pushy sign-up forms.
+        </p>
+        <p>
+          Whether you're a first-time home loan applicant trying to understand your EMI, a young professional planning your SIP investments, a freelancer computing GST for a client invoice, or a salaried employee comparing old vs new tax regimes — IndiCalculator gives you instant, reliable answers.
+        </p>
+        <p>
+          We are an independent project run by a small team of Indian finance enthusiasts and developers. Our mission is to democratise financial literacy across India by making complex calculations simple, transparent, and accessible to everyone.
+        </p>
+
+        <div class="about-divider"><span>Our Mission</span></div>
+
+        <p>
+          🎯 <strong>Mission:</strong> To provide every Indian — regardless of their financial background — with free, accurate, and beautifully simple tools that help them make informed money decisions.
+        </p>
+        <p>
+          💡 <strong>Vision:</strong> A financially literate India where no one overpays on loans, under-saves on investments, or misses out on tax savings simply because the right tools weren't available to them.
+        </p>
+      </article>
+
+      <!-- OUR TOOLS -->
+      <article class="about-card" aria-labelledby="about-tools-title">
+        <h2 id="about-tools-title"><span class="section-icon" aria-hidden="true">🛠️</span> Our Calculators</h2>
+        <p>We currently offer <strong>6 free financial calculators</strong>, each tailored to the Indian financial ecosystem — Indian tax slabs, Indian interest rate conventions, and Indian rupee formatting.</p>
+
+        <nav class="tool-list" aria-label="Available calculators">
+          <a href="emi-calculator.html" class="tool-item">
+            <div class="ti-icon" aria-hidden="true">🏠</div>
+            <div class="ti-info">
+              <span class="ti-name">EMI Calculator</span>
+              <span class="ti-desc">Home, car &amp; personal loans</span>
+            </div>
+            <span class="ti-arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="sip-calculator.html" class="tool-item">
+            <div class="ti-icon" aria-hidden="true">📈</div>
+            <div class="ti-info">
+              <span class="ti-name">SIP Calculator</span>
+              <span class="ti-desc">Mutual fund returns</span>
+            </div>
+            <span class="ti-arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="income-tax-calculator.html" class="tool-item">
+            <div class="ti-icon" aria-hidden="true">💰</div>
+            <div class="ti-info">
+              <span class="ti-name">Income Tax Calculator</span>
+              <span class="ti-desc">Old vs New regime (FY 2025-26)</span>
+            </div>
+            <span class="ti-arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="gst-calculator.html" class="tool-item">
+            <div class="ti-icon" aria-hidden="true">🧾</div>
+            <div class="ti-info">
+              <span class="ti-name">GST Calculator</span>
+              <span class="ti-desc">Add or remove GST instantly</span>
+            </div>
+            <span class="ti-arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="ppf-fd-calculator.html" class="tool-item">
+            <div class="ti-icon" aria-hidden="true">🏦</div>
+            <div class="ti-info">
+              <span class="ti-name">PPF &amp; FD Calculator</span>
+              <span class="ti-desc">Long-term savings maturity</span>
+            </div>
+            <span class="ti-arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="sbi-home-loan-emi-calculator.html" class="tool-item">
+            <div class="ti-icon" aria-hidden="true">🏛️</div>
+            <div class="ti-info">
+              <span class="ti-name">SBI Home Loan EMI</span>
+              <span class="ti-desc">Current SBI rate: 8.50%</span>
+            </div>
+            <span class="ti-arrow" aria-hidden="true">→</span>
+          </a>
+        </nav>
+      </article>
+
+      <!-- WHY CHOOSE US -->
+      <article class="about-card" aria-labelledby="about-why-title">
+        <h2 id="about-why-title"><span class="section-icon" aria-hidden="true">✅</span> Why Choose IndiCalculator?</h2>
+        <p>We've thought about what matters most to Indian users and built around those priorities:</p>
+
+        <div class="feature-grid" role="list">
+          <div class="feature-card" role="listitem">
+            <div class="fc-icon" aria-hidden="true">🎁</div>
+            <div class="fc-title">Free Forever</div>
+            <div class="fc-desc">Every calculator on IndiCalculator is completely free — no premium plan, no locked features, no hidden charges. Ever.</div>
+          </div>
+          <div class="feature-card" role="listitem">
+            <div class="fc-icon" aria-hidden="true">🔓</div>
+            <div class="fc-title">No Sign-Up Required</div>
+            <div class="fc-desc">We don't ask for your email, phone number, or personal details. Open the page and start calculating — it's that simple.</div>
+          </div>
+          <div class="feature-card" role="listitem">
+            <div class="fc-icon" aria-hidden="true">🇮🇳</div>
+            <div class="fc-title">Built for India</div>
+            <div class="fc-desc">Indian tax slabs, Indian interest rate norms, ₹ rupee formatting, and Indian financial regulations — we're built from the ground up for India.</div>
+          </div>
+          <div class="feature-card" role="listitem">
+            <div class="fc-icon" aria-hidden="true">📊</div>
+            <div class="fc-title">Accurate &amp; Up-to-Date</div>
+            <div class="fc-desc">Our calculators use current figures — FY 2025-26 tax slabs, latest RBI-linked interest rates, and updated PPF/FD rates from official sources.</div>
+          </div>
+          <div class="feature-card" role="listitem">
+            <div class="fc-icon" aria-hidden="true">📱</div>
+            <div class="fc-title">Mobile-Friendly</div>
+            <div class="fc-desc">Fully responsive design. Whether you're on a phone, tablet, or desktop, our calculators look great and work perfectly.</div>
+          </div>
+          <div class="feature-card" role="listitem">
+            <div class="fc-icon" aria-hidden="true">💸</div>
+            <div class="fc-title">Ad-Supported, Not Paywalled</div>
+            <div class="fc-desc">We sustain IndiCalculator through respectful, non-intrusive advertising (Google AdSense) — never through paywalls or data selling.</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- MEET THE TEAM -->
+      <article class="about-card" aria-labelledby="about-team-title">
+        <h2 id="about-team-title"><span class="section-icon" aria-hidden="true">👥</span> Meet the Team</h2>
+        <p>IndiCalculator is an independent project created and maintained by a small group of Indian finance enthusiasts, developers, and content writers who are passionate about financial literacy.</p>
+
+        <div class="team-card">
+          <div class="team-avatar" aria-hidden="true">🧑‍💻</div>
+          <div class="team-body">
+            <h3>The IndiCalculator Team</h3>
+            <div class="team-role">Independent · India-based</div>
+            <p>
+              We're a lean, passionate team — developers who care about clean UX, finance writers who value accuracy, and everyday Indians who know how confusing financial decisions can be. We built IndiCalculator because we wished it had existed when we needed it.
+            </p>
+            <p style="margin-top:10px;">
+              There's no VC funding, no corporate backing. Just a genuine commitment to helping our fellow Indians navigate loans, taxes, savings, and investments with confidence.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- CONTACT -->
+      <article class="about-card" aria-labelledby="about-contact-title">
+        <h2 id="about-contact-title"><span class="section-icon" aria-hidden="true">📬</span> Get in Touch</h2>
+        <p>We'd love to hear from you — whether it's a bug report, a feature request, or just a kind word. Since IndiCalculator is a static website (hosted on GitHub Pages), the best way to reach us is through GitHub.</p>
+
+        <div class="contact-card">
+          <div class="contact-icon-wrap" aria-hidden="true">🐙</div>
+          <div class="contact-body">
+            <h3>GitHub Issues</h3>
+            <p>Found a bug? Have a suggestion for a new calculator? Want to request a data update? Please open an issue on our GitHub repository — it's the fastest way for us to hear from you and track your feedback.</p>
+            <div class="contact-badge">
+              <span aria-hidden="true">⭐</span>
+              <span>Static site · Contact via GitHub Issues</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-divider"><span>Important Notice</span></div>
+
+        <p style="font-size:0.88rem;color:var(--text-2);line-height:1.8;">
+          ⚠️ <strong>Disclaimer:</strong> IndiCalculator is provided for <strong>informational and educational purposes only</strong>. The results generated by our calculators are estimates based on the inputs you provide. They should not be construed as financial, tax, or investment advice. Always consult a qualified financial advisor before making major financial decisions.
+        </p>
+      </article>
+
+    </main>
+
+    <!-- ─── RIGHT SIDEBAR ─── -->
+    <aside class="right-sidebar" aria-label="Sidebar widgets">
+
+      <!-- Popular Tools Widget -->
+      <div class="widget">
+        <div class="widget-title">🔥 Popular Tools</div>
+        <a href="emi-calculator.html" class="sidebar-tool-link">
+          <span class="stl-icon">🏠</span><span>EMI Calculator</span>
+        </a>
+        <a href="sip-calculator.html" class="sidebar-tool-link">
+          <span class="stl-icon">📈</span><span>SIP Returns</span>
+        </a>
+        <a href="income-tax-calculator.html" class="sidebar-tool-link">
+          <span class="stl-icon">💰</span><span>Income Tax Calculator</span>
+        </a>
+        <a href="gst-calculator.html" class="sidebar-tool-link">
+          <span class="stl-icon">🧾</span><span>GST Calculator</span>
+        </a>
+        <a href="ppf-fd-calculator.html" class="sidebar-tool-link">
+          <span class="stl-icon">🏦</span><span>PPF / FD Calculator</span>
+        </a>
+        <a href="sbi-home-loan-emi-calculator.html" class="sidebar-tool-link">
+          <span class="stl-icon">🏛️</span><span>SBI Home Loan EMI</span>
+        </a>
+      </div>
+
+      <!-- Latest from Blog Widget -->
+      <div class="widget">
+        <div class="widget-title">📝 Latest from Blog</div>
+        <div class="blog-post-item">
+          <a href="blog.html">How to Choose Between Home Loan Tenures — Short vs Long EMI</a>
+          <div class="bpi-meta">Finance Tips · 5 min read</div>
+        </div>
+        <div class="blog-post-item">
+          <a href="blog.html">SIP vs Lump Sum: Which Works Better for Indian Investors in 2025?</a>
+          <div class="bpi-meta">Investments · 7 min read</div>
+        </div>
+        <div class="blog-post-item">
+          <a href="blog.html">Old vs New Tax Regime: Which Should You Pick in FY 2025-26?</a>
+          <div class="bpi-meta">Tax Planning · 6 min read</div>
+        </div>
+        <div class="blog-post-item">
+          <a href="blog.html">PPF vs FD: Where to Park Your Long-Term Savings?</a>
+          <div class="bpi-meta">Savings · 5 min read</div>
+        </div>
+        <a href="blog.html" style="display:inline-block;margin-top:12px;font-size:0.82rem;font-weight:700;color:var(--teal);text-decoration:none;">View all articles →</a>
+      </div>
+
+      <!-- Ad placeholder -->
+      <div class="ad-side" role="complementary" aria-label="Advertisement">
+        <!-- AdSense 300×250 -->
+        <!-- <ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX"></ins> -->
+        <span>Ad · 300×250</span>
+      </div>
+
+      <!-- Quick info widget -->
+      <div class="widget">
+        <div class="widget-title">ℹ️ About This Site</div>
+        <div class="rate-row"><span class="rate-label">Launched</span><span class="rate-val teal">2024</span></div>
+        <div class="rate-row"><span class="rate-label">Calculators</span><span class="rate-val teal">6</span></div>
+        <div class="rate-row"><span class="rate-label">Cost to Use</span><span class="rate-val teal">₹0</span></div>
+        <div class="rate-row"><span class="rate-label">Data Privacy</span><span class="rate-val teal">100%</span></div>
+        <div class="rate-row"><span class="rate-label">Platform</span><span class="rate-val" style="color:var(--text-2);font-size:0.78rem">GitHub Pages</span></div>
+      </div>
+
+    </aside>
+
+  </div><!-- /.layout -->
+
+  <!-- ═══════════════════════════════════════ FOOTER LINKS ═══════════════════════════════════════ -->
+  <section class="footer-links-section">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>🏠 EMI Calculators</h4>
+          <a href="emi-calculator.html">EMI Calculator</a>
+          <a href="sbi-home-loan-emi-calculator.html">SBI Home Loan EMI</a>
+        </div>
+        <div class="footer-col">
+          <h4>📈 SIP &amp; Investment</h4>
+          <a href="sip-calculator.html">SIP Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>🏦 Savings</h4>
+          <a href="ppf-fd-calculator.html">PPF / FD Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>💰 Tax &amp; Business</h4>
+          <a href="income-tax-calculator.html">Income Tax Calculator</a>
+          <a href="gst-calculator.html">GST Calculator</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2025 IndiCalculator · Informational purposes only · Not financial advice</span>
+    <div class="footer-bottom-links">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="privacy-policy.html">Privacy</a>
+    </div>
+  </footer>
+
+  <!-- Shared JS -->
+  <script src="shared.js"></script>
+
+</body>
+</html>
+
+<!--
+════════════════════════════════════════════════════════
+  BROKEN-LINK AUDIT — about.html
+════════════════════════════════════════════════════════
+Every href used in this file:
+
+  index.html                     ✅ valid (in allowed list)
+  emi-calculator.html            ✅ valid (in allowed list)
+  sip-calculator.html            ✅ valid (in allowed list)
+  income-tax-calculator.html     ✅ valid (in allowed list)
+  gst-calculator.html            ✅ valid (in allowed list)
+  ppf-fd-calculator.html         ✅ valid (in allowed list)
+  sbi-home-loan-emi-calculator.html ✅ valid (in allowed list)
+  blog.html                      ✅ valid (in allowed list)
+  about.html                     ✅ valid (in allowed list)  [footer self-link]
+  privacy-policy.html            ✅ valid (in allowed list)
+  shared.css                     ✅ valid (stylesheet link)
+  shared.js                      ✅ valid (script src)
+
+No links to:
+  ✗ salary-calculator.html       — NOT linked (correctly omitted)
+  ✗ hra-calculator.html          — NOT linked (correctly omitted)
+  ✗ hdfc-home-loan-emi-calculator.html — NOT linked (correctly omitted)
+  ✗ Any absolute /path links     — None used (all relative)
+  ✗ Any external links           — Only Google Fonts + CDNs (non-href)
+
+RESULT: All 12 hrefs confirmed valid. Zero broken links. ✅
+════════════════════════════════════════════════════════
+-->

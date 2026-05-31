@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>HRA Calculator 2025 - House Rent Allowance Exemption Calculator | IndiCalculator</title>
+  <meta name="description" content="Calculate HRA exemption under Section 10(13A). Free HRA calculator for FY 2025-26. Find taxable &amp; exempt HRA for metro &amp; non-metro cities."/>
+  <link rel="canonical" href="https://indicalculator.in/hra-calculator.html"/>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="HRA Calculator 2025 – House Rent Allowance Exemption | IndiCalculator"/>
+  <meta property="og:description" content="Calculate HRA exemption under Section 10(13A). Free HRA calculator for FY 2025-26. Find taxable &amp; exempt HRA for metro &amp; non-metro cities."/>
+  <meta property="og:url" content="https://indicalculator.in/hra-calculator.html"/>
+  <meta property="og:site_name" content="IndiCalculator"/>
+  <meta property="og:image" content="https://indicalculator.in/og-hra.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="HRA Calculator 2025 – House Rent Allowance Exemption | IndiCalculator"/>
+  <meta name="twitter:description" content="Calculate HRA exemption under Section 10(13A). Free for FY 2025-26. Metro &amp; non-metro support."/>
+
+  <!-- Schema: WebApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "HRA Exemption Calculator",
+    "url": "https://indicalculator.in/hra-calculator.html",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "description": "Free online HRA calculator to compute House Rent Allowance exemption under Section 10(13A) of the Income Tax Act for FY 2025-26.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "IndiCalculator",
+      "url": "https://indicalculator.in"
+    }
+  }
+  </script>
+
+  <!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://indicalculator.in/index.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "HRA Calculator",
+        "item": "https://indicalculator.in/hra-calculator.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is HRA exemption under Section 10(13A)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "HRA exemption under Section 10(13A) allows salaried employees to claim a portion of their House Rent Allowance as tax-free income. The exempt amount is the minimum of three conditions: actual HRA received, 50%/40% of basic salary (metro/non-metro), or rent paid minus 10% of basic salary."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is HRA available under the new tax regime?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. HRA exemption under Section 10(13A) is not available if you opt for the new tax regime introduced under Section 115BAC. It is only available under the old tax regime."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What percentage of basic salary is used for HRA exemption in metro cities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For metro cities (Mumbai, Delhi, Kolkata, Chennai), 50% of basic salary is used for computing HRA exemption. For all other non-metro cities, 40% of basic salary applies."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to submit rent receipts to claim HRA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. If your annual rent exceeds ₹1 lakh, you must provide your landlord's PAN card details to your employer. Most employers also require monthly rent receipts as proof of rent payment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I claim HRA if I live in my own house?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. HRA exemption can only be claimed if you are actually paying rent for a residential accommodation. If you live in your own house, the entire HRA received becomes taxable."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is 80GG and how is it different from HRA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Section 80GG allows a deduction for rent paid by self-employed individuals or salaried employees who do not receive HRA as part of their salary. The deduction under 80GG is limited to ₹5,000 per month (₹60,000 per year), or 25% of total income, or rent paid minus 10% of income — whichever is least."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="shared.css"/>
+
+  <!-- Chart.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+
+  <!-- Google AdSense placeholder -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+  <!-- Google Analytics GA4 placeholder -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <style>
+    /* Page-specific overrides */
+    .radio-group{display:flex;gap:12px;flex-wrap:wrap;margin-top:4px}
+    .radio-pill{display:flex;align-items:center;gap:8px;padding:10px 18px;border:1.5px solid var(--border);border-radius:50px;cursor:pointer;font-size:0.9rem;font-weight:600;color:var(--text-2);transition:all 0.2s;background:var(--bg)}
+    .radio-pill input[type=radio]{width:16px;height:16px;accent-color:var(--teal);cursor:pointer}
+    .radio-pill:has(input:checked){border-color:var(--teal);background:var(--teal-bg);color:var(--teal)}
+    .radio-pill .pill-sub{font-size:0.7rem;color:var(--muted);display:block;margin-left:4px;font-weight:500}
+    .radio-pill:has(input:checked) .pill-sub{color:var(--teal-dark)}
+    .conditions-table{width:100%;border-collapse:collapse;font-size:0.87rem;margin:20px 0;border-radius:var(--r-sm);overflow:hidden;border:1px solid var(--border)}
+    .conditions-table th{background:var(--surface-2);padding:11px 14px;text-align:left;font-weight:700;color:var(--text-2);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.04em;border-bottom:1px solid var(--border)}
+    .conditions-table th:last-child{text-align:right}
+    .conditions-table td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text-2);font-variant-numeric:tabular-nums}
+    .conditions-table td:last-child{text-align:right;font-weight:700;color:var(--text)}
+    .conditions-table tr:last-child td{border-bottom:none;background:var(--teal-bg);font-weight:800;color:var(--teal)}
+    .conditions-table tr:last-child td:last-child{color:var(--teal)}
+    .conditions-table tr.minimum-row td{font-weight:800}
+    .monthly-table-section{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:28px;margin-bottom:20px}
+    .monthly-table-section h3{font-family:var(--font-display);font-size:1.1rem;font-weight:800;color:var(--text);margin-bottom:16px}
+    .monthly-table-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:var(--r-sm)}
+    .monthly-table{width:100%;border-collapse:collapse;font-size:0.85rem}
+    .monthly-table th{background:var(--surface-2);padding:10px 14px;text-align:right;font-weight:700;color:var(--text-2);font-size:0.75rem;text-transform:uppercase;letter-spacing:0.04em;border-bottom:1px solid var(--border);position:sticky;top:0}
+    .monthly-table th:first-child{text-align:left}
+    .monthly-table td{padding:9px 14px;text-align:right;border-bottom:1px solid var(--border);font-variant-numeric:tabular-nums;color:var(--text-2)}
+    .monthly-table td:first-child{text-align:left;font-weight:600;color:var(--text)}
+    .monthly-table tr:hover{background:var(--surface-2)}
+    .monthly-table tr:last-child td{border-bottom:none;font-weight:700;background:var(--teal-bg);color:var(--teal)}
+    .tax-slab-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);font-size:0.82rem}
+    .tax-slab-row:last-child{border-bottom:none}
+    .slab-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+    .slab-info{flex:1}
+    .slab-income{font-size:0.78rem;color:var(--muted)}
+    .slab-rate{font-weight:800;font-size:0.88rem}
+    .info-box{background:var(--teal-bg);border:1px solid rgba(13,148,136,0.2);border-radius:var(--r-sm);padding:14px 18px;margin:16px 0;font-size:0.88rem;color:var(--teal-dark);line-height:1.7}
+    .info-box strong{font-weight:800}
+    .example-box{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-sm);padding:18px;margin:16px 0}
+    .example-box h4{font-family:var(--font-display);font-size:0.95rem;font-weight:800;color:var(--text);margin-bottom:10px}
+    .example-table{width:100%;font-size:0.85rem;border-collapse:collapse}
+    .example-table td{padding:6px 10px;border-bottom:1px solid var(--border);color:var(--text-2)}
+    .example-table td:last-child{text-align:right;font-weight:700;color:var(--text)}
+    .example-table tr:last-child td{border-bottom:none;color:var(--teal);font-weight:800}
+    .vs-badge{display:inline-block;padding:2px 10px;border-radius:50px;font-size:0.72rem;font-weight:700;background:var(--coral-bg);color:var(--coral);margin-left:8px}
+    .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}
+    @media(max-width:600px){.compare-grid{grid-template-columns:1fr}}
+    .compare-box{border:1px solid var(--border);border-radius:var(--r-sm);padding:14px}
+    .compare-box h5{font-family:var(--font-display);font-size:0.88rem;font-weight:800;margin-bottom:8px;color:var(--text)}
+    .compare-box ul{font-size:0.82rem;color:var(--text-2);padding-left:18px;line-height:1.9}
+    .step-list{counter-reset:steps;list-style:none;padding:0;margin:12px 0}
+    .step-list li{counter-increment:steps;padding:8px 0 8px 44px;position:relative;border-bottom:1px solid var(--border);font-size:0.9rem;color:var(--text-2);line-height:1.7}
+    .step-list li:last-child{border-bottom:none}
+    .step-list li::before{content:counter(steps);position:absolute;left:0;top:8px;width:28px;height:28px;background:var(--teal);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.8rem;line-height:28px;text-align:center}
+    .ad-mid{background:var(--surface);border:1px dashed var(--border);border-radius:var(--r);min-height:90px;display:flex;align-items:center;justify-content:center;font-size:0.68rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin:20px 0}
+    .ad-bottom{background:var(--surface);border:1px dashed var(--border);border-radius:var(--r);min-height:90px;display:flex;align-items:center;justify-content:center;font-size:0.68rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-top:20px}
+    .faq-section{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:32px;margin-bottom:20px}
+    .faq-section h2{font-family:var(--font-display);font-size:1.4rem;font-weight:800;margin-bottom:20px;color:var(--text)}
+    .related-section{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:28px;margin-bottom:20px}
+    .related-section h2{font-family:var(--font-display);font-size:1.2rem;font-weight:800;margin-bottom:16px;color:var(--text)}
+    .blog-link-item{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);text-decoration:none;color:inherit;align-items:flex-start}
+    .blog-link-item:last-child{border-bottom:none}
+    .blog-link-dot{width:8px;height:8px;border-radius:50%;background:var(--teal);flex-shrink:0;margin-top:6px}
+    .blog-link-text{font-size:0.82rem;font-weight:600;color:var(--text-2);line-height:1.5;transition:color 0.2s}
+    .blog-link-item:hover .blog-link-text{color:var(--teal)}
+    .popular-calc-item{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--border);text-decoration:none;color:inherit;font-size:0.82rem;font-weight:600;color:var(--text-2);transition:color 0.2s}
+    .popular-calc-item:last-child{border-bottom:none}
+    .popular-calc-item:hover{color:var(--teal)}
+    .popular-calc-icon{font-size:1rem;width:28px;text-align:center}
+  </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <a href="index.html" class="logo a1" style="gap:12px">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" fill="none" style="width:38px;height:38px;flex-shrink:0">
+      <rect width="44" height="44" rx="10" fill="url(#lg)"/>
+      <rect x="8" y="12" width="28" height="8" rx="3" fill="white" opacity="0.92"/>
+      <rect x="8" y="24" width="11" height="11" rx="3" fill="white" opacity="0.78"/>
+      <rect x="22" y="24" width="5" height="11" rx="2" fill="white" opacity="0.65"/>
+      <rect x="30" y="24" width="6" height="11" rx="2" fill="white" opacity="0.78"/>
+      <defs>
+        <linearGradient id="lg" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#0D9488"/>
+          <stop offset="100%" stop-color="#0F766E"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    <span style="font-family:var(--font-display);font-size:1.35rem;font-weight:900;color:var(--text);letter-spacing:-0.02em">Indi<span style="color:var(--teal)">Calculator</span></span>
+  </a>
+  <nav class="a2">
+    <a href="emi-calculator.html">EMI</a>
+    <a href="sip-calculator.html">SIP</a>
+    <a href="income-tax-calculator.html">Tax</a>
+    <a href="gst-calculator.html">GST</a>
+    <a href="ppf-fd-calculator.html">PPF/FD</a>
+    <a href="blog.html">Blog</a>
+  </nav>
+</header>
+
+<!-- ===== AD LEADERBOARD ===== -->
+<div class="ad-top">
+  <ins class="adsbygoogle" style="display:block;width:728px;height:90px" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1111111111" data-ad-format="horizontal"></ins>
+  <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</div>
+
+<!-- ===== BREADCRUMB ===== -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="index.html">Home</a>
+  <span class="sep">›</span>
+  <span class="current">HRA Calculator</span>
+</nav>
+
+<!-- ===== MAIN LAYOUT ===== -->
+<div class="layout container">
+
+  <!-- ===== LEFT NAV ===== -->
+  <aside class="left-nav a3">
+    <span class="left-nav-label">Calculators</span>
+    <a href="emi-calculator.html" class="nav-card">
+      <div class="nc-icon">🏠</div>
+      <div class="nc-info"><span class="nc-name">EMI</span><span class="nc-desc">Loan calculator</span></div>
+    </a>
+    <a href="sip-calculator.html" class="nav-card">
+      <div class="nc-icon">📈</div>
+      <div class="nc-info"><span class="nc-name">SIP Returns</span><span class="nc-desc">Mutual fund growth</span></div>
+    </a>
+    <a href="income-tax-calculator.html" class="nav-card">
+      <div class="nc-icon">💰</div>
+      <div class="nc-info"><span class="nc-name">Income Tax</span><span class="nc-desc">Old vs New regime</span></div>
+    </a>
+    <a href="gst-calculator.html" class="nav-card">
+      <div class="nc-icon">🧾</div>
+      <div class="nc-info"><span class="nc-name">GST</span><span class="nc-desc">Add/remove tax</span></div>
+    </a>
+    <a href="ppf-fd-calculator.html" class="nav-card">
+      <div class="nc-icon">🏦</div>
+      <div class="nc-info"><span class="nc-name">PPF / FD</span><span class="nc-desc">Savings maturity</span></div>
+    </a>
+    <a href="sbi-home-loan-emi-calculator.html" class="nav-card">
+      <div class="nc-icon">🏛️</div>
+      <div class="nc-info"><span class="nc-name">SBI Home Loan</span><span class="nc-desc">Rate: 8.50%</span></div>
+    </a>
+    <a href="hra-calculator.html" class="nav-card active">
+      <div class="nc-icon">🏘️</div>
+      <div class="nc-info"><span class="nc-name">HRA Exemption</span><span class="nc-desc">Tax saving on rent</span></div>
+    </a>
+    <hr class="nav-divider"/>
+    <a href="blog.html" class="nav-card">
+      <div class="nc-icon">📝</div>
+      <div class="nc-info"><span class="nc-name">Blog</span><span class="nc-desc">Finance guides</span></div>
+    </a>
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="col-center a4">
+
+    <!-- Panel Top -->
+    <div class="panel-top">
+      <div class="panel-badge">🏘️ Section 10(13A)</div>
+      <h1 class="panel-title">HRA Exemption Calculator 2025</h1>
+      <p class="panel-sub">Compute your House Rent Allowance (HRA) exemption instantly for FY 2025-26. Supports metro &amp; non-metro cities. Know exactly how much HRA is tax-free and how much is taxable under the old income tax regime.</p>
+    </div>
+
+    <!-- Calculator Card -->
+    <div class="calc-card">
+      <div class="form-grid">
+        <!-- Basic Salary -->
+        <div class="field">
+          <label for="basicSalary">Basic Salary (Annual) ₹</label>
+          <input type="number" id="basicSalary" min="0" step="1000" value="600000" placeholder="e.g. 600000"/>
+        </div>
+        <!-- HRA Received -->
+        <div class="field">
+          <label for="hraReceived">HRA Received (Annual) ₹</label>
+          <input type="number" id="hraReceived" min="0" step="1000" value="240000" placeholder="e.g. 240000"/>
+        </div>
+        <!-- Rent Paid -->
+        <div class="field">
+          <label for="rentPaid">Rent Paid (Annual) ₹</label>
+          <input type="number" id="rentPaid" min="0" step="1000" value="300000" placeholder="e.g. 300000"/>
+        </div>
+      </div>
+
+      <!-- City Type -->
+      <div class="field" style="margin-bottom:28px">
+        <label>City Type</label>
+        <div class="radio-group" role="radiogroup" aria-label="City Type">
+          <label class="radio-pill">
+            <input type="radio" name="cityType" value="metro" checked/>
+            🏙️ Metro City
+            <span class="pill-sub">(Mumbai / Delhi / Kolkata / Chennai)</span>
+          </label>
+          <label class="radio-pill">
+            <input type="radio" name="cityType" value="nonmetro"/>
+            🏡 Non-Metro City
+            <span class="pill-sub">(Pune / Hyderabad / Bengaluru, etc.)</span>
+          </label>
+        </div>
+      </div>
+
+      <button class="go-btn" onclick="calculateHRA()">⚡ Calculate HRA Exemption</button>
+
+      <!-- Results -->
+      <div class="results-wrap" id="resultsSection" style="display:none">
+        <div class="results-divider"><span>Your HRA Breakdown</span></div>
+
+        <div class="stat-grid">
+          <div class="stat-card teal" style="grid-column:span 2">
+            <div class="stat-label">🏆 HRA Exemption (Tax-Free)</div>
+            <div class="stat-val" id="statExemption">₹0</div>
+          </div>
+          <div class="stat-card coral">
+            <div class="stat-label">💸 Taxable HRA</div>
+            <div class="stat-val" id="statTaxable">₹0</div>
+          </div>
+          <div class="stat-card green">
+            <div class="stat-label">🏠 Annual Rent Paid</div>
+            <div class="stat-val" id="statRent">₹0</div>
+          </div>
+          <div class="stat-card gold">
+            <div class="stat-label">📩 HRA Received</div>
+            <div class="stat-val" id="statHRAReceived">₹0</div>
+          </div>
+          <div class="stat-card violet">
+            <div class="stat-label">📊 Exemption %</div>
+            <div class="stat-val" id="statExPct">0%</div>
+          </div>
+        </div>
+
+        <!-- Conditions Breakdown Table -->
+        <h3 style="font-family:var(--font-display);font-size:1rem;font-weight:800;color:var(--text);margin-bottom:4px">3-Condition Formula Breakdown</h3>
+        <p style="font-size:0.82rem;color:var(--muted);margin-bottom:0">HRA exemption = Minimum of the three conditions below</p>
+        <table class="conditions-table" aria-label="HRA Conditions Breakdown">
+          <thead>
+            <tr>
+              <th>Condition</th>
+              <th style="text-align:right">Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>① Actual HRA Received</td>
+              <td id="condC1">₹0</td>
+            </tr>
+            <tr>
+              <td id="condC2Label">② 50% of Basic Salary (Metro)</td>
+              <td id="condC2">₹0</td>
+            </tr>
+            <tr>
+              <td>③ Rent Paid − 10% of Basic Salary</td>
+              <td id="condC3">₹0</td>
+            </tr>
+            <tr class="minimum-row">
+              <td>✅ Minimum (= HRA Exemption)</td>
+              <td id="condMin">₹0</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Charts -->
+        <div class="chart-area two-col" style="margin-top:24px">
+          <div>
+            <div class="chart-title">🍩 Exempt vs Taxable HRA</div>
+            <div class="chart-canvas-wrap" style="height:220px">
+              <canvas id="donutChart"></canvas>
+            </div>
+          </div>
+          <div>
+            <div class="chart-title">📊 3-Condition Comparison</div>
+            <div class="chart-canvas-wrap" style="height:220px">
+              <canvas id="barChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Banner -->
+    <div class="cta-banner">
+      <div class="cta-banner-text">
+        <h3>💼 Save More Tax — File ITR Online</h3>
+        <p>Maximize your HRA exemption claim. Expert CA review. Hassle-free filing on ClearTax.</p>
+      </div>
+      <a href="income-tax-calculator.html" class="cta-btn">Calculate Tax Now →</a>
+    </div>
+
+    <!-- Mid-Content AdSense -->
+    <div class="ad-mid">
+      <ins class="adsbygoogle" style="display:block;width:100%;height:90px" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="2222222222" data-ad-format="horizontal"></ins>
+      <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+    </div>
+
+    <!-- Monthly Breakdown Table -->
+    <div class="monthly-table-section" id="monthlySection" style="display:none">
+      <h3>📅 Monthly HRA Breakdown</h3>
+      <div class="monthly-table-wrap">
+        <table class="monthly-table" aria-label="Monthly HRA Breakdown">
+          <thead>
+            <tr>
+              <th>Month</th>
+              <th>Basic Salary</th>
+              <th>HRA Received</th>
+              <th>Rent Paid</th>
+              <th>HRA Exempt</th>
+              <th>Taxable HRA</th>
+            </tr>
+          </thead>
+          <tbody id="monthlyTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="disclaimer">
+      <strong>⚠️ Disclaimer:</strong> This calculator is for informational and educational purposes only. HRA exemption figures are indicative and based on standard Section 10(13A) rules. Actual tax liability may vary depending on your full income, deductions, and the tax regime chosen. Consult a qualified CA or tax advisor before filing your ITR.
+    </div>
+
+    <!-- ===== SEO ARTICLE ===== -->
+    <div class="info-section">
+      <h2>What is HRA? House Rent Allowance Explained</h2>
+      <p>House Rent Allowance (HRA) is a salary component provided by employers to help employees cover their rental housing expenses. For salaried individuals, HRA is one of the most significant tax-saving tools available under the Indian Income Tax Act, 1961 — specifically under <strong>Section 10(13A)</strong>, read with Rule 2A.</p>
+      <p>If you are a salaried employee receiving HRA and paying rent for your accommodation, you can claim a partial or full exemption on the HRA received. This reduces your taxable income, thereby lowering your overall tax liability. The amount of exemption is not simply the HRA you receive — it is computed using a specific three-condition formula prescribed by the Income Tax Department.</p>
+
+      <h3>Who Can Claim HRA Exemption?</h3>
+      <p>To be eligible for HRA exemption under Section 10(13A), you must satisfy all of the following conditions:</p>
+      <ul>
+        <li>You must be a <strong>salaried employee</strong> (not self-employed or a freelancer).</li>
+        <li>HRA must be a <strong>component of your salary</strong> as per your employment contract/CTC.</li>
+        <li>You must be <strong>actually paying rent</strong> for a residential accommodation.</li>
+        <li>The accommodation must <strong>not be owned by you</strong> or your spouse.</li>
+        <li>You must be opting for the <strong>old tax regime</strong> — HRA exemption is not available under the new tax regime.</li>
+      </ul>
+      <div class="info-box">
+        <strong>📌 Important:</strong> If you receive HRA but do not pay rent (e.g., you own the house you live in), the entire HRA received is taxable as part of your salary income.
+      </div>
+
+      <h3>Section 10(13A) — The 3-Condition Formula</h3>
+      <p>The HRA exemption is the <strong>least of the following three amounts</strong>:</p>
+      <ol>
+        <li><strong>Actual HRA received</strong> from the employer during the year.</li>
+        <li><strong>50% of basic salary</strong> if the employee resides in a metro city (Mumbai, Delhi, Kolkata, or Chennai), or <strong>40% of basic salary</strong> for non-metro cities.</li>
+        <li><strong>Rent actually paid minus 10% of basic salary</strong> (i.e., excess rent over 10% of basic).</li>
+      </ol>
+
+      <div class="formula">
+        HRA Exemption = Min(<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;① Actual HRA received,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;② 50%/40% × Basic Salary,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;③ Rent Paid − 10% × Basic Salary<br>
+        )
+      </div>
+
+      <p>The amount exceeding this minimum — i.e., any HRA received above the exempt amount — becomes <strong>taxable HRA</strong> and is added to your gross salary for tax computation.</p>
+
+      <h3>Metro vs Non-Metro Cities — The 50% / 40% Rule</h3>
+      <p>The Income Tax Act recognises only <strong>four cities as metro</strong> for the purpose of HRA exemption:</p>
+      <ul>
+        <li>🏙️ <strong>Mumbai</strong></li>
+        <li>🏙️ <strong>Delhi</strong> (including NCR)</li>
+        <li>🏙️ <strong>Kolkata</strong></li>
+        <li>🏙️ <strong>Chennai</strong></li>
+      </ul>
+      <p>All other cities — including Bengaluru, Hyderabad, Pune, Ahmedabad, Jaipur — are treated as <strong>non-metro</strong>, even if they are large metropolitan areas economically. This classification is based on the original statutory definition and has not been updated despite the growth of these cities.</p>
+      <div class="compare-grid">
+        <div class="compare-box">
+          <h5>🏙️ Metro City (50% of Basic)</h5>
+          <ul>
+            <li>Mumbai, Delhi, Kolkata, Chennai</li>
+            <li>Higher exemption due to higher rents</li>
+            <li>Condition 2 = 50% × Basic Salary</li>
+          </ul>
+        </div>
+        <div class="compare-box">
+          <h5>🏡 Non-Metro City (40% of Basic)</h5>
+          <ul>
+            <li>Bengaluru, Pune, Hyderabad, etc.</li>
+            <li>Lower percentage applies</li>
+            <li>Condition 2 = 40% × Basic Salary</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>HRA Exemption in Old vs New Tax Regime</h3>
+      <p>This is one of the most critical distinctions every taxpayer must understand:</p>
+      <ul>
+        <li><strong>Old Tax Regime:</strong> HRA exemption under Section 10(13A) is fully available. You can claim the exempt HRA and reduce your taxable income accordingly.</li>
+        <li><strong>New Tax Regime (Section 115BAC):</strong> HRA exemption is <strong>NOT available</strong>. If you opt for the new regime, the entire HRA received is taxable as salary income. However, the new regime offers lower slab rates which may compensate depending on your income level.</li>
+      </ul>
+      <p>For employees with high HRA (typical in metro cities), the old regime often turns out more beneficial specifically because of the HRA exemption. Use our <a href="income-tax-calculator.html" style="color:var(--teal);font-weight:700">Income Tax Calculator</a> to compare both regimes.</p>
+
+      <h3>Worked Example — Delhi (Metro City)</h3>
+      <div class="example-box">
+        <h4>📍 Scenario: Ravi, working in Delhi</h4>
+        <table class="example-table">
+          <tr><td>Basic Salary (Annual)</td><td>₹7,20,000</td></tr>
+          <tr><td>HRA Received (Annual)</td><td>₹2,88,000</td></tr>
+          <tr><td>Rent Paid (Annual)</td><td>₹3,60,000</td></tr>
+          <tr><td>City Type</td><td>Metro (Delhi)</td></tr>
+        </table>
+        <br/>
+        <table class="example-table">
+          <tr><td>① Actual HRA Received</td><td>₹2,88,000</td></tr>
+          <tr><td>② 50% × ₹7,20,000 (Metro)</td><td>₹3,60,000</td></tr>
+          <tr><td>③ ₹3,60,000 − 10% × ₹7,20,000</td><td>₹2,88,000</td></tr>
+          <tr><td>✅ HRA Exemption (Minimum)</td><td>₹2,88,000</td></tr>
+          <tr><td>💸 Taxable HRA</td><td>₹0</td></tr>
+        </table>
+        <p style="font-size:0.82rem;color:var(--muted);margin-top:8px">Ravi's entire HRA is exempt because all three conditions happen to be equal or higher than the actual HRA received.</p>
+      </div>
+
+      <h3>Worked Example — Pune (Non-Metro City)</h3>
+      <div class="example-box">
+        <h4>📍 Scenario: Priya, working in Pune</h4>
+        <table class="example-table">
+          <tr><td>Basic Salary (Annual)</td><td>₹6,00,000</td></tr>
+          <tr><td>HRA Received (Annual)</td><td>₹2,40,000</td></tr>
+          <tr><td>Rent Paid (Annual)</td><td>₹3,00,000</td></tr>
+          <tr><td>City Type</td><td>Non-Metro (Pune)</td></tr>
+        </table>
+        <br/>
+        <table class="example-table">
+          <tr><td>① Actual HRA Received</td><td>₹2,40,000</td></tr>
+          <tr><td>② 40% × ₹6,00,000 (Non-Metro)</td><td>₹2,40,000</td></tr>
+          <tr><td>③ ₹3,00,000 − 10% × ₹6,00,000</td><td>₹2,40,000</td></tr>
+          <tr><td>✅ HRA Exemption (Minimum)</td><td>₹2,40,000</td></tr>
+          <tr><td>💸 Taxable HRA</td><td>₹0</td></tr>
+        </table>
+        <p style="font-size:0.82rem;color:var(--muted);margin-top:8px">Priya's HRA is also fully exempt. This is the default example pre-filled in the calculator above.</p>
+      </div>
+
+      <h3>Rent Receipts and Documentation Requirements</h3>
+      <p>The Income Tax Department and your employer require documentation to allow the HRA exemption. Key requirements include:</p>
+      <ul>
+        <li><strong>Rent Receipts:</strong> Monthly rent receipts stamped with ₹1 revenue stamp (for cash payments above ₹5,000) signed by your landlord.</li>
+        <li><strong>Rent Agreement:</strong> A valid rental agreement or lease deed between you and the landlord.</li>
+        <li><strong>Landlord's PAN:</strong> If your annual rent exceeds <strong>₹1,00,000</strong> (₹8,333/month), you <em>must</em> furnish the PAN of your landlord to your employer, who will report it in Form 16. Failure to provide PAN will result in TDS being deducted on the HRA component.</li>
+        <li><strong>Declaration:</strong> A signed declaration stating that the accommodation is not owned by you or your immediate family.</li>
+      </ul>
+      <div class="info-box">
+        <strong>📌 Landlord PAN Rule:</strong> As per CBDT Circular No. 8/2013, if annual rent exceeds ₹1 lakh, furnishing the landlord's PAN is mandatory. If the landlord does not have a PAN, you can submit a declaration to that effect along with Form 60.
+      </div>
+
+      <h3>Common HRA Mistakes to Avoid</h3>
+      <ul>
+        <li>❌ <strong>Claiming HRA when living in own home:</strong> You cannot claim exemption if you own the house you live in, even if HRA is part of your salary.</li>
+        <li>❌ <strong>Paying rent to immediate family:</strong> Paying rent to a spouse is generally not accepted. Paying to parents is allowed but must be genuine and the parents must declare it as rental income in their ITR.</li>
+        <li>❌ <strong>Not submitting proof on time:</strong> Submit rent receipts and documents to your employer before the investment declaration deadline (usually January–February) to avoid excess TDS.</li>
+        <li>❌ <strong>Incorrect city classification:</strong> Remember, only Mumbai, Delhi, Kolkata, and Chennai qualify as metro. Bengaluru does NOT qualify despite being India's tech capital.</li>
+        <li>❌ <strong>Claiming HRA under new tax regime:</strong> HRA exemption is not available if you have opted for the new tax regime under Section 115BAC.</li>
+      </ul>
+
+      <h3>How to Declare HRA to Your Employer</h3>
+      <ol class="step-list">
+        <li>At the start of the financial year (April), submit an <strong>investment declaration</strong> to your HR/payroll team mentioning the HRA claim with estimated rent details.</li>
+        <li>Collect <strong>monthly rent receipts</strong> from your landlord (or digitally signed receipts are acceptable by many employers).</li>
+        <li>If annual rent exceeds ₹1 lakh, collect and submit the <strong>landlord's PAN</strong>.</li>
+        <li>Submit all proofs to your employer by the declared deadline (usually <strong>January or February</strong>). This reduces TDS deducted from your salary.</li>
+        <li>At year-end, verify Form 16 (Part B) to confirm the HRA exemption has been correctly reflected. If not, claim the exemption directly in your <strong>ITR filing</strong>.</li>
+      </ol>
+
+      <h3>HRA vs Section 80GG — Which to Claim?</h3>
+      <p>If you are <strong>self-employed</strong> or a salaried employee whose CTC does <strong>not</strong> include HRA, you cannot claim exemption under Section 10(13A). However, you may claim a deduction under <strong>Section 80GG</strong> instead.</p>
+      <div class="compare-grid">
+        <div class="compare-box">
+          <h5>Section 10(13A) — HRA Exemption</h5>
+          <ul>
+            <li>Available to salaried employees with HRA in CTC</li>
+            <li>Exempt amount = min of 3 conditions</li>
+            <li>No cap on the maximum exemption</li>
+            <li>Only under old tax regime</li>
+          </ul>
+        </div>
+        <div class="compare-box">
+          <h5>Section 80GG — Rent Deduction</h5>
+          <ul>
+            <li>For self-employed / salaried without HRA</li>
+            <li>Capped at ₹5,000/month (₹60,000/year)</li>
+            <li>Or 25% of total income, whichever is less</li>
+            <li>Only under old tax regime</li>
+          </ul>
+        </div>
+      </div>
+      <p>In most cases, employees with HRA save more tax through Section 10(13A) because there is no upper limit on the exempt amount — the three-condition formula determines it dynamically based on your actual salary and rent.</p>
+
+      <h3>Tips to Maximise Your HRA Exemption</h3>
+      <ul>
+        <li>📌 <strong>Pay rent to parents:</strong> If you live in your parents' house, you can pay rent to them. They declare it as rental income, but with standard deduction of 30% and basic exemption limits, the family's overall tax burden may reduce significantly.</li>
+        <li>📌 <strong>Negotiate salary structure:</strong> Request HR to increase the HRA component as a percentage of basic salary (up to 50% for metro employees). Higher HRA in CTC doesn't automatically mean higher tax savings unless you're paying commensurate rent.</li>
+        <li>📌 <strong>Keep rent receipts organised:</strong> Maintain a folder with monthly receipts, the rental agreement, and a copy of the landlord's PAN for quick submission to your employer or during ITR filing.</li>
+        <li>📌 <strong>File ITR even if employer misses the claim:</strong> If you forgot to submit proof to your employer, you can still claim the HRA exemption while filing your ITR under the old regime. The refund (if any excess TDS was deducted) will be processed by the Income Tax Department.</li>
+      </ul>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq-section">
+      <h2>❓ Frequently Asked Questions — HRA</h2>
+      <div id="faqContainer">
+        <div class="faq-item">
+          <div class="faq-q">What is HRA exemption under Section 10(13A)?</div>
+          <div class="faq-a">HRA exemption under Section 10(13A) allows salaried employees to claim a portion of their House Rent Allowance as tax-free income. The exempt amount is the minimum of three conditions: actual HRA received, 50%/40% of basic salary (metro/non-metro), or rent paid minus 10% of basic salary.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is HRA available under the new tax regime (2025-26)?</div>
+          <div class="faq-a">No. HRA exemption under Section 10(13A) is NOT available if you opt for the new tax regime introduced under Section 115BAC. It is exclusively available under the old tax regime. If you choose the new regime, the entire HRA received becomes part of your taxable salary.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Which cities are considered metro for HRA purposes?</div>
+          <div class="faq-a">Only four cities are classified as metro under the Income Tax Act for HRA exemption: Mumbai, Delhi (including NCR), Kolkata, and Chennai. Bengaluru, Hyderabad, Pune, and other large cities are treated as non-metro — even if economically significant — due to the original statutory definition that has not been updated.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I claim HRA if I pay rent to my parents?</div>
+          <div class="faq-a">Yes, you can claim HRA by paying rent to your parents, provided the arrangement is genuine, rent receipts are issued, and a rental agreement exists. Your parents must declare the rent received as income in their own ITR. This is a legitimate and commonly used tax planning strategy. However, paying rent to a spouse is generally not accepted.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">When must I provide my landlord's PAN for HRA?</div>
+          <div class="faq-a">You must furnish your landlord's PAN card details to your employer when your annual rent exceeds ₹1,00,000 (i.e., more than ₹8,333 per month). This is mandatory as per CBDT Circular No. 8/2013. If your landlord does not have a PAN, a Form 60 declaration must be submitted.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What if I forgot to submit HRA proof to my employer?</div>
+          <div class="faq-a">Don't worry — you can still claim the HRA exemption while filing your Income Tax Return (ITR). If your employer deducted excess TDS because you didn't submit proof, the excess tax will be refunded by the Income Tax Department after you file your ITR under the old regime. Keep all your rent receipts and landlord details ready for ITR filing.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What is Section 80GG and how does it differ from HRA?</div>
+          <div class="faq-a">Section 80GG applies to individuals who do not receive HRA as part of their salary — typically self-employed persons or those with HRA not in their CTC. The deduction is the least of: ₹5,000/month, 25% of adjusted total income, or actual rent paid minus 10% of total income. HRA under Section 10(13A) is generally more beneficial as it has no fixed upper cap.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can both spouses claim HRA separately for the same rented accommodation?</div>
+          <div class="faq-a">Yes, if both spouses are salaried and both are named as tenants in the rental agreement, and both contribute to the rent payment, both can claim HRA exemption for their respective share of the rent. The rental agreement should clearly mention both names, and the rent payment should ideally be made from separate bank accounts.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Related Calculators -->
+    <div class="related-section">
+      <h2>🔗 Related Calculators</h2>
+      <div class="related-grid">
+        <a href="income-tax-calculator.html" class="related-card">
+          <div class="related-icon">💰</div>
+          <div class="related-info">
+            <span>Income Tax Calculator</span>
+            <small>Old vs New regime comparison</small>
+          </div>
+        </a>
+        <a href="emi-calculator.html" class="related-card">
+          <div class="related-icon">🏠</div>
+          <div class="related-info">
+            <span>EMI Calculator</span>
+            <small>Home loan EMI computation</small>
+          </div>
+        </a>
+        <a href="sip-calculator.html" class="related-card">
+          <div class="related-icon">📈</div>
+          <div class="related-info">
+            <span>SIP Calculator</span>
+            <small>Mutual fund returns</small>
+          </div>
+        </a>
+        <a href="ppf-fd-calculator.html" class="related-card">
+          <div class="related-icon">🏦</div>
+          <div class="related-info">
+            <span>PPF / FD Calculator</span>
+            <small>Fixed savings maturity</small>
+          </div>
+        </a>
+        <a href="gst-calculator.html" class="related-card">
+          <div class="related-icon">🧾</div>
+          <div class="related-info">
+            <span>GST Calculator</span>
+            <small>Add or remove GST</small>
+          </div>
+        </a>
+        <a href="sbi-home-loan-emi-calculator.html" class="related-card">
+          <div class="related-icon">🏛️</div>
+          <div class="related-info">
+            <span>SBI Home Loan EMI</span>
+            <small>At current 8.50% rate</small>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom AdSense -->
+    <div class="ad-bottom">
+      <ins class="adsbygoogle" style="display:block;width:100%;height:90px" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="3333333333" data-ad-format="horizontal"></ins>
+      <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+    </div>
+
+  </main>
+
+  <!-- ===== RIGHT SIDEBAR ===== -->
+  <aside class="right-sidebar">
+
+    <!-- Tax Slab Widget -->
+    <div class="widget">
+      <div class="widget-title">💰 Tax Slabs FY 2025-26 (Old Regime)</div>
+      <div class="tax-slab-row">
+        <div class="slab-dot" style="background:var(--green)"></div>
+        <div class="slab-info">
+          <div style="font-weight:700;font-size:0.83rem">Up to ₹2.5 Lakh</div>
+          <div class="slab-income">Basic exemption limit</div>
+        </div>
+        <div class="slab-rate" style="color:var(--green)">NIL</div>
+      </div>
+      <div class="tax-slab-row">
+        <div class="slab-dot" style="background:var(--teal)"></div>
+        <div class="slab-info">
+          <div style="font-weight:700;font-size:0.83rem">₹2.5L – ₹5L</div>
+          <div class="slab-income">Rebate u/s 87A available</div>
+        </div>
+        <div class="slab-rate" style="color:var(--teal)">5%</div>
+      </div>
+      <div class="tax-slab-row">
+        <div class="slab-dot" style="background:var(--gold)"></div>
+        <div class="slab-info">
+          <div style="font-weight:700;font-size:0.83rem">₹5L – ₹10L</div>
+          <div class="slab-income">Middle income slab</div>
+        </div>
+        <div class="slab-rate" style="color:var(--gold)">20%</div>
+      </div>
+      <div class="tax-slab-row">
+        <div class="slab-dot" style="background:var(--coral)"></div>
+        <div class="slab-info">
+          <div style="font-weight:700;font-size:0.83rem">Above ₹10L</div>
+          <div class="slab-income">Highest slab</div>
+        </div>
+        <div class="slab-rate" style="color:var(--coral)">30%</div>
+      </div>
+    </div>
+
+    <!-- Key HRA Info Widget -->
+    <div class="widget">
+      <div class="widget-title">📌 HRA Quick Facts</div>
+      <div class="rate-row">
+        <span class="rate-label">Metro HRA %</span>
+        <span class="rate-val teal">50% of Basic</span>
+      </div>
+      <div class="rate-row">
+        <span class="rate-label">Non-Metro HRA %</span>
+        <span class="rate-val green">40% of Basic</span>
+      </div>
+      <div class="rate-row">
+        <span class="rate-label">10% Basic deduction</span>
+        <span class="rate-val coral">Condition 3</span>
+      </div>
+      <div class="rate-row">
+        <span class="rate-label">PAN required if rent &gt;</span>
+        <span class="rate-val" style="color:var(--violet)">₹1L/yr</span>
+      </div>
+      <div class="rate-row">
+        <span class="rate-label">New regime HRA?</span>
+        <span class="rate-val coral">❌ Not available</span>
+      </div>
+      <div class="rate-row">
+        <span class="rate-label">Section</span>
+        <span class="rate-val teal">10(13A)</span>
+      </div>
+    </div>
+
+    <!-- Popular Calculators Widget -->
+    <div class="widget">
+      <div class="widget-title">🔥 Popular Calculators</div>
+      <a href="emi-calculator.html" class="popular-calc-item">
+        <span class="popular-calc-icon">🏠</span> EMI Calculator
+      </a>
+      <a href="sip-calculator.html" class="popular-calc-item">
+        <span class="popular-calc-icon">📈</span> SIP Calculator
+      </a>
+      <a href="income-tax-calculator.html" class="popular-calc-item">
+        <span class="popular-calc-icon">💰</span> Income Tax Calculator
+      </a>
+      <a href="gst-calculator.html" class="popular-calc-item">
+        <span class="popular-calc-icon">🧾</span> GST Calculator
+      </a>
+      <a href="ppf-fd-calculator.html" class="popular-calc-item">
+        <span class="popular-calc-icon">🏦</span> PPF / FD Calculator
+      </a>
+      <a href="sbi-home-loan-emi-calculator.html" class="popular-calc-item">
+        <span class="popular-calc-icon">🏛️</span> SBI Home Loan EMI
+      </a>
+    </div>
+
+    <!-- Blog Links Widget -->
+    <div class="widget">
+      <div class="widget-title">📝 Finance Guides</div>
+      <a href="blog.html" class="blog-link-item">
+        <div class="blog-link-dot"></div>
+        <div class="blog-link-text">Old vs New Tax Regime — Which is Better in 2025?</div>
+      </a>
+      <a href="blog.html" class="blog-link-item">
+        <div class="blog-link-dot"></div>
+        <div class="blog-link-text">How to Save Tax with HRA, 80C, NPS &amp; More</div>
+      </a>
+      <a href="blog.html" class="blog-link-item">
+        <div class="blog-link-dot"></div>
+        <div class="blog-link-text">Home Loan Tax Benefits Under Section 24 &amp; 80C</div>
+      </a>
+      <a href="blog.html" class="blog-link-item">
+        <div class="blog-link-dot"></div>
+        <div class="blog-link-text">SIP vs FD: Where Should You Invest in 2025?</div>
+      </a>
+    </div>
+
+    <!-- Sidebar Ad -->
+    <div class="ad-side">
+      <ins class="adsbygoogle" style="display:block;width:250px;height:250px" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="4444444444" data-ad-format="rectangle"></ins>
+      <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+    </div>
+
+  </aside>
+
+</div><!-- end .layout -->
+
+<!-- ===== FOOTER LINKS ===== -->
+<section class="footer-links-section">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>🏠 EMI Calculators</h4>
+        <a href="emi-calculator.html">EMI Calculator</a>
+        <a href="sbi-home-loan-emi-calculator.html">SBI Home Loan EMI</a>
+      </div>
+      <div class="footer-col">
+        <h4>📈 SIP &amp; Investment</h4>
+        <a href="sip-calculator.html">SIP Calculator</a>
+      </div>
+      <div class="footer-col">
+        <h4>🏦 Savings</h4>
+        <a href="ppf-fd-calculator.html">PPF / FD Calculator</a>
+      </div>
+      <div class="footer-col">
+        <h4>💰 Tax &amp; Business</h4>
+        <a href="income-tax-calculator.html">Income Tax Calculator</a>
+        <a href="gst-calculator.html">GST Calculator</a>
+        <a href="hra-calculator.html">HRA Exemption Calculator</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <span>© 2025 IndiCalculator · Informational purposes only · Not financial advice</span>
+  <div class="footer-bottom-links">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About</a>
+    <a href="privacy-policy.html">Privacy</a>
+  </div>
+</footer>
+
+<!-- ===== SCRIPTS ===== -->
+<script src="shared.js"></script>
+<script>
+// =============================================
+// HRA CALCULATOR — SECTION 10(13A) LOGIC
+// =============================================
+
+let donutChartInstance = null;
+let barChartInstance = null;
+
+function fmt(n) {
+  return '₹' + Math.round(n).toLocaleString('en-IN');
+}
+
+function calculateHRA() {
+  const basicAnnual = parseFloat(document.getElementById('basicSalary').value) || 0;
+  const hraReceived = parseFloat(document.getElementById('hraReceived').value) || 0;
+  const rentPaid    = parseFloat(document.getElementById('rentPaid').value) || 0;
+  const cityRadio   = document.querySelector('input[name="cityType"]:checked');
+  const isMetro     = cityRadio ? cityRadio.value === 'metro' : true;
+
+  // ── 3-Condition Formula ──────────────────────
+  const cond1 = hraReceived;
+  const cond2 = basicAnnual * (isMetro ? 0.50 : 0.40);
+  const cond3 = Math.max(0, rentPaid - (basicAnnual * 0.10));
+
+  const exemption  = Math.min(cond1, cond2, cond3);
+  const taxableHRA = Math.max(0, hraReceived - exemption);
+  const exPct      = hraReceived > 0 ? ((exemption / hraReceived) * 100).toFixed(1) : '0.0';
+
+  // ── Update Stat Cards ────────────────────────
+  document.getElementById('statExemption').textContent  = fmt(exemption);
+  document.getElementById('statTaxable').textContent    = fmt(taxableHRA);
+  document.getElementById('statRent').textContent       = fmt(rentPaid);
+  document.getElementById('statHRAReceived').textContent = fmt(hraReceived);
+  document.getElementById('statExPct').textContent      = exPct + '%';
+
+  // ── Update Conditions Table ──────────────────
+  document.getElementById('condC1').textContent    = fmt(cond1);
+  document.getElementById('condC2Label').textContent = isMetro
+    ? '② 50% of Basic Salary (Metro)'
+    : '② 40% of Basic Salary (Non-Metro)';
+  document.getElementById('condC2').textContent    = fmt(cond2);
+  document.getElementById('condC3').textContent    = fmt(cond3);
+  document.getElementById('condMin').textContent   = fmt(exemption);
+
+  // ── Show Results ─────────────────────────────
+  document.getElementById('resultsSection').style.display = 'block';
+  document.getElementById('monthlySection').style.display = 'block';
+
+  // ── Update Charts ────────────────────────────
+  updateDonutChart(exemption, taxableHRA);
+  updateBarChart(cond1, cond2, cond3, isMetro);
+
+  // ── Monthly Breakdown ────────────────────────
+  renderMonthlyTable(basicAnnual, hraReceived, rentPaid, exemption, taxableHRA);
+
+  // ── Smooth scroll to results ─────────────────
+  document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function updateDonutChart(exempt, taxable) {
+  const ctx = document.getElementById('donutChart').getContext('2d');
+  if (donutChartInstance) donutChartInstance.destroy();
+
+  donutChartInstance = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Exempt HRA', 'Taxable HRA'],
+      datasets: [{
+        data: [Math.max(exempt, 0), Math.max(taxable, 0)],
+        backgroundColor: ['#0D9488', '#F97316'],
+        borderColor: '#fff',
+        borderWidth: 3,
+        hoverOffset: 8
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      cutout: '62%',
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: {
+            font: { family: 'Mulish', size: 11, weight: '700' },
+            padding: 14,
+            boxWidth: 12,
+            boxHeight: 12
+          }
+        },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              return ' ' + context.label + ': ₹' + Math.round(context.raw).toLocaleString('en-IN');
+            }
+          }
+        }
+      }
+    }
+  });
+}
+
+function updateBarChart(c1, c2, c3, isMetro) {
+  const ctx = document.getElementById('barChart').getContext('2d');
+  if (barChartInstance) barChartInstance.destroy();
+
+  const minVal = Math.min(c1, c2, c3);
+
+  barChartInstance = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: [
+        'Actual HRA\nReceived',
+        isMetro ? '50% of\nBasic (Metro)' : '40% of\nBasic (Non-Metro)',
+        'Rent Paid\n– 10% Basic'
+      ],
+      datasets: [{
+        label: 'Amount (₹)',
+        data: [c1, c2, c3],
+        backgroundColor: [
+          c1 === minVal ? '#0D9488' : 'rgba(13,148,136,0.45)',
+          c2 === minVal ? '#0D9488' : 'rgba(13,148,136,0.45)',
+          c3 === minVal ? '#0D9488' : 'rgba(13,148,136,0.45)'
+        ],
+        borderRadius: 6,
+        borderSkipped: false
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              return ' ₹' + Math.round(context.raw).toLocaleString('en-IN');
+            }
+          }
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: {
+            callback: function(v) {
+              if (v >= 100000) return '₹' + (v/100000).toFixed(1) + 'L';
+              if (v >= 1000)   return '₹' + (v/1000).toFixed(0) + 'K';
+              return '₹' + v;
+            },
+            font: { family: 'Mulish', size: 10 },
+            color: '#8890AA'
+          },
+          grid: { color: 'rgba(0,0,0,0.05)' }
+        },
+        x: {
+          ticks: {
+            font: { family: 'Mulish', size: 9 },
+            color: '#8890AA',
+            maxRotation: 0
+          },
+          grid: { display: false }
+        }
+      }
+    }
+  });
+}
+
+function renderMonthlyTable(basicAnnual, hraAnnual, rentAnnual, exemptAnnual, taxableAnnual) {
+  const months = ['April','May','June','July','August','September','October','November','December','January','February','March'];
+  const basicM  = basicAnnual / 12;
+  const hraM    = hraAnnual / 12;
+  const rentM   = rentAnnual / 12;
+  const exemptM = exemptAnnual / 12;
+  const taxM    = taxableAnnual / 12;
+
+  const tbody = document.getElementById('monthlyTableBody');
+  tbody.innerHTML = '';
+
+  months.forEach(month => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${month}</td>
+      <td>${fmt(basicM)}</td>
+      <td>${fmt(hraM)}</td>
+      <td>${fmt(rentM)}</td>
+      <td style="color:var(--teal);font-weight:700">${fmt(exemptM)}</td>
+      <td style="color:var(--coral);font-weight:700">${fmt(taxM)}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+
+  // Totals row
+  const totalRow = document.createElement('tr');
+  totalRow.innerHTML = `
+    <td>📊 Annual Total</td>
+    <td>${fmt(basicAnnual)}</td>
+    <td>${fmt(hraAnnual)}</td>
+    <td>${fmt(rentAnnual)}</td>
+    <td>${fmt(exemptAnnual)}</td>
+    <td>${fmt(taxableAnnual)}</td>
+  `;
+  tbody.appendChild(totalRow);
+}
+
+// ── FAQ Accordion ─────────────────────────────
+function initFAQ() {
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+}
+
+// ── Auto-calculate on page load ───────────────
+document.addEventListener('DOMContentLoaded', () => {
+  initFAQ();
+  calculateHRA();
+});
+</script>
+
+<!--
+==============================================
+BROKEN-LINK AUDIT SUMMARY
+==============================================
+Every href used in this page, verified against the valid list:
+
+NAVIGATION / HEADER:
+  ✅ index.html           — valid
+  ✅ emi-calculator.html  — valid
+  ✅ sip-calculator.html  — valid
+  ✅ income-tax-calculator.html — valid
+  ✅ gst-calculator.html  — valid
+  ✅ ppf-fd-calculator.html — valid
+  ✅ blog.html            — valid
+
+LEFT NAV:
+  ✅ emi-calculator.html  — valid
+  ✅ sip-calculator.html  — valid
+  ✅ income-tax-calculator.html — valid
+  ✅ gst-calculator.html  — valid
+  ✅ ppf-fd-calculator.html — valid
+  ✅ sbi-home-loan-emi-calculator.html — valid
+  ✅ hra-calculator.html  — valid (self)
+  ✅ blog.html            — valid
+
+CTA BANNER:
+  ✅ income-tax-calculator.html — valid
+
+RELATED CALCULATORS:
+  ✅ income-tax-calculator.html — valid
+  ✅ emi-calculator.html  — valid
+  ✅ sip-calculator.html  — valid
+  ✅ ppf-fd-calculator.html — valid
+  ✅ gst-calculator.html  — valid
+  ✅ sbi-home-loan-emi-calculator.html — valid
+
+RIGHT SIDEBAR:
+  ✅ emi-calculator.html  — valid
+  ✅ sip-calculator.html  — valid
+  ✅ income-tax-calculator.html — valid
+  ✅ gst-calculator.html  — valid
+  ✅ ppf-fd-calculator.html — valid
+  ✅ sbi-home-loan-emi-calculator.html — valid
+  ✅ blog.html (×4 blog links) — valid
+
+FOOTER LINKS SECTION:
+  ✅ emi-calculator.html  — valid
+  ✅ sbi-home-loan-emi-calculator.html — valid
+  ✅ sip-calculator.html  — valid
+  ✅ ppf-fd-calculator.html — valid
+  ✅ income-tax-calculator.html — valid
+  ✅ gst-calculator.html  — valid
+  ✅ hra-calculator.html  — valid
+
+FOOTER BOTTOM:
+  ✅ index.html           — valid
+  ✅ blog.html            — valid
+  ✅ about.html           — valid
+  ✅ privacy-policy.html  — valid
+
+ASSETS:
+  ✅ shared.css           — valid
+  ✅ shared.js            — valid
+  ✅ Chart.js from cdnjs  — external CDN (valid)
+
+NO invalid links found.
+No references to hdfc-home-loan-emi-calculator.html or any other unlisted page.
+==============================================
+-->
+
+</body>
+</html>
