@@ -280,8 +280,8 @@
 
 <script src="shared.min.js"></script>
 <script>
-document.querySelector('nav a[data-page="ppf"]').classList.add('active');
-document.querySelector('.nav-card[data-nav="ppf"]').classList.add('active');
+var _n=document.querySelector('nav a[data-page="ppf"]');if(_n)_n.classList.add('active');
+var _c=document.querySelector('.nav-card[data-nav="ppf"]');if(_c)_c.classList.add('active');
 
 syncRange('pa','pa-r','pa-d',v=>fmt(v));
 syncRange('pr','pr-r','pr-d',v=>v+'%');

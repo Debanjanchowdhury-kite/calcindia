@@ -271,8 +271,8 @@
 
 <script src="shared.min.js"></script>
 <script>
-document.querySelector('nav a[data-page="gst"]').classList.add('active');
-document.querySelector('.nav-card[data-nav="gst"]').classList.add('active');
+var _n=document.querySelector('nav a[data-page="gst"]');if(_n)_n.classList.add('active');
+var _c=document.querySelector('.nav-card[data-nav="gst"]');if(_c)_c.classList.add('active');
 
 function toggleCGST(){ el('gst-cw').style.display = el('gr').value==='c'?'':'none'; }
 

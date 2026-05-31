@@ -314,8 +314,8 @@
 
 <script src="shared.min.js"></script>
 <script>
-document.querySelector('nav a[data-page="tax"]').classList.add('active');
-document.querySelector('.nav-card[data-nav="tax"]').classList.add('active');
+var _n=document.querySelector('nav a[data-page="tax"]');if(_n)_n.classList.add('active');
+var _c=document.querySelector('.nav-card[data-nav="tax"]');if(_c)_c.classList.add('active');
 
 syncRange('ti','ti-r','ti-d',v=>fmt(v));
 

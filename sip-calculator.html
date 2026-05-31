@@ -327,8 +327,8 @@
 
 <script src="shared.min.js"></script>
 <script>
-document.querySelector('nav a[data-page="sip"]').classList.add('active');
-document.querySelector('.nav-card[data-nav="sip"]').classList.add('active');
+var _n=document.querySelector('nav a[data-page="sip"]');if(_n)_n.classList.add('active');
+var _c=document.querySelector('.nav-card[data-nav="sip"]');if(_c)_c.classList.add('active');
 
 syncRange('sa','sa-r','sa-d',v=>fmtFull(v));
 syncRange('sr','sr-r','sr-d',v=>v+'%');
