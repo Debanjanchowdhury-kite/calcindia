@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Finance Blog — IndiCalculator | EMI, SIP, Tax Tips India 2025</title>
+<meta name="description" content="Free finance guides for Indians — EMI tips, SIP strategies, income tax saving, GST explained, PPF tricks. Updated 2025."/>
+<link rel="canonical" href="https://indicalculator.in/blog.html"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"IndiCalculator Blog","url":"https://indicalculator.in/blog.html"}</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared.css"/>
+<style>
+.blog-hero{background:linear-gradient(135deg,var(--teal-dark),var(--teal));color:#fff;padding:48px 40px;position:relative;overflow:hidden}
+.blog-hero::after{content:'📝';position:absolute;right:40px;top:50%;transform:translateY(-50%);font-size:8rem;opacity:.07;line-height:1;pointer-events:none}
+.blog-hero .bh-kicker{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;opacity:.8;margin-bottom:10px}
+.blog-hero h1{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;margin-bottom:10px;letter-spacing:-.02em}
+.blog-hero p{font-size:.95rem;opacity:.9;max-width:520px;line-height:1.7}
+.blog-toc{background:var(--teal-bg);border:1px solid rgba(13,148,136,.2);border-radius:var(--r);padding:20px;margin:28px 40px 0}
+.blog-toc h3{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
+.toc-item{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid rgba(13,148,136,.12);font-size:.84rem;cursor:pointer;transition:color .2s;color:var(--text-2);text-decoration:none}
+.toc-item:last-child{border:none}
+.toc-item:hover{color:var(--teal)}
+.toc-num{font-family:var(--font-display);font-weight:900;color:var(--teal);font-size:1rem;min-width:22px}
+.blog-grid{margin-top:20px}
+.blog-article{background:var(--surface);border-bottom:1px solid var(--border);scroll-margin-top:80px}
+.article-header{padding:28px 40px 18px;cursor:pointer;display:flex;align-items:flex-start;justify-content:space-between;gap:20px}
+.article-header:hover .art-title{color:var(--teal)}
+.art-meta{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+.art-cat{padding:3px 10px;border-radius:50px;font-size:.63rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.cat-sip{background:rgba(13,148,136,.1);color:var(--teal);border:1px solid rgba(13,148,136,.2)}
+.cat-emi{background:rgba(249,115,22,.1);color:var(--coral);border:1px solid rgba(249,115,22,.2)}
+.cat-tax{background:rgba(124,58,237,.1);color:var(--violet);border:1px solid rgba(124,58,237,.2)}
+.cat-ppf{background:rgba(22,163,74,.1);color:var(--green);border:1px solid rgba(22,163,74,.2)}
+.cat-gst{background:rgba(217,119,6,.1);color:var(--gold);border:1px solid rgba(217,119,6,.2)}
+.art-date,.art-read{font-size:.72rem;color:var(--muted)}
+.art-title{font-family:var(--font-display);font-size:1.4rem;font-weight:900;color:var(--text);line-height:1.2;margin-bottom:8px;transition:color .2s}
+.art-excerpt{font-size:.88rem;color:var(--muted);line-height:1.65}
+.art-toggle{width:32px;height:32px;border-radius:50%;background:var(--surface-2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;transition:all .25s;color:var(--muted);margin-top:4px}
+.blog-article.open .art-toggle{background:var(--teal);color:#fff;border-color:var(--teal);transform:rotate(45deg)}
+.article-body{display:none;padding:4px 40px 32px;border-top:1px solid var(--border)}
+.blog-article.open .article-body{display:block}
+.article-body h2{font-family:var(--font-display);font-size:1.2rem;font-weight:800;margin:22px 0 10px;color:var(--text)}
+.article-body h3{font-family:var(--font-display);font-size:1rem;font-weight:800;margin:16px 0 8px;color:var(--teal)}
+.article-body p{font-size:.9rem;color:var(--text-2);line-height:1.8;margin-bottom:12px}
+.article-body ul,.article-body ol{font-size:.9rem;color:var(--text-2);padding-left:20px;margin-bottom:14px;line-height:1.9}
+.article-body strong{color:var(--text);font-weight:700}
+.article-body .formula{font-family:'Courier New',monospace;font-size:.88rem;background:var(--teal-bg);border:1px solid rgba(13,148,136,.2);border-radius:6px;padding:12px 16px;color:var(--teal-dark);margin:14px 0;font-weight:700}
+.highlight-box{background:var(--gold-bg);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:14px 18px;margin:16px 0;font-size:.88rem;color:var(--text-2);line-height:1.7}
+.highlight-box strong{color:var(--gold)}
+.article-body table{width:100%;border-collapse:collapse;font-size:.84rem;margin:16px 0;border-radius:8px;overflow:hidden;border:1px solid var(--border)}
+.article-body table th{background:var(--teal);color:#fff;padding:10px 14px;text-align:left;font-weight:700;font-size:.78rem}
+.article-body table td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text-2)}
+.article-body table tr:hover td{background:var(--teal-bg)}
+.calc-link-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;background:linear-gradient(135deg,var(--teal),var(--teal-2));color:#fff;border-radius:50px;text-decoration:none;font-weight:700;font-size:.85rem;margin-top:16px;transition:all .2s}
+.calc-link-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(13,148,136,.3)}
+@media(max-width:700px){
+  .article-header,.article-body{padding-left:18px;padding-right:18px}
+  .blog-hero,.blog-toc{padding-left:18px;padding-right:18px}
+  .blog-toc{margin:20px 0 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo a1" style="gap:12px">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" fill="none" style="width:38px;height:38px;flex-shrink:0"><rect width="44" height="44" rx="10" fill="url(#lg)"/><rect x="8" y="12" width="28" height="8" rx="3" fill="white" opacity="0.92"/><rect x="8" y="24" width="11" height="11" rx="3" fill="white" opacity="0.78"/><rect x="22" y="24" width="5" height="11" rx="2" fill="white" opacity="0.65"/><rect x="30" y="24" width="6" height="11" rx="2" fill="white" opacity="0.78"/><defs><linearGradient id="lg" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#0D9488"/><stop offset="100%" stop-color="#0F766E"/></linearGradient></defs></svg>
+    <span style="font-family:var(--font-display);font-size:1.35rem;font-weight:900;color:var(--text);letter-spacing:-0.02em">Indi<span style="color:var(--teal)">Calculator</span></span>
+  </a>
+  <nav class="a2">
+    <a href="emi-calculator.html">EMI</a>
+    <a href="sip-calculator.html">SIP</a>
+    <a href="income-tax-calculator.html">Tax</a>
+    <a href="gst-calculator.html">GST</a>
+    <a href="ppf-fd-calculator.html">PPF/FD</a>
+    <a href="blog.html" class="active">Blog</a>
+  </nav>
+</header>
+<div class="ad-top"><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1234567890"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+<nav class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><span class="current">Finance Blog</span></nav>
+
+<div class="blog-hero">
+  <div class="bh-kicker">📝 IndiCalculator Finance Blog</div>
+  <h1>Free Finance Guides<br/>Built for India</h1>
+  <p>Simple, clear explanations of EMI, SIP, Tax, GST and savings — updated for 2025. No jargon, just practical advice.</p>
+</div>
+
+<div class="layout">
+
+<aside class="left-nav a3">
+  <span class="left-nav-label">Calculators</span>
+  <a href="emi-calculator.html" class="nav-card"><div class="nc-icon">🏠</div><div class="nc-info"><span class="nc-name">EMI</span><span class="nc-desc">Loan calculator</span></div></a>
+  <a href="sip-calculator.html" class="nav-card"><div class="nc-icon">📈</div><div class="nc-info"><span class="nc-name">SIP Returns</span><span class="nc-desc">Mutual fund growth</span></div></a>
+  <a href="income-tax-calculator.html" class="nav-card"><div class="nc-icon">💰</div><div class="nc-info"><span class="nc-name">Income Tax</span><span class="nc-desc">Old vs New regime</span></div></a>
+  <a href="gst-calculator.html" class="nav-card"><div class="nc-icon">🧾</div><div class="nc-info"><span class="nc-name">GST</span><span class="nc-desc">Add/remove tax</span></div></a>
+  <a href="ppf-fd-calculator.html" class="nav-card"><div class="nc-icon">🏦</div><div class="nc-info"><span class="nc-name">PPF / FD</span><span class="nc-desc">Savings maturity</span></div></a>
+  <a href="sbi-home-loan-emi-calculator.html" class="nav-card"><div class="nc-icon">🏛️</div><div class="nc-info"><span class="nc-name">SBI Home Loan</span><span class="nc-desc">Rate: 8.50%</span></div></a>
+  <hr class="nav-divider"/>
+  <a href="blog.html" class="nav-card active"><div class="nc-icon">📝</div><div class="nc-info"><span class="nc-name">Blog</span><span class="nc-desc">Finance guides</span></div></a>
+</aside>
+
+<main class="a4" style="padding:0">
+
+  <div class="blog-toc">
+    <h3>📋 5 Articles — Click to Jump</h3>
+    <a class="toc-item" href="#sip-power"><span class="toc-num">1</span>The Power of SIP: How ₹500/Month Becomes ₹10 Lakh</a>
+    <a class="toc-item" href="#emi-mistakes"><span class="toc-num">2</span>5 EMI Mistakes That Are Costing You Lakhs</a>
+    <a class="toc-item" href="#tax-regime"><span class="toc-num">3</span>Old vs New Tax Regime 2025: Which Saves You More?</a>
+    <a class="toc-item" href="#ppf-tricks"><span class="toc-num">4</span>7 PPF Tricks Every Indian Should Know</a>
+    <a class="toc-item" href="#gst-guide"><span class="toc-num">5</span>GST Simplified: A Plain-English Guide for Small Business</a>
+  </div>
+
+  <div style="padding:16px 40px 0"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="5544332211" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+  <div class="blog-grid">
+
+    <article class="blog-article open" id="sip-power">
+      <div class="article-header" onclick="this.closest('.blog-article').classList.toggle('open')">
+        <div><div class="art-meta"><span class="art-cat cat-sip">📈 SIP</span><span class="art-date">May 2025</span><span class="art-read">· 5 min read</span></div><div class="art-title">The Power of SIP: How ₹500/Month Becomes ₹10 Lakh</div><div class="art-excerpt">Most Indians think investing is only for the rich. This article proves even ₹500/month can build serious wealth through compounding.</div></div>
+        <div class="art-toggle">+</div>
+      </div>
+      <div class="article-body">
+        <p>Systematic Investment Plans (SIPs) have transformed how ordinary Indians invest. You don't need ₹1 lakh to start. All you need is ₹500 and a bank account.</p>
+        <h2>What is a SIP?</h2>
+        <p>A SIP is a method of investing a fixed amount in a mutual fund every month — like an EMI, but to yourself. The fund buys units every month. When markets are low, you get more units. When high, fewer. This <strong>Rupee Cost Averaging</strong> reduces risk significantly over time.</p>
+        <h2>Real Numbers — What ₹500/Month Becomes</h2>
+        <table><thead><tr><th>Duration</th><th>Total Invested</th><th>Final Corpus (12%)</th><th>Profit</th></tr></thead><tbody>
+          <tr><td>5 years</td><td>₹30,000</td><td>₹40,931</td><td>₹10,931</td></tr>
+          <tr><td>10 years</td><td>₹60,000</td><td>₹1,16,170</td><td>₹56,170</td></tr>
+          <tr><td>20 years</td><td>₹1,20,000</td><td>₹4,99,574</td><td>₹3,79,574</td></tr>
+          <tr><td>25 years</td><td>₹1,50,000</td><td>₹9,50,000+</td><td>₹8,00,000+</td></tr>
+        </tbody></table>
+        <div class="highlight-box"><strong>Key Insight:</strong> After 25 years, you invested ₹1.5 lakh but earned ₹8 lakh in returns. Your money grew 6× — this is compound interest working silently every month.</div>
+        <h2>Starting Early vs Starting Late</h2>
+        <ul>
+          <li><strong>Start at 25:</strong> ₹2,000/month × 35 years = ₹1.08 Crore</li>
+          <li><strong>Start at 35:</strong> ₹2,000/month × 25 years = ₹37.9 Lakh</li>
+          <li><strong>Start at 45:</strong> ₹2,000/month × 15 years = ₹10 Lakh</li>
+        </ul>
+        <p>Same monthly amount, same fund. The only difference is when you started. <strong>Starting 10 years earlier gives you 3× more wealth.</strong></p>
+        <h2>How to Start Your SIP Today</h2>
+        <ol>
+          <li>Complete KYC on Groww, Zerodha or Paytm Money — takes 10 minutes</li>
+          <li>Choose a Nifty 50 Index Fund for beginners (lowest risk, lowest cost)</li>
+          <li>Set auto-debit for the 1st of every month</li>
+          <li>Don't stop it — not even when markets fall</li>
+          <li>Increase by 10% every year (Step-Up SIP)</li>
+        </ol>
+        <h3>SIP Myths Busted</h3>
+        <ul>
+          <li>❌ "I need to time the market" → SIP automatically averages your cost</li>
+          <li>❌ "Mutual funds always lose" → Nifty 50 has given 14%+ over 20 years</li>
+          <li>❌ "FD is safer" → FD gives 7%, inflation is 6%. You're barely growing.</li>
+        </ul>
+        <a class="calc-link-btn" href="sip-calculator.html">📈 Calculate Your SIP Returns →</a>
+      </div>
+    </article>
+
+    <article class="blog-article" id="emi-mistakes">
+      <div class="article-header" onclick="this.closest('.blog-article').classList.toggle('open')">
+        <div><div class="art-meta"><span class="art-cat cat-emi">🏠 Home Loans</span><span class="art-date">May 2025</span><span class="art-read">· 6 min read</span></div><div class="art-title">5 EMI Mistakes That Are Costing You Lakhs</div><div class="art-excerpt">Millions of Indians pay their EMI without realising they're leaving lakhs on the table. Here are 5 costly mistakes and exactly how to fix them.</div></div>
+        <div class="art-toggle">+</div>
+      </div>
+      <div class="article-body">
+        <p>A ₹50 lakh home loan at 8.5% for 20 years means you'll pay back over ₹1 crore — double the original. Most people never take steps to reduce this. Here are 5 mistakes draining your money.</p>
+        <h2>Mistake 1: Not Comparing Banks</h2>
+        <p>Most people walk into their existing bank and accept whatever rate is offered. The difference between 8.5% (SBI) and 9.0% (another bank) on a ₹50 lakh loan is <strong>₹1,71,600 in extra interest</strong> over 20 years.</p>
+        <p><strong>Fix:</strong> Get quotes from at least 3 banks. Use competing offers to negotiate 0.25–0.5% off your rate.</p>
+        <h2>Mistake 2: Choosing 30-Year Tenure for Low EMI</h2>
+        <table><thead><tr><th>Tenure</th><th>EMI (₹50L @ 8.5%)</th><th>Total Interest</th></tr></thead><tbody>
+          <tr><td>10 years</td><td>₹61,993</td><td>₹24.4 Lakh</td></tr>
+          <tr><td>20 years</td><td>₹43,391</td><td>₹54.1 Lakh</td></tr>
+          <tr><td>30 years</td><td>₹38,449</td><td>₹88.4 Lakh</td></tr>
+        </tbody></table>
+        <p><strong>Fix:</strong> Shorter tenure costs ₹5,000 more per month but saves ₹34 lakh. Choose the shortest tenure your budget allows.</p>
+        <h2>Mistake 3: Never Making Prepayments</h2>
+        <p>RBI mandates zero prepayment penalty on floating-rate home loans. Paying one extra EMI per year using your annual bonus can reduce a 20-year loan to 17 years and save ₹8–10 lakh.</p>
+        <h2>Mistake 4: Not Claiming Tax Benefits</h2>
+        <ul>
+          <li><strong>Section 80C:</strong> Up to ₹1.5L on principal repayment — saves ₹46,800/year at 30% slab</li>
+          <li><strong>Section 24(b):</strong> Up to ₹2L on interest — saves ₹62,400/year</li>
+          <li><strong>Joint loan:</strong> Both co-borrowers claim separately — doubles the benefit</li>
+        </ul>
+        <p><strong>Fix:</strong> Give your home loan certificate to HR at the start of every financial year. 5 minutes = ₹1 lakh saved.</p>
+        <h2>Mistake 5: Not Switching When Rates Fall</h2>
+        <p>Banks don't automatically lower your rate when RBI cuts rates. Check your rate every year. If another bank offers 0.5% lower, request a rate reset — or do a balance transfer after Year 3 when switching cost is worth it.</p>
+        <a class="calc-link-btn" href="emi-calculator.html">🏠 Calculate Your EMI and Total Cost →</a>
+      </div>
+    </article>
+
+    <article class="blog-article" id="tax-regime">
+      <div class="article-header" onclick="this.closest('.blog-article').classList.toggle('open')">
+        <div><div class="art-meta"><span class="art-cat cat-tax">💰 Income Tax</span><span class="art-date">April 2025</span><span class="art-read">· 7 min read</span></div><div class="art-title">Old vs New Tax Regime 2025: Which One Saves You More?</div><div class="art-excerpt">The New Regime is now the default. But is it better for you? The answer depends entirely on your deductions. Here's how to decide in under 5 minutes.</div></div>
+        <div class="art-toggle">+</div>
+      </div>
+      <div class="article-body">
+        <div class="highlight-box"><strong>Quick Answer:</strong> Choose New Regime if total deductions &lt; ₹3.75 lakh. Choose Old Regime if deductions &gt; ₹3.75 lakh.</div>
+        <h2>New Regime Slabs FY 2025-26</h2>
+        <table><thead><tr><th>Income Slab</th><th>Rate</th></tr></thead><tbody>
+          <tr><td>Up to ₹4,00,000</td><td>Nil</td></tr>
+          <tr><td>₹4L – ₹8L</td><td>5%</td></tr>
+          <tr><td>₹8L – ₹12L</td><td>10%</td></tr>
+          <tr><td>₹12L – ₹16L</td><td>15%</td></tr>
+          <tr><td>Above ₹24L</td><td>30%</td></tr>
+        </tbody></table>
+        <p>Standard deduction ₹75,000. Income up to ₹12L effectively <strong>tax-free</strong> via 87A rebate.</p>
+        <h2>Old Regime Slabs FY 2025-26</h2>
+        <table><thead><tr><th>Income Slab</th><th>Rate</th></tr></thead><tbody>
+          <tr><td>Up to ₹2,50,000</td><td>Nil</td></tr>
+          <tr><td>₹2.5L – ₹5L</td><td>5%</td></tr>
+          <tr><td>₹5L – ₹10L</td><td>20%</td></tr>
+          <tr><td>Above ₹10L</td><td>30%</td></tr>
+        </tbody></table>
+        <p>Standard deduction ₹50,000. All major deductions available: 80C, HRA, 80D, NPS, home loan interest.</p>
+        <h2>Real Comparison — ₹15 Lakh Salary</h2>
+        <table><thead><tr><th>Item</th><th>Old Regime</th><th>New Regime</th></tr></thead><tbody>
+          <tr><td>Standard Deduction</td><td>₹50,000</td><td>₹75,000</td></tr>
+          <tr><td>80C Investments</td><td>₹1,50,000</td><td>Not allowed</td></tr>
+          <tr><td>HRA Exemption</td><td>₹80,000</td><td>Not allowed</td></tr>
+          <tr><td>80D Health Insurance</td><td>₹25,000</td><td>Not allowed</td></tr>
+          <tr><td><strong>Total Tax (incl. cess)</strong></td><td><strong>₹1,64,372</strong></td><td><strong>₹1,89,500</strong></td></tr>
+        </tbody></table>
+        <p>Old Regime saves ₹25,128 here — because this person has strong deductions. Without deductions, New Regime wins by a similar margin.</p>
+        <h2>Can You Switch Every Year?</h2>
+        <p>Yes — salaried employees can switch between regimes each year while filing ITR. Business income earners can switch only once (back to Old Regime). Choose at ITR filing time, not when you declare investments to HR (that's just advance tax calculation).</p>
+        <a class="calc-link-btn" href="income-tax-calculator.html">💰 Compare Both Regimes for Your Salary →</a>
+      </div>
+    </article>
+
+    <article class="blog-article" id="ppf-tricks">
+      <div class="article-header" onclick="this.closest('.blog-article').classList.toggle('open')">
+        <div><div class="art-meta"><span class="art-cat cat-ppf">🏦 PPF</span><span class="art-date">April 2025</span><span class="art-read">· 5 min read</span></div><div class="art-title">7 PPF Tricks Every Indian Should Know</div><div class="art-excerpt">PPF is India's best tax-free investment. Most people only know the basics. These 7 tricks can add lakhs to your final corpus with no extra investment.</div></div>
+        <div class="art-toggle">+</div>
+      </div>
+      <div class="article-body">
+        <p>PPF offers 7.1% interest, full EEE tax exemption, and government guarantee. No other investment in India gives you all three. But most investors make simple mistakes that cost lakhs over 15 years.</p>
+        <h2>PPF at a Glance</h2>
+        <ul>
+          <li><strong>Minimum:</strong> ₹500/year | <strong>Maximum:</strong> ₹1,50,000/year</li>
+          <li><strong>Rate:</strong> 7.10% p.a. (Q3 FY 2025-26, reviewed quarterly)</li>
+          <li><strong>Tenure:</strong> 15 years (extendable in 5-year blocks)</li>
+          <li><strong>Tax:</strong> EEE — investment, interest, and maturity all tax-free</li>
+        </ul>
+        <h2>Trick 1: Deposit Before the 5th of Every Month</h2>
+        <p>PPF interest is calculated on the minimum balance between the 5th and last day of the month. Deposit on March 6th instead of March 4th and you lose one full month of interest on that amount. Over 15 years, this adds up to ₹20,000+.</p>
+        <h2>Trick 2: Invest in April, Not March</h2>
+        <p>Depositing ₹1.5 lakh in April gives you 12 months of interest. Depositing in March gives you 1 month. Do this for 15 years consistently and earn ₹1–1.5 lakh extra — free money for changing the timing of your deposit.</p>
+        <h2>Trick 3: Extend After Maturity — Don't Close</h2>
+        <div class="highlight-box"><strong>Example:</strong> ₹1.5L/year for 15 years = ₹40.68 lakh. Extend 5 more years with no deposits = ₹57.4 lakh. Extra ₹16.7 lakh for doing absolutely nothing.</div>
+        <h2>Trick 4: Open a PPF for Your Child</h2>
+        <p>A PPF opened at your child's birth matures at age 15 with completely tax-free returns. The entire 15-year compounding happens during your child's growing years, and they have a tax-free corpus available for education or marriage.</p>
+        <h2>Trick 5: Use PPF Loan Instead of Breaking FD</h2>
+        <p>PPF loan (Year 3–6) costs 1% above PPF rate = 8.1%. Far cheaper than personal loan (12–24%). Your PPF continues earning 7.1% while you borrow at 8.1% — net cost is just 1%. No processing fees, no credit check.</p>
+        <h2>Trick 6: Combine PPF + ELSS for Maximum 80C Benefit</h2>
+        <p>Put ₹75,000 in PPF (guaranteed 7.1%) and ₹75,000 in ELSS (12–15% potential). You claim full ₹1.5 lakh 80C deduction while balancing risk and return perfectly.</p>
+        <h2>Trick 7: The Partial Withdrawal Strategy</h2>
+        <p>From Year 7, you can withdraw 50% of the balance from Year 4. Use this as an emergency fund instead of a personal loan. You withdraw tax-free, and your remaining balance continues compounding at 7.1%.</p>
+        <a class="calc-link-btn" href="ppf-fd-calculator.html">🏦 Calculate Your PPF Maturity →</a>
+      </div>
+    </article>
+
+    <article class="blog-article" id="gst-guide">
+      <div class="article-header" onclick="this.closest('.blog-article').classList.toggle('open')">
+        <div><div class="art-meta"><span class="art-cat cat-gst">🧾 GST</span><span class="art-date">March 2025</span><span class="art-read">· 6 min read</span></div><div class="art-title">GST Simplified: A Plain-English Guide for Small Business Owners</div><div class="art-excerpt">CGST, SGST, IGST, ITC — GST confuses most small business owners. This guide explains everything clearly with real examples.</div></div>
+        <div class="art-toggle">+</div>
+      </div>
+      <div class="article-body">
+        <p>GST was launched in India on 1 July 2017, replacing 17 different taxes. Despite being 8 years old, it still confuses millions of small business owners. This guide covers everything you need to know.</p>
+        <h2>What is GST in Simple Terms?</h2>
+        <p>GST is a tax on the "value you add." If you buy a product for ₹100 and sell it for ₹150, you pay GST only on the ₹50 you added — not the full ₹150. This prevents the cascading "tax on tax" problem that existed before 2017.</p>
+        <h2>CGST vs SGST vs IGST — Explained Simply</h2>
+        <table><thead><tr><th>Type</th><th>When Applied</th><th>Goes To</th></tr></thead><tbody>
+          <tr><td>CGST</td><td>Sale within same state</td><td>Central Government</td></tr>
+          <tr><td>SGST</td><td>Sale within same state</td><td>State Government</td></tr>
+          <tr><td>IGST</td><td>Sale to another state</td><td>Central (shared later)</td></tr>
+        </tbody></table>
+        <div class="highlight-box"><strong>Simple Rule:</strong> Delhi shop → Delhi customer = CGST + SGST (equal halves). Delhi shop → Mumbai customer = IGST only (same total rate).</div>
+        <h2>GST Rate Slabs 2025</h2>
+        <table><thead><tr><th>Rate</th><th>What's Included</th></tr></thead><tbody>
+          <tr><td>0%</td><td>Fresh vegetables, milk, eggs, books, salt</td></tr>
+          <tr><td>5%</td><td>Medicines, packaged food, economy hotels, transport</td></tr>
+          <tr><td>12%</td><td>Processed food, computers, mobile phones</td></tr>
+          <tr><td>18%</td><td>IT services, telecom, restaurants, most services</td></tr>
+          <tr><td>28%</td><td>Luxury cars, tobacco, aerated drinks</td></tr>
+        </tbody></table>
+        <h2>Who Must Register for GST?</h2>
+        <ul>
+          <li>Annual turnover above <strong>₹40 lakh</strong> (goods) or <strong>₹20 lakh</strong> (services)</li>
+          <li>Anyone selling across state borders (any turnover)</li>
+          <li>E-commerce sellers on Amazon, Flipkart (any turnover)</li>
+          <li>Casual taxable persons running temporary businesses</li>
+        </ul>
+        <h2>Input Tax Credit (ITC) — Your Biggest GST Benefit</h2>
+        <p>You can deduct the GST you paid on purchases from the GST you collect on sales.</p>
+        <p><strong>Example:</strong> Buy materials for ₹1L + ₹18,000 GST. Sell goods for ₹1.5L + ₹27,000 GST. Net tax to pay: ₹27,000 − ₹18,000 = <strong>only ₹9,000</strong>. You saved ₹18,000 because of ITC.</p>
+        <h2>GST Filing Deadlines — Never Miss These</h2>
+        <ul>
+          <li><strong>GSTR-1</strong> (sales details): 11th of next month</li>
+          <li><strong>GSTR-3B</strong> (summary + payment): 20th of next month</li>
+          <li><strong>GSTR-9</strong> (annual return): 31st December</li>
+          <li><strong>Late fee:</strong> ₹50/day (₹20/day for nil returns)</li>
+        </ul>
+        <h2>3 Common GST Mistakes to Avoid</h2>
+        <ul>
+          <li><strong>Wrong HSN code:</strong> Every product has a code — wrong code = wrong rate = penalty</li>
+          <li><strong>Missing ITC claims:</strong> Claims expire — file and claim every month</li>
+          <li><strong>Not reconciling GSTR-2A:</strong> You can only claim ITC if your supplier also filed returns</li>
+        </ul>
+        <a class="calc-link-btn" href="gst-calculator.html">🧾 Calculate GST for Your Invoice →</a>
+      </div>
+    </article>
+
+  </div>
+
+  <div style="padding:20px 40px"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="9988776655" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+</main>
+
+<aside class="right-sidebar">
+  <div class="widget">
+    <div class="widget-title">📊 Live Rates · FY 2025-26</div>
+    <div class="rate-row"><span class="rate-label">RBI Repo Rate</span><span class="rate-val coral">6.50%</span></div>
+    <div class="rate-row"><span class="rate-label">SBI Home Loan</span><span class="rate-val teal">8.50%</span></div>
+    <div class="rate-row"><span class="rate-label">HDFC Home Loan</span><span class="rate-val teal">8.55%</span></div>
+    <div class="rate-row"><span class="rate-label">PPF Rate</span><span class="rate-val green">7.10%</span></div>
+    <div class="rate-row"><span class="rate-label">NSC Rate</span><span class="rate-val green">7.70%</span></div>
+    <div class="rate-row"><span class="rate-label">SBI Senior FD</span><span class="rate-val green">7.60%</span></div>
+  </div>
+  <div class="widget">
+    <div class="widget-title">⭐ All Calculators</div>
+    <a class="bank-link" href="emi-calculator.html">EMI Calculator</a>
+    <a class="bank-link" href="sip-calculator.html">SIP Calculator</a>
+    <a class="bank-link" href="income-tax-calculator.html">Income Tax Calculator</a>
+    <a class="bank-link" href="gst-calculator.html">GST Calculator</a>
+    <a class="bank-link" href="ppf-fd-calculator.html">PPF / FD Calculator</a>
+    <a class="bank-link" href="sbi-home-loan-emi-calculator.html">SBI Home Loan EMI</a>
+  </div>
+</aside>
+
+</div>
+
+<section class="footer-links-section"><div class="container"><div class="footer-grid">
+  <div class="footer-col"><h4>🏠 EMI Calculators</h4><a href="emi-calculator.html">EMI Calculator</a><a href="sbi-home-loan-emi-calculator.html">SBI Home Loan EMI</a></div>
+  <div class="footer-col"><h4>📈 SIP &amp; Investment</h4><a href="sip-calculator.html">SIP Calculator</a></div>
+  <div class="footer-col"><h4>🏦 Savings</h4><a href="ppf-fd-calculator.html">PPF / FD Calculator</a></div>
+  <div class="footer-col"><h4>💰 Tax &amp; Business</h4><a href="income-tax-calculator.html">Income Tax Calculator</a><a href="gst-calculator.html">GST Calculator</a></div>
+</div></div></section>
+<footer><span>© 2025 IndiCalculator · Informational purposes only · Not financial advice</span><div class="footer-bottom-links"><a href="index.html">Home</a><a href="blog.html">Blog</a></div></footer>
+
+<script src="shared.js"></script>
+</body>
+</html>
