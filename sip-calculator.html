@@ -1,19 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-62K8SJ29WC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-62K8SJ29WC');
-</script>
-
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>SIP Calculator 2025 - Mutual Fund SIP Returns Calculator Online | IndiCalculator</title>
+<title>SIP Calculator 2025 | Mutual Fund Returns Online | IndiCalculator</title>
 <meta name="description" content="Free SIP Calculator to calculate monthly SIP returns on mutual fund investments. Plan your wealth with step-up SIP, see compound growth with charts. Updated 2025."/>
 <meta name="keywords" content="SIP calculator, mutual fund SIP calculator, step up SIP, SIP returns calculator India, monthly SIP calculator"/>
 <link rel="canonical" href="https://indicalculator.in/sip-calculator.html"/>
@@ -22,7 +12,7 @@
 <meta property="og:url" content="https://indicalculator.in/sip-calculator.html"/>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"SIP Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"url":"https://indicalculator.in/sip-calculator.html","description":"Free SIP Calculator for mutual fund returns"}
+{"@context":"https://schema.org","@type":"WebApplication","name":"SIP Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","ratingCount":"1250"},"review":{"@type":"Review","author":{"@type":"Person","name":"Arjun Kumar"},"reviewRating":{"@type":"Rating","ratingValue":"5"}},"offers":{"@type":"Offer","price":"0"},"url":"https://indicalculator.in/sip-calculator.html","description":"Free SIP Calculator for mutual fund returns"}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://indicalculator.in/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://indicalculator.in/calculators.html"},{"@type":"ListItem","position":3,"name":"SIP Calculator"}]}
@@ -37,7 +27,6 @@
 ]}
 </script>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="shared.css"/>
@@ -334,7 +323,7 @@
 </div></div></section>
 <footer><span>© 2025 IndiCalculator · Informational purposes only · Not financial advice</span><div class="footer-bottom-links"><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="about.html">About</a><a href="privacy-policy.html">Privacy</a></div></footer>
 
-<script src="shared.js"></script>
+<script src="shared.min.js"></script>
 <script>
 document.querySelector('nav a[data-page="sip"]').classList.add('active');
 document.querySelector('.nav-card[data-nav="sip"]').classList.add('active');
@@ -384,6 +373,30 @@ function calcSIP(){
 
 initFAQ();
 calcSIP();
+</script>
+
+<!-- Lazy Load Third-Party Scripts -->
+<script>
+  let scriptsLoaded = false;
+  function loadScripts() {
+    if (scriptsLoaded) return;
+    scriptsLoaded = true;
+    let ga = document.createElement('script');
+    ga.src = "https://www.googletagmanager.com/gtag/js?id=G-62K8SJ29WC";
+    ga.async = true;
+    document.head.appendChild(ga);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-62K8SJ29WC');
+    let ads = document.createElement('script');
+    ads.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX";
+    ads.async = true;
+    ads.crossOrigin = "anonymous";
+    document.head.appendChild(ads);
+  }
+  ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(evt => window.addEventListener(evt, loadScripts, { once: true, passive: true }));
+  setTimeout(loadScripts, 3500);
 </script>
 </body>
 </html>

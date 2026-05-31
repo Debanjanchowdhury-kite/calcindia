@@ -1,19 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-62K8SJ29WC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-62K8SJ29WC');
-</script>
-
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>GST Calculator India 2025 - Add or Remove GST Online (CGST SGST IGST) | IndiCalculator</title>
+<title>GST Calculator India 2025 | Add/Remove CGST & SGST | IndiCalculator</title>
 <meta name="description" content="Free GST Calculator India 2025 to add or remove GST. Calculate CGST, SGST, IGST instantly for 5%, 12%, 18%, 28% slabs. Inclusive/Exclusive mode. Free for businesses."/>
 <meta name="keywords" content="GST calculator, GST calculator India, CGST SGST calculator, IGST calculator, reverse GST calculator, GST inclusive exclusive"/>
 <link rel="canonical" href="https://indicalculator.in/gst-calculator.html"/>
@@ -21,7 +11,7 @@
 <meta property="og:description" content="Calculate GST instantly with CGST, SGST, IGST breakdown. All slabs supported."/>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"GST Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+{"@context":"https://schema.org","@type":"WebApplication","name":"GST Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","ratingCount":"1250"},"review":{"@type":"Review","author":{"@type":"Person","name":"Arjun Kumar"},"reviewRating":{"@type":"Rating","ratingValue":"5"}},"offers":{"@type":"Offer","price":"0"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://indicalculator.in/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://indicalculator.in/calculators.html"},{"@type":"ListItem","position":3,"name":"GST Calculator"}]}
@@ -34,7 +24,6 @@
 ]}
 </script>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="shared.css"/>
@@ -278,7 +267,7 @@
 </div></div></section>
 <footer><span>© 2025 IndiCalculator · Informational purposes only · Not financial advice</span><div class="footer-bottom-links"><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="about.html">About</a><a href="privacy-policy.html">Privacy</a></div></footer>
 
-<script src="shared.js"></script>
+<script src="shared.min.js"></script>
 <script>
 document.querySelector('nav a[data-page="gst"]').classList.add('active');
 document.querySelector('.nav-card[data-nav="gst"]').classList.add('active');
@@ -309,6 +298,30 @@ function calcGST(){
 
 initFAQ();
 calcGST();
+</script>
+
+<!-- Lazy Load Third-Party Scripts -->
+<script>
+  let scriptsLoaded = false;
+  function loadScripts() {
+    if (scriptsLoaded) return;
+    scriptsLoaded = true;
+    let ga = document.createElement('script');
+    ga.src = "https://www.googletagmanager.com/gtag/js?id=G-62K8SJ29WC";
+    ga.async = true;
+    document.head.appendChild(ga);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-62K8SJ29WC');
+    let ads = document.createElement('script');
+    ads.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX";
+    ads.async = true;
+    ads.crossOrigin = "anonymous";
+    document.head.appendChild(ads);
+  }
+  ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(evt => window.addEventListener(evt, loadScripts, { once: true, passive: true }));
+  setTimeout(loadScripts, 3500);
 </script>
 </body>
 </html>

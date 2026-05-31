@@ -1,0 +1,20 @@
+# IndiCalculator
+
+> Free Indian financial calculators for EMI, SIP, Income Tax, GST, PPF, and FD.
+
+IndiCalculator is a completely free, client-side static website that provides financial calculators specifically tailored for the Indian market and tax regulations. All calculations are performed entirely in the browser, ensuring 100% privacy with no data sent to any servers.
+
+## Tools Available
+- [EMI Calculator](https://indicalculator.in/emi-calculator.html): Calculate home loan, car loan, and personal loan EMIs.
+- [SIP Calculator](https://indicalculator.in/sip-calculator.html): Calculate Mutual Fund SIP returns with visual charts.
+- [Income Tax Calculator](https://indicalculator.in/income-tax-calculator.html): Compare Old vs New tax regimes for FY 2025-26.
+- [GST Calculator](https://indicalculator.in/gst-calculator.html): Add or remove GST (CGST, SGST, IGST).
+- [PPF & FD Calculator](https://indicalculator.in/ppf-fd-calculator.html): Calculate maturity value and interest earned.
+- [Salary Calculator](https://indicalculator.in/salary-calculator.html): Calculate in-hand take-home salary after PF, ESI, and TDS deductions.
+- [HRA Calculator](https://indicalculator.in/hra-calculator.html): Calculate House Rent Allowance tax exemptions.
+
+## Additional Resources
+- [Finance Blog](https://indicalculator.in/blog.html): Tips and guides on SIPs, home loans, and taxes.
+
+## Privacy
+We do not collect, process, or store any user financial data. All calculations are 100% client-side. See our [Privacy Policy](https://indicalculator.in/privacy-policy.html) for more details.

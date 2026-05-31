@@ -1,19 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-62K8SJ29WC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-62K8SJ29WC');
-</script>
-
-  <meta charset="UTF-8"/>
+<meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>HRA Calculator 2025 - House Rent Allowance Exemption Calculator | IndiCalculator</title>
+  <title>HRA Calculator 2025 | House Rent Exemption Online | IndiCalculator</title>
   <meta name="description" content="Calculate HRA exemption under Section 10(13A). Free HRA calculator for FY 2025-26. Find taxable &amp; exempt HRA for metro &amp; non-metro cities."/>
   <link rel="canonical" href="https://indicalculator.in/hra-calculator.html"/>
 
@@ -143,8 +133,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
 
   <!-- Google AdSense placeholder -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-
   <style>
     /* Page-specific overrides */
     .radio-group{display:flex;gap:12px;flex-wrap:wrap;margin-top:4px}
@@ -868,7 +856,7 @@
 </footer>
 
 <!-- ===== SCRIPTS ===== -->
-<script src="shared.js"></script>
+<script src="shared.min.js"></script>
 <script>
 // =============================================
 // HRA CALCULATOR — SECTION 10(13A) LOGIC
@@ -1162,5 +1150,29 @@ No references to hdfc-home-loan-emi-calculator.html or any other unlisted page.
 ==============================================
 -->
 
+
+<!-- Lazy Load Third-Party Scripts -->
+<script>
+  let scriptsLoaded = false;
+  function loadScripts() {
+    if (scriptsLoaded) return;
+    scriptsLoaded = true;
+    let ga = document.createElement('script');
+    ga.src = "https://www.googletagmanager.com/gtag/js?id=G-62K8SJ29WC";
+    ga.async = true;
+    document.head.appendChild(ga);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-62K8SJ29WC');
+    let ads = document.createElement('script');
+    ads.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX";
+    ads.async = true;
+    ads.crossOrigin = "anonymous";
+    document.head.appendChild(ads);
+  }
+  ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(evt => window.addEventListener(evt, loadScripts, { once: true, passive: true }));
+  setTimeout(loadScripts, 3500);
+</script>
 </body>
 </html>

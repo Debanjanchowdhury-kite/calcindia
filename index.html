@@ -1,19 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-62K8SJ29WC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-62K8SJ29WC');
-</script>
-
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>IndiCalculator — Free Online Financial Calculators for India 2025 | EMI, SIP, Tax, GST, PPF</title>
+<title>Free Online Financial Calculators India 2025 | IndiCalculator</title>
 <meta name="description" content="India's most-trusted free financial calculators. Calculate EMI, SIP returns, Income Tax, GST, PPF & FD instantly. Updated for 2025 with latest rates and tax slabs."/>
 <meta name="keywords" content="financial calculator India, EMI calculator, SIP calculator, income tax calculator, GST calculator, PPF calculator, FD calculator"/>
 <link rel="canonical" href="https://indicalculator.in/"/>
@@ -97,7 +87,6 @@
 .content-block p{color:#475569;line-height:1.75;margin:0 0 16px}
 </style>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -253,6 +242,30 @@
 document.querySelectorAll('[data-include]').forEach(el=>{
   Promise.resolve('').then(r=>r.text()).then(html=>{ el.innerHTML=html; });
 });
+</script>
+
+<!-- Lazy Load Third-Party Scripts -->
+<script>
+  let scriptsLoaded = false;
+  function loadScripts() {
+    if (scriptsLoaded) return;
+    scriptsLoaded = true;
+    let ga = document.createElement('script');
+    ga.src = "https://www.googletagmanager.com/gtag/js?id=G-62K8SJ29WC";
+    ga.async = true;
+    document.head.appendChild(ga);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-62K8SJ29WC');
+    let ads = document.createElement('script');
+    ads.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX";
+    ads.async = true;
+    ads.crossOrigin = "anonymous";
+    document.head.appendChild(ads);
+  }
+  ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(evt => window.addEventListener(evt, loadScripts, { once: true, passive: true }));
+  setTimeout(loadScripts, 3500);
 </script>
 </body>
 </html>

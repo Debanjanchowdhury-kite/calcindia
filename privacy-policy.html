@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-62K8SJ29WC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-62K8SJ29WC');
-</script>
-
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Privacy Policy - IndiCalculator | How We Use Your Data</title>
@@ -67,8 +57,6 @@
 <link rel="stylesheet" href="shared.css"/>
 
 <!-- Google AdSense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-
 <!-- Google Analytics GA4 -->
 <style>
 /* ── Privacy Policy page-specific styles ── */
@@ -350,14 +338,14 @@
     <!-- ══════════════════════════════════════════════════════════════ -->
     <div class="info-section policy-section" id="section-intro">
       <h2>Introduction</h2>
-      <p>Welcome to <strong>IndiCalculator</strong> (<a href="index.html" style="color:var(--teal)">indicalculator.in</a>), a free Indian financial calculator website. We are committed to protecting your privacy and being fully transparent about how we collect, use, and safeguard any information relating to your use of our website.</p>
+      <p>Welcome to <strong>IndiCalculator</strong> (<a href="index.html" style="color:var(--teal)">indicalculator.in</a>), a free Indian financial calculator website. We protect your privacy. We are fully transparent about how we handle your information.</p>
       <p>This Privacy Policy applies to all pages and services offered on IndiCalculator, including our EMI Calculator, SIP Calculator, Income Tax Calculator, GST Calculator, PPF/FD Calculator, and all associated blog articles and informational content.</p>
-      <p>By accessing or using IndiCalculator, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy. If you do not agree with any part of this policy, please discontinue your use of our website.</p>
+      <p>By using IndiCalculator, you agree to this Privacy Policy. If you do not agree, please do not use the website.</p>
       <p>IndiCalculator is a <strong>purely static website</strong> hosted on GitHub Pages. We do not operate servers that process or store user data. All calculations performed on this website take place entirely within your browser and are never transmitted to any server operated by us.</p>
       <div class="policy-callout">
         <strong>In Plain English:</strong> Our calculators are 100% client-side. Whatever numbers you enter into our EMI, SIP, or Tax calculators stay in your browser only. We never see, store, or process your financial data.
       </div>
-      <p>This policy is governed by and construed in accordance with the laws of <strong>India</strong>, including the Information Technology Act, 2000, and the Information Technology (Amendment) Act, 2008. For users outside India, we comply with applicable international standards to the extent reasonably practicable.</p>
+      <p>This policy follows the laws of <strong>India</strong>, including the IT Act of 2000.</p>
       <a href="#toc" class="back-top">↑ Back to Table of Contents</a>
     </div>
 
@@ -661,7 +649,7 @@
       <div class="policy-callout">
         <strong>IndiCalculator Privacy Contact</strong><br/>
         📧 Email: <a href="mailto:contact@indicalculator.in" style="color:var(--teal)">contact@indicalculator.in</a><br/>
-        🐙 GitHub: <a href="https://github.com/debanjanchoudhury-kite/calcindia" rel="noopener noreferrer" target="_blank" style="color:var(--teal)">github.com/debanjanchoudhury-kite/calcindia</a><br/>
+        🐙 GitHub: <a href="mailto:contact@indicalculator.in" style="color:var(--teal)">contact@indicalculator.in</a><br/>
         🌐 Website: <a href="index.html" style="color:var(--teal)">indicalculator.in</a>
       </div>
 
@@ -674,7 +662,7 @@
         <li>Contact us directly at contact@indicalculator.in to resolve the matter informally</li>
         <li>File a complaint with the relevant data protection authority in your jurisdiction</li>
         <li>For Indian residents: Contact the <strong>Ministry of Electronics and Information Technology (MeitY)</strong> or the Data Protection Board of India (once operational under the Digital Personal Data Protection Act, 2023)</li>
-        <li>Open a public issue on our GitHub repository at <a href="https://github.com/debanjanchoudhury-kite/calcindia" rel="noopener noreferrer" target="_blank" style="color:var(--teal)">github.com/debanjanchoudhury-kite/calcindia</a> if you prefer a transparent, public resolution process</li>
+        <li>Open a public issue on our GitHub repository at <a href="mailto:contact@indicalculator.in" style="color:var(--teal)">contact@indicalculator.in</a> if you prefer a transparent, public resolution process</li>
       </ul>
 
       <a href="#toc" class="back-top">↑ Back to Table of Contents</a>
@@ -802,7 +790,31 @@
   </div>
 </footer>
 
-<script src="shared.js"></script>
+<script src="shared.min.js"></script>
+
+<!-- Lazy Load Third-Party Scripts -->
+<script>
+  let scriptsLoaded = false;
+  function loadScripts() {
+    if (scriptsLoaded) return;
+    scriptsLoaded = true;
+    let ga = document.createElement('script');
+    ga.src = "https://www.googletagmanager.com/gtag/js?id=G-62K8SJ29WC";
+    ga.async = true;
+    document.head.appendChild(ga);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-62K8SJ29WC');
+    let ads = document.createElement('script');
+    ads.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX";
+    ads.async = true;
+    ads.crossOrigin = "anonymous";
+    document.head.appendChild(ads);
+  }
+  ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(evt => window.addEventListener(evt, loadScripts, { once: true, passive: true }));
+  setTimeout(loadScripts, 3500);
+</script>
 </body>
 </html>
 
@@ -832,7 +844,7 @@ External links (informational, open in new tab — not site links):
   https://optout.aboutads.info/
   https://optout.networkadvertising.org/
   https://myaccount.google.com/data-and-privacy
-  https://github.com/debanjanchoudhury-kite/calcindia
+  contact@indicalculator.in
   mailto:contact@indicalculator.in
 
 No invalid internal hrefs found. All external links open with

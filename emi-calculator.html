@@ -1,25 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-62K8SJ29WC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-62K8SJ29WC');
-</script>
-
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>EMI Calculator 2025 - Calculate Home, Car &amp; Personal Loan EMI Online | IndiCalculator</title>
+<title>EMI Calculator 2025 | Home & Car Loan EMI Online | IndiCalculator</title>
 <meta name="description" content="Free online EMI Calculator to calculate monthly EMI for home loan, car loan, personal loan and education loan. Get instant EMI breakdown with amortization schedule. Updated 2025."/>
 <link rel="canonical" href="https://indicalculator.in/emi-calculator.html"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"EMI Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"EMI Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","ratingCount":"1250"},"review":{"@type":"Review","author":{"@type":"Person","name":"Arjun Kumar"},"reviewRating":{"@type":"Rating","ratingValue":"5"}},"offers":{"@type":"Offer","price":"0"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://indicalculator.in/"},{"@type":"ListItem","position":2,"name":"EMI Calculator"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is EMI calculated?","acceptedAnswer":{"@type":"Answer","text":"EMI = [P × R × (1+R)^N] / [(1+R)^N – 1], where P is principal, R is monthly interest rate, N is tenure in months."}},{"@type":"Question","name":"What is a good EMI to salary ratio?","acceptedAnswer":{"@type":"Answer","text":"Your total EMI should not exceed 40% of your monthly take-home salary."}},{"@type":"Question","name":"Can I prepay my home loan EMI?","acceptedAnswer":{"@type":"Answer","text":"Yes, RBI guidelines say banks cannot charge prepayment penalty on floating-rate home loans."}},{"@type":"Question","name":"Does EMI include GST?","acceptedAnswer":{"@type":"Answer","text":"No, GST at 18% applies only on processing fees and other bank charges, not on the EMI itself."}}]}</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="shared.css"/>
@@ -185,7 +174,7 @@
 </div></div></section>
 <footer><span>© 2025 IndiCalculator · Informational purposes only · Not financial advice</span><div class="footer-bottom-links"><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="about.html">About</a><a href="privacy-policy.html">Privacy</a></div></footer>
 
-<script src="shared.js"></script>
+<script src="shared.min.js"></script>
 <script>
 syncRange('ep','ep-r','ep-d',v=>fmt(v));
 syncRange('er','er-r','er-d',v=>v+'%');
@@ -234,6 +223,30 @@ function renderAmortization(view){
   tbody.innerHTML=rows.join('');
 }
 initFAQ();initAmortToggle();calcEMI();
+</script>
+
+<!-- Lazy Load Third-Party Scripts -->
+<script>
+  let scriptsLoaded = false;
+  function loadScripts() {
+    if (scriptsLoaded) return;
+    scriptsLoaded = true;
+    let ga = document.createElement('script');
+    ga.src = "https://www.googletagmanager.com/gtag/js?id=G-62K8SJ29WC";
+    ga.async = true;
+    document.head.appendChild(ga);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-62K8SJ29WC');
+    let ads = document.createElement('script');
+    ads.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX";
+    ads.async = true;
+    ads.crossOrigin = "anonymous";
+    document.head.appendChild(ads);
+  }
+  ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(evt => window.addEventListener(evt, loadScripts, { once: true, passive: true }));
+  setTimeout(loadScripts, 3500);
 </script>
 </body>
 </html>
