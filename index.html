@@ -79,7 +79,7 @@
 .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin:30px 0 60px}
 .why-card{padding:24px;background:#fff;border-radius:14px;border:1px solid #f1f5f9}
 .why-card .w-ico{width:48px;height:48px;background:#F0FDFA;color:#0D9488;border-radius:12px;display:grid;place-items:center;font-size:1.4rem;margin-bottom:14px}
-.why-card h4{margin:0 0 8px;font-weight:800;font-size:1.1rem}
+.why-card h3{margin:0 0 8px;font-weight:800;font-size:1.1rem}
 .why-card p{margin:0;color:#64748b;line-height:1.6;font-size:.95rem;text-align:justify}
 
 .content-block{max-width:820px;margin:60px auto;padding:0 20px}
@@ -109,7 +109,7 @@
   .trust-grid .t-item .lbl{font-size:.82rem}
   .why-grid{grid-template-columns:1fr;gap:16px;margin:20px 0 40px}
   .why-card{padding:20px}
-  .why-card h4{font-size:1rem}
+  .why-card h3{font-size:1rem}
   .why-card p{font-size:.88rem}
   .content-block{margin:40px auto;padding:0 16px}
   .content-block h2{font-size:1.35rem}
@@ -125,9 +125,9 @@
 <body>
 <!-- HEADER -->
 <header>
-  <a href="index.html" class="logo a1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 64" style="height:36px;width:auto"><circle cx="8" cy="9" r="6" fill="#F5A623"/><circle cx="83" cy="9" r="6" fill="#F5A623"/><text x="0" y="55" font-family="Nunito,sans-serif" font-weight="900" font-size="50" fill="#1B2A5E">indicalculat</text><rect x="283" y="15" width="35" height="41" rx="5" fill="#1B2A5E"/><rect x="287" y="18" width="27" height="11" rx="3" fill="#F5A623"/><circle cx="292" cy="34" r="2.5" fill="white"/><circle cx="300" cy="34" r="2.5" fill="white"/><circle cx="308" cy="34" r="2.5" fill="white"/><circle cx="292" cy="42" r="2.5" fill="white"/><circle cx="300" cy="42" r="2.5" fill="white"/><circle cx="308" cy="42" r="2.5" fill="white"/><circle cx="292" cy="50" r="2.5" fill="white"/><circle cx="300" cy="50" r="2.5" fill="white"/><circle cx="308" cy="50" r="2.5" fill="white"/><text x="321" y="55" font-family="Nunito,sans-serif" font-weight="900" font-size="50" fill="#1B2A5E">r</text></svg></a>
+  <a href="index.html" aria-label="IndiCalculator Home" class="logo a1"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 64" style="height:36px;width:auto"><circle cx="8" cy="9" r="6" fill="#F5A623"/><circle cx="83" cy="9" r="6" fill="#F5A623"/><text x="0" y="55" font-family="Nunito,sans-serif" font-weight="900" font-size="50" fill="#1B2A5E">indicalculat</text><rect x="283" y="15" width="35" height="41" rx="5" fill="#1B2A5E"/><rect x="287" y="18" width="27" height="11" rx="3" fill="#F5A623"/><circle cx="292" cy="34" r="2.5" fill="white"/><circle cx="300" cy="34" r="2.5" fill="white"/><circle cx="308" cy="34" r="2.5" fill="white"/><circle cx="292" cy="42" r="2.5" fill="white"/><circle cx="300" cy="42" r="2.5" fill="white"/><circle cx="308" cy="42" r="2.5" fill="white"/><circle cx="292" cy="50" r="2.5" fill="white"/><circle cx="300" cy="50" r="2.5" fill="white"/><circle cx="308" cy="50" r="2.5" fill="white"/><text x="321" y="55" font-family="Nunito,sans-serif" font-weight="900" font-size="50" fill="#1B2A5E">r</text></svg></a>
   <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-  <nav class="a2">
+  <nav class="a2" aria-label="Main navigation">
     <a href="emi-calculator.html">EMI</a>
     <a href="sip-calculator.html">SIP</a>
     <a href="income-tax-calculator.html">Tax</a>
@@ -138,6 +138,7 @@
 </header>
 <div class="mobile-nav-overlay"></div>
 <div class="ad-top"><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1234567890"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+<main>
 <!-- HERO -->
 <section class="home-hero">
   <div class="container">
@@ -228,22 +229,22 @@
   <div class="why-grid">
     <div class="why-card">
       <div class="w-ico">🇮🇳</div>
-      <h4>India-First Design</h4>
+      <h3>India-First Design</h3>
       <p>Every calculator uses Indian formulas, tax slabs, banking rates and units (lakhs/crores). No conversions needed.</p>
     </div>
     <div class="why-card">
       <div class="w-ico">⚡</div>
-      <h4>Instant Results</h4>
+      <h3>Instant Results</h3>
       <p>No sign-up, no email, no waiting. Adjust sliders and see results update in real-time with charts and tables.</p>
     </div>
     <div class="why-card">
       <div class="w-ico">📊</div>
-      <h4>Detailed Breakdowns</h4>
+      <h3>Detailed Breakdowns</h3>
       <p>Get year-by-year amortization, principal-vs-interest charts, and yearly growth tables — not just a single number.</p>
     </div>
     <div class="why-card">
       <div class="w-ico">🔒</div>
-      <h4>Privacy First</h4>
+      <h3>Privacy First</h3>
       <p>All calculations happen in your browser. We never store your loan amount, income, or personal data.</p>
     </div>
   </div>
@@ -257,11 +258,12 @@
   <p>We believe financial decisions shouldn't require a CA or financial planner for basic calculations. With IndiCalculator, anyone can instantly understand their monthly EMI burden before signing a loan, see how a ₹5,000 SIP can grow to over ₹1 crore in 25 years, compare the Old vs New tax regime in seconds, or split GST correctly for their business invoices. All for free, with no sign-up.</p>
 </section>
 
+</main>
 <section class="footer-links-section"><div class="container"><div class="footer-grid">
-  <div class="footer-col"><h4>🏠 EMI Calculators</h4><a href="emi-calculator.html">EMI Calculator</a></div>
-  <div class="footer-col"><h4>📈 SIP &amp; Investment</h4><a href="sip-calculator.html">SIP Calculator</a></div>
-  <div class="footer-col"><h4>🏦 Savings</h4><a href="ppf-fd-calculator.html">PPF / FD Calculator</a></div>
-  <div class="footer-col"><h4>💰 Tax &amp; Business</h4><a href="income-tax-calculator.html">Income Tax Calculator</a><a href="gst-calculator.html">GST Calculator</a><a href="hra-calculator.html">HRA Calculator</a><a href="salary-calculator.html">Salary Calculator</a></div>
+  <div class="footer-col"><h3 class="footer-heading">🏠 EMI Calculators</h3><a href="emi-calculator.html">EMI Calculator</a></div>
+  <div class="footer-col"><h3 class="footer-heading">📈 SIP &amp; Investment</h3><a href="sip-calculator.html">SIP Calculator</a></div>
+  <div class="footer-col"><h3 class="footer-heading">🏦 Savings</h3><a href="ppf-fd-calculator.html">PPF / FD Calculator</a></div>
+  <div class="footer-col"><h3 class="footer-heading">💰 Tax &amp; Business</h3><a href="income-tax-calculator.html">Income Tax Calculator</a><a href="gst-calculator.html">GST Calculator</a><a href="hra-calculator.html">HRA Calculator</a><a href="salary-calculator.html">Salary Calculator</a></div>
 </div></div></section>
 <footer><span>© 2025 IndiCalculator · Informational purposes only · Not financial advice</span><div class="footer-bottom-links"><a href="index.html" class="active">Home</a><a href="blog.html">Blog</a><a href="about.html">About</a><a href="privacy-policy.html">Privacy</a></div></footer>
 

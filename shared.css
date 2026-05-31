@@ -2,7 +2,7 @@
 html{scroll-behavior:smooth}
 :root{
   --bg:#F7F8FC;--surface:#FFFFFF;--surface-2:#F0F2F8;--border:#E3E6F0;
-  --text:#1E2235;--text-2:#4A5068;--muted:#8890AA;
+  --text:#1E2235;--text-2:#3D4460;--muted:#656D85;
   --teal:#1B2A5E;--teal-2:#2A3B75;--teal-bg:#F0F4FA;--teal-dark:#10193E;
   --coral:#F5A623;--coral-bg:#FFF7EC;--violet:#7C3AED;--green:#16A34A;
   --red:#DC2626;--gold:#D97706;--gold-bg:#FFFBEB;
@@ -179,7 +179,7 @@ input[type=range]{flex:1;height:4px;border:none;padding:0;cursor:pointer;accent-
 /* Footer with massive internal linking — Groww strategy */
 .footer-links-section{background:var(--surface);border-top:1px solid var(--border);padding:40px 32px;margin-top:60px}
 .footer-links-section .container{max-width:1320px;margin:0 auto}
-.footer-links-section h4{font-family:var(--font-display);font-size:0.85rem;font-weight:800;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.footer-links-section h3.footer-heading,.footer-links-section h4{font-family:var(--font-display);font-size:0.85rem;font-weight:800;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
 .footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-bottom:32px}
 .footer-col a{display:block;font-size:0.85rem;color:var(--text-2);padding:5px 0;text-decoration:none;font-weight:500;transition:color 0.2s}
 .footer-col a:hover{color:var(--teal)}
