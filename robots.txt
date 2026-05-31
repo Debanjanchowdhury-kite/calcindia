@@ -1,17 +1,4 @@
-# CalcIndia robots.txt
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /private/
-Disallow: /*.json$
 
-# Google AdSense
-User-agent: Mediapartners-Google
-Allow: /
-
-# Google AdsBot
-User-agent: AdsBot-Google
-Allow: /
-
-# Sitemap
-Sitemap: https://calcindia.in/sitemap.xml
+Sitemap: https://indicalculator.in/sitemap.xml
