@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CalcIndia — Free Online Financial Calculators for India 2025 | EMI, SIP, Tax, GST, PPF</title>
+<meta name="description" content="India's most-trusted free financial calculators. Calculate EMI, SIP returns, Income Tax, GST, PPF & FD instantly. Updated for 2025 with latest rates and tax slabs."/>
+<meta name="keywords" content="financial calculator India, EMI calculator, SIP calculator, income tax calculator, GST calculator, PPF calculator, FD calculator"/>
+<link rel="canonical" href="https://calcindia.in/"/>
+
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="CalcIndia — Free Financial Calculators for India"/>
+<meta property="og:description" content="Calculate EMI, SIP, Tax, GST, PPF instantly. Updated 2025."/>
+<meta property="og:url" content="https://calcindia.in/"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "CalcIndia",
+  "url": "https://calcindia.in",
+  "description": "India's free financial calculators for EMI, SIP, Tax, GST, PPF and FD",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://calcindia.in/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "CalcIndia",
+  "url": "https://calcindia.in",
+  "logo": "https://calcindia.in/logo.png",
+  "sameAs": []
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+
+<style>
+.home-hero{background:linear-gradient(135deg,#0D9488 0%,#0F766E 100%);color:#fff;padding:80px 0 100px;text-align:center;position:relative;overflow:hidden}
+.home-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 20%,rgba(249,115,22,.15),transparent 50%),radial-gradient(circle at 80% 80%,rgba(255,255,255,.08),transparent 50%);pointer-events:none}
+.home-hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:900;margin:0 0 16px;letter-spacing:-.02em}
+.home-hero .accent{color:#FED7AA}
+.home-hero p{font-size:1.25rem;max-width:720px;margin:0 auto 32px;opacity:.95}
+.home-hero .stats{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;margin-top:40px}
+.home-hero .stats div strong{display:block;font-size:2rem;font-weight:900;color:#FED7AA}
+.home-hero .stats div span{font-size:.9rem;opacity:.9}
+
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin:60px 0}
+.calc-tile{background:#fff;border-radius:16px;padding:28px;text-decoration:none;color:inherit;border:2px solid #f1f5f9;transition:all .25s;display:block;position:relative;overflow:hidden}
+.calc-tile::after{content:'→';position:absolute;top:24px;right:24px;font-size:1.5rem;color:#94a3b8;transition:all .25s}
+.calc-tile:hover{border-color:#0D9488;transform:translateY(-4px);box-shadow:0 12px 30px rgba(13,148,136,.15)}
+.calc-tile:hover::after{color:#0D9488;transform:translateX(4px)}
+.calc-tile .icon{font-size:2.5rem;margin-bottom:16px;display:block}
+.calc-tile h3{margin:0 0 8px;font-size:1.25rem;font-weight:800}
+.calc-tile p{margin:0;color:#64748b;font-size:.95rem;line-height:1.5}
+.calc-tile .tag{display:inline-block;margin-top:14px;padding:4px 10px;background:#FEF3E2;color:#C2410C;font-size:.75rem;font-weight:700;border-radius:6px;letter-spacing:.05em;text-transform:uppercase}
+
+.section-title{font-size:2rem;font-weight:900;text-align:center;margin:0 0 12px;color:#0F172A}
+.section-sub{text-align:center;color:#64748b;font-size:1.05rem;margin:0 0 40px}
+
+.bank-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:30px 0 60px}
+.bank-tile{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:16px;text-decoration:none;color:inherit;font-weight:600;transition:all .2s;display:flex;align-items:center;gap:10px}
+.bank-tile:hover{border-color:#0D9488;background:#F0FDFA;color:#0D9488}
+.bank-tile .b-icon{width:36px;height:36px;background:#0D9488;color:#fff;border-radius:8px;display:grid;place-items:center;font-weight:800;font-size:.85rem;flex-shrink:0}
+
+.trust-row{background:#F8FAFC;padding:50px 0;margin:60px 0;border-top:1px solid #E2E8F0;border-bottom:1px solid #E2E8F0}
+.trust-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;text-align:center}
+.trust-grid .t-item .num{font-size:2.5rem;font-weight:900;color:#0D9488;display:block;line-height:1}
+.trust-grid .t-item .lbl{color:#64748b;font-size:.95rem;margin-top:6px;display:block}
+
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin:30px 0 60px}
+.why-card{padding:24px;background:#fff;border-radius:14px;border:1px solid #f1f5f9}
+.why-card .w-ico{width:48px;height:48px;background:#F0FDFA;color:#0D9488;border-radius:12px;display:grid;place-items:center;font-size:1.4rem;margin-bottom:14px}
+.why-card h4{margin:0 0 8px;font-weight:800;font-size:1.1rem}
+.why-card p{margin:0;color:#64748b;line-height:1.6;font-size:.95rem}
+
+.content-block{max-width:820px;margin:60px auto;padding:0 20px}
+.content-block h2{font-size:1.75rem;font-weight:900;margin:0 0 16px}
+.content-block p{color:#475569;line-height:1.75;margin:0 0 16px}
+</style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+</head>
+<body>
+
+<div data-include="_header.html"></div>
+
+<!-- HERO -->
+<section class="home-hero">
+  <div class="container">
+    <h1>India's #1 Free <span class="accent">Financial Calculators</span></h1>
+    <p>Calculate EMI, SIP returns, Income Tax, GST, PPF and FD in seconds. Built for India. Updated for 2025 with latest rates and tax slabs.</p>
+    <div class="stats">
+      <div><strong>50+</strong><span>Calculators</span></div>
+      <div><strong>2025</strong><span>Updated Rates</span></div>
+      <div><strong>100%</strong><span>Free & Accurate</span></div>
+      <div><strong>0</strong><span>Sign-up Required</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- AD -->
+<div class="ad-slot ad-leaderboard">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</div>
+
+<!-- TOP CALCULATORS -->
+<section class="container" style="padding:60px 0 20px">
+  <h2 class="section-title">Most Popular Calculators</h2>
+  <p class="section-sub">Trusted by lakhs of Indians for everyday financial decisions</p>
+
+  <div class="calc-grid">
+    <a href="emi-calculator.html" class="calc-tile">
+      <span class="icon">🏠</span>
+      <h3>EMI Calculator</h3>
+      <p>Calculate monthly EMI for home loan, car loan or personal loan. Get full amortization schedule.</p>
+      <span class="tag">Most Popular</span>
+    </a>
+    <a href="sip-calculator.html" class="calc-tile">
+      <span class="icon">📈</span>
+      <h3>SIP Calculator</h3>
+      <p>See how much wealth your SIP creates over time. Supports step-up SIP and year-by-year breakdown.</p>
+      <span class="tag">Updated 2025</span>
+    </a>
+    <a href="income-tax-calculator.html" class="calc-tile">
+      <span class="icon">📋</span>
+      <h3>Income Tax Calculator</h3>
+      <p>Calculate income tax for FY 2025-26 under both Old & New regimes. Compare and choose the best.</p>
+      <span class="tag">FY 2025-26</span>
+    </a>
+    <a href="gst-calculator.html" class="calc-tile">
+      <span class="icon">🧾</span>
+      <h3>GST Calculator</h3>
+      <p>Compute GST with CGST/SGST/IGST split. Inclusive and exclusive modes for all GST slabs.</p>
+      <span class="tag">For Business</span>
+    </a>
+    <a href="ppf-fd-calculator.html" class="calc-tile">
+      <span class="icon">🏦</span>
+      <h3>PPF & FD Calculator</h3>
+      <p>Calculate maturity for PPF (7.10%) and Fixed Deposits. Compare returns with year-by-year growth.</p>
+      <span class="tag">Risk-Free</span>
+    </a>
+    <a href="sbi-home-loan-emi-calculator.html" class="calc-tile">
+      <span class="icon">🏛️</span>
+      <h3>SBI Home Loan EMI</h3>
+      <p>Calculate EMI for SBI home loan at current 8.50% p.a. rate. Special rates for women borrowers.</p>
+      <span class="tag">New</span>
+    </a>
+  </div>
+</section>
+
+<!-- BANK-SPECIFIC SECTION -->
+<section class="container" style="padding:40px 0">
+  <h2 class="section-title">Bank-Specific EMI Calculators</h2>
+  <p class="section-sub">Pre-filled with current interest rates from India's top banks</p>
+  <div class="bank-grid">
+    <a href="sbi-home-loan-emi-calculator.html" class="bank-tile"><span class="b-icon">SBI</span>SBI Home Loan</a>
+    <a href="hdfc-home-loan-emi-calculator.html" class="bank-tile"><span class="b-icon">HDFC</span>HDFC Home Loan</a>
+    <a href="icici-home-loan-emi-calculator.html" class="bank-tile"><span class="b-icon">ICICI</span>ICICI Home Loan</a>
+    <a href="axis-home-loan-emi-calculator.html" class="bank-tile"><span class="b-icon">AXIS</span>Axis Home Loan</a>
+    <a href="kotak-home-loan-emi-calculator.html" class="bank-tile"><span class="b-icon">KOTAK</span>Kotak Home Loan</a>
+    <a href="lic-home-loan-emi-calculator.html" class="bank-tile"><span class="b-icon">LIC</span>LIC Housing</a>
+    <a href="sbi-personal-loan-emi-calculator.html" class="bank-tile"><span class="b-icon">SBI</span>SBI Personal Loan</a>
+    <a href="hdfc-personal-loan-emi-calculator.html" class="bank-tile"><span class="b-icon">HDFC</span>HDFC Personal Loan</a>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust-row">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="t-item"><span class="num">100%</span><span class="lbl">Free Forever</span></div>
+      <div class="t-item"><span class="num">2025</span><span class="lbl">Latest Tax Slabs</span></div>
+      <div class="t-item"><span class="num">RBI</span><span class="lbl">Updated Rates</span></div>
+      <div class="t-item"><span class="num">No</span><span class="lbl">Sign-up Needed</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="container">
+  <h2 class="section-title">Why CalcIndia?</h2>
+  <p class="section-sub">Built for India, by Indians</p>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="w-ico">🇮🇳</div>
+      <h4>India-First Design</h4>
+      <p>Every calculator uses Indian formulas, tax slabs, banking rates and units (lakhs/crores). No conversions needed.</p>
+    </div>
+    <div class="why-card">
+      <div class="w-ico">⚡</div>
+      <h4>Instant Results</h4>
+      <p>No sign-up, no email, no waiting. Adjust sliders and see results update in real-time with charts and tables.</p>
+    </div>
+    <div class="why-card">
+      <div class="w-ico">📊</div>
+      <h4>Detailed Breakdowns</h4>
+      <p>Get year-by-year amortization, principal-vs-interest charts, and yearly growth tables — not just a single number.</p>
+    </div>
+    <div class="why-card">
+      <div class="w-ico">🔒</div>
+      <h4>Privacy First</h4>
+      <p>All calculations happen in your browser. We never store your loan amount, income, or personal data.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SEO CONTENT -->
+<section class="content-block">
+  <h2>About CalcIndia — India's Trusted Financial Calculator Hub</h2>
+  <p>CalcIndia is India's most accurate and easy-to-use platform for financial calculations. Whether you're planning a home loan, investing in mutual funds via SIP, filing your income tax return, or simply trying to understand GST on a business invoice — our calculators give you instant, accurate, and India-specific answers.</p>
+  <p>Every calculator on CalcIndia is built specifically for Indian users. That means our income tax calculator uses the latest FY 2025-26 tax slabs from the Union Budget. Our EMI calculator uses interest rates from RBI-tracked banks like SBI, HDFC, ICICI and Axis. Our PPF calculator uses the current 7.10% interest rate set by the Ministry of Finance. We update all rates regularly so you always get accurate results.</p>
+  <p>We believe financial decisions shouldn't require a CA or financial planner for basic calculations. With CalcIndia, anyone can instantly understand their monthly EMI burden before signing a loan, see how a ₹5,000 SIP can grow to over ₹1 crore in 25 years, compare the Old vs New tax regime in seconds, or split GST correctly for their business invoices. All for free, with no sign-up.</p>
+</section>
+
+<div data-include="_footer.html"></div>
+
+<script>
+document.querySelectorAll('[data-include]').forEach(el=>{
+  fetch(el.dataset.include).then(r=>r.text()).then(html=>{ el.innerHTML=html; });
+});
+</script>
+</body>
+</html>

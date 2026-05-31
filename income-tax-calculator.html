@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Income Tax Calculator FY 2025-26 - Old vs New Regime Calculator India | CalcIndia</title>
+<meta name="description" content="Free Income Tax Calculator FY 2025-26. Compare Old vs New tax regime instantly. Calculate tax savings with 80C, HRA, NPS deductions. Accurate as per latest budget."/>
+<meta name="keywords" content="income tax calculator, income tax calculator 2025-26, old vs new tax regime, tax calculator India, ITR calculator, tax saving calculator"/>
+<link rel="canonical" href="https://calcindia.in/income-tax-calculator.html"/>
+<meta property="og:title" content="Income Tax Calculator FY 2025-26 - Compare Old vs New Regime"/>
+<meta property="og:description" content="Calculate your income tax for FY 2025-26 with the latest budget rates. Find out which regime saves you more."/>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Income Tax Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"url":"https://calcindia.in/income-tax-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calcindia.in/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://calcindia.in/calculators.html"},{"@type":"ListItem","position":3,"name":"Income Tax Calculator"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"Which is better - Old or New tax regime?","acceptedAnswer":{"@type":"Answer","text":"The New regime is better if you have minimal deductions, as income up to ₹12 lakh is effectively tax-free. The Old regime is better if you can claim 80C ₹1.5L + HRA + NPS deductions exceeding ₹3-4 lakh."}},
+  {"@type":"Question","name":"What is Section 87A rebate?","acceptedAnswer":{"@type":"Answer","text":"Section 87A provides a tax rebate up to ₹25,000 in New regime (for income up to ₹12L) and ₹12,500 in Old regime (for income up to ₹5L). It effectively makes income below these thresholds tax-free."}},
+  {"@type":"Question","name":"Is standard deduction available in New regime?","acceptedAnswer":{"@type":"Answer","text":"Yes, FY 2025-26 New regime offers ₹75,000 standard deduction for salaried individuals. Old regime offers ₹50,000 standard deduction."}}
+]}
+</script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+<!-- HEADER -->
+<header>
+  <a href="/" class="logo a1">
+    <div class="logo-icon">🧮</div>
+    Calc<span>India</span>
+  </a>
+  <nav class="a2">
+    <a href="/emi-calculator.html" data-page="emi">EMI</a>
+    <a href="/sip-calculator.html" data-page="sip">SIP</a>
+    <a href="/income-tax-calculator.html" data-page="tax">Tax</a>
+    <a href="/gst-calculator.html" data-page="gst">GST</a>
+    <a href="/ppf-fd-calculator.html" data-page="ppf">PPF/FD</a>
+  </nav>
+</header>
+
+<div class="ad-top">
+  <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1234567890"></ins>
+  <script>(adsbygoogle=window.adsbygoogle||[]).push({})</script>
+</div>
+
+<nav class="breadcrumb" aria-label="breadcrumb">
+  <a href="/">Home</a><span class="sep">›</span>
+  <a href="/calculators.html">Calculators</a><span class="sep">›</span>
+  <span class="current">Income Tax Calculator</span>
+</nav>
+
+<div class="layout">
+<aside class="left-nav a3">
+  <span class="left-nav-label">Calculators</span>
+  <a href="/emi-calculator.html" class="nav-card" data-nav="emi">
+    <div class="nc-icon">🏠</div>
+    <div class="nc-info"><span class="nc-name">EMI</span><span class="nc-desc">Loan calculator</span></div>
+  </a>
+  <a href="/sip-calculator.html" class="nav-card" data-nav="sip">
+    <div class="nc-icon">📈</div>
+    <div class="nc-info"><span class="nc-name">SIP Returns</span><span class="nc-desc">Mutual fund growth</span></div>
+  </a>
+  <a href="/income-tax-calculator.html" class="nav-card" data-nav="tax">
+    <div class="nc-icon">💰</div>
+    <div class="nc-info"><span class="nc-name">Income Tax</span><span class="nc-desc">Old vs New regime</span></div>
+  </a>
+  <a href="/gst-calculator.html" class="nav-card" data-nav="gst">
+    <div class="nc-icon">🧾</div>
+    <div class="nc-info"><span class="nc-name">GST</span><span class="nc-desc">Add/remove tax</span></div>
+  </a>
+  <a href="/ppf-fd-calculator.html" class="nav-card" data-nav="ppf">
+    <div class="nc-icon">🏦</div>
+    <div class="nc-info"><span class="nc-name">PPF / FD</span><span class="nc-desc">Savings maturity</span></div>
+  </a>
+
+  <hr class="nav-divider"/>
+  <div class="bank-list">
+    <div class="bank-list-title">🏛️ Bank EMI Calculators</div>
+    <a class="bank-link" href="/sbi-home-loan-emi-calculator.html">SBI Home Loan EMI</a>
+    <a class="bank-link" href="/hdfc-home-loan-emi-calculator.html">HDFC Home Loan EMI</a>
+    <a class="bank-link" href="/icici-home-loan-emi-calculator.html">ICICI Home Loan EMI</a>
+    <a class="bank-link" href="/axis-home-loan-emi-calculator.html">Axis Home Loan EMI</a>
+    <a class="bank-link" href="/kotak-home-loan-emi-calculator.html">Kotak Home Loan EMI</a>
+  </div>
+
+  <hr class="nav-divider"/>
+  <div class="bank-list">
+    <div class="bank-list-title">🏦 Bank SIP Calculators</div>
+    <a class="bank-link" href="/sbi-sip-calculator.html">SBI SIP</a>
+    <a class="bank-link" href="/hdfc-sip-calculator.html">HDFC SIP</a>
+    <a class="bank-link" href="/icici-sip-calculator.html">ICICI SIP</a>
+    <a class="bank-link" href="/axis-sip-calculator.html">Axis SIP</a>
+  </div>
+</aside>
+
+<main class="a4">
+  <div class="panel-top">
+    <div class="panel-badge">💰 FY 2025-26</div>
+    <h1 class="panel-title">Income Tax Calculator FY 2025-26</h1>
+    <p class="panel-sub">Compare Old vs New Tax Regime instantly. Calculate your tax liability with all major deductions. Updated as per the latest Union Budget 2025.</p>
+  </div>
+
+  <div class="calc-card">
+    <div class="form-grid">
+      <div class="field">
+        <label>Annual Income (₹)</label>
+        <input type="number" id="ti" value="1500000" min="0" step="50000"/>
+        <div class="range-wrap"><input type="range" id="ti-r" min="0" max="10000000" step="50000" value="1500000"/><span class="rv" id="ti-d">₹15L</span></div>
+      </div>
+      <div class="field">
+        <label>Age Group</label>
+        <select id="tage">
+          <option value="g">Below 60</option>
+          <option value="s">60–80 (Senior)</option>
+          <option value="ss">Above 80 (Super Senior)</option>
+        </select>
+      </div>
+      <div class="field"><label>80C Deductions (₹)</label><input type="number" id="t80c" value="150000" min="0" max="150000" step="5000"/></div>
+      <div class="field"><label>HRA Exemption (₹)</label><input type="number" id="thra" value="120000" min="0" step="5000"/></div>
+      <div class="field"><label>NPS 80CCD(1B) (₹)</label><input type="number" id="tnps" value="50000" min="0" max="50000" step="5000"/></div>
+      <div class="field"><label>Other Deductions (₹)</label><input type="number" id="toth" value="50000" min="0" step="5000"/></div>
+    </div>
+    <button class="go-btn" onclick="calcTax()">Compare Both Regimes →</button>
+
+    <div class="results-wrap" id="tax-res">
+      <div class="results-divider"><span>Your Tax Comparison</span></div>
+      <div class="stat-grid">
+        <div class="stat-card red"><div class="stat-label">Old Regime Tax</div><div class="stat-val" id="t-old">—</div></div>
+        <div class="stat-card teal"><div class="stat-label">New Regime Tax</div><div class="stat-val" id="t-new">—</div></div>
+        <div class="stat-card green"><div class="stat-label">You Save</div><div class="stat-val" id="t-save">—</div></div>
+        <div class="stat-card gold"><div class="stat-label">Best Choice</div><div class="stat-val" id="t-rec" style="font-size:1.05rem">—</div></div>
+      </div>
+      <div class="chart-area one-col">
+        <div class="chart-box">
+          <div class="chart-title"><span>📊</span> Side-by-Side Tax Comparison</div>
+          <div class="chart-canvas-wrap" style="height:260px"><canvas id="tax-chart"></canvas></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-banner">
+    <div class="cta-banner-text">
+      <h3>📋 File Your ITR in 10 Minutes</h3>
+      <p>Expert-assisted ITR filing · Save more tax · Free draft review</p>
+    </div>
+    <a href="#" class="cta-btn">File ITR Now →</a>
+  </div>
+
+  <!-- Tax slab breakdown table -->
+  <div class="amortization-section">
+    <div class="amort-header">
+      <div class="amort-title">📋 Detailed Tax Breakdown</div>
+    </div>
+    <div class="amort-table-wrap">
+      <table class="amort-table">
+        <thead>
+          <tr><th>Component</th><th>Old Regime</th><th>New Regime</th></tr>
+        </thead>
+        <tbody id="tax-detail-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="disclaimer"><strong>Disclaimer:</strong> Calculations are based on FY 2025-26 tax slabs. Surcharge applies on income above ₹50 lakh. Please consult a Chartered Accountant for accurate tax filing as individual situations may vary.</div>
+
+  <article class="info-section">
+    <h2>Income Tax Slabs FY 2025-26</h2>
+
+    <h3>🆕 New Tax Regime (Default) — FY 2025-26</h3>
+    <ul>
+      <li><strong>Up to ₹4,00,000:</strong> Nil</li>
+      <li><strong>₹4,00,001 - ₹8,00,000:</strong> 5%</li>
+      <li><strong>₹8,00,001 - ₹12,00,000:</strong> 10%</li>
+      <li><strong>₹12,00,001 - ₹16,00,000:</strong> 15%</li>
+      <li><strong>₹16,00,001 - ₹20,00,000:</strong> 20%</li>
+      <li><strong>₹20,00,001 - ₹24,00,000:</strong> 25%</li>
+      <li><strong>Above ₹24,00,000:</strong> 30%</li>
+    </ul>
+    <p><strong>Standard Deduction:</strong> ₹75,000 for salaried. <strong>Section 87A Rebate:</strong> Income up to ₹12 lakh is effectively tax-free.</p>
+
+    <h3>📜 Old Tax Regime — FY 2025-26</h3>
+    <p><strong>Below 60 Years:</strong></p>
+    <ul>
+      <li>Up to ₹2,50,000: Nil</li>
+      <li>₹2,50,001 - ₹5,00,000: 5%</li>
+      <li>₹5,00,001 - ₹10,00,000: 20%</li>
+      <li>Above ₹10,00,000: 30%</li>
+    </ul>
+    <p><strong>Standard Deduction:</strong> ₹50,000. <strong>87A Rebate:</strong> Income up to ₹5 lakh is tax-free.</p>
+
+    <h2>Old vs New Regime — Which Should You Choose?</h2>
+    <p><strong>Choose New Regime if:</strong></p>
+    <ul>
+      <li>You have minimal deductions (no home loan, no major 80C investments)</li>
+      <li>You want simpler tax filing without tracking proofs</li>
+      <li>Your income is between ₹7L-₹15L with few deductions</li>
+    </ul>
+
+    <p><strong>Choose Old Regime if:</strong></p>
+    <ul>
+      <li>You have 80C ₹1.5L + HRA + NPS investments exceeding ₹3-4 lakh</li>
+      <li>You're paying home loan interest (Section 24)</li>
+      <li>You have health insurance premiums (80D)</li>
+      <li>You donate to charity (80G)</li>
+    </ul>
+
+    <h2>Major Tax Deductions Available (Old Regime Only)</h2>
+    <h3>Section 80C — ₹1,50,000 limit</h3>
+    <ul>
+      <li>PPF, ELSS, EPF, NSC, LIC premium, ULIP</li>
+      <li>Children's tuition fees</li>
+      <li>Home loan principal repayment</li>
+      <li>5-year tax-saving FD</li>
+    </ul>
+
+    <h3>Section 80CCD(1B) — Additional ₹50,000</h3>
+    <p>Extra deduction for NPS contributions over and above 80C limit.</p>
+
+    <h3>Section 80D — Health Insurance</h3>
+    <ul>
+      <li>Self &amp; family: up to ₹25,000</li>
+      <li>Parents below 60: additional ₹25,000</li>
+      <li>Senior citizen parents: additional ₹50,000</li>
+    </ul>
+
+    <h3>Section 24(b) — Home Loan Interest</h3>
+    <p>Up to ₹2,00,000 deduction on interest paid on self-occupied home loan.</p>
+
+    <h3>HRA Exemption</h3>
+    <p>Minimum of: (a) Actual HRA received, (b) 50% of basic salary in metro, 40% in non-metro, (c) Rent paid - 10% of basic salary.</p>
+
+    <h2>How Income Tax is Calculated — Step by Step</h2>
+    <ol>
+      <li><strong>Calculate Gross Total Income:</strong> Salary + business income + capital gains + other sources</li>
+      <li><strong>Apply Standard Deduction:</strong> ₹75K (New) or ₹50K (Old) for salaried</li>
+      <li><strong>Apply Section Deductions:</strong> 80C, 80D, 80CCD(1B), etc. (Old regime only)</li>
+      <li><strong>Calculate Taxable Income:</strong> Gross Income - Total Deductions</li>
+      <li><strong>Apply Tax Slabs:</strong> Calculate tax based on applicable slabs</li>
+      <li><strong>Apply 87A Rebate:</strong> If income within rebate limit</li>
+      <li><strong>Add Surcharge:</strong> 10% (₹50L+), 15% (₹1Cr+), 25% (₹2Cr+), 37% (₹5Cr+)</li>
+      <li><strong>Add Cess:</strong> 4% Health &amp; Education Cess on tax + surcharge</li>
+    </ol>
+
+    <h2>Tax Saving Tips for FY 2025-26</h2>
+    <ul>
+      <li>Max out 80C with ELSS funds (better returns than PPF in long term)</li>
+      <li>Use 80CCD(1B) for additional ₹50K NPS deduction</li>
+      <li>Get parents health insurance for extra 80D benefit</li>
+      <li>Donate to PM Cares or registered NGOs for 80G</li>
+      <li>Claim HRA if living in rented accommodation</li>
+      <li>Plan home loan EMI for both 80C and Section 24 benefits</li>
+    </ul>
+  </article>
+
+  <div class="info-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q">Which is better — Old or New tax regime?</div>
+      <div class="faq-a">The New regime is better if you have minimal deductions, as income up to ₹12 lakh is effectively tax-free. The Old regime is better if you can claim deductions exceeding ₹3-4 lakh (80C ₹1.5L + HRA + NPS + 80D).</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What is Section 87A rebate?</div>
+      <div class="faq-a">Section 87A provides a tax rebate up to ₹25,000 in New regime (for income up to ₹12L) and ₹12,500 in Old regime (for income up to ₹5L). It effectively makes income below these thresholds tax-free.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is standard deduction available in New regime?</div>
+      <div class="faq-a">Yes, FY 2025-26 New regime offers ₹75,000 standard deduction for salaried individuals. Old regime offers ₹50,000 standard deduction.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can I switch between tax regimes every year?</div>
+      <div class="faq-a">Salaried individuals (with only salary income) can switch between regimes every year while filing ITR. Business income earners can switch only once in their lifetime back to Old regime.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Are deductions like 80C allowed in New regime?</div>
+      <div class="faq-a">No, most deductions like 80C, 80D, HRA, LTA are NOT available in New regime. However, employer contribution to NPS (80CCD(2)) and standard deduction are allowed.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What is the surcharge on income tax?</div>
+      <div class="faq-a">Surcharge is additional tax on high incomes: 10% for income ₹50L-₹1Cr, 15% for ₹1Cr-₹2Cr, 25% for ₹2Cr-₹5Cr, 37% for above ₹5Cr (capped at 25% in New regime).</div>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/hra-calculator.html"><div class="related-icon">🏠</div><div class="related-info"><span>HRA Calculator</span><small>House Rent Allowance</small></div></a>
+      <a class="related-card" href="/tds-calculator.html"><div class="related-icon">📑</div><div class="related-info"><span>TDS Calculator</span><small>Tax Deducted at Source</small></div></a>
+      <a class="related-card" href="/salary-calculator.html"><div class="related-icon">💼</div><div class="related-info"><span>Salary Calculator</span><small>In-hand salary</small></div></a>
+      <a class="related-card" href="/gratuity-calculator.html"><div class="related-icon">💰</div><div class="related-info"><span>Gratuity Calculator</span><small>Retirement gratuity</small></div></a>
+      <a class="related-card" href="/capital-gains-calculator.html"><div class="related-icon">📈</div><div class="related-info"><span>Capital Gains</span><small>STCG &amp; LTCG</small></div></a>
+      <a class="related-card" href="/sip-calculator.html"><div class="related-icon">💸</div><div class="related-info"><span>SIP Calculator</span><small>Mutual fund returns</small></div></a>
+    </div>
+  </div>
+
+  <div style="margin-top:20px"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="9876543210" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div>
+</main>
+
+<aside class="right-sidebar">
+  <div class="widget">
+    <div class="widget-title">📊 Live Rates · FY 2025-26</div>
+    <div class="rate-row"><span class="rate-label">RBI Repo Rate</span><span class="rate-val coral">6.50%</span></div>
+    <div class="rate-row"><span class="rate-label">SBI Home Loan</span><span class="rate-val teal">8.50%</span></div>
+    <div class="rate-row"><span class="rate-label">HDFC Home Loan</span><span class="rate-val teal">8.55%</span></div>
+    <div class="rate-row"><span class="rate-label">PPF Rate</span><span class="rate-val green">7.10%</span></div>
+    <div class="rate-row"><span class="rate-label">NSC Rate</span><span class="rate-val green">7.70%</span></div>
+    <div class="rate-row"><span class="rate-label">SBI Senior FD</span><span class="rate-val green">7.60%</span></div>
+    <div class="rate-row"><span class="rate-label">HDFC FD (1Y)</span><span class="rate-val teal">7.25%</span></div>
+  </div>
+
+  <div class="ad-side">
+    <ins class="adsbygoogle" style="display:inline-block;width:100%;height:250px"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1122334455" data-ad-format="auto"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({})</script>
+  </div>
+
+  <div class="widget">
+    <div class="widget-title">⭐ Popular Calculators</div>
+    <a class="bank-link" href="/emi-calculator.html">EMI Calculator</a>
+    <a class="bank-link" href="/sip-calculator.html">SIP Calculator</a>
+    <a class="bank-link" href="/income-tax-calculator.html">Income Tax Calculator</a>
+    <a class="bank-link" href="/gst-calculator.html">GST Calculator</a>
+    <a class="bank-link" href="/ppf-fd-calculator.html">PPF / FD Calculator</a>
+    <a class="bank-link" href="/sbi-home-loan-emi-calculator.html">SBI Home Loan EMI</a>
+  </div>
+</aside>
+</div>
+<!-- Footer with massive internal linking — Groww strategy -->
+<section class="footer-links-section">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>🏠 EMI Calculators</h4>
+        <a href="/emi-calculator.html">EMI Calculator</a>
+        <a href="/sbi-home-loan-emi-calculator.html">SBI Home Loan EMI</a>
+        <a href="/hdfc-home-loan-emi-calculator.html">HDFC Home Loan EMI</a>
+        <a href="/icici-home-loan-emi-calculator.html">ICICI Home Loan EMI</a>
+        <a href="/axis-home-loan-emi-calculator.html">Axis Home Loan EMI</a>
+        <a href="/kotak-home-loan-emi-calculator.html">Kotak Home Loan EMI</a>
+        <a href="/personal-loan-emi-calculator.html">Personal Loan EMI</a>
+        <a href="/car-loan-emi-calculator.html">Car Loan EMI</a>
+        <a href="/education-loan-emi-calculator.html">Education Loan EMI</a>
+      </div>
+      <div class="footer-col">
+        <h4>📈 SIP & Investment</h4>
+        <a href="/sip-calculator.html">SIP Calculator</a>
+        <a href="/sbi-sip-calculator.html">SBI SIP Calculator</a>
+        <a href="/hdfc-sip-calculator.html">HDFC SIP Calculator</a>
+        <a href="/icici-sip-calculator.html">ICICI SIP Calculator</a>
+        <a href="/axis-sip-calculator.html">Axis SIP Calculator</a>
+        <a href="/step-up-sip-calculator.html">Step-Up SIP Calculator</a>
+        <a href="/lumpsum-calculator.html">Lumpsum Calculator</a>
+        <a href="/swp-calculator.html">SWP Calculator</a>
+        <a href="/elss-calculator.html">ELSS Calculator</a>
+      </div>
+      <div class="footer-col">
+        <h4>🏦 Savings & Deposits</h4>
+        <a href="/ppf-fd-calculator.html">PPF / FD Calculator</a>
+        <a href="/fd-calculator.html">FD Calculator</a>
+        <a href="/rd-calculator.html">RD Calculator</a>
+        <a href="/ppf-calculator.html">PPF Calculator</a>
+        <a href="/nsc-calculator.html">NSC Calculator</a>
+        <a href="/ssy-calculator.html">Sukanya Samriddhi Calculator</a>
+        <a href="/epf-calculator.html">EPF Calculator</a>
+        <a href="/kvp-calculator.html">KVP Calculator</a>
+      </div>
+      <div class="footer-col">
+        <h4>💰 Tax & Business</h4>
+        <a href="/income-tax-calculator.html">Income Tax Calculator</a>
+        <a href="/gst-calculator.html">GST Calculator</a>
+        <a href="/hra-calculator.html">HRA Calculator</a>
+        <a href="/tds-calculator.html">TDS Calculator</a>
+        <a href="/salary-calculator.html">In-hand Salary Calculator</a>
+        <a href="/gratuity-calculator.html">Gratuity Calculator</a>
+        <a href="/capital-gains-calculator.html">Capital Gains Calculator</a>
+        <a href="/professional-tax-calculator.html">Professional Tax Calculator</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2025 CalcIndia · For informational purposes only · Not financial advice</span>
+  <div class="footer-bottom-links">
+    <a href="/about.html">About</a>
+    <a href="/privacy-policy.html">Privacy Policy</a>
+    <a href="/disclaimer.html">Disclaimer</a>
+    <a href="/contact.html">Contact</a>
+  </div>
+</footer>
+
+<script src="shared.js"></script>
+<script>
+document.querySelector('nav a[data-page="tax"]').classList.add('active');
+document.querySelector('.nav-card[data-nav="tax"]').classList.add('active');
+
+syncRange('ti','ti-r','ti-d',v=>fmt(v));
+
+function calcTaxOld(income, age){
+  const b = income - 50000;
+  let tax=0;
+  if(age==='ss'){ if(b>500000) tax = b<=1000000?(b-500000)*0.2:500000*0.2+(b-1000000)*0.3; }
+  else if(age==='s'){ if(b>300000) tax = b<=500000?(b-300000)*0.05:b<=1000000?200000*0.05+(b-500000)*0.2:200000*0.05+500000*0.2+(b-1000000)*0.3; }
+  else { if(b>250000) tax = b<=500000?(b-250000)*0.05:b<=1000000?250000*0.05+(b-500000)*0.2:250000*0.05+500000*0.2+(b-1000000)*0.3; }
+  if(income<=500000) tax=0;
+  return tax*1.04;
+}
+function calcTaxNew(income){
+  const b = income-75000;
+  let tax=0;
+  if(b>400000){
+    if(b<=800000) tax=(b-400000)*0.05;
+    else if(b<=1200000) tax=400000*0.05+(b-800000)*0.1;
+    else if(b<=1600000) tax=400000*0.05+400000*0.1+(b-1200000)*0.15;
+    else if(b<=2000000) tax=400000*0.05+400000*0.1+400000*0.15+(b-1600000)*0.2;
+    else if(b<=2400000) tax=400000*0.05+400000*0.1+400000*0.15+400000*0.2+(b-2000000)*0.25;
+    else tax=400000*0.05+400000*0.1+400000*0.15+400000*0.2+400000*0.25+(b-2400000)*0.3;
+  }
+  if(income<=1200000) tax=0;
+  return tax*1.04;
+}
+
+function calcTax(){
+  const gross=parseFloat(el('ti').value), age=el('tage').value;
+  const ded80c = Math.min(parseFloat(el('t80c').value)||0, 150000);
+  const dedHRA = parseFloat(el('thra').value)||0;
+  const dedNPS = Math.min(parseFloat(el('tnps').value)||0, 50000);
+  const dedOther = parseFloat(el('toth').value)||0;
+  const totalDed = ded80c+dedHRA+dedNPS+dedOther;
+  const oldIncome = Math.max(0, gross-totalDed);
+  const oldTax = calcTaxOld(oldIncome, age);
+  const newTax = calcTaxNew(gross);
+  const save = Math.abs(oldTax-newTax);
+
+  el('t-old').textContent=fmtFull(oldTax);
+  el('t-new').textContent=fmtFull(newTax);
+  el('t-save').textContent=fmtFull(save);
+  el('t-rec').textContent = oldTax < newTax ? '✅ Old Regime' : '✅ New Regime';
+
+  makeBar('tax-chart', ['Gross Income','Deductions','Taxable Income','Tax Payable','Take-Home'], [
+    { label:'Old Regime', data:[Math.round(gross),Math.round(totalDed),Math.round(oldIncome-50000),Math.round(oldTax),Math.round(gross-oldTax)], backgroundColor:COLORS.coral, borderRadius:4 },
+    { label:'New Regime', data:[Math.round(gross),75000,Math.round(gross-75000),Math.round(newTax),Math.round(gross-newTax)], backgroundColor:COLORS.teal, borderRadius:4 }
+  ]);
+
+  const rows = [
+    ['Gross Annual Income', fmtFull(gross), fmtFull(gross)],
+    ['Standard Deduction', '₹50,000', '₹75,000'],
+    ['80C Deductions', fmtFull(ded80c), 'Not allowed'],
+    ['HRA Exemption', fmtFull(dedHRA), 'Not allowed'],
+    ['NPS 80CCD(1B)', fmtFull(dedNPS), 'Not allowed'],
+    ['Other Deductions', fmtFull(dedOther), 'Not allowed'],
+    ['<strong>Taxable Income</strong>', '<strong>'+fmtFull(Math.max(0,oldIncome-50000))+'</strong>', '<strong>'+fmtFull(gross-75000)+'</strong>'],
+    ['Tax (before cess)', fmtFull(oldTax/1.04), fmtFull(newTax/1.04)],
+    ['+ 4% Cess', fmtFull(oldTax-oldTax/1.04), fmtFull(newTax-newTax/1.04)],
+    ['<strong>Total Tax Payable</strong>', '<strong style="color:#DC2626">'+fmtFull(oldTax)+'</strong>', '<strong style="color:#0D9488">'+fmtFull(newTax)+'</strong>'],
+    ['<strong>Take-Home (Annual)</strong>', '<strong>'+fmtFull(gross-oldTax)+'</strong>', '<strong>'+fmtFull(gross-newTax)+'</strong>'],
+  ];
+  el('tax-detail-body').innerHTML = rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td></tr>`).join('');
+}
+
+initFAQ();
+calcTax();
+</script>
+</body>
+</html>

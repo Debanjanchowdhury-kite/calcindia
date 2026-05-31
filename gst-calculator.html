@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>GST Calculator India 2025 - Add or Remove GST Online (CGST SGST IGST) | CalcIndia</title>
+<meta name="description" content="Free GST Calculator India 2025 to add or remove GST. Calculate CGST, SGST, IGST instantly for 5%, 12%, 18%, 28% slabs. Inclusive/Exclusive mode. Free for businesses."/>
+<meta name="keywords" content="GST calculator, GST calculator India, CGST SGST calculator, IGST calculator, reverse GST calculator, GST inclusive exclusive"/>
+<link rel="canonical" href="https://calcindia.in/gst-calculator.html"/>
+<meta property="og:title" content="GST Calculator India - Add/Remove GST Online | CalcIndia"/>
+<meta property="og:description" content="Calculate GST instantly with CGST, SGST, IGST breakdown. All slabs supported."/>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"GST Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calcindia.in/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://calcindia.in/calculators.html"},{"@type":"ListItem","position":3,"name":"GST Calculator"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"What is GST in India?","acceptedAnswer":{"@type":"Answer","text":"GST (Goods and Services Tax) is a unified indirect tax in India introduced on 1 July 2017, replacing VAT, Service Tax, and Excise Duty. It is destination-based and operates across 5%, 12%, 18%, and 28% slabs."}},
+  {"@type":"Question","name":"What is CGST SGST and IGST?","acceptedAnswer":{"@type":"Answer","text":"CGST is Central GST collected by Central Government. SGST is State GST collected by State Government. Both apply equally on intrastate transactions. IGST is Integrated GST applied on interstate transactions and collected entirely by Central Government."}},
+  {"@type":"Question","name":"How to remove GST from total amount?","acceptedAnswer":{"@type":"Answer","text":"To remove GST from inclusive amount: Base Amount = Total / (1 + GST Rate/100). For example, ₹11,800 inclusive of 18% GST = ₹11,800/1.18 = ₹10,000 base + ₹1,800 GST."}}
+]}
+</script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+<!-- HEADER -->
+<header>
+  <a href="/" class="logo a1">
+    <div class="logo-icon">🧮</div>
+    Calc<span>India</span>
+  </a>
+  <nav class="a2">
+    <a href="/emi-calculator.html" data-page="emi">EMI</a>
+    <a href="/sip-calculator.html" data-page="sip">SIP</a>
+    <a href="/income-tax-calculator.html" data-page="tax">Tax</a>
+    <a href="/gst-calculator.html" data-page="gst">GST</a>
+    <a href="/ppf-fd-calculator.html" data-page="ppf">PPF/FD</a>
+  </nav>
+</header>
+
+<div class="ad-top">
+  <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1234567890"></ins>
+  <script>(adsbygoogle=window.adsbygoogle||[]).push({})</script>
+</div>
+
+<nav class="breadcrumb">
+  <a href="/">Home</a><span class="sep">›</span>
+  <a href="/calculators.html">Calculators</a><span class="sep">›</span>
+  <span class="current">GST Calculator</span>
+</nav>
+
+<div class="layout">
+<aside class="left-nav a3">
+  <span class="left-nav-label">Calculators</span>
+  <a href="/emi-calculator.html" class="nav-card" data-nav="emi">
+    <div class="nc-icon">🏠</div>
+    <div class="nc-info"><span class="nc-name">EMI</span><span class="nc-desc">Loan calculator</span></div>
+  </a>
+  <a href="/sip-calculator.html" class="nav-card" data-nav="sip">
+    <div class="nc-icon">📈</div>
+    <div class="nc-info"><span class="nc-name">SIP Returns</span><span class="nc-desc">Mutual fund growth</span></div>
+  </a>
+  <a href="/income-tax-calculator.html" class="nav-card" data-nav="tax">
+    <div class="nc-icon">💰</div>
+    <div class="nc-info"><span class="nc-name">Income Tax</span><span class="nc-desc">Old vs New regime</span></div>
+  </a>
+  <a href="/gst-calculator.html" class="nav-card" data-nav="gst">
+    <div class="nc-icon">🧾</div>
+    <div class="nc-info"><span class="nc-name">GST</span><span class="nc-desc">Add/remove tax</span></div>
+  </a>
+  <a href="/ppf-fd-calculator.html" class="nav-card" data-nav="ppf">
+    <div class="nc-icon">🏦</div>
+    <div class="nc-info"><span class="nc-name">PPF / FD</span><span class="nc-desc">Savings maturity</span></div>
+  </a>
+
+  <hr class="nav-divider"/>
+  <div class="bank-list">
+    <div class="bank-list-title">🏛️ Bank EMI Calculators</div>
+    <a class="bank-link" href="/sbi-home-loan-emi-calculator.html">SBI Home Loan EMI</a>
+    <a class="bank-link" href="/hdfc-home-loan-emi-calculator.html">HDFC Home Loan EMI</a>
+    <a class="bank-link" href="/icici-home-loan-emi-calculator.html">ICICI Home Loan EMI</a>
+    <a class="bank-link" href="/axis-home-loan-emi-calculator.html">Axis Home Loan EMI</a>
+    <a class="bank-link" href="/kotak-home-loan-emi-calculator.html">Kotak Home Loan EMI</a>
+  </div>
+
+  <hr class="nav-divider"/>
+  <div class="bank-list">
+    <div class="bank-list-title">🏦 Bank SIP Calculators</div>
+    <a class="bank-link" href="/sbi-sip-calculator.html">SBI SIP</a>
+    <a class="bank-link" href="/hdfc-sip-calculator.html">HDFC SIP</a>
+    <a class="bank-link" href="/icici-sip-calculator.html">ICICI SIP</a>
+    <a class="bank-link" href="/axis-sip-calculator.html">Axis SIP</a>
+  </div>
+</aside>
+
+<main class="a4">
+  <div class="panel-top">
+    <div class="panel-badge">🧾 Indirect Tax</div>
+    <h1 class="panel-title">GST Calculator India</h1>
+    <p class="panel-sub">Add or remove GST with complete CGST, SGST &amp; IGST breakdown. Supports all GST slabs — 5%, 12%, 18%, 28% — and custom rates for any product or service.</p>
+  </div>
+
+  <div class="calc-card">
+    <div class="form-grid">
+      <div class="field"><label>Amount (₹)</label><input type="number" id="ga" value="10000" min="1" step="100"/></div>
+      <div class="field">
+        <label>GST Rate</label>
+        <select id="gr" onchange="toggleCGST()">
+          <option value="5">5% — Food, medicines, transport</option>
+          <option value="12">12% — Computers, processed food</option>
+          <option value="18" selected>18% — Services, IT, telecom</option>
+          <option value="28">28% — Luxury, tobacco</option>
+          <option value="c">Custom Rate</option>
+        </select>
+      </div>
+      <div class="field" id="gst-cw" style="display:none"><label>Custom Rate (%)</label><input type="number" id="gcr" value="10" min="0" max="100" step="0.5"/></div>
+      <div class="field">
+        <label>Transaction</label>
+        <select id="gtxn">
+          <option value="intra">Intrastate (CGST + SGST)</option>
+          <option value="inter">Interstate (IGST)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Mode</label>
+        <select id="gmode">
+          <option value="excl">Add GST (Exclusive)</option>
+          <option value="incl">Remove GST (Inclusive)</option>
+        </select>
+      </div>
+    </div>
+    <button class="go-btn" onclick="calcGST()">Calculate GST →</button>
+
+    <div class="results-wrap" id="gst-res">
+      <div class="results-divider"><span>Your GST Breakdown</span></div>
+      <div class="stat-grid">
+        <div class="stat-card teal"><div class="stat-label">GST Amount</div><div class="stat-val" id="g-tax">—</div></div>
+        <div class="stat-card coral"><div class="stat-label" id="g-l1">CGST</div><div class="stat-val" id="g-v1">—</div></div>
+        <div class="stat-card violet"><div class="stat-label" id="g-l2">SGST</div><div class="stat-val" id="g-v2">—</div></div>
+        <div class="stat-card green"><div class="stat-label" id="g-nl">Total (incl. GST)</div><div class="stat-val" id="g-net">—</div></div>
+      </div>
+      <div class="chart-area one-col">
+        <div class="chart-box">
+          <div class="chart-title"><span>🍩</span> GST Distribution</div>
+          <div class="chart-canvas-wrap" style="height:240px"><canvas id="gst-donut"></canvas></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-banner">
+    <div class="cta-banner-text">
+      <h3>🧾 Get GST Registration in 24 Hours</h3>
+      <p>Expert filing · Free advisory · 100% online process</p>
+    </div>
+    <a href="#" class="cta-btn">Register Now →</a>
+  </div>
+
+  <div class="disclaimer"><strong>Disclaimer:</strong> GST rates may vary for specific goods/services. Always verify with CBIC or a GST consultant before raising invoices. This calculator is for indicative purposes only.</div>
+
+  <article class="info-section">
+    <h2>What is GST in India?</h2>
+    <p>Goods and Services Tax (GST) is India's unified indirect tax system, introduced on 1 July 2017, replacing multiple cascading taxes including VAT, Service Tax, Excise Duty, and Octroi. GST is a destination-based, multi-stage tax levied on every value addition in the supply chain.</p>
+    <p>GST has dramatically simplified taxation, increased compliance, and unified India's economy under "One Nation, One Tax." Over 1.4 crore businesses are registered under GST as of 2025.</p>
+
+    <h2>GST Calculation Formulas</h2>
+    <h3>Adding GST to Base Amount (Exclusive)</h3>
+    <div class="formula">GST Amount = Base × (GST Rate / 100)<br/>Total = Base + GST Amount</div>
+    <p><strong>Example:</strong> Base ₹10,000 + 18% GST = ₹10,000 + ₹1,800 = ₹11,800</p>
+
+    <h3>Removing GST from Total Amount (Inclusive)</h3>
+    <div class="formula">Base = Total / (1 + GST Rate/100)<br/>GST Amount = Total – Base</div>
+    <p><strong>Example:</strong> Total ₹11,800 inclusive of 18% GST → Base = ₹11,800/1.18 = ₹10,000, GST = ₹1,800</p>
+
+    <h2>Types of GST in India</h2>
+    <h3>CGST (Central GST)</h3>
+    <p>Collected by Central Government on intrastate supplies. Applies equally with SGST on transactions within the same state.</p>
+
+    <h3>SGST (State GST)</h3>
+    <p>Collected by State Government on intrastate supplies. Applies equally with CGST.</p>
+
+    <h3>IGST (Integrated GST)</h3>
+    <p>Collected by Central Government on interstate transactions. Equal to combined CGST + SGST rate.</p>
+
+    <h3>UTGST (Union Territory GST)</h3>
+    <p>Collected on supplies within Union Territories without legislature (Chandigarh, Lakshadweep, etc.).</p>
+
+    <h2>GST Rate Slabs in India 2025</h2>
+    <ul>
+      <li><strong>0% (Exempt):</strong> Fresh vegetables, milk, eggs, unbranded flour, postal services</li>
+      <li><strong>5%:</strong> Essential medicines, packaged food, economy transport, footwear under ₹1000</li>
+      <li><strong>12%:</strong> Processed food, business class flights, computers, mobile phones</li>
+      <li><strong>18%:</strong> IT services, telecom, restaurants, hotel rooms ₹1000-7500</li>
+      <li><strong>28%:</strong> Luxury cars, tobacco, aerated drinks, hotel rooms above ₹7500</li>
+      <li><strong>28% + Cess:</strong> Pan masala, gutkha, luxury goods</li>
+    </ul>
+
+    <h2>Who Should Register for GST?</h2>
+    <ul>
+      <li>Businesses with turnover above ₹40 lakh (₹20L for services, ₹10L for special states)</li>
+      <li>Interstate suppliers (regardless of turnover)</li>
+      <li>E-commerce sellers</li>
+      <li>Casual taxable persons</li>
+      <li>Non-resident taxable persons</li>
+      <li>Input Service Distributors</li>
+    </ul>
+
+    <h2>Benefits of Using a GST Calculator</h2>
+    <ul>
+      <li><strong>Time-Saving:</strong> Instant computation vs manual calculation</li>
+      <li><strong>Error-Free:</strong> No arithmetic mistakes on invoices</li>
+      <li><strong>Both Modes:</strong> Add GST or extract GST from total</li>
+      <li><strong>Detailed Breakdown:</strong> See CGST, SGST, IGST split clearly</li>
+      <li><strong>Free &amp; Unlimited:</strong> Use as many times as needed</li>
+      <li><strong>Mobile Friendly:</strong> Calculate on-the-go from anywhere</li>
+    </ul>
+
+    <h2>Input Tax Credit (ITC) — Save More with GST</h2>
+    <p>Input Tax Credit allows businesses to deduct the GST paid on purchases (inputs) from the GST collected on sales (output). This avoids tax cascading and is one of GST's biggest advantages over the old tax system.</p>
+    <p>For example, if you collect ₹10,000 GST on sales and paid ₹6,000 GST on purchases, you only need to pay ₹4,000 (net) to the government.</p>
+
+    <h2>GST Return Filing Schedule</h2>
+    <ul>
+      <li><strong>GSTR-1:</strong> Monthly/Quarterly sales return (11th of next month)</li>
+      <li><strong>GSTR-3B:</strong> Monthly summary return (20th of next month)</li>
+      <li><strong>GSTR-9:</strong> Annual return (31st December)</li>
+      <li><strong>GSTR-4:</strong> Composition scheme annual return (30th April)</li>
+    </ul>
+  </article>
+
+  <div class="info-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-q">What is GST in India?</div><div class="faq-a">GST (Goods and Services Tax) is India's unified indirect tax introduced on 1 July 2017, replacing VAT, Service Tax, and Excise Duty. It is destination-based and operates across 5%, 12%, 18%, and 28% slabs.</div></div>
+    <div class="faq-item"><div class="faq-q">What is CGST, SGST and IGST?</div><div class="faq-a">CGST is Central GST collected by Central Government. SGST is State GST collected by State Government. Both apply equally on intrastate transactions. IGST is Integrated GST applied on interstate transactions, collected entirely by Central Government.</div></div>
+    <div class="faq-item"><div class="faq-q">How to remove GST from total amount?</div><div class="faq-a">To remove GST from inclusive amount: Base Amount = Total / (1 + GST Rate/100). For example, ₹11,800 inclusive of 18% GST → ₹11,800/1.18 = ₹10,000 base + ₹1,800 GST.</div></div>
+    <div class="faq-item"><div class="faq-q">Who needs to register for GST?</div><div class="faq-a">Businesses with annual turnover above ₹40 lakh (₹20L for services in most states, ₹10L for special category states like NE, Himachal). Also mandatory for interstate sellers, e-commerce sellers, and casual taxable persons.</div></div>
+    <div class="faq-item"><div class="faq-q">Is GST applicable on home loan EMIs?</div><div class="faq-a">No, GST is NOT applicable on the EMI itself (interest is not goods/service). However, 18% GST applies on processing fees, prepayment penalties, and late payment charges from banks.</div></div>
+    <div class="faq-item"><div class="faq-q">Can I claim ITC for any business expense?</div><div class="faq-a">No, ITC is restricted on certain expenses like personal vehicles, food/beverages, club memberships, and travel for personal purpose. ITC is allowed only on inputs/services used for business purposes with valid tax invoices.</div></div>
+  </div>
+
+  <div class="info-section">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/income-tax-calculator.html"><div class="related-icon">💰</div><div class="related-info"><span>Income Tax</span><small>FY 2025-26</small></div></a>
+      <a class="related-card" href="/tds-calculator.html"><div class="related-icon">📑</div><div class="related-info"><span>TDS Calculator</span><small>Tax deduction at source</small></div></a>
+      <a class="related-card" href="/professional-tax-calculator.html"><div class="related-icon">💼</div><div class="related-info"><span>Professional Tax</span><small>State-wise rates</small></div></a>
+      <a class="related-card" href="/hra-calculator.html"><div class="related-icon">🏠</div><div class="related-info"><span>HRA Calculator</span><small>House Rent Allowance</small></div></a>
+      <a class="related-card" href="/salary-calculator.html"><div class="related-icon">💵</div><div class="related-info"><span>Salary Calculator</span><small>In-hand salary</small></div></a>
+      <a class="related-card" href="/capital-gains-calculator.html"><div class="related-icon">📈</div><div class="related-info"><span>Capital Gains</span><small>STCG and LTCG</small></div></a>
+    </div>
+  </div>
+
+  <div style="margin-top:20px"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="9876543210" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div>
+</main>
+
+<aside class="right-sidebar">
+  <div class="widget">
+    <div class="widget-title">📊 Live Rates · FY 2025-26</div>
+    <div class="rate-row"><span class="rate-label">RBI Repo Rate</span><span class="rate-val coral">6.50%</span></div>
+    <div class="rate-row"><span class="rate-label">SBI Home Loan</span><span class="rate-val teal">8.50%</span></div>
+    <div class="rate-row"><span class="rate-label">HDFC Home Loan</span><span class="rate-val teal">8.55%</span></div>
+    <div class="rate-row"><span class="rate-label">PPF Rate</span><span class="rate-val green">7.10%</span></div>
+    <div class="rate-row"><span class="rate-label">NSC Rate</span><span class="rate-val green">7.70%</span></div>
+    <div class="rate-row"><span class="rate-label">SBI Senior FD</span><span class="rate-val green">7.60%</span></div>
+    <div class="rate-row"><span class="rate-label">HDFC FD (1Y)</span><span class="rate-val teal">7.25%</span></div>
+  </div>
+
+  <div class="ad-side">
+    <ins class="adsbygoogle" style="display:inline-block;width:100%;height:250px"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1122334455" data-ad-format="auto"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({})</script>
+  </div>
+
+  <div class="widget">
+    <div class="widget-title">⭐ Popular Calculators</div>
+    <a class="bank-link" href="/emi-calculator.html">EMI Calculator</a>
+    <a class="bank-link" href="/sip-calculator.html">SIP Calculator</a>
+    <a class="bank-link" href="/income-tax-calculator.html">Income Tax Calculator</a>
+    <a class="bank-link" href="/gst-calculator.html">GST Calculator</a>
+    <a class="bank-link" href="/ppf-fd-calculator.html">PPF / FD Calculator</a>
+    <a class="bank-link" href="/sbi-home-loan-emi-calculator.html">SBI Home Loan EMI</a>
+  </div>
+</aside>
+</div>
+<!-- Footer with massive internal linking — Groww strategy -->
+<section class="footer-links-section">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>🏠 EMI Calculators</h4>
+        <a href="/emi-calculator.html">EMI Calculator</a>
+        <a href="/sbi-home-loan-emi-calculator.html">SBI Home Loan EMI</a>
+        <a href="/hdfc-home-loan-emi-calculator.html">HDFC Home Loan EMI</a>
+        <a href="/icici-home-loan-emi-calculator.html">ICICI Home Loan EMI</a>
+        <a href="/axis-home-loan-emi-calculator.html">Axis Home Loan EMI</a>
+        <a href="/kotak-home-loan-emi-calculator.html">Kotak Home Loan EMI</a>
+        <a href="/personal-loan-emi-calculator.html">Personal Loan EMI</a>
+        <a href="/car-loan-emi-calculator.html">Car Loan EMI</a>
+        <a href="/education-loan-emi-calculator.html">Education Loan EMI</a>
+      </div>
+      <div class="footer-col">
+        <h4>📈 SIP & Investment</h4>
+        <a href="/sip-calculator.html">SIP Calculator</a>
+        <a href="/sbi-sip-calculator.html">SBI SIP Calculator</a>
+        <a href="/hdfc-sip-calculator.html">HDFC SIP Calculator</a>
+        <a href="/icici-sip-calculator.html">ICICI SIP Calculator</a>
+        <a href="/axis-sip-calculator.html">Axis SIP Calculator</a>
+        <a href="/step-up-sip-calculator.html">Step-Up SIP Calculator</a>
+        <a href="/lumpsum-calculator.html">Lumpsum Calculator</a>
+        <a href="/swp-calculator.html">SWP Calculator</a>
+        <a href="/elss-calculator.html">ELSS Calculator</a>
+      </div>
+      <div class="footer-col">
+        <h4>🏦 Savings & Deposits</h4>
+        <a href="/ppf-fd-calculator.html">PPF / FD Calculator</a>
+        <a href="/fd-calculator.html">FD Calculator</a>
+        <a href="/rd-calculator.html">RD Calculator</a>
+        <a href="/ppf-calculator.html">PPF Calculator</a>
+        <a href="/nsc-calculator.html">NSC Calculator</a>
+        <a href="/ssy-calculator.html">Sukanya Samriddhi Calculator</a>
+        <a href="/epf-calculator.html">EPF Calculator</a>
+        <a href="/kvp-calculator.html">KVP Calculator</a>
+      </div>
+      <div class="footer-col">
+        <h4>💰 Tax & Business</h4>
+        <a href="/income-tax-calculator.html">Income Tax Calculator</a>
+        <a href="/gst-calculator.html">GST Calculator</a>
+        <a href="/hra-calculator.html">HRA Calculator</a>
+        <a href="/tds-calculator.html">TDS Calculator</a>
+        <a href="/salary-calculator.html">In-hand Salary Calculator</a>
+        <a href="/gratuity-calculator.html">Gratuity Calculator</a>
+        <a href="/capital-gains-calculator.html">Capital Gains Calculator</a>
+        <a href="/professional-tax-calculator.html">Professional Tax Calculator</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2025 CalcIndia · For informational purposes only · Not financial advice</span>
+  <div class="footer-bottom-links">
+    <a href="/about.html">About</a>
+    <a href="/privacy-policy.html">Privacy Policy</a>
+    <a href="/disclaimer.html">Disclaimer</a>
+    <a href="/contact.html">Contact</a>
+  </div>
+</footer>
+
+<script src="shared.js"></script>
+<script>
+document.querySelector('nav a[data-page="gst"]').classList.add('active');
+document.querySelector('.nav-card[data-nav="gst"]').classList.add('active');
+
+function toggleCGST(){ el('gst-cw').style.display = el('gr').value==='c'?'':'none'; }
+
+function calcGST(){
+  const rv = el('gr').value;
+  const rate = rv==='c'?parseFloat(el('gcr').value)||0:parseFloat(rv);
+  const mode = el('gmode').value, txn = el('gtxn').value, amt = parseFloat(el('ga').value)||0;
+  let base, gst, total;
+  if(mode==='excl'){ base=amt; gst=amt*rate/100; total=amt+gst; }
+  else { total=amt; base=amt/(1+rate/100); gst=total-base; }
+  const half=gst/2;
+  el('g-tax').textContent=fmtFull(gst);
+  el('g-net').textContent=fmtFull(mode==='excl'?total:base);
+  el('g-nl').textContent=mode==='excl'?'Total (incl. GST)':'Base (excl. GST)';
+  if(txn==='intra'){
+    el('g-l1').textContent=`CGST (${rate/2}%)`;el('g-l2').textContent=`SGST (${rate/2}%)`;
+    el('g-v1').textContent=fmtFull(half);el('g-v2').textContent=fmtFull(half);
+    makeDonut('gst-donut',['Base Amount',`CGST ${rate/2}%`,`SGST ${rate/2}%`],[Math.round(base),Math.round(half),Math.round(half)],[COLORS.teal,COLORS.coral,COLORS.violet]);
+  } else {
+    el('g-l1').textContent=`IGST (${rate}%)`;el('g-l2').textContent='Base Amount';
+    el('g-v1').textContent=fmtFull(gst);el('g-v2').textContent=fmtFull(base);
+    makeDonut('gst-donut',['Base Amount',`IGST ${rate}%`],[Math.round(base),Math.round(gst)],[COLORS.teal,COLORS.coral]);
+  }
+}
+
+initFAQ();
+calcGST();
+</script>
+</body>
+</html>
