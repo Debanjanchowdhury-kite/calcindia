@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
+<link rel="icon" href="favicon.ico" sizes="any"/>
 <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"/>
 <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Finance Blog 2025 | EMI, SIP, Tax & Investment Tips India | IndiCalculator</title>
-<meta name="description" content="Free finance guides for Indians — ₹50L home loan EMI comparison, SIP to reach ₹1 crore, income tax saving, GST explained, PPF tricks. Updated June 2025."/>
+<title>Finance Blog 2025 | How to Calculate EMI, GST & Investment Tips India | IndiCalculator</title>
+<meta name="description" content="Free finance guides for Indians — how to calculate EMI manually, how to calculate home loan EMI, how to calculate GST on MRP, SIP to ₹1 crore, PPF tricks. Updated June 2025."/>
+<meta name="keywords" content="how to calculate emi, how to calculate home loan emi, how to calculate loan emi, how to calculate car loan emi, how to calculate emi for personal loan, how to calculate emi in excel, how to calculate bike emi, how to calculate gst, how to calculate gst percentage, how to calculate gst on mrp, how to calculate gst from total amount"/>
 <link rel="canonical" href="https://indicalculator.in/blog.html"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"IndiCalculator Finance Blog","url":"https://indicalculator.in/blog.html","description":"Free finance guides for Indians covering EMI, SIP, income tax, GST, PPF and home loan tips. Updated 2025.","blogPost":[{"@type":"BlogPosting","headline":"How Much SIP Do You Need to Get ₹1 Crore?","url":"https://indicalculator.in/blog.html#sip-1crore","datePublished":"2025-06-01"},{"@type":"BlogPosting","headline":"₹50 Lakh Home Loan EMI: SBI vs HDFC vs ICICI 2025","url":"https://indicalculator.in/blog.html#home-loan-50l","datePublished":"2025-06-01"},{"@type":"BlogPosting","headline":"How to Calculate EMI Manually — Formula & Examples","url":"https://indicalculator.in/blog.html#emi-formula","datePublished":"2025-06-01"},{"@type":"BlogPosting","headline":"Old vs New Tax Regime 2025: Which Saves You More?","url":"https://indicalculator.in/blog.html#tax-regime","datePublished":"2025-04-01"}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -243,7 +245,7 @@
         <div class="art-toggle">+</div>
       </div>
       <div class="article-body">
-        <p>Banks calculate your EMI using a fixed formula. Understanding it helps you verify your bank's figures, compare offers quickly, and negotiate better. Here's the complete breakdown.</p>
+        <p>Banks calculate your EMI using a fixed formula. Whether you want to know how to calculate EMI for a personal loan, how to calculate home loan EMI for a ₹50 lakh property, or how to calculate car loan EMI on a 5-year tenure — the underlying math is the same. Understanding it helps you verify your bank's figures, compare offers quickly, and negotiate better.</p>
 
         <h2>The EMI Formula</h2>
         <div class="formula">EMI = P × R × (1 + R)^N ÷ [(1 + R)^N − 1]</div>
@@ -286,6 +288,14 @@
 
         <h2>Why Your Bank's EMI Might Differ Slightly</h2>
         <p>Banks may use slightly different compounding conventions (daily vs monthly), round up to the nearest rupee, or add insurance/processing fees into the EMI. If your bank's EMI differs by more than ₹50–100 from this formula, ask for a detailed amortisation schedule.</p>
+
+        <h2>How to Calculate EMI in Excel</h2>
+        <p>If you prefer a spreadsheet, Excel has a built-in <code>PMT</code> function that does the entire calculation in one line:</p>
+        <div class="formula">=PMT(rate/12, tenure_months, -principal)</div>
+        <p>For a ₹20 lakh loan at 9% for 5 years: <code>=PMT(9%/12, 60, -2000000)</code> returns ₹41,519 — the same answer as the formula above. The minus sign before principal flips the result to a positive number.</p>
+
+        <h2>How to Calculate Bike EMI and Two-Wheeler Loan EMI</h2>
+        <p>Bike loans typically run for 1–3 years at 9.5–13% interest. The same EMI formula applies — a ₹1 lakh bike loan at 11% for 3 years comes to <strong>~₹3,273/month</strong>. Many showrooms quote inflated "flat rates" — always re-check using the reducing-balance formula above.</p>
 
         <h2>How to Reduce Your EMI Without Paying More</h2>
         <ul>
@@ -490,6 +500,22 @@
           <li><strong>Missing ITC claims:</strong> Claims expire — file and claim every month</li>
           <li><strong>Not reconciling GSTR-2A:</strong> You can only claim ITC if your supplier also filed returns</li>
         </ul>
+
+        <h2>How to Calculate GST Percentage on a Product</h2>
+        <p>The standard GST percentage formula is straightforward — add the slab to the base price. For an 18% slab on a ₹1,000 base product: GST = 1000 × 18 ÷ 100 = ₹180. Total = ₹1,180.</p>
+        <p>To learn how to calculate 18 percent GST quickly, divide the base by 100 and multiply by 18, or just multiply the base by 0.18.</p>
+
+        <h2>How to Calculate GST from Total Amount (Reverse GST)</h2>
+        <p>When a price is GST-inclusive (e.g. an MRP), use this reverse formula:</p>
+        <div class="formula">Base = Total ÷ (1 + GST_rate/100)</div>
+        <p>So if a product's MRP is ₹1,180 inclusive of 18% GST, the base price = 1180 ÷ 1.18 = ₹1,000 and the GST portion = ₹180. This is exactly how to calculate GST on MRP for any retail product.</p>
+
+        <h2>How to Calculate GST on Medicine and Gold</h2>
+        <ul>
+          <li><strong>Medicine:</strong> Most fall under 5% GST; some life-saving drugs are 0%. For a ₹500 medicine at 5% GST, the tax is ₹25.</li>
+          <li><strong>Gold:</strong> 3% GST on the gold value + 5% GST on making charges. On ₹1,00,000 gold with ₹10,000 making charges = ₹3,000 + ₹500 = ₹3,500 total GST.</li>
+        </ul>
+
         <a class="calc-link-btn" href="gst-calculator.html">🧾 Calculate GST for Your Invoice →</a>
       </div>
     </article>

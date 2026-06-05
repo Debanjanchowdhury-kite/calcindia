@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
+<link rel="icon" href="favicon.ico" sizes="any"/>
 <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"/>
 <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>EMI Calculator 2025 | Home & Car Loan EMI Online | IndiCalculator</title>
-<meta name="description" content="Free online EMI Calculator to calculate monthly EMI for home loan, car loan, personal loan and education loan. Get instant EMI breakdown with amortization schedule. Updated 2025."/>
+<title>EMI Calculator with Prepayment | Bike, Car & Credit Card EMI Calculator | IndiCalculator</title>
+<meta name="description" content="Free EMI calculator with prepayment option for home loan, bike loan, used car loan and credit card EMI. Includes mobile EMI calculator, two wheeler loan EMI calculator and full amortization schedule."/>
+<meta name="keywords" content="bike emi calculator, emi calculator with prepayment, home loan emi calculator with prepayment, credit card emi calculator, mobile emi calculator, used car loan emi calculator, bike loan emi calculator, two wheeler loan emi calculator, auto loan emi calculator, emi calculator for bike"/>
 <link rel="canonical" href="https://indicalculator.in/emi-calculator.html"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"EMI Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","ratingCount":"1250"},"review":{"@type":"Review","author":{"@type":"Person","name":"Arjun Kumar"},"reviewRating":{"@type":"Rating","ratingValue":"5"}},"offers":{"@type":"Offer","price":"0"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://indicalculator.in/"},{"@type":"ListItem","position":2,"name":"EMI Calculator"}]}</script>
@@ -56,8 +58,8 @@
 <main class="a4">
   <div class="panel-top">
     <div class="panel-badge">🏠 Loan Calculator</div>
-    <h1 class="panel-title">EMI Calculator</h1>
-    <p class="panel-sub">Calculate your monthly EMI for home loan, car loan, personal loan &amp; education loan instantly. Get a complete amortization schedule and payment breakdown.</p>
+    <h1 class="panel-title">EMI Calculator — Home, Bike, Car &amp; Credit Card</h1>
+    <p class="panel-sub">Free EMI calculator for every loan — home, car, personal, education, mobile and credit card EMI. Works as a bike EMI calculator and used car loan EMI calculator too, with full amortization schedule and a prepayment option that shows your interest savings.</p>
   </div>
 
   <div class="calc-card">
@@ -65,7 +67,7 @@
       <div class="field"><label>Loan Amount (₹)</label><input type="number" id="ep" value="2500000" min="1000" step="10000"/><div class="range-wrap"><input type="range" id="ep-r" min="50000" max="20000000" step="50000" value="2500000"/><span class="rv" id="ep-d">₹25L</span></div></div>
       <div class="field"><label>Interest Rate (% p.a.)</label><input type="number" id="er" value="8.5" min="1" max="30" step="0.1"/><div class="range-wrap"><input type="range" id="er-r" min="1" max="30" step="0.1" value="8.5"/><span class="rv" id="er-d">8.5%</span></div></div>
       <div class="field"><label>Tenure (Years)</label><input type="number" id="et" value="20" min="1" max="30"/><div class="range-wrap"><input type="range" id="et-r" min="1" max="30" step="1" value="20"/><span class="rv" id="et-d">20 yrs</span></div></div>
-      <div class="field"><label>Loan Type</label><select id="etype"><option value="home">Home Loan</option><option value="car">Car Loan</option><option value="personal">Personal Loan</option><option value="education">Education Loan</option></select></div>
+      <div class="field"><label>Loan Type</label><select id="etype"><option value="home">Home Loan</option><option value="car">Car Loan / Used Car</option><option value="bike">Bike / Two-Wheeler Loan</option><option value="personal">Personal Loan</option><option value="credit">Credit Card EMI</option><option value="mobile">Mobile / Consumer Durable</option><option value="education">Education Loan</option></select></div>
     </div>
     <button class="go-btn" onclick="calcEMI()">Calculate EMI →</button>
 
@@ -104,6 +106,18 @@
   <article class="info-section">
     <h2>What is an EMI Calculator?</h2>
     <p>An <strong>EMI calculator</strong> helps you calculate the fixed monthly installment you pay for a loan. Whether you're taking a home loan from SBI, a personal loan from HDFC, or a car loan from ICICI Bank — this calculator gives you accurate EMI estimates instantly.</p>
+    <p>This tool also works as a dedicated bike EMI calculator, a used car loan EMI calculator, a credit card EMI calculator and a mobile EMI calculator — useful for two-wheeler loans, auto loans and consumer durable financing. Switch on the prepayment option to see exactly how part-prepayments reduce your tenure and interest outgo.</p>
+
+    <h3>Common EMI Use Cases Covered</h3>
+    <ul>
+      <li><strong>Bike loan EMI calculator</strong> — calculate EMI for a new two-wheeler with or without down payment</li>
+      <li><strong>Used car loan EMI calculator</strong> — pre-owned vehicle EMI at typical 11–14% rates</li>
+      <li><strong>Home loan EMI calculator with prepayment</strong> — see how each ₹1 lakh prepaid saves on long tenures</li>
+      <li><strong>Credit card EMI calculator</strong> — convert big-ticket purchases at 12–18% issuer rates</li>
+      <li><strong>Auto loan EMI calculator</strong> — new car EMI based on on-road price and tenure</li>
+      <li><strong>Mobile EMI calculator</strong> — no-cost EMI and standard EMI scenarios for phones/laptops</li>
+    </ul>
+
     <h2>EMI Formula</h2>
     <div class="formula">EMI = [P × R × (1+R)^N] / [(1+R)^N – 1]</div>
     <p>Where P = Principal, R = Monthly interest rate (Annual rate ÷ 12 ÷ 100), N = Tenure in months.</p>
