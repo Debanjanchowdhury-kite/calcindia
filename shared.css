@@ -1,3 +1,7 @@
+/* Font fallback to prevent FOIT while Google Fonts load */
+body,input,select,button,textarea{font-family:'Mulish',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+h1,h2,h3,h4,h5,h6,.logo,.panel-title,.amort-title,.section-title{font-family:'Nunito',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 :root{
@@ -17,10 +21,14 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);min-hei
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 @keyframes scaleIn{from{opacity:0;transform:scale(0.96)}to{opacity:1;transform:scale(1)}}
 @keyframes popIn{from{opacity:0;transform:scale(0.8) translateY(6px)}to{opacity:1;transform:scale(1) translateY(0)}}
-.a1{animation:fadeUp 0.55s var(--ease) 0.05s both}
-.a2{animation:fadeUp 0.55s var(--ease) 0.15s both}
-.a3{animation:fadeUp 0.55s var(--ease) 0.25s both}
-.a4{animation:fadeUp 0.55s var(--ease) 0.35s both}
+/* Reduced animation delays for faster perceived load */
+@media(prefers-reduced-motion:no-preference){
+.a1{animation:fadeUp 0.4s var(--ease) both}
+.a2{animation:fadeUp 0.4s var(--ease) 0.05s both}
+.a3{animation:fadeUp 0.4s var(--ease) 0.1s both}
+.a4{animation:fadeUp 0.4s var(--ease) 0.15s both}
+}
+@media(prefers-reduced-motion:reduce){.a1,.a2,.a3,.a4{animation:none}}
 
 /* Header */
 header{position:sticky;top:0;z-index:200;background:rgba(255,255,255,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 32px;height:64px;display:flex;align-items:center;justify-content:space-between;box-shadow:var(--shadow-sm)}
@@ -175,6 +183,9 @@ input[type=range]{flex:1;height:4px;border:none;padding:0;cursor:pointer;accent-
 .rate-val{font-weight:800;font-variant-numeric:tabular-nums}
 .rate-val.teal{color:var(--teal)}.rate-val.green{color:var(--green)}.rate-val.coral{color:var(--coral)}
 .ad-side{background:var(--surface-2);border:1px dashed var(--border);border-radius:var(--r);min-height:0;display:none;align-items:center;justify-content:center;font-size:0.68rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase}
+
+/* Defer rendering of off-screen sections */
+.info-section,.footer-links-section,.faq-item{content-visibility:auto;contain-intrinsic-size:auto 500px}
 
 /* Footer with massive internal linking — Groww strategy */
 .footer-links-section{background:var(--surface);border-top:1px solid var(--border);padding:40px 32px;margin-top:60px}
