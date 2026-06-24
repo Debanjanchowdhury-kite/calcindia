@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>HDFC Home Loan EMI Calculator 2026 - Calculate HDFC Bank Home Loan EMI | IndiCalculator</title>
+<title>HDFC Home Loan EMI Calculator 2026 | IndiCalculator</title>
 <meta name="description" content="Free HDFC Home Loan EMI Calculator with current HDFC Bank rates (7.90% p.a.). Calculate monthly EMI, total interest &amp; amortization. Updated 2025."/>
 <meta name="keywords" content="HDFC home loan EMI calculator, HDFC bank home loan interest rate, HDFC home loan EMI, HDFC housing loan calculator, HDFC home loan 2025, HDFC bank home loan rates"/>
 <link rel="canonical" href="https://indicalculator.in/hdfc-home-loan-emi-calculator.html"/>
@@ -88,7 +88,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="shared.css"/>
+<link rel="stylesheet" href="shared.min.css"/>
 
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
@@ -614,246 +614,213 @@
 <footer><span>© 2025 IndiCalculator · Informational purposes only · Not financial advice</span><div class="footer-bottom-links"><a href="/">Home</a><a href="blog.html">Blog</a><a href="about.html">About</a><a href="privacy-policy.html">Privacy</a></div></footer>
 
 <!-- ═══ SCRIPTS ═══ -->
-<script src="shared.js"></script>
-<script>
-(function(){
-  // ── Sync range <-> number inputs ──────────────────────────────
-  function syncPair(numId, rangeId, displayId, fmt){
-    const num = document.getElementById(numId);
-    const rng = document.getElementById(rangeId);
-    const disp = displayId ? document.getElementById(displayId) : null;
-    function setDisp(v){
-      if(!disp) return;
-      disp.textContent = fmt ? fmt(v) : v;
-    }
-    num.addEventListener('input', function(){
-      rng.value = num.value;
-      setDisp(+num.value);
-      calc();
-    });
-    rng.addEventListener('input', function(){
-      num.value = rng.value;
-      setDisp(+rng.value);
-      calc();
-    });
-    setDisp(+num.value);
-  }
-
-  function fmtAmt(v){
-    if(v >= 10000000) return '₹' + (v/10000000).toFixed(2).replace(/\.?0+$/,'') + ' Cr';
-    if(v >= 100000)   return '₹' + (v/100000).toFixed(1).replace(/\.0$/,'') + ' L';
-    return '₹' + v.toLocaleString('en-IN');
-  }
-  function fmtRate(v){ return v + '%'; }
-  function fmtTenure(v){ return v + ' yr' + (v>1?'s':''); }
-
-  syncPair('amount','amountR','amountRV', fmtAmt);
-  syncPair('rate','rateR','rateRV', fmtRate);
-  syncPair('tenure','tenureR','tenureRV', fmtTenure);
-
-  // ── Format currency ───────────────────────────────────────────
-  function fmt(v){
-    return '₹' + Math.round(v).toLocaleString('en-IN');
-  }
-
-  // ── Charts ───────────────────────────────────────────────────
-  let donutChart = null, lineChart = null;
-
-  function makeDonut(canvasId, labels, data){
-    const ctx = document.getElementById(canvasId).getContext('2d');
-    return new Chart(ctx, {
-      type: 'doughnut',
-      data: {
-        labels: labels,
-        datasets: [{
-          data: data,
-          backgroundColor: ['#0D9488','#F97316'],
-          borderWidth: 0,
-          hoverOffset: 6
-        }]
-      },
-      options: {
-        cutout: '65%',
-        plugins: {
-          legend: { position:'bottom', labels:{ font:{size:11,weight:'700'}, color:'#4A5068', padding:12, usePointStyle:true } },
-          tooltip: {
-            callbacks: { label: function(ctx){ return ' ' + ctx.label + ': ' + fmt(ctx.raw); } }
-          }
-        },
-        animation: { animateRotate: true, duration: 700 }
-      }
-    });
-  }
-
-  function makeLine(canvasId, labels, data, label){
-    const ctx = document.getElementById(canvasId).getContext('2d');
-    return new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: labels,
-        datasets: [{
-          label: label,
-          data: data,
-          borderColor: '#0D9488',
-          backgroundColor: 'rgba(13,148,136,0.10)',
-          borderWidth: 2.5,
-          pointRadius: 3,
-          pointBackgroundColor: '#0D9488',
-          tension: 0.35,
-          fill: true
-        }]
-      },
-      options: {
-        plugins: {
-          legend: { display: false },
-          tooltip: {
-            callbacks: { label: function(ctx){ return ' Balance: ' + fmt(ctx.raw); } }
-          }
-        },
-        scales: {
-          x: { ticks:{ font:{size:10}, color:'#8890AA', maxTicksLimit:8 }, grid:{display:false} },
-          y: {
-            ticks:{ font:{size:10}, color:'#8890AA', callback: function(v){ return '₹'+(v/100000).toFixed(0)+'L'; } },
-            grid:{ color:'rgba(0,0,0,0.05)' }
-          }
-        },
-        animation: { duration: 700 }
-      }
-    });
-  }
-
-  // ── Amortization ──────────────────────────────────────────────
-  let amortMode = 'yearly'; // 'yearly' | 'monthly'
-  let amortData = []; // store { month, P, I, bal }
-
-  function buildAmortData(P, r, n, emi){
-    const rows = [];
-    let bal = P;
-    for(let m=1; m<=n; m++){
-      const intPay = bal * r;
-      const prinPay = emi - intPay;
-      bal -= prinPay;
-      rows.push({ month: m, prinPay, intPay, bal: Math.max(0, bal) });
-    }
-    return rows;
-  }
-
-  function renderAmortTable(){
-    const tbody = document.getElementById('amortBody');
-    tbody.innerHTML = '';
-    if(amortMode === 'yearly'){
-      let yr = 0, yP = 0, yI = 0;
-      for(let i = 0; i < amortData.length; i++){
-        const row = amortData[i];
-        yP += row.prinPay; yI += row.intPay;
-        if((i+1) % 12 === 0 || i === amortData.length-1){
-          yr++;
-          tbody.innerHTML += `<tr>
-            <td>Year ${yr}</td>
-            <td>${fmt(yP)}</td>
-            <td>${fmt(yI)}</td>
-            <td>${fmt(yP+yI)}</td>
-            <td>${fmt(row.bal)}</td>
-          </tr>`;
-          yP = 0; yI = 0;
-        }
-      }
-    } else {
-      for(let i = 0; i < amortData.length; i++){
-        const row = amortData[i];
-        const yr = Math.ceil(row.month / 12);
-        const mo = ((row.month - 1) % 12) + 1;
-        const moName = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][mo-1];
-        tbody.innerHTML += `<tr>
-          <td>${moName} ${yr}</td>
-          <td>${fmt(row.prinPay)}</td>
-          <td>${fmt(row.intPay)}</td>
-          <td>${fmt(row.prinPay + row.intPay)}</td>
-          <td>${fmt(row.bal)}</td>
-        </tr>`;
-      }
-    }
-  }
-
-  // ── Main calc ─────────────────────────────────────────────────
-  function calc(){
-    const P = Math.max(1, +document.getElementById('amount').value);
-    const annualRate = +document.getElementById('rate').value;
-    const years = +document.getElementById('tenure').value;
-    const r = annualRate / 12 / 100;
-    const n = years * 12;
-
-    const emi = P * r * Math.pow(1+r, n) / (Math.pow(1+r, n) - 1);
-    const totalPay = emi * n;
-    const totalInt = totalPay - P;
-
-    document.getElementById('emi').textContent = fmt(emi);
-    document.getElementById('interest').textContent = fmt(totalInt);
-    document.getElementById('total').textContent = fmt(totalPay);
-
-    // Update donut
-    if(!donutChart){
-      donutChart = makeDonut('donut', ['Principal','Interest'], [P, totalInt]);
-    } else {
-      donutChart.data.datasets[0].data = [P, totalInt];
-      donutChart.update();
-    }
-
-    // Build amort data
-    amortData = buildAmortData(P, r, n, emi);
-    renderAmortTable();
-
-    // Build line chart data
-    const yrs = [], bals = [];
-    for(let i = 11; i < amortData.length; i += 12){
-      yrs.push('Yr ' + Math.ceil((i+1)/12));
-      bals.push(amortData[i].bal);
-    }
-    // ensure last point is 0
-    if(bals[bals.length-1] > 0){
-      yrs.push('Yr ' + years);
-      bals.push(0);
-    }
-
-    if(!lineChart){
-      lineChart = makeLine('lineChart', yrs, bals, 'Outstanding Balance');
-    } else {
-      lineChart.data.labels = yrs;
-      lineChart.data.datasets[0].data = bals;
-      lineChart.update();
-    }
-  }
-
-  // ── FAQ toggle ───────────────────────────────────────────────
-  function initFAQ(){
-    document.querySelectorAll('.faq-q').forEach(function(q){
-      q.addEventListener('click', function(){
-        const item = q.parentElement;
-        const isOpen = item.classList.contains('open');
-        document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
-        if(!isOpen) item.classList.add('open');
-      });
-    });
-  }
-
-  // ── Amort toggle ─────────────────────────────────────────────
-  function initAmortToggle(){
-    document.querySelectorAll('#amortToggle button').forEach(function(btn){
-      btn.addEventListener('click', function(){
-        document.querySelectorAll('#amortToggle button').forEach(function(b){ b.classList.remove('active'); });
-        btn.classList.add('active');
-        amortMode = btn.dataset.view;
-        renderAmortTable();
-      });
-    });
-  }
-
-  // ── Init ─────────────────────────────────────────────────────
-  calc();
-  initFAQ();
-  initAmortToggle();
-})();
-</script>
+<script src="shared.min.js"></script>
+<script>(function(){
+function syncPair(numId, rangeId, displayId, fmt){
+const num = document.getElementById(numId);
+const rng = document.getElementById(rangeId);
+const disp = displayId ? document.getElementById(displayId) : null;
+function setDisp(v){
+if(!disp) return;
+disp.textContent = fmt ? fmt(v) : v;
+}
+num.addEventListener('input', function(){
+rng.value = num.value;
+setDisp(+num.value);
+calc();
+});
+rng.addEventListener('input', function(){
+num.value = rng.value;
+setDisp(+rng.value);
+calc();
+});
+setDisp(+num.value);
+}
+function fmtAmt(v){
+if(v >= 10000000) return '₹' + (v/10000000).toFixed(2).replace(/\.?0+$/,'') + ' Cr';
+if(v >= 100000) return '₹' + (v/100000).toFixed(1).replace(/\.0$/,'') + ' L';
+return '₹' + v.toLocaleString('en-IN');
+}
+function fmtRate(v){ return v + '%'; }
+function fmtTenure(v){ return v + ' yr' + (v>1?'s':''); }
+syncPair('amount','amountR','amountRV', fmtAmt);
+syncPair('rate','rateR','rateRV', fmtRate);
+syncPair('tenure','tenureR','tenureRV', fmtTenure);
+function fmt(v){
+return '₹' + Math.round(v).toLocaleString('en-IN');
+}
+let donutChart = null, lineChart = null;
+function makeDonut(canvasId, labels, data){
+const ctx = document.getElementById(canvasId).getContext('2d');
+return new Chart(ctx, {
+type: 'doughnut',
+data: {
+labels: labels,
+datasets: [{
+data: data,
+backgroundColor: ['#0D9488','#F97316'],
+borderWidth: 0,
+hoverOffset: 6
+}]
+},
+options: {
+cutout: '65%',
+plugins: {
+legend: { position:'bottom', labels:{ font:{size:11,weight:'700'}, color:'#4A5068', padding:12, usePointStyle:true } },
+tooltip: {
+callbacks: { label: function(ctx){ return ' ' + ctx.label + ': ' + fmt(ctx.raw); } }
+}
+},
+animation: { animateRotate: true, duration: 700 }
+}
+});
+}
+function makeLine(canvasId, labels, data, label){
+const ctx = document.getElementById(canvasId).getContext('2d');
+return new Chart(ctx, {
+type: 'line',
+data: {
+labels: labels,
+datasets: [{
+label: label,
+data: data,
+borderColor: '#0D9488',
+backgroundColor: 'rgba(13,148,136,0.10)',
+borderWidth: 2.5,
+pointRadius: 3,
+pointBackgroundColor: '#0D9488',
+tension: 0.35,
+fill: true
+}]
+},
+options: {
+plugins: {
+legend: { display: false },
+tooltip: {
+callbacks: { label: function(ctx){ return ' Balance: ' + fmt(ctx.raw); } }
+}
+},
+scales: {
+x: { ticks:{ font:{size:10}, color:'#8890AA', maxTicksLimit:8 }, grid:{display:false} },
+y: {
+ticks:{ font:{size:10}, color:'#8890AA', callback: function(v){ return '₹'+(v/100000).toFixed(0)+'L'; } },
+grid:{ color:'rgba(0,0,0,0.05)' }
+}
+},
+animation: { duration: 700 }
+}
+});
+}
+let amortMode = 'yearly';
+let amortData = [];
+function buildAmortData(P, r, n, emi){
+const rows = [];
+let bal = P;
+for(let m=1; m<=n; m++){
+const intPay = bal * r;
+const prinPay = emi - intPay;
+bal -= prinPay;
+rows.push({ month: m, prinPay, intPay, bal: Math.max(0, bal) });
+}
+return rows;
+}
+function renderAmortTable(){
+const tbody = document.getElementById('amortBody');
+tbody.innerHTML = '';
+if(amortMode === 'yearly'){
+let yr = 0, yP = 0, yI = 0;
+for(let i = 0; i < amortData.length; i++){
+const row = amortData[i];
+yP += row.prinPay; yI += row.intPay;
+if((i+1) % 12 === 0 || i === amortData.length-1){
+yr++;
+tbody.innerHTML += `<tr>
+<td>Year ${yr}</td>
+<td>${fmt(yP)}</td>
+<td>${fmt(yI)}</td>
+<td>${fmt(yP+yI)}</td>
+<td>${fmt(row.bal)}</td>
+</tr>`;
+yP = 0; yI = 0;
+}
+}
+} else {
+for(let i = 0; i < amortData.length; i++){
+const row = amortData[i];
+const yr = Math.ceil(row.month / 12);
+const mo = ((row.month - 1) % 12) + 1;
+const moName = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][mo-1];
+tbody.innerHTML += `<tr>
+<td>${moName} ${yr}</td>
+<td>${fmt(row.prinPay)}</td>
+<td>${fmt(row.intPay)}</td>
+<td>${fmt(row.prinPay + row.intPay)}</td>
+<td>${fmt(row.bal)}</td>
+</tr>`;
+}
+}
+}
+function calc(){
+const P = Math.max(1, +document.getElementById('amount').value);
+const annualRate = +document.getElementById('rate').value;
+const years = +document.getElementById('tenure').value;
+const r = annualRate / 12 / 100;
+const n = years * 12;
+const emi = P * r * Math.pow(1+r, n) / (Math.pow(1+r, n) - 1);
+const totalPay = emi * n;
+const totalInt = totalPay - P;
+document.getElementById('emi').textContent = fmt(emi);
+document.getElementById('interest').textContent = fmt(totalInt);
+document.getElementById('total').textContent = fmt(totalPay);
+if(!donutChart){
+donutChart = makeDonut('donut', ['Principal','Interest'], [P, totalInt]);
+} else {
+donutChart.data.datasets[0].data = [P, totalInt];
+donutChart.update();
+}
+amortData = buildAmortData(P, r, n, emi);
+renderAmortTable();
+const yrs = [], bals = [];
+for(let i = 11; i < amortData.length; i += 12){
+yrs.push('Yr ' + Math.ceil((i+1)/12));
+bals.push(amortData[i].bal);
+}
+if(bals[bals.length-1] > 0){
+yrs.push('Yr ' + years);
+bals.push(0);
+}
+if(!lineChart){
+lineChart = makeLine('lineChart', yrs, bals, 'Outstanding Balance');
+} else {
+lineChart.data.labels = yrs;
+lineChart.data.datasets[0].data = bals;
+lineChart.update();
+}
+}
+function initFAQ(){
+document.querySelectorAll('.faq-q').forEach(function(q){
+q.addEventListener('click', function(){
+const item = q.parentElement;
+const isOpen = item.classList.contains('open');
+document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
+if(!isOpen) item.classList.add('open');
+});
+});
+}
+function initAmortToggle(){
+document.querySelectorAll('#amortToggle button').forEach(function(btn){
+btn.addEventListener('click', function(){
+document.querySelectorAll('#amortToggle button').forEach(function(b){ b.classList.remove('active'); });
+btn.classList.add('active');
+amortMode = btn.dataset.view;
+renderAmortTable();
+});
+});
+}
+calc();
+initFAQ();
+initAmortToggle();
+})();</script>
 
 <!--
 ════════════════════════════════════════════

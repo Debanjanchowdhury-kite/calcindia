@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>SBI Home Loan EMI Calculator 2026 - Calculate SBI Home Loan EMI Online | IndiCalculator</title>
+<title>SBI Home Loan EMI Calculator 2026 | IndiCalculator</title>
 <meta name="description" content="Free SBI Home Loan EMI Calculator with current SBI interest rates (7.50% p.a.). Calculate monthly EMI, total interest & amortization for SBI home loans up to 30 years. Updated November 2025."/>
 <meta name="keywords" content="SBI home loan EMI calculator, SBI home loan interest rate, SBI home loan EMI, SBI housing loan calculator, SBI home loan 2025, state bank of india home loan EMI"/>
 <link rel="canonical" href="https://indicalculator.in/sbi-home-loan-emi-calculator.html"/>
@@ -79,7 +79,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="shared.min.css">
 
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
@@ -449,57 +449,47 @@
 <footer><span>© 2025 IndiCalculator · Informational purposes only · Not financial advice</span><div class="footer-bottom-links"><a href="/">Home</a><a href="blog.html">Blog</a></div></footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="shared.js"></script>
-<script>
-// Include partials
-document.querySelectorAll('[data-include]').forEach(el=>{
-  Promise.resolve('').then(r=>r.text()).then(html=>{ el.innerHTML=html; if(el.dataset.include==='_leftnav.html') highlightActive(); });
+<script src="shared.min.js"></script>
+<script>document.querySelectorAll('[data-include]').forEach(el=>{
+Promise.resolve('').then(r=>r.text()).then(html=>{ el.innerHTML=html; if(el.dataset.include==='_leftnav.html') highlightActive(); });
 });
 function highlightActive(){
-  document.querySelectorAll('.nav-card').forEach(a=>{
-    if(a.getAttribute('href')==='emi-calculator.html'||a.getAttribute('href').includes('emi')) a.classList.add('active');
-  });
+document.querySelectorAll('.nav-card').forEach(a=>{
+if(a.getAttribute('href')==='emi-calculator.html'||a.getAttribute('href').includes('emi')) a.classList.add('active');
+});
 }
-
 syncRange('amount','amountR'); syncRange('rate','rateR'); syncRange('tenure','tenureR');
-
 let donut, lineChart;
 function calc(){
-  const P=+document.getElementById('amount').value;
-  const r=+document.getElementById('rate').value/12/100;
-  const n=+document.getElementById('tenure').value*12;
-  const emi=P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
-  const total=emi*n; const interest=total-P;
-
-  document.getElementById('emi').textContent=fmt(emi);
-  document.getElementById('interest').textContent=fmt(interest);
-  document.getElementById('total').textContent=fmt(total);
-
-  if(!donut) donut=makeDonut('donut',['Principal','Interest'],[P,interest]);
-  else { donut.data.datasets[0].data=[P,interest]; donut.update(); }
-
-  // Build amortization
-  const tbody=document.querySelector('#amortTable tbody');
-  tbody.innerHTML='';
-  let bal=P, yearP=0, yearI=0;
-  const yrs=[], bals=[];
-  for(let m=1;m<=n;m++){
-    const intPay=bal*r; const prinPay=emi-intPay;
-    bal-=prinPay; yearP+=prinPay; yearI+=intPay;
-    if(m%12===0){
-      const yr=m/12;
-      tbody.innerHTML+=`<tr><td>${yr}</td><td>${fmt(yearP)}</td><td>${fmt(yearI)}</td><td>${fmt(yearP+yearI)}</td><td>${fmt(Math.max(0,bal))}</td></tr>`;
-      yrs.push('Yr '+yr); bals.push(Math.max(0,bal));
-      yearP=0; yearI=0;
-    }
-  }
-
-  if(!lineChart) lineChart=makeLine('line',yrs,bals,'Outstanding Balance');
-  else { lineChart.data.labels=yrs; lineChart.data.datasets[0].data=bals; lineChart.update(); }
+const P=+document.getElementById('amount').value;
+const r=+document.getElementById('rate').value/12/100;
+const n=+document.getElementById('tenure').value*12;
+const emi=P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+const total=emi*n; const interest=total-P;
+document.getElementById('emi').textContent=fmt(emi);
+document.getElementById('interest').textContent=fmt(interest);
+document.getElementById('total').textContent=fmt(total);
+if(!donut) donut=makeDonut('donut',['Principal','Interest'],[P,interest]);
+else { donut.data.datasets[0].data=[P,interest]; donut.update(); }
+const tbody=document.querySelector('#amortTable tbody');
+tbody.innerHTML='';
+let bal=P, yearP=0, yearI=0;
+const yrs=[], bals=[];
+for(let m=1;m<=n;m++){
+const intPay=bal*r; const prinPay=emi-intPay;
+bal-=prinPay; yearP+=prinPay; yearI+=intPay;
+if(m%12===0){
+const yr=m/12;
+tbody.innerHTML+=`<tr><td>${yr}</td><td>${fmt(yearP)}</td><td>${fmt(yearI)}</td><td>${fmt(yearP+yearI)}</td><td>${fmt(Math.max(0,bal))}</td></tr>`;
+yrs.push('Yr '+yr); bals.push(Math.max(0,bal));
+yearP=0; yearI=0;
+}
+}
+if(!lineChart) lineChart=makeLine('line',yrs,bals,'Outstanding Balance');
+else { lineChart.data.labels=yrs; lineChart.data.datasets[0].data=bals; lineChart.update(); }
 }
 ['amount','rate','tenure','amountR','rateR','tenureR'].forEach(id=>document.getElementById(id).addEventListener('input',calc));
 calc();
-initFAQ(); initAmortToggle();
-</script>
+initFAQ(); initAmortToggle();</script>
 </body>
 </html>
