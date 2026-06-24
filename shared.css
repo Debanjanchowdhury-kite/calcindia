@@ -41,7 +41,7 @@ nav a:hover{color:var(--text);background:var(--surface-2)}
 nav a.active{color:var(--teal);background:var(--teal-bg)}
 
 /* Page Hero Section */
-.page-hero{background:linear-gradient(135deg,var(--teal-bg),#f5f8ff);padding:40px 32px;border-bottom:1px solid var(--border);margin-bottom:20px}
+.page-hero{position:static;height:auto;display:block;background:linear-gradient(135deg,var(--teal-bg),#f5f8ff);padding:40px 32px;border-bottom:1px solid var(--border);margin-bottom:20px;box-shadow:none;backdrop-filter:none}
 .page-hero .container{max-width:1320px;margin:0 auto}
 .page-hero h1{font-size:2.2rem;font-weight:900;color:var(--text);margin:16px 0 12px;line-height:1.2;letter-spacing:-0.02em}
 .page-hero .lead{font-size:0.95rem;color:var(--text-2);line-height:1.7;margin-bottom:20px}
