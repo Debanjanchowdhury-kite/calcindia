@@ -40,6 +40,18 @@ nav a{padding:7px 16px;border-radius:50px;text-decoration:none;font-family:var(-
 nav a:hover{color:var(--text);background:var(--surface-2)}
 nav a.active{color:var(--teal);background:var(--teal-bg)}
 
+/* Page Hero Section */
+.page-hero{background:linear-gradient(135deg,var(--teal-bg),#f5f8ff);padding:40px 32px;border-bottom:1px solid var(--border);margin-bottom:20px}
+.page-hero .container{max-width:1320px;margin:0 auto}
+.page-hero h1{font-size:2.2rem;font-weight:900;color:var(--text);margin:16px 0 12px;line-height:1.2;letter-spacing:-0.02em}
+.page-hero .lead{font-size:0.95rem;color:var(--text-2);line-height:1.7;margin-bottom:20px}
+.bank-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:var(--teal);color:#fff;border-radius:50px;font-size:0.78rem;font-weight:700;margin-bottom:16px}
+.bank-logo{font-size:1.1rem}
+.quick-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-top:24px}
+.qs{background:#fff;border:1px solid var(--border);border-radius:var(--r-sm);padding:16px;display:flex;flex-direction:column;gap:4px;box-shadow:var(--shadow-sm)}
+.qs-label{font-size:0.7rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted)}
+.qs strong{font-size:1.2rem;font-weight:900;color:var(--text)}
+
 /* Breadcrumb */
 .breadcrumb{padding:14px 32px;background:var(--surface);border-bottom:1px solid var(--border);font-size:0.82rem;color:var(--muted)}
 .breadcrumb a{color:var(--muted);text-decoration:none}
@@ -246,6 +258,16 @@ nav,nav a,.go-btn,.cta-btn,.stat-card,.stat-label,.stat-val,.field label,.panel-
 
   /* Breadcrumb */
   .breadcrumb{padding:10px 16px;font-size:0.78rem}
+
+  /* Page Hero */
+  .page-hero{padding:28px 16px}
+  .page-hero h1{font-size:1.6rem;margin:12px 0 10px}
+  .page-hero .lead{font-size:0.9rem}
+  .bank-badge{font-size:0.75rem}
+  .quick-stats{grid-template-columns:1fr 1fr;gap:12px}
+  .qs{padding:14px}
+  .qs-label{font-size:0.68rem}
+  .qs strong{font-size:1rem}
 
   /* Panel */
   .panel-title{font-size:1.5rem}
