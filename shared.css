@@ -353,3 +353,4 @@ nav,nav a,.go-btn,.cta-btn,.stat-card,.stat-label,.stat-val,.field label,.panel-
   .calc-card{padding:16px 12px}
 }
 .author-byline{max-width:1320px;margin:0 auto;padding:10px 32px;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-size:.8rem;color:var(--muted);border-bottom:1px solid var(--border)}.author-byline strong{color:var(--text-2);font-weight:700}@media(max-width:700px){.author-byline{padding:10px 16px;font-size:.74rem}}
+.rate-updated{font-size:.68rem;color:var(--muted);margin-top:8px;padding-top:8px;border-top:1px dashed var(--border);letter-spacing:.02em}
