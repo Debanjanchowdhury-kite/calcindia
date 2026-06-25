@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="icon" href="/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Lumpsum Calculator | One-Time Investment Returns | IndiCalculator</title>
+<meta name="description" content="Free lumpsum calculator for one-time mutual fund investments. Compute future value using the compound interest formula, year-by-year growth and an inflation-adjusted (real) corpus view."/>
+<meta name="keywords" content="lumpsum calculator, mutual fund lumpsum calculator, one time investment calculator, lumpsum return calculator, compound interest calculator india"/>
+<link rel="canonical" href="https://indicalculator.in/lumpsum-calculator/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Lumpsum Calculator — One-Time Investment"/>
+<meta property="og:description" content="See your one-time investment compound over the years."/>
+<meta property="og:url" content="https://indicalculator.in/lumpsum-calculator/"/>
+<meta property="og:image" content="https://indicalculator.in/og-image.png"/>
+<meta property="og:site_name" content="IndiCalculator"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://indicalculator.in/og-image.png"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Lumpsum Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"url":"https://indicalculator.in/lumpsum-calculator/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://indicalculator.in/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://indicalculator.in/calculators/"},{"@type":"ListItem","position":3,"name":"Lumpsum Calculator"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a lumpsum investment?","acceptedAnswer":{"@type":"Answer","text":"A lumpsum investment is a one-time deposit of money into a mutual fund or other compounding instrument, instead of investing a fixed amount every month. It is calculated using the compound interest formula: FV = P × (1 + r)^n."}},{"@type":"Question","name":"Is lumpsum better than SIP?","acceptedAnswer":{"@type":"Answer","text":"Lumpsum can give higher returns if you invest when markets are low and have a long horizon. SIP is safer for most investors because it averages out market volatility (rupee-cost averaging) and matches typical monthly salary cash flow."}},{"@type":"Question","name":"What is a good return assumption for a lumpsum in equity?","acceptedAnswer":{"@type":"Answer","text":"For long-term (10+ year) equity mutual funds, historical Indian markets have given around 11–13% CAGR. A 12% assumption is reasonable; use 10% to be conservative."}},{"@type":"Question","name":"How is tax calculated on lumpsum mutual fund returns?","acceptedAnswer":{"@type":"Answer","text":"Equity mutual funds held over 1 year attract LTCG of 12.5% on gains above ₹1.25 lakh per financial year. Debt funds are taxed at your slab rate. ELSS lumpsums qualify for 80C deduction up to ₹1.5 lakh."}}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Mulish:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Mulish:wght@400;600;700&display=swap"></noscript>
+<link rel="stylesheet" href="/shared.min.css"/>
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com"/>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+<header>
+  <a href="/" aria-label="IndiCalculator Home" class="logo a1"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 64" style="height:36px;width:auto"><circle cx="8" cy="9" r="6" fill="#F5A623"/><circle cx="83" cy="9" r="6" fill="#F5A623"/><text x="0" y="55" font-family="Nunito,sans-serif" font-weight="900" font-size="50" fill="#1B2A5E">indicalculat</text><rect x="283" y="15" width="35" height="41" rx="5" fill="#1B2A5E"/><rect x="287" y="18" width="27" height="11" rx="3" fill="#F5A623"/><circle cx="292" cy="34" r="2.5" fill="white"/><circle cx="300" cy="34" r="2.5" fill="white"/><circle cx="308" cy="34" r="2.5" fill="white"/><circle cx="292" cy="42" r="2.5" fill="white"/><circle cx="300" cy="42" r="2.5" fill="white"/><circle cx="308" cy="42" r="2.5" fill="white"/><circle cx="292" cy="50" r="2.5" fill="white"/><circle cx="300" cy="50" r="2.5" fill="white"/><circle cx="308" cy="50" r="2.5" fill="white"/><text x="321" y="55" font-family="Nunito,sans-serif" font-weight="900" font-size="50" fill="#1B2A5E">r</text></svg></a>
+  <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  <nav class="a2" aria-label="Main navigation">
+    <a href="/emi-calculator.html">EMI</a>
+    <a href="/sip-calculator.html">SIP</a>
+    <a href="/income-tax-calculator/ay-2026-27/">Tax</a>
+    <a href="/gst-calculator.html">GST</a>
+    <a href="/ppf-calculator/">PPF/FD</a>
+    <a href="/blog.html">Blog</a>
+  </nav>
+</header>
+<div class="mobile-nav-overlay"></div>
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">›</span><a href="/calculators/">Calculators</a><span class="sep">›</span><span class="current">Lumpsum Calculator</span></nav>
+<!-- AUTHOR BYLINE — replace 'IndiCalculator Editorial' with a real author when you have one, then add 'Reviewed by …' span -->
+<div class="author-byline">
+  <span>✍️ Written by <strong>IndiCalculator Editorial</strong></span>
+  <span aria-hidden="true">·</span>
+  <span>Updated June 2026</span>
+</div>
+
+<div class="layout">
+<aside class="left-nav a3">
+  <span class="left-nav-label">Calculators</span>
+  <a href="/emi-calculator.html" class="nav-card"><div class="nc-icon">🏠</div><div class="nc-info"><span class="nc-name">EMI</span><span class="nc-desc">Loan calculator</span></div></a>
+  <a href="/sip-calculator.html" class="nav-card"><div class="nc-icon">📈</div><div class="nc-info"><span class="nc-name">SIP</span><span class="nc-desc">Monthly SIP</span></div></a>
+  <a href="/step-up-sip-calculator/" class="nav-card"><div class="nc-icon">⏫</div><div class="nc-info"><span class="nc-name">Step-Up SIP</span><span class="nc-desc">Annual increment</span></div></a>
+  <a href="/lumpsum-calculator/" class="nav-card"><div class="nc-icon">💰</div><div class="nc-info"><span class="nc-name">Lumpsum</span><span class="nc-desc">One-time investment</span></div></a>
+  <a href="/income-tax-calculator/ay-2026-27/" class="nav-card"><div class="nc-icon">💰</div><div class="nc-info"><span class="nc-name">Income Tax</span><span class="nc-desc">Old vs New regime</span></div></a>
+  <a href="/gst-calculator.html" class="nav-card"><div class="nc-icon">🧾</div><div class="nc-info"><span class="nc-name">GST</span><span class="nc-desc">Add/remove tax</span></div></a>
+  <a href="/ppf-calculator/" class="nav-card"><div class="nc-icon">🏦</div><div class="nc-info"><span class="nc-name">PPF</span><span class="nc-desc">Tax-free 15-yr</span></div></a>
+  <a href="/fd-calculator/" class="nav-card"><div class="nc-icon">💳</div><div class="nc-info"><span class="nc-name">FD</span><span class="nc-desc">Fixed deposit</span></div></a>
+  <a href="/epf-calculator.html" class="nav-card"><div class="nc-icon">💵</div><div class="nc-info"><span class="nc-name">EPF</span><span class="nc-desc">PF retirement</span></div></a>
+  <a href="/nps-calculator.html" class="nav-card"><div class="nc-icon">🪙</div><div class="nc-info"><span class="nc-name">NPS</span><span class="nc-desc">Pension corpus</span></div></a>
+  <a href="/salary-calculator.html" class="nav-card"><div class="nc-icon">💼</div><div class="nc-info"><span class="nc-name">Salary</span><span class="nc-desc">In-hand pay</span></div></a>
+  <hr class="nav-divider"/>
+  <a href="/blog.html" class="nav-card"><div class="nc-icon">📝</div><div class="nc-info"><span class="nc-name">Blog</span><span class="nc-desc">Finance guides</span></div></a>
+</aside>
+
+<main class="a4">
+  <div class="panel-top">
+    <div class="panel-badge">💰 One-Time Investment</div>
+    <h1 class="panel-title">Lumpsum Calculator — One-Time Investment Returns</h1>
+    <p class="panel-sub">A focused lumpsum calculator for one-time mutual fund investments. Enter the amount, expected return and tenure to see the final corpus, total gain, and what the corpus is worth after inflation.</p>
+  </div>
+
+  <div class="calc-card">
+    <div class="form-grid">
+      <div class="field"><label>Lumpsum Amount (₹)</label><input type="number" id="ls-a" value="100000" min="1000" step="1000"/><div class="range-wrap"><input type="range" id="ls-a-r" min="10000" max="10000000" step="10000" value="100000"/><span class="rv" id="ls-a-d">₹1L</span></div></div>
+      <div class="field"><label>Expected Return (% p.a.)</label><input type="number" id="ls-r" value="12" min="1" max="25" step="0.5"/><div class="range-wrap"><input type="range" id="ls-r-r" min="3" max="20" step="0.5" value="12"/><span class="rv" id="ls-r-d">12%</span></div></div>
+      <div class="field"><label>Tenure (Years)</label><input type="number" id="ls-t" value="10" min="1" max="40" step="1"/><div class="range-wrap"><input type="range" id="ls-t-r" min="1" max="40" step="1" value="10"/><span class="rv" id="ls-t-d">10 yrs</span></div></div>
+      <div class="field"><label>Inflation Rate (% p.a.)</label><input type="number" id="ls-i" value="6" min="0" max="15" step="0.5"/><div class="range-wrap"><input type="range" id="ls-i-r" min="0" max="12" step="0.5" value="6"/><span class="rv" id="ls-i-d">6%</span></div></div>
+    </div>
+    <button class="go-btn" onclick="calcLump()">Calculate Lumpsum →</button>
+
+    <div class="results-wrap" id="ls-res">
+      <div class="results-divider"><span>Your Lumpsum Projection</span></div>
+      <div class="stat-grid">
+        <div class="stat-card teal"><div class="stat-label">Final Corpus</div><div class="stat-val" id="ls-corpus">—</div></div>
+        <div class="stat-card coral"><div class="stat-label">Invested</div><div class="stat-val" id="ls-inv">—</div></div>
+        <div class="stat-card green"><div class="stat-label">Wealth Gained</div><div class="stat-val" id="ls-gain">—</div></div>
+        <div class="stat-card violet"><div class="stat-label">Real Value (inflation-adj.)</div><div class="stat-val" id="ls-real">—</div></div>
+      </div>
+      <div class="chart-area two-col">
+        <div class="chart-box"><div class="chart-title"><span>📈</span> Year-by-Year Growth</div><div class="chart-canvas-wrap" style="height:240px"><canvas id="ls-line"></canvas></div></div>
+        <div class="chart-box"><div class="chart-title"><span>🍩</span> Invested vs Returns</div><div class="chart-canvas-wrap" style="height:240px"><canvas id="ls-donut"></canvas></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-section" style="background:linear-gradient(135deg,var(--teal-bg),#f5f8ff);border:1px solid rgba(13,148,136,.15)">
+    <h2 style="margin-bottom:14px">🔁 Compare the three SIP modes</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/sip-calculator.html" style=""><div class="related-icon">📈</div><div class="related-info"><span>Monthly SIP</span><small>Same amount every month — the core SIP.</small></div></a>
+      <a class="related-card" href="/step-up-sip-calculator/" style=""><div class="related-icon">⏫</div><div class="related-info"><span>Step-Up SIP</span><small>Increase your SIP each year (e.g. with salary hikes).</small></div></a>
+      <a class="related-card" href="/lumpsum-calculator/" style="pointer-events:none;border-color:var(--teal);background:#fff"><div class="related-icon">💰</div><div class="related-info"><span>Lumpsum (this page)</span><small>A one-time investment that compounds for years.</small></div></a>
+    </div>
+  </div>
+
+  <div class="amortization-section">
+    <div class="amort-header"><div class="amort-title">📋 Year-by-Year Schedule</div></div>
+    <div class="amort-table-wrap"><table class="amort-table"><thead><tr><th>Year</th><th>Invested This Year</th><th>Total Invested</th><th>Returns</th><th>Corpus</th></tr></thead><tbody id="ls-amort-body"></tbody></table></div>
+  </div>
+
+  <div class="disclaimer"><strong>Disclaimer:</strong> Equity mutual fund returns are market-linked and not guaranteed. Inflation assumption (6% default) is editable. LTCG on equity mutual funds is 12.5% above ₹1.25 lakh exempt limit.</div>
+
+  <article class="info-section">
+    <h2>What is a Lumpsum Investment?</h2>
+    <p>A <strong>lumpsum investment</strong> is a one-time deposit into a mutual fund, FD, PPF or any compounding instrument — as opposed to a monthly SIP. It is best used when you have an unexpected lump (bonus, ESOP payout, inheritance, real-estate sale) and the markets are not at obvious peaks.</p>
+    <h2>Lumpsum Formula — Compound Interest</h2>
+    <div class="formula">Future Value = P × (1 + r)^n</div>
+    <p>where P is the lumpsum amount, r is the annual return rate (decimal), and n is the tenure in years. The calculator above runs this and also shows the <strong>inflation-adjusted "real" value</strong> using your inflation input.</p>
+    <h2>Lumpsum vs SIP — Which Is Better?</h2>
+    <table class="data-table"><thead><tr><th>Feature</th><th>Lumpsum</th><th>SIP</th></tr></thead><tbody>
+    <tr><td>Capital</td><td>One-time large amount</td><td>Small monthly amounts</td></tr>
+    <tr><td>Timing risk</td><td>High — entire amount enters at one market level</td><td>Low — rupee-cost averaging across cycles</td></tr>
+    <tr><td>Best when</td><td>Markets corrected; long horizon</td><td>Salaried investor; uncertain markets</td></tr>
+    <tr><td>Discipline</td><td>One decision</td><td>Automated, builds habit</td></tr>
+    </tbody></table>
+    <h2>Inflation Matters — Look at Real Returns</h2>
+    <p>A ₹1 lakh investment at 12% for 20 years matures to about ₹9.65 lakh — but at 6% inflation, that ₹9.65 lakh has the purchasing power of only ₹3 lakh today. Use the inflation input above to see the <strong>real</strong> value of your corpus, not just the nominal number.</p>
+    <h2>Tax on Lumpsum Returns</h2>
+    <ul>
+      <li><strong>Equity mutual funds</strong> (≥65% equity, held &gt;1 year): LTCG of 12.5% on gains above ₹1.25 lakh per year.</li>
+      <li><strong>Debt mutual funds</strong>: taxed at your income-tax slab rate (no indexation post April 2023).</li>
+      <li><strong>ELSS</strong>: same LTCG rules; investment qualifies for Section 80C up to ₹1.5 lakh (3-year lock-in).</li>
+    </ul>
+  </article>
+
+  <div class="info-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-q">What is a lumpsum investment?</div><div class="faq-a">A lumpsum investment is a one-time deposit of money into a mutual fund or other compounding instrument, instead of investing a fixed amount every month. It is calculated using the compound interest formula: FV = P × (1 + r)^n.</div></div>
+    <div class="faq-item"><div class="faq-q">Is lumpsum better than SIP?</div><div class="faq-a">Lumpsum can give higher returns if you invest when markets are low and have a long horizon. SIP is safer for most investors because it averages out market volatility (rupee-cost averaging) and matches typical monthly salary cash flow.</div></div>
+    <div class="faq-item"><div class="faq-q">What is a good return assumption for a lumpsum in equity?</div><div class="faq-a">For long-term (10+ year) equity mutual funds, historical Indian markets have given around 11–13% CAGR. A 12% assumption is reasonable; use 10% to be conservative.</div></div>
+    <div class="faq-item"><div class="faq-q">How is tax calculated on lumpsum mutual fund returns?</div><div class="faq-a">Equity mutual funds held over 1 year attract LTCG of 12.5% on gains above ₹1.25 lakh per financial year. Debt funds are taxed at your slab rate. ELSS lumpsums qualify for 80C deduction up to ₹1.5 lakh.</div></div>
+  </div>
+</main>
+
+<aside class="right-sidebar">
+  <div class="widget">
+    <div class="widget-title">📊 Live Rates</div><div class="rate-updated">Updated 25 Jun 2026 · rates indicative</div>
+    <div class="rate-row"><span class="rate-label">RBI Repo Rate</span><span class="rate-val coral">5.25%</span></div>
+    <div class="rate-row"><span class="rate-label">PPF Rate</span><span class="rate-val green">7.10%</span></div>
+    <div class="rate-row"><span class="rate-label">NSC Rate</span><span class="rate-val green">7.70%</span></div>
+    <div class="rate-row"><span class="rate-label">SBI Senior FD</span><span class="rate-val green">7.05%</span></div>
+    <div class="rate-row"><span class="rate-label">HDFC FD (1Y)</span><span class="rate-val teal">7.25%</span></div>
+    <div class="rate-row"><span class="rate-label">Equity LTCG</span><span class="rate-val violet">12.5%</span></div>
+  </div>
+  <div class="widget">
+    <div class="widget-title">⭐ All Calculators</div>
+    <a class="bank-link" href="/emi-calculator.html">EMI Calculator</a>
+    <a class="bank-link" href="/sip-calculator.html">SIP Calculator</a>
+    <a class="bank-link" href="/step-up-sip-calculator/">Step-Up SIP Calculator</a>
+    <a class="bank-link" href="/lumpsum-calculator/">Lumpsum Calculator</a>
+    <a class="bank-link" href="/income-tax-calculator/ay-2026-27/">Income Tax Calculator</a>
+    <a class="bank-link" href="/ppf-calculator/">PPF Calculator</a>
+    <a class="bank-link" href="/fd-calculator/">FD Calculator</a>
+    <a class="bank-link" href="/epf-calculator.html">EPF Calculator</a>
+    <a class="bank-link" href="/nps-calculator.html">NPS Calculator</a>
+  </div>
+</aside>
+</div>
+<section class="footer-links-section"><div class="container"><div class="footer-grid">
+  <div class="footer-col"><h3 class="footer-heading">🏠 Loans &amp; EMI</h3><a href="/emi-calculator.html">EMI Calculator</a><a href="/sbi-home-loan-emi-calculator.html">SBI Home Loan EMI</a><a href="/hdfc-home-loan-emi-calculator.html">HDFC Home Loan EMI</a></div>
+  <div class="footer-col"><h3 class="footer-heading">📈 Investments &amp; Retirement</h3><a href="/sip-calculator.html">SIP Calculator</a><a href="/step-up-sip-calculator/">Step-Up SIP</a><a href="/lumpsum-calculator/">Lumpsum</a><a href="/ppf-calculator/">PPF Calculator</a><a href="/fd-calculator/">FD Calculator</a><a href="/epf-calculator.html">EPF Calculator</a><a href="/nps-calculator.html">NPS Calculator</a></div>
+  <div class="footer-col"><h3 class="footer-heading">💼 Salary &amp; HR</h3><a href="/salary-calculator.html">Salary Calculator</a><a href="/hra-calculator.html">HRA Calculator</a><a href="/gratuity-calculator.html">Gratuity Calculator</a></div>
+  <div class="footer-col"><h3 class="footer-heading">💰 Tax &amp; Business</h3><a href="/income-tax-calculator/ay-2026-27/">Income Tax Calculator</a><a href="/gst-calculator.html">GST Calculator</a><a href="/reverse-gst-calculator.html">Reverse GST Calculator</a><a href="/blog.html">Finance Blog</a></div>
+</div></div></section>
+<footer><span>© 2026 IndiCalculator · Informational purposes only · Not financial advice</span><div class="footer-bottom-links"><a href="/">Home</a><a href="/blog.html">Blog</a><a href="/about.html">About</a><a href="/privacy-policy.html">Privacy</a></div></footer>
+
+<script src="/shared.min.js"></script>
+<script>
+syncRange('ls-a','ls-a-r','ls-a-d',v=>fmt(v));
+syncRange('ls-r','ls-r-r','ls-r-d',v=>v+'%');
+syncRange('ls-t','ls-t-r','ls-t-d',v=>v+' yrs');
+syncRange('ls-i','ls-i-r','ls-i-d',v=>v+'%');
+function calcLump(){
+  const P=parseFloat(el('ls-a').value)||0, R=(parseFloat(el('ls-r').value)||0)/100;
+  const T=parseInt(el('ls-t').value)||1, I=(parseFloat(el('ls-i').value)||0)/100;
+  const corpus=P*Math.pow(1+R,T);
+  const real=corpus/Math.pow(1+I,T);
+  const lbl=[], line=[], invd=[], rows=[];
+  let prev=P;
+  for(let y=1;y<=T;y++){
+    const v=P*Math.pow(1+R,y);
+    lbl.push('Yr '+y); line.push(Math.round(v)); invd.push(P);
+    rows.push('<tr><td>Year '+y+'</td><td>'+(y===1?fmtFull(P):'—')+'</td><td>'+fmtFull(P)+'</td><td>'+fmtFull(v-prev)+'</td><td>'+fmtFull(v)+'</td></tr>');
+    prev=v;
+  }
+  el('ls-corpus').textContent=fmt(corpus); el('ls-inv').textContent=fmt(P);
+  el('ls-gain').textContent=fmt(corpus-P); el('ls-real').textContent=fmt(real);
+  makeLine('ls-line',lbl,[
+    {label:'Corpus',data:line,borderColor:COLORS.teal,backgroundColor:COLORS.teala,fill:true},
+    {label:'Invested',data:invd,borderColor:COLORS.coral,backgroundColor:COLORS.corala,fill:true}
+  ]);
+  makeDonut('ls-donut',['Invested','Returns'],[Math.round(P),Math.round(corpus-P)],[COLORS.coral,COLORS.green]);
+  el('ls-amort-body').innerHTML=rows.join('');
+}
+initMobileMenu();initFAQ();
+calcLump();
+</script>
+<script>
+  let scriptsLoaded=false;
+  function loadScripts(){if(scriptsLoaded)return;scriptsLoaded=true;
+    let ga=document.createElement('script');ga.src="https://www.googletagmanager.com/gtag/js?id=G-62K8SJ29WC";ga.async=true;document.head.appendChild(ga);
+    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-62K8SJ29WC');
+  }
+  ['scroll','mousemove','touchstart','keydown'].forEach(e=>window.addEventListener(e,loadScripts,{once:true,passive:true}));
+  setTimeout(loadScripts,5000);
+</script>
+</body>
+</html>

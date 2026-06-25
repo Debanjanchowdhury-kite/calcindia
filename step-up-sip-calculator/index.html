@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="icon" href="/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Step-Up SIP Calculator | Annual Increment SIP | IndiCalculator</title>
+<meta name="description" content="Free step-up SIP calculator with annual SIP increment (5–25%). See how raising your monthly SIP each year — usually with salary hikes — dramatically grows your corpus vs a flat SIP."/>
+<meta name="keywords" content="step up sip calculator, top up sip calculator, sip annual increment, increasing sip calculator, sip step up, salary hike sip"/>
+<link rel="canonical" href="https://indicalculator.in/step-up-sip-calculator/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Step-Up SIP Calculator — Annual Increment"/>
+<meta property="og:description" content="Project how an annual SIP increment grows your corpus."/>
+<meta property="og:url" content="https://indicalculator.in/step-up-sip-calculator/"/>
+<meta property="og:image" content="https://indicalculator.in/og-image.png"/>
+<meta property="og:site_name" content="IndiCalculator"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://indicalculator.in/og-image.png"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Step-Up SIP Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"url":"https://indicalculator.in/step-up-sip-calculator/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://indicalculator.in/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://indicalculator.in/calculators/"},{"@type":"ListItem","position":3,"name":"Step-Up SIP Calculator"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between step-up SIP and flat SIP?","acceptedAnswer":{"@type":"Answer","text":"A flat SIP invests the same amount every month for the whole tenure. A step-up SIP increases the monthly amount by a fixed percentage (typically 10%) each year, usually to track salary hikes. Over 15–20 years the step-up corpus is often almost double."}},{"@type":"Question","name":"What annual step-up percentage should I choose?","acceptedAnswer":{"@type":"Answer","text":"10% is the most common, since average annual salary hikes in India are 8–12%. If you expect bigger raises (start-up or senior roles), 15% is reasonable. Below 5% the benefit over a flat SIP is small."}},{"@type":"Question","name":"Do mutual fund houses support step-up SIP?","acceptedAnswer":{"@type":"Answer","text":"Yes. Most fund houses and platforms (Groww, Zerodha Coin, Kuvera, ICICI Direct, etc.) let you register a step-up SIP at the time of starting, with an option to set the increment percentage and the month it triggers each year."}},{"@type":"Question","name":"Can I stop a step-up SIP?","acceptedAnswer":{"@type":"Answer","text":"Yes. Like a regular SIP, you can pause or stop a step-up SIP at any time from your fund-house portal. There is no penalty."}}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Mulish:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Mulish:wght@400;600;700&display=swap"></noscript>
+<link rel="stylesheet" href="/shared.min.css"/>
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com"/>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+<header>
+  <a href="/" aria-label="IndiCalculator Home" class="logo a1"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 64" style="height:36px;width:auto"><circle cx="8" cy="9" r="6" fill="#F5A623"/><circle cx="83" cy="9" r="6" fill="#F5A623"/><text x="0" y="55" font-family="Nunito,sans-serif" font-weight="900" font-size="50" fill="#1B2A5E">indicalculat</text><rect x="283" y="15" width="35" height="41" rx="5" fill="#1B2A5E"/><rect x="287" y="18" width="27" height="11" rx="3" fill="#F5A623"/><circle cx="292" cy="34" r="2.5" fill="white"/><circle cx="300" cy="34" r="2.5" fill="white"/><circle cx="308" cy="34" r="2.5" fill="white"/><circle cx="292" cy="42" r="2.5" fill="white"/><circle cx="300" cy="42" r="2.5" fill="white"/><circle cx="308" cy="42" r="2.5" fill="white"/><circle cx="292" cy="50" r="2.5" fill="white"/><circle cx="300" cy="50" r="2.5" fill="white"/><circle cx="308" cy="50" r="2.5" fill="white"/><text x="321" y="55" font-family="Nunito,sans-serif" font-weight="900" font-size="50" fill="#1B2A5E">r</text></svg></a>
+  <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  <nav class="a2" aria-label="Main navigation">
+    <a href="/emi-calculator.html">EMI</a>
+    <a href="/sip-calculator.html">SIP</a>
+    <a href="/income-tax-calculator/ay-2026-27/">Tax</a>
+    <a href="/gst-calculator.html">GST</a>
+    <a href="/ppf-calculator/">PPF/FD</a>
+    <a href="/blog.html">Blog</a>
+  </nav>
+</header>
+<div class="mobile-nav-overlay"></div>
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">›</span><a href="/calculators/">Calculators</a><span class="sep">›</span><span class="current">Step-Up SIP Calculator</span></nav>
+<!-- AUTHOR BYLINE — replace 'IndiCalculator Editorial' with a real author when you have one, then add 'Reviewed by …' span -->
+<div class="author-byline">
+  <span>✍️ Written by <strong>IndiCalculator Editorial</strong></span>
+  <span aria-hidden="true">·</span>
+  <span>Updated June 2026</span>
+</div>
+
+<div class="layout">
+<aside class="left-nav a3">
+  <span class="left-nav-label">Calculators</span>
+  <a href="/emi-calculator.html" class="nav-card"><div class="nc-icon">🏠</div><div class="nc-info"><span class="nc-name">EMI</span><span class="nc-desc">Loan calculator</span></div></a>
+  <a href="/sip-calculator.html" class="nav-card"><div class="nc-icon">📈</div><div class="nc-info"><span class="nc-name">SIP</span><span class="nc-desc">Monthly SIP</span></div></a>
+  <a href="/step-up-sip-calculator/" class="nav-card"><div class="nc-icon">⏫</div><div class="nc-info"><span class="nc-name">Step-Up SIP</span><span class="nc-desc">Annual increment</span></div></a>
+  <a href="/lumpsum-calculator/" class="nav-card"><div class="nc-icon">💰</div><div class="nc-info"><span class="nc-name">Lumpsum</span><span class="nc-desc">One-time investment</span></div></a>
+  <a href="/income-tax-calculator/ay-2026-27/" class="nav-card"><div class="nc-icon">💰</div><div class="nc-info"><span class="nc-name">Income Tax</span><span class="nc-desc">Old vs New regime</span></div></a>
+  <a href="/gst-calculator.html" class="nav-card"><div class="nc-icon">🧾</div><div class="nc-info"><span class="nc-name">GST</span><span class="nc-desc">Add/remove tax</span></div></a>
+  <a href="/ppf-calculator/" class="nav-card"><div class="nc-icon">🏦</div><div class="nc-info"><span class="nc-name">PPF</span><span class="nc-desc">Tax-free 15-yr</span></div></a>
+  <a href="/fd-calculator/" class="nav-card"><div class="nc-icon">💳</div><div class="nc-info"><span class="nc-name">FD</span><span class="nc-desc">Fixed deposit</span></div></a>
+  <a href="/epf-calculator.html" class="nav-card"><div class="nc-icon">💵</div><div class="nc-info"><span class="nc-name">EPF</span><span class="nc-desc">PF retirement</span></div></a>
+  <a href="/nps-calculator.html" class="nav-card"><div class="nc-icon">🪙</div><div class="nc-info"><span class="nc-name">NPS</span><span class="nc-desc">Pension corpus</span></div></a>
+  <a href="/salary-calculator.html" class="nav-card"><div class="nc-icon">💼</div><div class="nc-info"><span class="nc-name">Salary</span><span class="nc-desc">In-hand pay</span></div></a>
+  <hr class="nav-divider"/>
+  <a href="/blog.html" class="nav-card"><div class="nc-icon">📝</div><div class="nc-info"><span class="nc-name">Blog</span><span class="nc-desc">Finance guides</span></div></a>
+</aside>
+
+<main class="a4">
+  <div class="panel-top">
+    <div class="panel-badge">⏫ Step-Up SIP</div>
+    <h1 class="panel-title">Step-Up SIP Calculator</h1>
+    <p class="panel-sub">A focused step-up SIP calculator. Set your starting monthly SIP, the annual increment rate (most people use 10% to match salary hikes), and see how the corpus compares to a flat SIP.</p>
+  </div>
+
+  <div class="calc-card">
+    <div class="form-grid">
+      <div class="field"><label>Starting Monthly SIP (₹)</label><input type="number" id="su-a" value="10000" min="500" step="500"/><div class="range-wrap"><input type="range" id="su-a-r" min="500" max="200000" step="500" value="10000"/><span class="rv" id="su-a-d">₹10,000</span></div></div>
+      <div class="field"><label>Annual Step-Up (%)</label><input type="number" id="su-s" value="10" min="0" max="30" step="1"/><div class="range-wrap"><input type="range" id="su-s-r" min="0" max="30" step="1" value="10"/><span class="rv" id="su-s-d">10%</span></div></div>
+      <div class="field"><label>Expected Return (% p.a.)</label><input type="number" id="su-r" value="12" min="1" max="25" step="0.5"/><div class="range-wrap"><input type="range" id="su-r-r" min="6" max="20" step="0.5" value="12"/><span class="rv" id="su-r-d">12%</span></div></div>
+      <div class="field"><label>Period (Years)</label><input type="number" id="su-t" value="20" min="1" max="40" step="1"/><div class="range-wrap"><input type="range" id="su-t-r" min="1" max="40" step="1" value="20"/><span class="rv" id="su-t-d">20 yrs</span></div></div>
+    </div>
+    <button class="go-btn" onclick="calcStep()">Calculate Step-Up Corpus →</button>
+
+    <div class="results-wrap" id="su-res">
+      <div class="results-divider"><span>Your Step-Up SIP Projection</span></div>
+      <div class="stat-grid">
+        <div class="stat-card teal"><div class="stat-label">Step-Up Corpus</div><div class="stat-val" id="su-corpus">—</div></div>
+        <div class="stat-card coral"><div class="stat-label">Total Invested</div><div class="stat-val" id="su-inv">—</div></div>
+        <div class="stat-card green"><div class="stat-label">Wealth Gained</div><div class="stat-val" id="su-ret">—</div></div>
+        <div class="stat-card violet"><div class="stat-label">vs Flat SIP</div><div class="stat-val" id="su-vs">—</div></div>
+      </div>
+      <div class="chart-area two-col">
+        <div class="chart-box"><div class="chart-title"><span>📈</span> Year-by-Year Growth</div><div class="chart-canvas-wrap" style="height:240px"><canvas id="su-line"></canvas></div></div>
+        <div class="chart-box"><div class="chart-title"><span>🍩</span> Invested vs Returns</div><div class="chart-canvas-wrap" style="height:240px"><canvas id="su-donut"></canvas></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-section" style="background:linear-gradient(135deg,var(--teal-bg),#f5f8ff);border:1px solid rgba(13,148,136,.15)">
+    <h2 style="margin-bottom:14px">🔁 Compare the three SIP modes</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/sip-calculator.html" style=""><div class="related-icon">📈</div><div class="related-info"><span>Monthly SIP</span><small>Same amount every month — the core SIP.</small></div></a>
+      <a class="related-card" href="/step-up-sip-calculator/" style="pointer-events:none;border-color:var(--teal);background:#fff"><div class="related-icon">⏫</div><div class="related-info"><span>Step-Up SIP (this page)</span><small>Increase your SIP each year (e.g. with salary hikes).</small></div></a>
+      <a class="related-card" href="/lumpsum-calculator/" style=""><div class="related-icon">💰</div><div class="related-info"><span>Lumpsum</span><small>A one-time investment that compounds for years.</small></div></a>
+    </div>
+  </div>
+
+  <div class="amortization-section">
+    <div class="amort-header"><div class="amort-title">📋 Year-by-Year Schedule</div></div>
+    <div class="amort-table-wrap"><table class="amort-table"><thead><tr><th>Year</th><th>Invested This Year</th><th>Total Invested</th><th>Returns</th><th>Corpus</th></tr></thead><tbody id="su-amort-body"></tbody></table></div>
+  </div>
+
+  <div class="disclaimer"><strong>Disclaimer:</strong> Equity mutual fund returns are market-linked and not guaranteed. A 10–12% long-term assumption is common but past performance is no guarantee.</div>
+
+  <article class="info-section">
+    <h2>What is a Step-Up SIP?</h2>
+    <p>A <strong>Step-Up SIP</strong> (also called a Top-Up SIP) increases your monthly SIP amount by a fixed percentage every year. Most people set the step-up to <strong>10%</strong> so it roughly tracks salary hikes. Over a long horizon the difference vs a flat SIP is dramatic, because the bigger monthly contributions in later years still get years of compounding.</p>
+    <h2>Step-Up SIP Formula</h2>
+    <div class="formula">Year y monthly SIP = P × (1 + s)^(y − 1)<br/>Corpus = compound each year's monthly stream until the end of the tenure</div>
+    <p>where P is the starting monthly SIP, s is the annual step-up rate. The calculator above runs this iteratively so the math matches what a fund house statement shows.</p>
+    <h2>Step-Up vs Flat SIP — Worked Example</h2>
+    <p>₹10,000/month for 20 years at 12% gives roughly <strong>₹99 lakh</strong>. The same starting SIP with a 10% annual step-up over 20 years grows to about <strong>₹1.93 crore</strong> — almost double, for an investor who simply matched their SIP to salary increments.</p>
+    <h2>When to Use Step-Up SIP</h2>
+    <ul>
+      <li>You expect <strong>annual salary hikes</strong> of 8–12% and want investments to grow with income</li>
+      <li>You are <strong>young</strong>, with a long time horizon — step-up compounds harder over 20+ years</li>
+      <li>You are saving for a <strong>specific goal</strong> like a home down payment or retirement and want to hit it faster</li>
+      <li>You are following the <strong>50–30–20 rule</strong> and want investments to scale with income, not stay flat</li>
+    </ul>
+  </article>
+
+  <div class="info-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-q">What is the difference between step-up SIP and flat SIP?</div><div class="faq-a">A flat SIP invests the same amount every month for the whole tenure. A step-up SIP increases the monthly amount by a fixed percentage (typically 10%) each year, usually to track salary hikes. Over 15–20 years the step-up corpus is often almost double.</div></div>
+    <div class="faq-item"><div class="faq-q">What annual step-up percentage should I choose?</div><div class="faq-a">10% is the most common, since average annual salary hikes in India are 8–12%. If you expect bigger raises (start-up or senior roles), 15% is reasonable. Below 5% the benefit over a flat SIP is small.</div></div>
+    <div class="faq-item"><div class="faq-q">Do mutual fund houses support step-up SIP?</div><div class="faq-a">Yes. Most fund houses and platforms (Groww, Zerodha Coin, Kuvera, ICICI Direct, etc.) let you register a step-up SIP at the time of starting, with an option to set the increment percentage and the month it triggers each year.</div></div>
+    <div class="faq-item"><div class="faq-q">Can I stop a step-up SIP?</div><div class="faq-a">Yes. Like a regular SIP, you can pause or stop a step-up SIP at any time from your fund-house portal. There is no penalty.</div></div>
+  </div>
+</main>
+
+<aside class="right-sidebar">
+  <div class="widget">
+    <div class="widget-title">📊 Live Rates</div><div class="rate-updated">Updated 25 Jun 2026 · rates indicative</div>
+    <div class="rate-row"><span class="rate-label">RBI Repo Rate</span><span class="rate-val coral">5.25%</span></div>
+    <div class="rate-row"><span class="rate-label">PPF Rate</span><span class="rate-val green">7.10%</span></div>
+    <div class="rate-row"><span class="rate-label">NSC Rate</span><span class="rate-val green">7.70%</span></div>
+    <div class="rate-row"><span class="rate-label">SBI Senior FD</span><span class="rate-val green">7.05%</span></div>
+    <div class="rate-row"><span class="rate-label">HDFC FD (1Y)</span><span class="rate-val teal">7.25%</span></div>
+    <div class="rate-row"><span class="rate-label">Equity LTCG</span><span class="rate-val violet">12.5%</span></div>
+  </div>
+  <div class="widget">
+    <div class="widget-title">⭐ All Calculators</div>
+    <a class="bank-link" href="/emi-calculator.html">EMI Calculator</a>
+    <a class="bank-link" href="/sip-calculator.html">SIP Calculator</a>
+    <a class="bank-link" href="/step-up-sip-calculator/">Step-Up SIP Calculator</a>
+    <a class="bank-link" href="/lumpsum-calculator/">Lumpsum Calculator</a>
+    <a class="bank-link" href="/income-tax-calculator/ay-2026-27/">Income Tax Calculator</a>
+    <a class="bank-link" href="/ppf-calculator/">PPF Calculator</a>
+    <a class="bank-link" href="/fd-calculator/">FD Calculator</a>
+    <a class="bank-link" href="/epf-calculator.html">EPF Calculator</a>
+    <a class="bank-link" href="/nps-calculator.html">NPS Calculator</a>
+  </div>
+</aside>
+</div>
+<section class="footer-links-section"><div class="container"><div class="footer-grid">
+  <div class="footer-col"><h3 class="footer-heading">🏠 Loans &amp; EMI</h3><a href="/emi-calculator.html">EMI Calculator</a><a href="/sbi-home-loan-emi-calculator.html">SBI Home Loan EMI</a><a href="/hdfc-home-loan-emi-calculator.html">HDFC Home Loan EMI</a></div>
+  <div class="footer-col"><h3 class="footer-heading">📈 Investments &amp; Retirement</h3><a href="/sip-calculator.html">SIP Calculator</a><a href="/step-up-sip-calculator/">Step-Up SIP</a><a href="/lumpsum-calculator/">Lumpsum</a><a href="/ppf-calculator/">PPF Calculator</a><a href="/fd-calculator/">FD Calculator</a><a href="/epf-calculator.html">EPF Calculator</a><a href="/nps-calculator.html">NPS Calculator</a></div>
+  <div class="footer-col"><h3 class="footer-heading">💼 Salary &amp; HR</h3><a href="/salary-calculator.html">Salary Calculator</a><a href="/hra-calculator.html">HRA Calculator</a><a href="/gratuity-calculator.html">Gratuity Calculator</a></div>
+  <div class="footer-col"><h3 class="footer-heading">💰 Tax &amp; Business</h3><a href="/income-tax-calculator/ay-2026-27/">Income Tax Calculator</a><a href="/gst-calculator.html">GST Calculator</a><a href="/reverse-gst-calculator.html">Reverse GST Calculator</a><a href="/blog.html">Finance Blog</a></div>
+</div></div></section>
+<footer><span>© 2026 IndiCalculator · Informational purposes only · Not financial advice</span><div class="footer-bottom-links"><a href="/">Home</a><a href="/blog.html">Blog</a><a href="/about.html">About</a><a href="/privacy-policy.html">Privacy</a></div></footer>
+
+<script src="/shared.min.js"></script>
+<script>
+syncRange('su-a','su-a-r','su-a-d',v=>fmtFull(v));
+syncRange('su-s','su-s-r','su-s-d',v=>v+'%');
+syncRange('su-r','su-r-r','su-r-d',v=>v+'%');
+syncRange('su-t','su-t-r','su-t-d',v=>v+' yrs');
+function calcStep(){
+  const P=parseFloat(el('su-a').value)||0, s=(parseFloat(el('su-s').value)||0)/100, R=(parseFloat(el('su-r').value)||0)/100, Y=parseInt(el('su-t').value)||1;
+  const mr=Math.pow(1+R,1/12)-1;
+  let corpus=0, invested=0, monthly=P;
+  const lbl=[], cline=[], iline=[], rows=[];
+  for(let y=0;y<Y;y++){
+    let yearInv=0;
+    for(let m=0;m<12;m++){corpus=(corpus+monthly)*(1+mr); invested+=monthly; yearInv+=monthly;}
+    lbl.push('Yr '+(y+1)); cline.push(Math.round(corpus)); iline.push(Math.round(invested));
+    rows.push('<tr><td>Year '+(y+1)+'</td><td>'+fmtFull(yearInv)+'</td><td>'+fmtFull(invested)+'</td><td>'+fmtFull(corpus-invested)+'</td><td>'+fmtFull(corpus)+'</td></tr>');
+    monthly*=(1+s);
+  }
+  // Flat SIP (no step-up) for comparison
+  let fcorpus=0,finv=0;
+  for(let m=0;m<Y*12;m++){fcorpus=(fcorpus+P)*(1+mr); finv+=P;}
+  const diff=corpus-fcorpus;
+  el('su-corpus').textContent=fmt(corpus); el('su-inv').textContent=fmt(invested);
+  el('su-ret').textContent=fmt(corpus-invested);
+  el('su-vs').textContent=(diff>=0?'+':'')+fmt(diff);
+  makeLine('su-line',lbl,[
+    {label:'Step-Up Corpus',data:cline,borderColor:COLORS.teal,backgroundColor:COLORS.teala,fill:true},
+    {label:'Total Invested',data:iline,borderColor:COLORS.coral,backgroundColor:COLORS.corala,fill:true}
+  ]);
+  makeDonut('su-donut',['Invested','Returns'],[Math.round(invested),Math.round(corpus-invested)],[COLORS.coral,COLORS.green]);
+  el('su-amort-body').innerHTML=rows.join('');
+}
+initMobileMenu();initFAQ();
+calcStep();
+</script>
+<script>
+  let scriptsLoaded=false;
+  function loadScripts(){if(scriptsLoaded)return;scriptsLoaded=true;
+    let ga=document.createElement('script');ga.src="https://www.googletagmanager.com/gtag/js?id=G-62K8SJ29WC";ga.async=true;document.head.appendChild(ga);
+    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-62K8SJ29WC');
+  }
+  ['scroll','mousemove','touchstart','keydown'].forEach(e=>window.addEventListener(e,loadScripts,{once:true,passive:true}));
+  setTimeout(loadScripts,5000);
+</script>
+</body>
+</html>
