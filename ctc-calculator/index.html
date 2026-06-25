@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="icon" href="/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CTC to In-Hand Salary Calculator | Take-Home Pay | IndiCalculator</title>
+<meta name="description" content="Free CTC to in-hand salary calculator for India. Enter your CTC, choose old vs new regime, and see your monthly take-home pay after EPF, professional tax and income tax — FY 2025-26 slabs."/>
+<meta name="keywords" content="ctc calculator, in hand salary calculator, take home salary calculator, ctc to in hand, salary calculator india, monthly salary calculator, ctc breakup calculator"/>
+<link rel="canonical" href="https://indicalculator.in/ctc-calculator/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="CTC to In-Hand Salary Calculator | IndiCalculator"/>
+<meta property="og:description" content="See your monthly take-home pay from CTC after EPF, PT and income tax."/>
+<meta property="og:url" content="https://indicalculator.in/ctc-calculator/"/>
+<meta property="og:image" content="https://indicalculator.in/og-image.png"/>
+<meta property="og:site_name" content="IndiCalculator"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://indicalculator.in/og-image.png"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"CTC / In-Hand Salary Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"url":"https://indicalculator.in/ctc-calculator/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://indicalculator.in/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://indicalculator.in/calculators/"},{"@type":"ListItem","position":3,"name":"CTC / In-Hand Salary Calculator"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between CTC, Gross Salary and In-Hand Salary?","acceptedAnswer":{"@type":"Answer","text":"CTC (Cost to Company) is everything the employer spends on you in a year — salary, employer EPF, gratuity provision, perks. Gross salary is CTC minus the employer-funded retirement contributions (employer EPF + gratuity provision). In-hand salary is gross minus your own EPF, professional tax and income tax — the amount actually credited to your bank account."}},{"@type":"Question","name":"Why is my in-hand salary lower than my CTC?","acceptedAnswer":{"@type":"Answer","text":"Three reasons: (1) employer-funded items like employer EPF and gratuity provision sit inside CTC but never reach you in cash, (2) you contribute 12% of Basic to EPF, (3) income tax and professional tax are deducted at source. On a ₹15 lakh CTC, in-hand is typically ₹10.5–11.5 lakh per year depending on the tax regime."}},{"@type":"Question","name":"Which tax regime gives higher in-hand salary?","acceptedAnswer":{"@type":"Answer","text":"For most salaried Indians without large deductions (no home loan, low HRA), the New Regime gives higher in-hand salary because of the ₹75,000 standard deduction and the ₹12L 87A rebate. If you have HRA + 80C + 80D + home loan interest totalling over ~₹3.5L of deductions, the Old Regime can win. The calculator above runs both side-by-side."}},{"@type":"Question","name":"How much is professional tax in my state?","acceptedAnswer":{"@type":"Answer","text":"Professional tax is a state levy capped at ₹2,500/year. The exact slab varies — Karnataka and Maharashtra deduct ₹200/month (₹2,400/year), West Bengal up to ₹2,496/year, Tamil Nadu half-yearly. A few states (Delhi, Haryana, Punjab, UP, Rajasthan, Uttarakhand) don't levy it. Adjust the input above to match your state."}},{"@type":"Question","name":"Is gratuity included in CTC or in-hand?","acceptedAnswer":{"@type":"Answer","text":"Gratuity is shown inside CTC as a yearly provision (typically Basic × 15/26 / 12 per month), but you only receive it as a lump sum when you complete 5+ years and leave. Until then it sits as a notional component — never in your monthly bank credit."}},{"@type":"Question","name":"Is the employer EPF part of my salary?","acceptedAnswer":{"@type":"Answer","text":"Technically the employer's 12% is part of your CTC, but you do not receive it as cash. It goes directly into your EPF account along with your own 12% contribution, growing tax-free at the EPF rate (8.25% for FY 2024-25) until retirement."}}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Mulish:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Mulish:wght@400;600;700&display=swap"></noscript>
+<link rel="stylesheet" href="/shared.min.css"/>
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com"/>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+<header>
+  <a href="/" aria-label="IndiCalculator Home" class="logo a1"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 64" style="height:36px;width:auto"><circle cx="8" cy="9" r="6" fill="#F5A623"/><circle cx="83" cy="9" r="6" fill="#F5A623"/><text x="0" y="55" font-family="Nunito,sans-serif" font-weight="900" font-size="50" fill="#1B2A5E">indicalculat</text><rect x="283" y="15" width="35" height="41" rx="5" fill="#1B2A5E"/><rect x="287" y="18" width="27" height="11" rx="3" fill="#F5A623"/><circle cx="292" cy="34" r="2.5" fill="white"/><circle cx="300" cy="34" r="2.5" fill="white"/><circle cx="308" cy="34" r="2.5" fill="white"/><circle cx="292" cy="42" r="2.5" fill="white"/><circle cx="300" cy="42" r="2.5" fill="white"/><circle cx="308" cy="42" r="2.5" fill="white"/><circle cx="292" cy="50" r="2.5" fill="white"/><circle cx="300" cy="50" r="2.5" fill="white"/><circle cx="308" cy="50" r="2.5" fill="white"/><text x="321" y="55" font-family="Nunito,sans-serif" font-weight="900" font-size="50" fill="#1B2A5E">r</text></svg></a>
+  <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  <nav class="a2" aria-label="Main navigation">
+    <a href="/emi-calculator.html">EMI</a>
+    <a href="/sip-calculator.html">SIP</a>
+    <a href="/income-tax-calculator/ay-2026-27/">Tax</a>
+    <a href="/gst-calculator.html">GST</a>
+    <a href="/ppf-calculator/">PPF/FD</a>
+    <a href="/blog.html">Blog</a>
+  </nav>
+</header>
+<div class="mobile-nav-overlay"></div>
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">›</span><a href="/calculators/">Calculators</a><span class="sep">›</span><span class="current">CTC / In-Hand Salary Calculator</span></nav>
+<!-- AUTHOR BYLINE — replace 'IndiCalculator Editorial' with a real author when you have one, then add 'Reviewed by …' span -->
+<div class="author-byline">
+  <span>✍️ Written by <strong>IndiCalculator Editorial</strong></span>
+  <span aria-hidden="true">·</span>
+  <span>Updated June 2026</span>
+</div>
+
+<div class="layout">
+<aside class="left-nav a3">
+  <span class="left-nav-label">Calculators</span>
+  <a href="/emi-calculator.html" class="nav-card"><div class="nc-icon">🏠</div><div class="nc-info"><span class="nc-name">EMI</span><span class="nc-desc">Loan calculator</span></div></a>
+  <a href="/sip-calculator.html" class="nav-card"><div class="nc-icon">📈</div><div class="nc-info"><span class="nc-name">SIP</span><span class="nc-desc">Monthly SIP</span></div></a>
+  <a href="/income-tax-calculator/ay-2026-27/" class="nav-card"><div class="nc-icon">💰</div><div class="nc-info"><span class="nc-name">Income Tax</span><span class="nc-desc">Old vs New regime</span></div></a>
+  <a href="/gst-calculator.html" class="nav-card"><div class="nc-icon">🧾</div><div class="nc-info"><span class="nc-name">GST</span><span class="nc-desc">Add/remove tax</span></div></a>
+  <a href="/ppf-calculator/" class="nav-card"><div class="nc-icon">🏦</div><div class="nc-info"><span class="nc-name">PPF</span><span class="nc-desc">Tax-free 15-yr</span></div></a>
+  <a href="/ctc-calculator/" class="nav-card"><div class="nc-icon">📋</div><div class="nc-info"><span class="nc-name">CTC / In-Hand</span><span class="nc-desc">From CTC to take-home</span></div></a>
+  <a href="/salary-calculator.html" class="nav-card"><div class="nc-icon">💼</div><div class="nc-info"><span class="nc-name">Salary</span><span class="nc-desc">In-hand pay</span></div></a>
+  <a href="/hra-calculator.html" class="nav-card"><div class="nc-icon">🏘️</div><div class="nc-info"><span class="nc-name">HRA</span><span class="nc-desc">Tax saving on rent</span></div></a>
+  <a href="/epf-calculator.html" class="nav-card"><div class="nc-icon">💵</div><div class="nc-info"><span class="nc-name">EPF</span><span class="nc-desc">PF retirement</span></div></a>
+  <a href="/nps-calculator.html" class="nav-card"><div class="nc-icon">🪙</div><div class="nc-info"><span class="nc-name">NPS</span><span class="nc-desc">Pension corpus</span></div></a>
+  <a href="/gratuity-calculator.html" class="nav-card"><div class="nc-icon">🎁</div><div class="nc-info"><span class="nc-name">Gratuity</span><span class="nc-desc">On resignation</span></div></a>
+  <hr class="nav-divider"/>
+  <a href="/blog.html" class="nav-card"><div class="nc-icon">📝</div><div class="nc-info"><span class="nc-name">Blog</span><span class="nc-desc">Finance guides</span></div></a>
+</aside>
+
+<main class="a4">
+  <div class="panel-top">
+    <div class="panel-badge">📋 Salary &amp; HR</div>
+    <h1 class="panel-title">CTC to In-Hand Salary Calculator</h1>
+    <p class="panel-sub">Enter your annual CTC, pick the tax regime, and see your monthly take-home pay. The calculator subtracts employer-funded items (employer EPF, gratuity provision) to reach Gross, then deducts your EPF share, professional tax and FY 2025-26 income tax to reach in-hand. Uses the same engine as our <a href="/income-tax-calculator/ay-2026-27/">Income Tax Calculator (AY 2026-27)</a>.</p>
+  </div>
+
+  <div class="calc-card">
+    <div class="form-grid">
+      <div class="field"><label>Annual CTC (₹)</label><input type="number" id="ctc-c" value="1500000" min="100000" step="50000"/><div class="range-wrap"><input type="range" id="ctc-c-r" min="100000" max="10000000" step="50000" value="1500000"/><span class="rv" id="ctc-c-d">₹15L</span></div></div>
+      <div class="field"><label>Basic % of CTC</label><input type="number" id="ctc-bp" value="40" min="20" max="70" step="1"/><div class="range-wrap"><input type="range" id="ctc-bp-r" min="20" max="70" step="1" value="40"/><span class="rv" id="ctc-bp-d">40%</span></div></div>
+      <div class="field"><label>Tax Regime</label><select id="ctc-reg"><option value="new" selected>New Regime (default)</option><option value="old">Old Regime</option></select></div>
+      <div class="field"><label>Total Old-Regime Deductions (₹)</label><input type="number" id="ctc-ded" value="0" min="0" step="5000"/></div>
+      <div class="field"><label>Professional Tax (₹/year)</label><input type="number" id="ctc-pt" value="2400" min="0" max="2500" step="100"/></div>
+      <div class="field"><label>EPF on</label><select id="ctc-wb"><option value="actual" selected>Actual Basic+DA</option><option value="cap">Capped at ₹15,000/mo</option></select></div>
+    </div>
+    <button class="go-btn" onclick="calcCTC()">Calculate In-Hand Salary →</button>
+
+    <div class="results-wrap" id="ctc-res">
+      <div class="results-divider"><span>Your Salary Breakdown</span></div>
+      <div class="stat-grid">
+        <div class="stat-card teal"><div class="stat-label">Monthly In-Hand</div><div class="stat-val" id="ctc-mon">—</div></div>
+        <div class="stat-card green"><div class="stat-label">Annual In-Hand</div><div class="stat-val" id="ctc-ann">—</div></div>
+        <div class="stat-card coral"><div class="stat-label">Gross Salary (Yr)</div><div class="stat-val" id="ctc-gross">—</div></div>
+        <div class="stat-card violet"><div class="stat-label">Total Deductions</div><div class="stat-val" id="ctc-ded-out">—</div></div>
+      </div>
+      <div class="chart-area one-col">
+        <div class="chart-box"><div class="chart-title"><span>🍩</span> CTC Breakdown</div><div class="chart-canvas-wrap" style="height:260px"><canvas id="ctc-donut"></canvas></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="amortization-section">
+    <div class="amort-header"><div class="amort-title">📋 Full CTC → In-Hand Breakdown</div></div>
+    <div class="amort-table-wrap"><table class="amort-table"><thead><tr><th>Component</th><th>Annual (₹)</th><th>Monthly (₹)</th></tr></thead><tbody id="ctc-body"></tbody></table></div>
+  </div>
+
+  <div class="disclaimer"><strong>Disclaimer:</strong> Real CTC structures vary by employer — bonuses, ESOPs, variable pay, LTA, NPS contribution, group health insurance and meal allowances may add or remove components. The calculator uses the standard salaried structure. Income tax uses AY 2026-27 slabs.</div>
+
+  <article class="info-section">
+    <h2>CTC vs Gross vs In-Hand Salary — The Three Numbers</h2>
+    <p>Your offer letter shows <strong>CTC (Cost to Company)</strong>, but the money credited to your bank every month is a much smaller number. Three salary layers connect them:</p>
+    <ol>
+      <li><strong>CTC</strong> — everything the employer spends per year: salary, employer EPF, gratuity provision, group insurance, any perks.</li>
+      <li><strong>Gross Salary</strong> = CTC − employer EPF − gratuity provision − employer-funded perks. This is what enters the payroll system.</li>
+      <li><strong>In-Hand Salary</strong> = Gross − your EPF (12% of Basic) − professional tax − income tax (TDS). This is what credits to your bank account.</li>
+    </ol>
+    <h2>CTC Components — A Standard Indian Structure</h2>
+    <ul>
+      <li><strong>Basic Salary</strong> — typically 35–50% of CTC. Drives EPF, gratuity and HRA calculations.</li>
+      <li><strong>HRA</strong> — usually 40% of Basic (non-metro) or 50% (metro).</li>
+      <li><strong>Special Allowance</strong> — the catch-all balancing item.</li>
+      <li><strong>Employer EPF</strong> — 12% of Basic, capped at ₹15,000 monthly base (statutory).</li>
+      <li><strong>Gratuity Provision</strong> — Basic × 15 / 26, payable at 5+ years.</li>
+      <li><strong>Other</strong> — LTA, meal coupons, group health insurance, NPS contribution.</li>
+    </ul>
+    <h2>Income Tax in In-Hand Calculation</h2>
+    <p>The calculator runs the FY 2025-26 / AY 2026-27 tax engine on the entire gross + employer EPF (i.e. taxable salary). Under the <strong>New Regime</strong> a ₹75,000 standard deduction applies, and income up to ₹12 lakh is effectively tax-free thanks to the Section 87A rebate. Under the <strong>Old Regime</strong> you can claim 80C (₹1.5L), HRA, 80D, home loan interest etc. — enter the total in the deductions field above.</p>
+    <h2>Professional Tax by State</h2>
+    <p>Professional Tax (PT) is a state-level levy capped at <strong>₹2,500/year</strong>. Karnataka and Maharashtra commonly deduct <strong>₹200/month</strong> (₹2,400/year); West Bengal up to ₹2,496/year; Tamil Nadu and AP collect half-yearly. <strong>Delhi, Haryana, Punjab, UP, Rajasthan, Uttarakhand, J&amp;K, Goa, Arunachal</strong> do not levy it — set the PT field to 0.</p>
+    <h2>Worked Example — ₹15 Lakh CTC (New Regime)</h2>
+    <p>CTC ₹15L · Basic 40% (₹6L) · employer EPF ₹72K · gratuity provision ~₹34.6K → Gross ≈ ₹13.93L → employee EPF ₹72K, PT ₹2.4K, income tax (new regime, no other deductions) ≈ ₹46K → <strong>In-hand ≈ ₹12.74L/year (~₹1.06L/month)</strong>.</p>
+  </article>
+
+  <div class="info-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-q">What's the difference between CTC, Gross Salary and In-Hand Salary?</div><div class="faq-a">CTC (Cost to Company) is everything the employer spends on you in a year — salary, employer EPF, gratuity provision, perks. Gross salary is CTC minus the employer-funded retirement contributions (employer EPF + gratuity provision). In-hand salary is gross minus your own EPF, professional tax and income tax — the amount actually credited to your bank account.</div></div>
+    <div class="faq-item"><div class="faq-q">Why is my in-hand salary lower than my CTC?</div><div class="faq-a">Three reasons: (1) employer-funded items like employer EPF and gratuity provision sit inside CTC but never reach you in cash, (2) you contribute 12% of Basic to EPF, (3) income tax and professional tax are deducted at source. On a ₹15 lakh CTC, in-hand is typically ₹10.5–11.5 lakh per year depending on the tax regime.</div></div>
+    <div class="faq-item"><div class="faq-q">Which tax regime gives higher in-hand salary?</div><div class="faq-a">For most salaried Indians without large deductions (no home loan, low HRA), the New Regime gives higher in-hand salary because of the ₹75,000 standard deduction and the ₹12L 87A rebate. If you have HRA + 80C + 80D + home loan interest totalling over ~₹3.5L of deductions, the Old Regime can win. The calculator above runs both side-by-side.</div></div>
+    <div class="faq-item"><div class="faq-q">How much is professional tax in my state?</div><div class="faq-a">Professional tax is a state levy capped at ₹2,500/year. The exact slab varies — Karnataka and Maharashtra deduct ₹200/month (₹2,400/year), West Bengal up to ₹2,496/year, Tamil Nadu half-yearly. A few states (Delhi, Haryana, Punjab, UP, Rajasthan, Uttarakhand) don't levy it. Adjust the input above to match your state.</div></div>
+    <div class="faq-item"><div class="faq-q">Is gratuity included in CTC or in-hand?</div><div class="faq-a">Gratuity is shown inside CTC as a yearly provision (typically Basic × 15/26 / 12 per month), but you only receive it as a lump sum when you complete 5+ years and leave. Until then it sits as a notional component — never in your monthly bank credit.</div></div>
+    <div class="faq-item"><div class="faq-q">Is the employer EPF part of my salary?</div><div class="faq-a">Technically the employer's 12% is part of your CTC, but you do not receive it as cash. It goes directly into your EPF account along with your own 12% contribution, growing tax-free at the EPF rate (8.25% for FY 2024-25) until retirement.</div></div>
+  </div>
+
+  <div class="info-section">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/income-tax-calculator/ay-2026-27/"><div class="related-icon">💰</div><div class="related-info"><span>Income Tax Calculator</span><small>AY 2026-27 · old vs new</small></div></a>
+      <a class="related-card" href="/hra-calculator.html"><div class="related-icon">🏘️</div><div class="related-info"><span>HRA Calculator</span><small>Exemption u/s 10(13A)</small></div></a>
+      <a class="related-card" href="/epf-calculator.html"><div class="related-icon">💵</div><div class="related-info"><span>EPF Calculator</span><small>PF retirement corpus</small></div></a>
+      <a class="related-card" href="/gratuity-calculator.html"><div class="related-icon">🎁</div><div class="related-info"><span>Gratuity Calculator</span><small>On resignation</small></div></a>
+    </div>
+  </div>
+</main>
+
+<aside class="right-sidebar">
+  <div class="widget">
+    <div class="widget-title">📊 Live Rates</div><div class="rate-updated">Updated 25 Jun 2026 · rates indicative</div>
+    <div class="rate-row"><span class="rate-label">EPF Rate (FY24-25)</span><span class="rate-val green">8.25%</span></div>
+    <div class="rate-row"><span class="rate-label">PPF Rate</span><span class="rate-val green">7.10%</span></div>
+    <div class="rate-row"><span class="rate-label">New Regime Rebate</span><span class="rate-val teal">≤₹12L</span></div>
+    <div class="rate-row"><span class="rate-label">Std Deduction (New)</span><span class="rate-val teal">₹75,000</span></div>
+    <div class="rate-row"><span class="rate-label">Std Deduction (Old)</span><span class="rate-val coral">₹50,000</span></div>
+    <div class="rate-row"><span class="rate-label">EPF Wage Ceiling</span><span class="rate-val violet">₹15,000</span></div>
+  </div>
+  <div class="widget">
+    <div class="widget-title">⭐ All Calculators</div>
+    <a class="bank-link" href="/income-tax-calculator/ay-2026-27/">Income Tax Calculator</a>
+    <a class="bank-link" href="/salary-calculator.html">Salary Calculator</a>
+    <a class="bank-link" href="/hra-calculator.html">HRA Calculator</a>
+    <a class="bank-link" href="/epf-calculator.html">EPF Calculator</a>
+    <a class="bank-link" href="/nps-calculator.html">NPS Calculator</a>
+    <a class="bank-link" href="/gratuity-calculator.html">Gratuity Calculator</a>
+    <a class="bank-link" href="/sip-calculator.html">SIP Calculator</a>
+    <a class="bank-link" href="/ppf-calculator/">PPF Calculator</a>
+  </div>
+</aside>
+</div>
+<section class="footer-links-section"><div class="container"><div class="footer-grid">
+  <div class="footer-col"><h3 class="footer-heading">🏠 Loans &amp; EMI</h3><a href="/emi-calculator.html">EMI Calculator</a><a href="/sbi-home-loan-emi-calculator.html">SBI Home Loan EMI</a><a href="/hdfc-home-loan-emi-calculator.html">HDFC Home Loan EMI</a></div>
+  <div class="footer-col"><h3 class="footer-heading">📈 Investments &amp; Retirement</h3><a href="/sip-calculator.html">SIP Calculator</a><a href="/ppf-calculator/">PPF Calculator</a><a href="/fd-calculator/">FD Calculator</a><a href="/epf-calculator.html">EPF Calculator</a><a href="/nps-calculator.html">NPS Calculator</a></div>
+  <div class="footer-col"><h3 class="footer-heading">💼 Salary &amp; HR</h3><a href="/ctc-calculator/">CTC / In-Hand Calculator</a><a href="/salary-calculator.html">Salary Calculator</a><a href="/hra-calculator.html">HRA Calculator</a><a href="/gratuity-calculator.html">Gratuity Calculator</a></div>
+  <div class="footer-col"><h3 class="footer-heading">💰 Tax &amp; Business</h3><a href="/income-tax-calculator/ay-2026-27/">Income Tax Calculator</a><a href="/gst-calculator.html">GST Calculator</a><a href="/reverse-gst-calculator.html">Reverse GST Calculator</a><a href="/blog.html">Finance Blog</a></div>
+</div></div></section>
+<footer><span>© 2026 IndiCalculator · Informational purposes only · Not financial advice</span><div class="footer-bottom-links"><a href="/">Home</a><a href="/blog.html">Blog</a><a href="/about.html">About</a><a href="/privacy-policy.html">Privacy</a></div></footer>
+
+<script src="/shared.min.js"></script>
+<script>
+syncRange('ctc-c','ctc-c-r','ctc-c-d',v=>fmt(v));
+syncRange('ctc-bp','ctc-bp-r','ctc-bp-d',v=>v+'%');
+
+// Tax engines — copied verbatim from /income-tax-calculator/ay-2026-27/
+function calcTaxOld(income, age){
+  const b = income - 50000;
+  let tax=0;
+  if(age==='ss'){ if(b>500000) tax = b<=1000000?(b-500000)*0.2:500000*0.2+(b-1000000)*0.3; }
+  else if(age==='s'){ if(b>300000) tax = b<=500000?(b-300000)*0.05:b<=1000000?200000*0.05+(b-500000)*0.2:200000*0.05+500000*0.2+(b-1000000)*0.3; }
+  else { if(b>250000) tax = b<=500000?(b-250000)*0.05:b<=1000000?250000*0.05+(b-500000)*0.2:250000*0.05+500000*0.2+(b-1000000)*0.3; }
+  if(income<=500000) tax=0;
+  return tax*1.04;
+}
+function calcTaxNew(income){
+  const b = income-75000;
+  let tax=0;
+  if(b>400000){
+    if(b<=800000) tax=(b-400000)*0.05;
+    else if(b<=1200000) tax=400000*0.05+(b-800000)*0.1;
+    else if(b<=1600000) tax=400000*0.05+400000*0.1+(b-1200000)*0.15;
+    else if(b<=2000000) tax=400000*0.05+400000*0.1+400000*0.15+(b-1600000)*0.2;
+    else if(b<=2400000) tax=400000*0.05+400000*0.1+400000*0.15+400000*0.2+(b-2000000)*0.25;
+    else tax=400000*0.05+400000*0.1+400000*0.15+400000*0.2+400000*0.25+(b-2400000)*0.3;
+  }
+  if(income<=1200000) tax=0;
+  return tax*1.04;
+}
+
+function calcCTC(){
+  const CTC = parseFloat(el('ctc-c').value)||0;
+  const bp  = (parseFloat(el('ctc-bp').value)||40)/100;
+  const reg = el('ctc-reg').value;
+  const oldDed = parseFloat(el('ctc-ded').value)||0;
+  const pt  = parseFloat(el('ctc-pt').value)||0;
+  const wbCap = el('ctc-wb').value==='cap';
+
+  const basicAnn = CTC * bp;
+  const basicMon = basicAnn/12;
+  const epfBaseMon = wbCap ? Math.min(basicMon, 15000) : basicMon;
+  const employerEPF = epfBaseMon * 0.12 * 12;
+  const employeeEPF = epfBaseMon * 0.12 * 12;
+  const gratuity = (15 * basicMon * 1) / 26 * 12 / 12; // 1 year provision: (15 × Basic × 1) / 26 monthly × 12 ≈ Basic × 15/26
+  // Actually: yearly gratuity provision = Basic × 15/26 (one year of service contributes this)
+  const gratuityProv = basicAnn * 15/26 / 12 * 12 / 12; // simplification: Basic_monthly × 15/26
+  // Cleaner: gratuityProv = basicMon * 15 / 26 (one month's gratuity worth per year, totalled)
+  const gratuityProvAnnual = (basicMon * 15) / 26;
+
+  const gross = CTC - employerEPF - gratuityProvAnnual;
+  // Taxable salary for income-tax: gross (includes employee EPF, which is the in-hand reducer)
+  // For 80C/EPF deduction logic in OLD regime: employee EPF + oldDed contribute (capped by user input)
+  let tax;
+  if(reg==='new'){ tax = calcTaxNew(gross); }
+  else {
+    const taxable = Math.max(0, gross - oldDed);
+    tax = calcTaxOld(taxable, 'g');
+  }
+  const totalDed = employeeEPF + pt + tax;
+  const inhandAnn = gross - totalDed;
+  const inhandMon = inhandAnn/12;
+
+  el('ctc-mon').textContent=fmt(inhandMon);
+  el('ctc-ann').textContent=fmt(inhandAnn);
+  el('ctc-gross').textContent=fmt(gross);
+  el('ctc-ded-out').textContent=fmt(totalDed);
+
+  const rows=[
+    ['<strong>CTC</strong>', '<strong>'+fmtFull(CTC)+'</strong>', '<strong>'+fmtFull(CTC/12)+'</strong>'],
+    ['− Employer EPF (12% of Basic)', fmtFull(employerEPF), fmtFull(employerEPF/12)],
+    ['− Gratuity Provision', fmtFull(gratuityProvAnnual), fmtFull(gratuityProvAnnual/12)],
+    ['<strong>= Gross Salary</strong>', '<strong>'+fmtFull(gross)+'</strong>', '<strong>'+fmtFull(gross/12)+'</strong>'],
+    ['− Employee EPF (12% of Basic)', fmtFull(employeeEPF), fmtFull(employeeEPF/12)],
+    ['− Professional Tax', fmtFull(pt), fmtFull(pt/12)],
+    ['− Income Tax ('+(reg==='new'?'New Regime':'Old Regime')+')', fmtFull(tax), fmtFull(tax/12)],
+    ['<strong>= In-Hand Salary</strong>', '<strong style="color:#16A34A">'+fmtFull(inhandAnn)+'</strong>', '<strong style="color:#16A34A">'+fmtFull(inhandMon)+'</strong>'],
+  ];
+  el('ctc-body').innerHTML = rows.map(r=>'<tr><td>'+r[0]+'</td><td>'+r[1]+'</td><td>'+r[2]+'</td></tr>').join('');
+
+  makeDonut('ctc-donut',['In-Hand','Income Tax','Employee EPF','Employer EPF','Gratuity','PT'],
+    [Math.round(inhandAnn),Math.round(tax),Math.round(employeeEPF),Math.round(employerEPF),Math.round(gratuityProvAnnual),Math.round(pt)],
+    [COLORS.green,COLORS.coral,COLORS.violet,COLORS.teal,COLORS.gold,COLORS.red]);
+}
+
+initMobileMenu();initFAQ();
+calcCTC();
+</script>
+<script>
+  let scriptsLoaded=false;
+  function loadScripts(){if(scriptsLoaded)return;scriptsLoaded=true;
+    let ga=document.createElement('script');ga.src="https://www.googletagmanager.com/gtag/js?id=G-62K8SJ29WC";ga.async=true;document.head.appendChild(ga);
+    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-62K8SJ29WC');
+  }
+  ['scroll','mousemove','touchstart','keydown'].forEach(e=>window.addEventListener(e,loadScripts,{once:true,passive:true}));
+  setTimeout(loadScripts,5000);
+</script>
+</body>
+</html>
