@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="icon" href="favicon.ico" sizes="any"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>EPF Calculator 2026 | PF Maturity & Corpus Calculator | IndiCalculator</title>
+<meta name="description" content="Free EPF calculator to project your Provident Fund corpus at retirement. 12% employee + 12% employer on Basic+DA, compounded at 8.25%, with salary growth and the ₹15,000 wage-ceiling option."/>
+<meta name="keywords" content="epf calculator, pf calculator, provident fund calculator, epf maturity calculator, epf interest 8.25, pf corpus retirement, employee provident fund"/>
+<link rel="canonical" href="https://indicalculator.in/epf-calculator.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="EPF Calculator — PF Corpus at Retirement"/>
+<meta property="og:description" content="Project your EPF retirement corpus at 8.25% with salary growth."/>
+<meta property="og:url" content="https://indicalculator.in/epf-calculator.html"/>
+<meta property="og:image" content="https://indicalculator.in/og-image.png"/>
+<meta property="og:site_name" content="IndiCalculator"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://indicalculator.in/og-image.png"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"EPF Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"url":"https://indicalculator.in/epf-calculator.html"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://indicalculator.in/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://indicalculator.in/calculators/"},{"@type":"ListItem","position":3,"name":"EPF Calculator"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the current EPF interest rate?","acceptedAnswer":{"@type":"Answer","text":"The EPF interest rate for FY 2024-25 is 8.25%, declared by EPFO. It is reviewed every year. You can edit the rate in the calculator when a new rate is announced."}},{"@type":"Question","name":"How much do employee and employer contribute to EPF?","acceptedAnswer":{"@type":"Answer","text":"Both contribute 12% of Basic+DA. Of the employer's 12%, 8.33% goes to the pension scheme (EPS, capped at ₹15,000 wages) and 3.67% to EPF."}},{"@type":"Question","name":"Is EPF taxable on withdrawal?","acceptedAnswer":{"@type":"Answer","text":"EPF is tax-free if withdrawn after 5 years of continuous service. Withdrawal before 5 years is taxable. Also, interest on employee contributions exceeding ₹2.5 lakh in a year is taxable."}},{"@type":"Question","name":"What is the ₹15,000 wage ceiling?","acceptedAnswer":{"@type":"Answer","text":"The statutory EPF contribution is calculated on Basic+DA up to ₹15,000/month. Employers may contribute on actual Basic instead. The toggle lets you compare both."}}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Mulish:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Mulish:wght@400;600;700&display=swap"></noscript>
+<link rel="stylesheet" href="shared.min.css"/>
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com"/>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+<header>
+  <a href="/" aria-label="IndiCalculator Home" class="logo a1"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 64" style="height:36px;width:auto"><circle cx="8" cy="9" r="6" fill="#F5A623"/><circle cx="83" cy="9" r="6" fill="#F5A623"/><text x="0" y="55" font-family="Nunito,sans-serif" font-weight="900" font-size="50" fill="#1B2A5E">indicalculat</text><rect x="283" y="15" width="35" height="41" rx="5" fill="#1B2A5E"/><rect x="287" y="18" width="27" height="11" rx="3" fill="#F5A623"/><circle cx="292" cy="34" r="2.5" fill="white"/><circle cx="300" cy="34" r="2.5" fill="white"/><circle cx="308" cy="34" r="2.5" fill="white"/><circle cx="292" cy="42" r="2.5" fill="white"/><circle cx="300" cy="42" r="2.5" fill="white"/><circle cx="308" cy="42" r="2.5" fill="white"/><circle cx="292" cy="50" r="2.5" fill="white"/><circle cx="300" cy="50" r="2.5" fill="white"/><circle cx="308" cy="50" r="2.5" fill="white"/><text x="321" y="55" font-family="Nunito,sans-serif" font-weight="900" font-size="50" fill="#1B2A5E">r</text></svg></a>
+  <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  <nav class="a2" aria-label="Main navigation">
+    <a href="emi-calculator.html">EMI</a>
+    <a href="sip-calculator.html">SIP</a>
+    <a href="income-tax-calculator.html">Tax</a>
+    <a href="gst-calculator.html">GST</a>
+    <a href="ppf-fd-calculator.html">PPF/FD</a>
+    <a href="blog.html">Blog</a>
+  </nav>
+</header>
+<div class="mobile-nav-overlay"></div>
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">›</span><a href="/calculators/">Calculators</a><span class="sep">›</span><span class="current">EPF Calculator</span></nav>
+<!-- AUTHOR BYLINE — replace the [placeholder] text below with real author/reviewer name & credential -->
+<div class="author-byline">
+  <span>✍️ Written by <strong>[Author Name — placeholder]</strong></span>
+  <span aria-hidden="true">·</span>
+  <span>✔️ Reviewed by <strong>[Reviewer Name, Credential — placeholder]</strong></span>
+  <span aria-hidden="true">·</span>
+  <span>Updated June 2026</span>
+</div>
+
+<div class="layout">
+<aside class="left-nav a3">
+  <span class="left-nav-label">Calculators</span>
+  <a href="emi-calculator.html" class="nav-card"><div class="nc-icon">🏠</div><div class="nc-info"><span class="nc-name">EMI</span><span class="nc-desc">Loan calculator</span></div></a>
+  <a href="sip-calculator.html" class="nav-card"><div class="nc-icon">📈</div><div class="nc-info"><span class="nc-name">SIP Returns</span><span class="nc-desc">Mutual fund growth</span></div></a>
+  <a href="income-tax-calculator.html" class="nav-card"><div class="nc-icon">💰</div><div class="nc-info"><span class="nc-name">Income Tax</span><span class="nc-desc">Old vs New regime</span></div></a>
+  <a href="gst-calculator.html" class="nav-card"><div class="nc-icon">🧾</div><div class="nc-info"><span class="nc-name">GST</span><span class="nc-desc">Add/remove tax</span></div></a>
+  <a href="ppf-fd-calculator.html" class="nav-card"><div class="nc-icon">🏦</div><div class="nc-info"><span class="nc-name">PPF / FD</span><span class="nc-desc">Savings maturity</span></div></a>
+  <a href="epf-calculator.html" class="nav-card" data-nav="epf"><div class="nc-icon">💵</div><div class="nc-info"><span class="nc-name">EPF</span><span class="nc-desc">PF retirement corpus</span></div></a>
+  <a href="nps-calculator.html" class="nav-card" data-nav="nps"><div class="nc-icon">🪙</div><div class="nc-info"><span class="nc-name">NPS</span><span class="nc-desc">Pension corpus</span></div></a>
+  <a href="gratuity-calculator.html" class="nav-card" data-nav="gratuity"><div class="nc-icon">🎁</div><div class="nc-info"><span class="nc-name">Gratuity</span><span class="nc-desc">On resignation</span></div></a>
+  <a href="salary-calculator.html" class="nav-card"><div class="nc-icon">💼</div><div class="nc-info"><span class="nc-name">Salary</span><span class="nc-desc">In-hand pay</span></div></a>
+  <a href="hra-calculator.html" class="nav-card"><div class="nc-icon">🏘️</div><div class="nc-info"><span class="nc-name">HRA Exemption</span><span class="nc-desc">Tax saving on rent</span></div></a>
+  <a href="reverse-gst-calculator.html" class="nav-card" data-nav="rgst"><div class="nc-icon">🔄</div><div class="nc-info"><span class="nc-name">Reverse GST</span><span class="nc-desc">Remove GST from total</span></div></a>
+  <hr class="nav-divider"/>
+  <a href="blog.html" class="nav-card"><div class="nc-icon">📝</div><div class="nc-info"><span class="nc-name">Blog</span><span class="nc-desc">Finance guides</span></div></a>
+</aside>
+
+<main class="a4">
+  <div class="panel-top">
+    <div class="panel-badge">💵 Retirement</div>
+    <h1 class="panel-title">EPF Calculator — PF Retirement Corpus</h1>
+    <p class="panel-sub">Project your Employee Provident Fund (EPF) corpus at retirement. The calculator compounds 12% employee + 12% employer contributions on Basic+DA at the current 8.25% EPF rate, with annual salary growth and an option to cap contributions at the ₹15,000 statutory wage.</p>
+  </div>
+
+  <div class="calc-card">
+    <div class="form-grid">
+      <div class="field"><label>Monthly Basic + DA (₹)</label><input type="number" id="ep-basic" value="30000" min="0" step="1000"/></div>
+      <div class="field"><label>Current Age</label><input type="number" id="ep-age" value="25" min="15" max="58" step="1"/></div>
+      <div class="field"><label>Retirement Age</label><input type="number" id="ep-ret" value="58" min="40" max="60" step="1"/></div>
+      <div class="field"><label>Current EPF Balance (₹)</label><input type="number" id="ep-bal" value="0" min="0" step="1000"/></div>
+      <div class="field"><label>Annual Salary Growth (%)</label><input type="number" id="ep-growth" value="5" min="0" max="20" step="0.5"/></div>
+      <div class="field"><label>EPF Interest Rate (%)</label><input type="number" id="ep-rate" value="8.25" min="1" max="12" step="0.05"/></div>
+      <div class="field"><label>Wage Base</label><select id="ep-wb"><option value="actual" selected>Actual Basic+DA</option><option value="cap">Capped at ₹15,000</option></select></div>
+    </div>
+    <button class="go-btn" onclick="calcEPF()">Calculate EPF →</button>
+
+    <div class="results-wrap" id="ep-res">
+      <div class="results-divider"><span>Your EPF Corpus</span></div>
+      <div class="stat-grid">
+        <div class="stat-card teal"><div class="stat-label">Your Contribution</div><div class="stat-val" id="ep-emp">—</div></div>
+        <div class="stat-card coral"><div class="stat-label">Employer Contribution</div><div class="stat-val" id="ep-empr">—</div></div>
+        <div class="stat-card violet"><div class="stat-label">Interest Earned</div><div class="stat-val" id="ep-int">—</div></div>
+        <div class="stat-card green"><div class="stat-label">Total Corpus</div><div class="stat-val" id="ep-corpus">—</div></div>
+      </div>
+      <div class="chart-area one-col">
+        <div class="chart-box">
+          <div class="chart-title"><span>🍩</span> Contributions vs Interest</div>
+          <div class="chart-canvas-wrap" style="height:240px"><canvas id="ep-donut"></canvas></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="disclaimer"><strong>Disclaimer:</strong> EPF rate (8.25%, FY 2024-25) is declared annually by EPFO and is editable above. Employer's 8.33% actually goes to EPS (pension); this tool follows the common 12%+12% EPF model. Indicative only.</div>
+
+  <article class="info-section">
+    <h2>How the EPF Calculator Works</h2>
+    <p>The Employee Provident Fund (EPF) is a mandatory retirement scheme for salaried employees. Each month you contribute <strong>12% of Basic+DA</strong>, and your employer matches it with another 12%. The combined balance earns interest — currently <strong>8.25% per year</strong> (FY 2024-25), declared annually by EPFO and credited to your account.</p>
+    <div class="formula">Monthly contribution = 24% × (Basic + DA)<br/>Corpus grows yearly at the EPF interest rate, on a rising salary</div>
+    <h2>The ₹15,000 Wage Ceiling</h2>
+    <p>The statutory minimum requires contributions on Basic+DA up to ₹15,000/month. Many private employers contribute on your <em>actual</em> Basic instead, giving a larger corpus. Use the <strong>Wage Base</strong> toggle to model either case.</p>
+    <h2>EPF vs EPS — Where the Employer's Share Goes</h2>
+    <p>In practice, of the employer's 12%, <strong>8.33% is diverted to the Employee Pension Scheme (EPS)</strong> (capped at ₹15,000 → ₹1,250/month) and only 3.67% goes to EPF. This calculator follows the simplified 12% + 12% EPF model used by most online tools; treat the corpus as an upper estimate of the EPF portion.</p>
+    <h2>EPF Tax Benefits</h2>
+    <ul><li>Employee contributions qualify for <strong>Section 80C</strong> deduction (within ₹1.5 lakh).</li><li>Interest and maturity are tax-free if you complete <strong>5 years of continuous service</strong>.</li><li>Interest on employee contributions above ₹2.5 lakh/year is taxable (high earners).</li></ul>
+  </article>
+
+  <div class="info-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-q">What is the current EPF interest rate?</div><div class="faq-a">The EPF interest rate for FY 2024-25 is 8.25%, declared by EPFO. It is reviewed every year. You can edit the rate in the calculator when a new rate is announced.</div></div>
+    <div class="faq-item"><div class="faq-q">How much do employee and employer contribute to EPF?</div><div class="faq-a">Both contribute 12% of Basic+DA. Of the employer's 12%, 8.33% goes to the pension scheme (EPS, capped at ₹15,000 wages) and 3.67% to EPF.</div></div>
+    <div class="faq-item"><div class="faq-q">Is EPF taxable on withdrawal?</div><div class="faq-a">EPF is tax-free if withdrawn after 5 years of continuous service. Withdrawal before 5 years is taxable. Also, interest on employee contributions exceeding ₹2.5 lakh in a year is taxable.</div></div>
+    <div class="faq-item"><div class="faq-q">What is the ₹15,000 wage ceiling?</div><div class="faq-a">The statutory EPF contribution is calculated on Basic+DA up to ₹15,000/month. Employers may contribute on actual Basic instead. The toggle lets you compare both.</div></div>
+  </div>
+
+  <div class="info-section">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+  <a class="related-card" href="nps-calculator.html"><div class="related-icon">🪙</div><div class="related-info"><span>NPS Calculator</span><small>Pension corpus</small></div></a>
+  <a class="related-card" href="gratuity-calculator.html"><div class="related-icon">🎁</div><div class="related-info"><span>Gratuity Calculator</span><small>On resignation</small></div></a>
+  <a class="related-card" href="ppf-fd-calculator.html"><div class="related-icon">🏦</div><div class="related-info"><span>PPF / FD</span><small>Savings maturity</small></div></a>
+    </div>
+  </div>
+</main>
+
+<aside class="right-sidebar">
+  <div class="widget">
+    <div class="widget-title">📊 Live Rates</div><div class="rate-updated">Updated 25 Jun 2026 · rates indicative</div>
+    <div class="rate-row"><span class="rate-label">RBI Repo Rate</span><span class="rate-val coral">5.25%</span></div>
+    <div class="rate-row"><span class="rate-label">EPF Rate (FY24-25)</span><span class="rate-val green">8.25%</span></div>
+    <div class="rate-row"><span class="rate-label">PPF Rate</span><span class="rate-val green">7.10%</span></div>
+    <div class="rate-row"><span class="rate-label">NSC Rate</span><span class="rate-val green">7.70%</span></div>
+    <div class="rate-row"><span class="rate-label">SBI Home Loan</span><span class="rate-val teal">7.50%</span></div>
+    <div class="rate-row"><span class="rate-label">SBI Senior FD</span><span class="rate-val green">7.05%</span></div>
+    <div class="rate-row"><span class="rate-label">HDFC FD (1Y)</span><span class="rate-val teal">7.25%</span></div>
+  </div>
+  <div class="widget">
+    <div class="widget-title">⭐ All Calculators</div>
+    <a class="bank-link" href="emi-calculator.html">EMI Calculator</a>
+    <a class="bank-link" href="sip-calculator.html">SIP Calculator</a>
+    <a class="bank-link" href="income-tax-calculator.html">Income Tax Calculator</a>
+    <a class="bank-link" href="gst-calculator.html">GST Calculator</a>
+    <a class="bank-link" href="reverse-gst-calculator.html">Reverse GST Calculator</a>
+    <a class="bank-link" href="ppf-fd-calculator.html">PPF / FD Calculator</a>
+    <a class="bank-link" href="epf-calculator.html">EPF Calculator</a>
+    <a class="bank-link" href="nps-calculator.html">NPS Calculator</a>
+    <a class="bank-link" href="gratuity-calculator.html">Gratuity Calculator</a>
+    <a class="bank-link" href="salary-calculator.html">Salary Calculator</a>
+    <a class="bank-link" href="hra-calculator.html">HRA Calculator</a>
+  </div>
+</aside>
+</div>
+<section class="footer-links-section"><div class="container"><div class="footer-grid">
+  <div class="footer-col"><h3 class="footer-heading">🏠 Loans &amp; EMI</h3><a href="emi-calculator.html">EMI Calculator</a><a href="sbi-home-loan-emi-calculator.html">SBI Home Loan EMI</a><a href="hdfc-home-loan-emi-calculator.html">HDFC Home Loan EMI</a></div>
+  <div class="footer-col"><h3 class="footer-heading">📈 Investments &amp; Retirement</h3><a href="sip-calculator.html">SIP Calculator</a><a href="ppf-fd-calculator.html">PPF / FD Calculator</a><a href="epf-calculator.html">EPF Calculator</a><a href="nps-calculator.html">NPS Calculator</a></div>
+  <div class="footer-col"><h3 class="footer-heading">💼 Salary &amp; HR</h3><a href="salary-calculator.html">Salary Calculator</a><a href="hra-calculator.html">HRA Calculator</a><a href="gratuity-calculator.html">Gratuity Calculator</a></div>
+  <div class="footer-col"><h3 class="footer-heading">💰 Tax &amp; Business</h3><a href="income-tax-calculator.html">Income Tax Calculator</a><a href="gst-calculator.html">GST Calculator</a><a href="reverse-gst-calculator.html">Reverse GST Calculator</a><a href="blog.html">Finance Blog</a></div>
+</div></div></section>
+<footer><span>© 2026 IndiCalculator · Informational purposes only · Not financial advice</span><div class="footer-bottom-links"><a href="/">Home</a><a href="blog.html">Blog</a><a href="about.html">About</a><a href="privacy-policy.html">Privacy</a></div></footer>
+
+<script src="shared.min.js"></script>
+<script>
+function calcEPF(){
+  let basic=parseFloat(el('ep-basic').value)||0;
+  const age=parseInt(el('ep-age').value)||0, ret=parseInt(el('ep-ret').value)||58;
+  let bal=parseFloat(el('ep-bal').value)||0;
+  const growth=(parseFloat(el('ep-growth').value)||0)/100, rate=(parseFloat(el('ep-rate').value)||0)/100;
+  const cap=el('ep-wb').value==='cap';
+  const years=Math.max(0,ret-age);
+  let empTot=0, emprTot=0;
+  for(let y=0;y<years;y++){
+    const cb=cap?Math.min(basic,15000):basic;
+    const emp=cb*0.12*12, empr=cb*0.12*12;       // 12% + 12% on Basic+DA
+    empTot+=emp; emprTot+=empr;
+    const yearlyContrib=emp+empr;
+    bal = bal*(1+rate) + yearlyContrib*(1+rate/2); // interest on opening + ~half-year on the year's inflow
+    basic = basic*(1+growth);
+  }
+  const totalContrib=empTot+emprTot+ (parseFloat(el('ep-bal').value)||0);
+  const interest=Math.max(0,bal-totalContrib);
+  el('ep-emp').textContent=fmt(empTot);
+  el('ep-empr').textContent=fmt(emprTot);
+  el('ep-int').textContent=fmt(interest);
+  el('ep-corpus').textContent=fmt(bal);
+  makeDonut('ep-donut',['Your','Employer','Interest'],[Math.round(empTot),Math.round(emprTot),Math.round(interest)],[COLORS.teal,COLORS.coral,COLORS.violet]);
+}
+initMobileMenu();initFAQ();
+calcEPF();
+</script>
+<!-- Lazy Load Third-Party Scripts -->
+<script>
+  let scriptsLoaded=false;
+  function loadScripts(){if(scriptsLoaded)return;scriptsLoaded=true;
+    let ga=document.createElement('script');ga.src="https://www.googletagmanager.com/gtag/js?id=G-62K8SJ29WC";ga.async=true;document.head.appendChild(ga);
+    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-62K8SJ29WC');
+  }
+  ['scroll','mousemove','touchstart','keydown'].forEach(e=>window.addEventListener(e,loadScripts,{once:true,passive:true}));
+  setTimeout(loadScripts,5000);
+</script>
+</body>
+</html>
