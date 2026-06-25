@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="icon" href="/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>FD Calculator 2026 | Fixed Deposit Maturity & TDS | IndiCalculator</title>
+<meta name="description" content="Free fixed deposit calculator with bank rate comparison (SBI, HDFC, ICICI, Post Office), TDS on FD interest, and a cumulative vs non-cumulative toggle. Updated rates June 2026."/>
+<meta name="keywords" content="fd calculator, fixed deposit calculator, fd maturity calculator, fd interest calculator, sbi fd calculator, hdfc fd calculator, tds on fd, cumulative fd, non cumulative fd"/>
+<link rel="canonical" href="https://indicalculator.in/fd-calculator/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="FD Calculator — Maturity, Interest &amp; TDS"/>
+<meta property="og:description" content="Calculate FD maturity, compare bank rates and estimate TDS."/>
+<meta property="og:url" content="https://indicalculator.in/fd-calculator/"/>
+<meta property="og:image" content="https://indicalculator.in/og-image.png"/>
+<meta property="og:site_name" content="IndiCalculator"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://indicalculator.in/og-image.png"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"FD Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"url":"https://indicalculator.in/fd-calculator/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://indicalculator.in/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://indicalculator.in/calculators/"},{"@type":"ListItem","position":3,"name":"FD Calculator"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is FD interest calculated?","acceptedAnswer":{"@type":"Answer","text":"For cumulative FDs: Maturity = P × (1 + R/n)^(n × T), where R is the annual rate, n is compounding frequency (quarterly = 4) and T is years. For non-cumulative FDs the bank pays the periodic interest out, so the principal stays the same."}},{"@type":"Question","name":"Is FD interest taxable?","acceptedAnswer":{"@type":"Answer","text":"Yes. FD interest is fully taxable as \"Income from Other Sources\" at your income-tax slab rate. Banks deduct 10% TDS if annual interest exceeds ₹40,000 (₹50,000 for senior citizens)."}},{"@type":"Question","name":"What is the difference between cumulative and non-cumulative FD?","acceptedAnswer":{"@type":"Answer","text":"A cumulative FD reinvests interest until maturity for a larger lump sum, ideal for wealth growth. A non-cumulative FD pays interest out periodically (usually quarterly), ideal for retirees who want regular income."}},{"@type":"Question","name":"How to save TDS on FD?","acceptedAnswer":{"@type":"Answer","text":"Submit Form 15G (or Form 15H for senior citizens) at the start of the financial year if your total income is below the basic exemption limit. You can also split deposits across banks so each stays below the ₹40,000/₹50,000 TDS threshold."}},{"@type":"Question","name":"Are bank FDs safe?","acceptedAnswer":{"@type":"Answer","text":"Bank FDs are insured by DICGC up to ₹5 lakh per depositor per bank. Public-sector and large private banks are considered very safe. For amounts above ₹5 lakh, spread across multiple banks for full coverage."}}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Mulish:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Mulish:wght@400;600;700&display=swap"></noscript>
+<link rel="stylesheet" href="/shared.min.css"/>
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com"/>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+<header>
+  <a href="/" aria-label="IndiCalculator Home" class="logo a1"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 64" style="height:36px;width:auto"><circle cx="8" cy="9" r="6" fill="#F5A623"/><circle cx="83" cy="9" r="6" fill="#F5A623"/><text x="0" y="55" font-family="Nunito,sans-serif" font-weight="900" font-size="50" fill="#1B2A5E">indicalculat</text><rect x="283" y="15" width="35" height="41" rx="5" fill="#1B2A5E"/><rect x="287" y="18" width="27" height="11" rx="3" fill="#F5A623"/><circle cx="292" cy="34" r="2.5" fill="white"/><circle cx="300" cy="34" r="2.5" fill="white"/><circle cx="308" cy="34" r="2.5" fill="white"/><circle cx="292" cy="42" r="2.5" fill="white"/><circle cx="300" cy="42" r="2.5" fill="white"/><circle cx="308" cy="42" r="2.5" fill="white"/><circle cx="292" cy="50" r="2.5" fill="white"/><circle cx="300" cy="50" r="2.5" fill="white"/><circle cx="308" cy="50" r="2.5" fill="white"/><text x="321" y="55" font-family="Nunito,sans-serif" font-weight="900" font-size="50" fill="#1B2A5E">r</text></svg></a>
+  <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  <nav class="a2" aria-label="Main navigation">
+    <a href="/emi-calculator.html">EMI</a>
+    <a href="/sip-calculator.html">SIP</a>
+    <a href="/income-tax-calculator/ay-2026-27/">Tax</a>
+    <a href="/gst-calculator.html">GST</a>
+    <a href="/ppf-calculator/">PPF/FD</a>
+    <a href="/blog.html">Blog</a>
+  </nav>
+</header>
+<div class="mobile-nav-overlay"></div>
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">›</span><a href="/calculators/">Calculators</a><span class="sep">›</span><span class="current">FD Calculator</span></nav>
+<!-- AUTHOR BYLINE — replace 'IndiCalculator Editorial' with a real author when you have one, then add 'Reviewed by …' span -->
+<div class="author-byline">
+  <span>✍️ Written by <strong>IndiCalculator Editorial</strong></span>
+  <span aria-hidden="true">·</span>
+  <span>Updated June 2026</span>
+</div>
+
+<div class="layout">
+<aside class="left-nav a3">
+  <span class="left-nav-label">Calculators</span>
+  <a href="/emi-calculator.html" class="nav-card"><div class="nc-icon">🏠</div><div class="nc-info"><span class="nc-name">EMI</span><span class="nc-desc">Loan calculator</span></div></a>
+  <a href="/sip-calculator.html" class="nav-card"><div class="nc-icon">📈</div><div class="nc-info"><span class="nc-name">SIP Returns</span><span class="nc-desc">Mutual fund growth</span></div></a>
+  <a href="/income-tax-calculator/ay-2026-27/" class="nav-card"><div class="nc-icon">💰</div><div class="nc-info"><span class="nc-name">Income Tax</span><span class="nc-desc">Old vs New regime</span></div></a>
+  <a href="/gst-calculator.html" class="nav-card"><div class="nc-icon">🧾</div><div class="nc-info"><span class="nc-name">GST</span><span class="nc-desc">Add/remove tax</span></div></a>
+  <a href="/ppf-calculator/" class="nav-card" id="nav-ppf"><div class="nc-icon">🏦</div><div class="nc-info"><span class="nc-name">PPF</span><span class="nc-desc">Tax-free 15-yr</span></div></a>
+  <a href="/fd-calculator/" class="nav-card" id="nav-fd"><div class="nc-icon">💳</div><div class="nc-info"><span class="nc-name">FD</span><span class="nc-desc">Fixed deposit</span></div></a>
+  <a href="/epf-calculator.html" class="nav-card"><div class="nc-icon">💵</div><div class="nc-info"><span class="nc-name">EPF</span><span class="nc-desc">PF retirement</span></div></a>
+  <a href="/nps-calculator.html" class="nav-card"><div class="nc-icon">🪙</div><div class="nc-info"><span class="nc-name">NPS</span><span class="nc-desc">Pension corpus</span></div></a>
+  <a href="/salary-calculator.html" class="nav-card"><div class="nc-icon">💼</div><div class="nc-info"><span class="nc-name">Salary</span><span class="nc-desc">In-hand pay</span></div></a>
+  <a href="/hra-calculator.html" class="nav-card"><div class="nc-icon">🏘️</div><div class="nc-info"><span class="nc-name">HRA Exemption</span><span class="nc-desc">Tax saving on rent</span></div></a>
+  <hr class="nav-divider"/>
+  <a href="/blog.html" class="nav-card"><div class="nc-icon">📝</div><div class="nc-info"><span class="nc-name">Blog</span><span class="nc-desc">Finance guides</span></div></a>
+</aside>
+
+<main class="a4">
+  <div class="panel-top">
+    <div class="panel-badge">💳 Fixed Deposit</div>
+    <h1 class="panel-title">FD Calculator — Fixed Deposit Maturity</h1>
+    <p class="panel-sub">Free FD calculator with current rates for SBI, HDFC, ICICI and Post Office. Toggle between cumulative (interest reinvested) and non-cumulative (interest paid out), and see the TDS estimate on your interest income.</p>
+  </div>
+
+  <div class="calc-card">
+    <div class="form-grid">
+      <div class="field"><label>Principal (₹)</label><input type="number" id="fd-a" value="100000" min="1000" step="1000"/><div class="range-wrap"><input type="range" id="fd-a-r" min="10000" max="5000000" step="10000" value="100000"/><span class="rv" id="fd-a-d">₹1L</span></div></div>
+      <div class="field"><label>Interest Rate (% p.a.)</label><input type="number" id="fd-r" value="7.25" min="1" max="15" step="0.05"/><div class="range-wrap"><input type="range" id="fd-r-r" min="3" max="10" step="0.05" value="7.25"/><span class="rv" id="fd-r-d">7.25%</span></div></div>
+      <div class="field"><label>Tenure (Years)</label><input type="number" id="fd-t" value="5" min="1" max="10" step="1"/><div class="range-wrap"><input type="range" id="fd-t-r" min="1" max="10" step="1" value="5"/><span class="rv" id="fd-t-d">5 yrs</span></div></div>
+      <div class="field"><label>FD Type</label><select id="fd-type"><option value="cum" selected>Cumulative (interest reinvested)</option><option value="ncum">Non-Cumulative (paid quarterly)</option></select></div>
+      <div class="field"><label>Compounding</label><select id="fd-comp"><option value="4" selected>Quarterly (most banks)</option><option value="12">Monthly</option><option value="1">Annual</option></select></div>
+      <div class="field"><label>Senior Citizen?</label><select id="fd-sr"><option value="no">No</option><option value="yes">Yes (TDS threshold ₹50K)</option></select></div>
+    </div>
+    <button class="go-btn" onclick="calcFD()">Calculate Maturity →</button>
+
+    <div class="results-wrap" id="fd-res">
+      <div class="results-divider"><span>Your FD Projection</span></div>
+      <div class="stat-grid">
+        <div class="stat-card teal"><div class="stat-label">Maturity Amount</div><div class="stat-val" id="fd-mat">—</div></div>
+        <div class="stat-card coral"><div class="stat-label">Total Invested</div><div class="stat-val" id="fd-inv">—</div></div>
+        <div class="stat-card green"><div class="stat-label">Interest Earned</div><div class="stat-val" id="fd-int">—</div></div>
+        <div class="stat-card violet"><div class="stat-label">TDS Estimate (10%)</div><div class="stat-val" id="fd-tds">—</div></div>
+      </div>
+      <div class="chart-area two-col">
+        <div class="chart-box"><div class="chart-title"><span>📈</span> Year-by-Year Growth</div><div class="chart-canvas-wrap" style="height:240px"><canvas id="fd-line"></canvas></div></div>
+        <div class="chart-box"><div class="chart-title"><span>🍩</span> Principal vs Interest</div><div class="chart-canvas-wrap" style="height:240px"><canvas id="fd-donut"></canvas></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-banner" style="display:flex !important;background:linear-gradient(135deg,var(--green),#15803D);color:#fff;padding:20px 24px;border-radius:var(--r);margin:20px 0;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+  <div><h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:800;margin:0 0 4px">💡 Compare FD vs PPF</h3><p style="font-size:.86rem;opacity:.95;margin:0">PPF gives tax-free 7.10% over 15 years (EEE) versus taxable FD interest. Worth a side-by-side look.</p></div>
+  <a href="/ppf-calculator/" style="background:#fff;color:#15803D;font-weight:800;font-family:var(--font-display);padding:10px 22px;border-radius:50px;text-decoration:none;font-size:.85rem;white-space:nowrap">Open PPF Calculator →</a>
+</div>
+
+  <div class="amortization-section">
+    <div class="amort-header"><div class="amort-title">📋 Year-by-Year Schedule</div></div>
+    <div class="amort-table-wrap"><table class="amort-table"><thead><tr><th>Year</th><th>Deposit</th><th>Total Invested</th><th>Interest</th><th>Balance</th></tr></thead><tbody id="fd-amort-body"></tbody></table></div>
+  </div>
+
+  <div class="disclaimer"><strong>Disclaimer:</strong> FD rates vary by bank, tenure and customer category. Senior citizens typically get +0.50%. Bank FDs are insured by DICGC up to ₹5 lakh. Indicative only.</div>
+
+  <article class="info-section">
+    <h2>Fixed Deposit (FD) — How It Works</h2>
+    <p>A <strong>Fixed Deposit</strong> is the simplest investment in India: you lock a lump sum with a bank for a chosen tenure at a fixed rate, and receive the principal plus interest at maturity. Most banks compound interest <strong>quarterly</strong>. Bank FDs are insured by DICGC up to <strong>₹5 lakh per bank per depositor</strong>.</p>
+    <h2>FD Calculation Formula</h2>
+    <div class="formula">Cumulative: Maturity = P × (1 + R/n)^(n × T)<br/>Non-Cumulative: Annual interest = P × R, paid out quarterly</div>
+    <p>where P is the principal, R the annual rate, T the tenure in years, and n the compounding frequency (4 for quarterly, 12 for monthly, 1 for annual).</p>
+    <h2>Cumulative vs Non-Cumulative FD</h2>
+    <table class="data-table"><thead><tr><th>Feature</th><th>Cumulative</th><th>Non-Cumulative</th></tr></thead><tbody>
+    <tr><td>Interest</td><td>Reinvested &amp; compounded</td><td>Paid out quarterly/monthly</td></tr>
+    <tr><td>Maturity</td><td>Larger lump sum</td><td>Principal + periodic payouts</td></tr>
+    <tr><td>Best for</td><td>Wealth growth</td><td>Regular income (retirees)</td></tr>
+    <tr><td>Effective yield</td><td>Higher (compounding effect)</td><td>Slightly lower</td></tr>
+    </tbody></table>
+    <h2>Best FD Interest Rates in India (June 2026)</h2>
+    <table class="data-table"><thead><tr><th>Bank</th><th>1-Year</th><th>3-Year</th><th>5-Year</th><th>Senior (+0.50%)</th></tr></thead><tbody>
+    <tr><td>SBI</td><td>6.80%</td><td>6.75%</td><td>6.50%</td><td>7.30%</td></tr>
+    <tr><td>HDFC Bank</td><td>7.25%</td><td>7.00%</td><td>7.00%</td><td>7.75%</td></tr>
+    <tr><td>ICICI Bank</td><td>7.25%</td><td>7.00%</td><td>7.00%</td><td>7.75%</td></tr>
+    <tr><td>Axis Bank</td><td>7.10%</td><td>7.10%</td><td>7.00%</td><td>7.60%</td></tr>
+    <tr><td>Bank of Baroda</td><td>7.05%</td><td>7.15%</td><td>6.50%</td><td>7.65%</td></tr>
+    <tr><td>Post Office TD (5-yr)</td><td>—</td><td>—</td><td>7.50%</td><td>—</td></tr>
+    </tbody></table>
+    <p><em>Rates are indicative. Verify on the bank's website before opening an FD.</em></p>
+    <h2>TDS on FD Interest</h2>
+    <p>Banks deduct <strong>10% TDS</strong> on FD interest if it exceeds <strong>₹40,000 per financial year</strong> (₹50,000 for senior citizens). If your PAN is not linked, TDS is 20%. The TDS is only an advance tax — you can adjust it in your ITR. To avoid TDS when your total income is below the basic exemption limit, submit <strong>Form 15G</strong> (or Form 15H if you are a senior citizen) at the start of the financial year.</p>
+    <h2>Tax-Saver Fixed Deposit</h2>
+    <p>A separate variant — the <strong>5-year tax-saver FD</strong> — qualifies for a Section 80C deduction up to ₹1.5 lakh, but the interest is still taxable. It has a strict 5-year lock-in and no premature withdrawal. Rates are similar to regular 5-year FDs.</p>
+  </article>
+
+  <div class="info-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-q">How is FD interest calculated?</div><div class="faq-a">For cumulative FDs: Maturity = P × (1 + R/n)^(n × T), where R is the annual rate, n is compounding frequency (quarterly = 4) and T is years. For non-cumulative FDs the bank pays the periodic interest out, so the principal stays the same.</div></div>
+    <div class="faq-item"><div class="faq-q">Is FD interest taxable?</div><div class="faq-a">Yes. FD interest is fully taxable as "Income from Other Sources" at your income-tax slab rate. Banks deduct 10% TDS if annual interest exceeds ₹40,000 (₹50,000 for senior citizens).</div></div>
+    <div class="faq-item"><div class="faq-q">What is the difference between cumulative and non-cumulative FD?</div><div class="faq-a">A cumulative FD reinvests interest until maturity for a larger lump sum, ideal for wealth growth. A non-cumulative FD pays interest out periodically (usually quarterly), ideal for retirees who want regular income.</div></div>
+    <div class="faq-item"><div class="faq-q">How to save TDS on FD?</div><div class="faq-a">Submit Form 15G (or Form 15H for senior citizens) at the start of the financial year if your total income is below the basic exemption limit. You can also split deposits across banks so each stays below the ₹40,000/₹50,000 TDS threshold.</div></div>
+    <div class="faq-item"><div class="faq-q">Are bank FDs safe?</div><div class="faq-a">Bank FDs are insured by DICGC up to ₹5 lakh per depositor per bank. Public-sector and large private banks are considered very safe. For amounts above ₹5 lakh, spread across multiple banks for full coverage.</div></div>
+  </div>
+
+  <div class="info-section">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+  <a class="related-card" href="/ppf-calculator/"><div class="related-icon">🏦</div><div class="related-info"><span>PPF Calculator</span><small>Tax-free 15-yr corpus</small></div></a>
+  <a class="related-card" href="/epf-calculator.html"><div class="related-icon">💵</div><div class="related-info"><span>EPF Calculator</span><small>PF retirement corpus</small></div></a>
+  <a class="related-card" href="/sip-calculator.html"><div class="related-icon">📈</div><div class="related-info"><span>SIP Calculator</span><small>Mutual fund SIP</small></div></a>
+    </div>
+  </div>
+</main>
+
+<aside class="right-sidebar">
+  <div class="widget">
+    <div class="widget-title">📊 Live Rates</div><div class="rate-updated">Updated 25 Jun 2026 · rates indicative</div>
+    <div class="rate-row"><span class="rate-label">PPF Rate</span><span class="rate-val green">7.10%</span></div>
+    <div class="rate-row"><span class="rate-label">SBI 5-yr FD</span><span class="rate-val teal">6.50%</span></div>
+    <div class="rate-row"><span class="rate-label">HDFC FD (1Y)</span><span class="rate-val teal">7.25%</span></div>
+    <div class="rate-row"><span class="rate-label">ICICI FD (1Y)</span><span class="rate-val teal">7.25%</span></div>
+    <div class="rate-row"><span class="rate-label">SBI Senior FD</span><span class="rate-val green">7.05%</span></div>
+    <div class="rate-row"><span class="rate-label">Post Office TD (5Y)</span><span class="rate-val green">7.50%</span></div>
+    <div class="rate-row"><span class="rate-label">NSC Rate</span><span class="rate-val green">7.70%</span></div>
+  </div>
+  <div class="widget">
+    <div class="widget-title">⭐ All Calculators</div>
+    <a class="bank-link" href="/emi-calculator.html">EMI Calculator</a>
+    <a class="bank-link" href="/sip-calculator.html">SIP Calculator</a>
+    <a class="bank-link" href="/income-tax-calculator/ay-2026-27/">Income Tax Calculator</a>
+    <a class="bank-link" href="/gst-calculator.html">GST Calculator</a>
+    <a class="bank-link" href="/ppf-calculator/">PPF Calculator</a>
+    <a class="bank-link" href="/fd-calculator/">FD Calculator</a>
+    <a class="bank-link" href="/epf-calculator.html">EPF Calculator</a>
+    <a class="bank-link" href="/nps-calculator.html">NPS Calculator</a>
+    <a class="bank-link" href="/salary-calculator.html">Salary Calculator</a>
+    <a class="bank-link" href="/hra-calculator.html">HRA Calculator</a>
+  </div>
+</aside>
+</div>
+<section class="footer-links-section"><div class="container"><div class="footer-grid">
+  <div class="footer-col"><h3 class="footer-heading">🏠 Loans &amp; EMI</h3><a href="/emi-calculator.html">EMI Calculator</a><a href="/sbi-home-loan-emi-calculator.html">SBI Home Loan EMI</a><a href="/hdfc-home-loan-emi-calculator.html">HDFC Home Loan EMI</a></div>
+  <div class="footer-col"><h3 class="footer-heading">📈 Investments &amp; Retirement</h3><a href="/sip-calculator.html">SIP Calculator</a><a href="/ppf-calculator/">PPF Calculator</a><a href="/fd-calculator/">FD Calculator</a><a href="/epf-calculator.html">EPF Calculator</a><a href="/nps-calculator.html">NPS Calculator</a></div>
+  <div class="footer-col"><h3 class="footer-heading">💼 Salary &amp; HR</h3><a href="/salary-calculator.html">Salary Calculator</a><a href="/hra-calculator.html">HRA Calculator</a><a href="/gratuity-calculator.html">Gratuity Calculator</a></div>
+  <div class="footer-col"><h3 class="footer-heading">💰 Tax &amp; Business</h3><a href="/income-tax-calculator/ay-2026-27/">Income Tax Calculator</a><a href="/gst-calculator.html">GST Calculator</a><a href="/reverse-gst-calculator.html">Reverse GST Calculator</a><a href="/blog.html">Finance Blog</a></div>
+</div></div></section>
+<footer><span>© 2026 IndiCalculator · Informational purposes only · Not financial advice</span><div class="footer-bottom-links"><a href="/">Home</a><a href="/blog.html">Blog</a><a href="/about.html">About</a><a href="/privacy-policy.html">Privacy</a></div></footer>
+
+<script src="/shared.min.js"></script>
+<script>
+syncRange('fd-a','fd-a-r','fd-a-d',v=>fmt(v));
+syncRange('fd-r','fd-r-r','fd-r-d',v=>v+'%');
+syncRange('fd-t','fd-t-r','fd-t-d',v=>v+' yrs');
+function calcFD(){
+  const P=parseFloat(el('fd-a').value)||0, R=(parseFloat(el('fd-r').value)||0)/100, T=parseInt(el('fd-t').value)||1;
+  const n=parseInt(el('fd-comp').value)||4, type=el('fd-type').value, senior=el('fd-sr').value==='yes';
+  const lbl=[], line=[], invd=[], rows=[];
+  let maturity, interest;
+  if(type==='cum'){
+    maturity = P*Math.pow(1+R/n, n*T);
+    interest = maturity - P;
+    let prev=P;
+    for(let y=1;y<=T;y++){
+      const v=P*Math.pow(1+R/n, n*y);
+      lbl.push('Yr '+y); line.push(Math.round(v)); invd.push(P);
+      rows.push('<tr><td>Year '+y+'</td><td>'+(y===1?fmtFull(P):'—')+'</td><td>'+fmtFull(P)+'</td><td>'+fmtFull(v-prev)+'</td><td>'+fmtFull(v)+'</td></tr>');
+      prev=v;
+    }
+  } else {
+    // Non-cumulative: simple interest paid out, principal stays
+    const annualInt = P*R; // paid out quarterly but total per year = P*R
+    interest = annualInt*T;
+    maturity = P + interest; // total received over tenure (principal + periodic payouts)
+    for(let y=1;y<=T;y++){
+      lbl.push('Yr '+y); line.push(Math.round(P+annualInt*y)); invd.push(P);
+      rows.push('<tr><td>Year '+y+'</td><td>'+(y===1?fmtFull(P):'—')+'</td><td>'+fmtFull(P)+'</td><td>'+fmtFull(annualInt)+'</td><td>'+fmtFull(P+annualInt*y)+'</td></tr>');
+    }
+  }
+  // TDS estimate: bank deducts 10% TDS if annual interest > ₹40K (₹50K for seniors)
+  const yearlyAvgInt = interest / T;
+  const threshold = senior ? 50000 : 40000;
+  const tds = yearlyAvgInt > threshold ? interest*0.10 : 0;
+  el('fd-mat').textContent=fmt(maturity); el('fd-inv').textContent=fmt(P);
+  el('fd-int').textContent=fmt(interest); el('fd-tds').textContent=tds>0?fmt(tds):'Nil (below threshold)';
+  makeLine('fd-line',lbl,[
+    {label:'Value',data:line,borderColor:COLORS.teal,backgroundColor:COLORS.teala,fill:true},
+    {label:'Principal',data:invd,borderColor:COLORS.coral,backgroundColor:COLORS.corala,fill:true}
+  ]);
+  makeDonut('fd-donut',['Principal','Interest'],[Math.round(P),Math.round(interest)],[COLORS.teal,COLORS.green]);
+  el('fd-amort-body').innerHTML=rows.join('');
+}
+initMobileMenu();initFAQ();
+calcFD();
+</script>
+<script>
+  let scriptsLoaded=false;
+  function loadScripts(){if(scriptsLoaded)return;scriptsLoaded=true;
+    let ga=document.createElement('script');ga.src="https://www.googletagmanager.com/gtag/js?id=G-62K8SJ29WC";ga.async=true;document.head.appendChild(ga);
+    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-62K8SJ29WC');
+  }
+  ['scroll','mousemove','touchstart','keydown'].forEach(e=>window.addEventListener(e,loadScripts,{once:true,passive:true}));
+  setTimeout(loadScripts,5000);
+</script>
+</body>
+</html>
