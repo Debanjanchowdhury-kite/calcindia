@@ -1,0 +1,39 @@
+name: Daily blog publish
+
+on:
+  schedule:
+    # 01:30 UTC every day = 07:00 IST every morning
+    - cron: '30 1 * * *'
+  workflow_dispatch:  # manual trigger from the Actions tab
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Publish next queued post
+        run: node _publish.js
+
+      - name: Commit and push if anything changed
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            # Grab today's slug from the queue diff for a descriptive commit
+            SLUG=$(git status --porcelain | grep -oE 'blog/[a-z0-9-]+/index\.html' | head -1 | cut -d/ -f2)
+            git commit -m "Publish blog post: ${SLUG:-daily}"
+            git push
+          else
+            echo "No changes — queue was empty."
+          fi
