@@ -1,6 +1,24 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+// Legacy anchor redirects — GSC 'Discovered - currently not indexed' fix.
+// Old accordion fragments now map to their standalone /blog/<slug>/ pages.
+(function(){
+  var m = {
+    'emi-formula':   '/blog/how-to-calculate-emi-manually/',
+    'emi-mistakes':  '/blog/5-emi-mistakes/',
+    'gst-guide':     '/blog/gst-simplified-guide/',
+    'home-loan-50l': '/blog/50-lakh-home-loan-emi-comparison/',
+    'ppf-tricks':    '/blog/ppf-tricks/',
+    'sip-1crore':    '/blog/sip-1-crore-by-age/',
+    'sip-power':     '/blog/power-of-sip-500-per-month/',
+    'tax-regime':    '/blog/old-vs-new-tax-regime-2025/'
+  };
+  var h = (location.hash || '').replace(/^#/,'');
+  if (h && m[h]) { location.replace(m[h]); }
+})();
+</script>
 <meta charset="UTF-8"/>
 <link rel="icon" href="favicon.ico" sizes="any"/>
 <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
