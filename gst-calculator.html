@@ -213,7 +213,26 @@
       <li><strong>GSTR-9:</strong> Annual return (31st December)</li>
       <li><strong>GSTR-4:</strong> Composition scheme annual return (30th April)</li>
     </ul>
-  </article>
+    <h2>GST Calculator Including GST: Extract the Tax Amount from a Total</h2>
+    <p>A <strong>GST calculator including GST</strong> is the "reverse" mode: you start with a total that already contains GST and work backwards to find the base price and the tax amount. This is what you use when a bill or invoice shows the final amount but you need to know the GST component for your input tax credit records.</p>
+    <p>Formula: Base = Total ÷ (1 + rate/100). Tax amount = Total − Base. Worked example: for a ₹11,800 invoice inclusive of 18% GST, the base price is 11,800 ÷ 1.18 = ₹10,000 and the tax amount is ₹1,800 (₹900 CGST + ₹900 SGST intrastate, or ₹1,800 IGST interstate).</p>
+
+    <h2>How the Tax Amount Splits Between Central, State and Integrated GST</h2>
+    <p>The tax amount computed by any GST calculator including GST always adds up to the full GST slab (5%, 12%, 18% or 28%), but the split depends on whether the supply is within the same state (intrastate) or crosses state lines (interstate). Intrastate: half is Central GST (CGST) and half is State GST (SGST). Interstate: the entire tax amount is Integrated GST (IGST), collected centrally and later apportioned to the destination state.</p>
+    <p>For a ₹1 lakh base supply at 18% GST, the tax amount is ₹18,000. Intrastate: ₹9,000 CGST + ₹9,000 SGST. Interstate: ₹18,000 IGST. The total tax collected is the same; only the accounting differs.</p>
+
+    <h2>When Do You Need the GST Calculator Including GST Mode?</h2>
+    <ul>
+      <li><strong>Purchase invoices from vendors</strong> — separating the tax amount for ITC (input tax credit) claims</li>
+      <li><strong>Retail receipts</strong> — verifying whether the shopkeeper applied the correct GST rate on the MRP-inclusive price</li>
+      <li><strong>E-commerce payouts</strong> — reconciling marketplace settlements that are net of GST</li>
+      <li><strong>Cash memos and bills</strong> — extracting the base value for accounting entries where only the total is quoted</li>
+      <li><strong>Cost-plus contracts</strong> — computing your true cost by isolating the tax amount from the vendor's final invoice</li>
+    </ul>
+
+    <h2>Reverse GST Calculator vs GST Calculator Including GST</h2>
+    <p>The two names describe the same operation: given a GST-inclusive total, find the base price and the tax amount. Our dedicated <a href="reverse-gst-calculator.html">Reverse GST Calculator</a> is a standalone tool for this workflow. The <strong>GST calculator including GST</strong> mode on this main page toggles the same calculation with the Intra/Inter state split.</p>
+    </article>
 
   <div class="info-section">
     <h2>Frequently Asked Questions</h2>
