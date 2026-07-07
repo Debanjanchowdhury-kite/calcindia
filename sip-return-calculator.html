@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="icon" href="favicon.ico" sizes="any"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>SIP Return Calculator | Mutual Fund SIP Returns 2026 | IndiCalculator</title>
+<meta name="description" content="Free SIP return calculator to project mutual fund SIP returns at 8%, 10%, 12% and 14% CAGR. Shows year-by-year corpus, inflation-adjusted real returns, and LTCG tax impact — updated 2026."/>
+<link rel="canonical" href="https://indicalculator.in/sip-return-calculator.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="SIP Return Calculator — Project Mutual Fund SIP Returns"/>
+<meta property="og:description" content="Estimate your monthly SIP corpus at different return rates with year-by-year growth and post-tax numbers."/>
+<meta property="og:url" content="https://indicalculator.in/sip-return-calculator.html"/>
+<meta property="og:image" content="https://indicalculator.in/og-image.png"/>
+<meta property="og:site_name" content="IndiCalculator"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://indicalculator.in/og-image.png"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"SIP Return Calculator — Project Mutual Fund SIP Returns","description":"Free SIP return calculator to project mutual fund SIP returns at 8%, 10%, 12% and 14% CAGR with year-by-year growth and post-tax numbers.","url":"https://indicalculator.in/sip-return-calculator.html","datePublished":"2026-07-02","dateModified":"2026-07-02","author":{"@type":"Organization","name":"IndiCalculator"},"publisher":{"@type":"Organization","name":"IndiCalculator","logo":{"@type":"ImageObject","url":"https://indicalculator.in/logo.svg"}},"image":"https://indicalculator.in/og-image.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://indicalculator.in/sip-return-calculator.html"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://indicalculator.in/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://indicalculator.in/blog.html"},{"@type":"ListItem","position":3,"name":"SIP Return Calculator"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is SIP return calculated?","acceptedAnswer":{"@type":"Answer","text":"A SIP return calculator uses the future-value-of-annuity formula: M = P × [((1+r)^n - 1) / r] × (1+r), where P is the monthly SIP, r is the monthly return (annual rate ÷ 12) and n is the number of months. It compounds each monthly contribution for the remaining tenure."}},{"@type":"Question","name":"What is a good SIP return rate to assume?","acceptedAnswer":{"@type":"Answer","text":"For long-term (10+ year) equity mutual funds, historical Indian markets have given roughly 11-13% CAGR. A 12% assumption is common; 10% is conservative; use 8% for a stress-tested view. Debt funds are typically 6-8%; hybrid funds 9-11%."}},{"@type":"Question","name":"Are SIP returns tax-free?","acceptedAnswer":{"@type":"Answer","text":"No. Equity SIPs held over 1 year attract 12.5% LTCG tax on gains above ₹1.25 lakh per financial year (as per Budget 2024). Debt mutual funds are taxed at your income-tax slab rate. ELSS SIPs give an 80C deduction but returns are still LTCG-taxed."}},{"@type":"Question","name":"Does the SIP return calculator include inflation?","acceptedAnswer":{"@type":"Answer","text":"Most SIP return calculators show nominal returns only. Divide the final corpus by (1 + inflation)^years to see the real, inflation-adjusted purchasing power. At 6% inflation, a corpus 20 years out is worth roughly 31% of its face value in today's rupees."}}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Mulish:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Mulish:wght@400;600;700&display=swap"></noscript>
+<link rel="stylesheet" href="shared.min.css"/>
+<style>
+.art-cat{display:inline-block;padding:4px 12px;border-radius:50px;font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.cat-sip{background:rgba(13,148,136,.1);color:var(--teal);border:1px solid rgba(13,148,136,.2)}
+.post-hero{background:linear-gradient(135deg,var(--teal-dark),var(--teal));color:#fff;padding:40px 24px}
+.post-hero .wrap{max-width:820px;margin:0 auto}
+.post-hero h1{font-family:var(--font-display);font-size:clamp(1.6rem,3.6vw,2.4rem);font-weight:900;line-height:1.18;margin:14px 0 12px;letter-spacing:-.02em}
+.post-hero .post-meta{font-size:.8rem;opacity:.9;display:flex;gap:10px;flex-wrap:wrap}
+.article-page{max-width:820px;margin:0 auto;padding:32px 24px 48px}
+.article-body h2{font-family:var(--font-display);font-size:1.35rem;font-weight:800;margin:28px 0 12px;color:var(--text)}
+.article-body h3{font-family:var(--font-display);font-size:1.08rem;font-weight:800;margin:20px 0 8px;color:var(--teal)}
+.article-body p{font-size:.96rem;color:var(--text-2);line-height:1.85;margin-bottom:14px}
+.article-body ul,.article-body ol{font-size:.96rem;color:var(--text-2);padding-left:22px;margin-bottom:16px;line-height:1.95}
+.article-body strong{color:var(--text);font-weight:700}
+.article-body a{color:var(--teal);font-weight:600}
+.article-body .formula{font-family:'Courier New',monospace;font-size:.92rem;background:var(--teal-bg);border:1px solid rgba(13,148,136,.2);border-radius:6px;padding:14px 18px;color:var(--teal-dark);margin:16px 0;font-weight:700;overflow-x:auto}
+.highlight-box{background:var(--gold-bg);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:14px 18px;margin:18px 0;font-size:.92rem;color:var(--text-2);line-height:1.7}
+.highlight-box strong{color:var(--gold)}
+.article-body table{width:100%;border-collapse:collapse;font-size:.88rem;margin:18px 0;border-radius:8px;overflow:hidden;border:1px solid var(--border);display:block;overflow-x:auto}
+.article-body table th{background:var(--teal);color:#fff;padding:10px 14px;text-align:left;font-weight:700;font-size:.8rem;white-space:nowrap}
+.article-body table td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text-2)}
+.article-body .calc-link-btn{display:inline-flex;align-items:center;gap:8px;padding:11px 24px;background:linear-gradient(135deg,var(--teal),var(--teal-2));color:#fff;border-radius:50px;text-decoration:none;font-weight:700;font-size:.88rem;margin-top:18px;transition:all .2s}
+.article-body .calc-link-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(13,148,136,.3)}
+.related-guides{max-width:820px;margin:0 auto 48px;padding:0 24px}
+.related-guides h2{font-family:var(--font-display);font-size:1.25rem;font-weight:900;margin-bottom:16px}
+.rg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.rg-card{display:block;padding:16px 18px;background:var(--surface);border:1px solid var(--border);border-radius:12px;text-decoration:none;color:inherit;transition:all .2s}
+.rg-card:hover{border-color:var(--teal);transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+.rg-card .rg-title{font-family:var(--font-display);font-weight:800;font-size:.98rem;color:var(--text);margin:8px 0 4px;line-height:1.3}
+.rg-card .rg-x{font-size:.78rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <a href="/" aria-label="IndiCalculator Home" class="logo a1"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 64" style="height:36px;width:auto"><circle cx="8" cy="9" r="6" fill="#F5A623"/><circle cx="83" cy="9" r="6" fill="#F5A623"/><text x="0" y="55" font-family="Nunito,sans-serif" font-weight="900" font-size="50" fill="#1B2A5E">indicalculat</text><rect x="283" y="15" width="35" height="41" rx="5" fill="#1B2A5E"/><rect x="287" y="18" width="27" height="11" rx="3" fill="#F5A623"/><circle cx="292" cy="34" r="2.5" fill="white"/><circle cx="300" cy="34" r="2.5" fill="white"/><circle cx="308" cy="34" r="2.5" fill="white"/><circle cx="292" cy="42" r="2.5" fill="white"/><circle cx="300" cy="42" r="2.5" fill="white"/><circle cx="308" cy="42" r="2.5" fill="white"/><circle cx="292" cy="50" r="2.5" fill="white"/><circle cx="300" cy="50" r="2.5" fill="white"/><circle cx="308" cy="50" r="2.5" fill="white"/><text x="321" y="55" font-family="Nunito,sans-serif" font-weight="900" font-size="50" fill="#1B2A5E">r</text></svg></a>
+  <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  <nav class="a2" aria-label="Main navigation">
+    <a href="emi-calculator.html">EMI</a>
+    <a href="sip-calculator.html">SIP</a>
+    <a href="/income-tax-calculator/ay-2026-27/">Tax</a>
+    <a href="gst-calculator.html">GST</a>
+    <a href="/ppf-calculator/">PPF/FD</a>
+    <a href="blog.html" class="active">Blog</a>
+  </nav>
+</header>
+<div class="mobile-nav-overlay"></div>
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">›</span><a href="blog.html">Blog</a><span class="sep">›</span><span class="current">SIP Return Calculator: Project Mutual Fund SIP Returns</span></nav>
+
+<div class="post-hero">
+  <div class="wrap">
+    <span class="art-cat cat-sip">📈 SIP</span>
+    <h1>SIP Return Calculator: Project Your Mutual Fund SIP Returns</h1>
+    <div class="post-meta"><span>2 July 2026</span><span>·</span><span>7 min read</span></div>
+  </div>
+</div>
+
+<div class="article-page">
+  <div class="article-body">
+    <p>A <strong>SIP return calculator</strong> answers the single most important question every mutual-fund investor asks: <em>if I invest ₹X per month for Y years, what will I have at the end?</em> This guide explains the formula behind the number, shows realistic return assumptions across fund categories, and covers the two things most SIP return calculators quietly ignore: inflation and LTCG tax.</p>
+
+    <h2>How a SIP Return Calculator Works</h2>
+    <p>Every honest SIP return calculator uses the future-value-of-annuity formula. Each monthly SIP contribution compounds for the remaining months of your tenure — the first month's ₹5,000 gets full n months of compounding, the last month's ₹5,000 gets just one.</p>
+    <div class="formula">M = P × [((1 + r)^n − 1) / r] × (1 + r)<br><br>where:<br>P = monthly SIP amount<br>r = monthly return = annual rate ÷ 12<br>n = number of months</div>
+    <p>For a ₹10,000 monthly SIP at 12% annual returns over 20 years: r = 0.01, n = 240, and the formula gives you approximately ₹99.9 lakh. Half of that is what you invested; the other half is compound returns.</p>
+
+    <h2>Realistic SIP Return Rates by Fund Category</h2>
+    <p>The "12%" assumption you see everywhere applies to equity funds over long periods (10+ years). Different fund types have historically delivered different ranges:</p>
+    <table>
+      <thead><tr><th>Fund Category</th><th>Historical CAGR (10-yr)</th><th>Risk</th><th>Best For</th></tr></thead>
+      <tbody>
+      <tr><td>Large-Cap Equity</td><td>10–13%</td><td>Moderate</td><td>Stable long-term growth</td></tr>
+      <tr><td>Flexi-Cap / Multi-Cap</td><td>11–14%</td><td>Moderate-High</td><td>Balanced equity exposure</td></tr>
+      <tr><td>Mid-Cap / Small-Cap</td><td>13–18%</td><td>High</td><td>Aggressive, 10+ year horizon</td></tr>
+      <tr><td>ELSS (Tax-Saver)</td><td>11–14%</td><td>Moderate-High</td><td>80C + long-term wealth</td></tr>
+      <tr><td>Hybrid / Balanced</td><td>9–12%</td><td>Moderate</td><td>Moderate risk investors</td></tr>
+      <tr><td>Debt Funds</td><td>6–8%</td><td>Low</td><td>Short-term goals, capital preservation</td></tr>
+      </tbody>
+    </table>
+    <p>Historical returns are not guarantees. To stress-test any SIP return calculator's number, run it at three rates — an optimistic (14%), a realistic (12%), and a pessimistic (8%) — and plan against the pessimistic outcome.</p>
+
+    <h2>SIP Return Calculator: Common Scenarios</h2>
+    <p>Here's what different monthly SIPs would grow to at 12% CAGR (equity long-term average), if the assumption holds:</p>
+    <table>
+      <thead><tr><th>Monthly SIP</th><th>10 years</th><th>15 years</th><th>20 years</th><th>25 years</th></tr></thead>
+      <tbody>
+      <tr><td>₹5,000</td><td>₹11.6 L</td><td>₹25.2 L</td><td>₹50.0 L</td><td>₹95.0 L</td></tr>
+      <tr><td>₹10,000</td><td>₹23.2 L</td><td>₹50.5 L</td><td>₹99.9 L</td><td>₹1.90 Cr</td></tr>
+      <tr><td>₹15,000</td><td>₹34.8 L</td><td>₹75.7 L</td><td>₹1.50 Cr</td><td>₹2.85 Cr</td></tr>
+      <tr><td>₹25,000</td><td>₹58.0 L</td><td>₹1.26 Cr</td><td>₹2.50 Cr</td><td>₹4.74 Cr</td></tr>
+      <tr><td>₹50,000</td><td>₹1.16 Cr</td><td>₹2.52 Cr</td><td>₹5.00 Cr</td><td>₹9.49 Cr</td></tr>
+      </tbody>
+    </table>
+    <p>The take-away: doubling your monthly SIP doubles your final corpus. But <strong>doubling your tenure roughly triples it</strong> because compounding accelerates in the later years. Starting early beats investing more later, most of the time.</p>
+
+    <div style="text-align:center">
+      <a class="calc-link-btn" href="sip-calculator.html">🧮 Run Your Numbers in the SIP Calculator</a>
+    </div>
+
+    <h2>What Most SIP Return Calculators Get Wrong</h2>
+
+    <h3>1. They show nominal returns, not real returns</h3>
+    <p>Your ₹99.9 lakh at year 20 sounds huge — but at 6% inflation, that has the purchasing power of roughly ₹31 lakh in today's rupees. When you plan a goal (₹1 crore for retirement, ₹50 lakh for education), the goal is in <em>today's</em> money. So either inflate the goal or discount the calculator's output:</p>
+    <div class="formula">Real value = Nominal value ÷ (1 + inflation)^years</div>
+    <p>Our <a href="/lumpsum-calculator/">Lumpsum Calculator</a> shows both nominal and inflation-adjusted values — use it as a mental model for how much your SIP corpus is really worth.</p>
+
+    <h3>2. They ignore LTCG tax</h3>
+    <p>Since Budget 2024, equity mutual fund gains above ₹1.25 lakh per financial year are taxed at <strong>12.5% LTCG</strong>. On a ₹50 lakh corpus with ₹35 lakh gain, roughly ₹4.2 lakh goes to tax — so plan for around 8–9% of your gains being trimmed at withdrawal, not zero.</p>
+    <p>Debt funds are worse: taxed at your income slab rate (no indexation for units bought after April 2023). If you're in the 30% bracket, that's a big drag on debt-fund SIP returns.</p>
+
+    <h3>3. They assume you never stop</h3>
+    <p>A 20-year projection assumes you keep depositing every single month, through every market crash, salary loss and life event. Real investors pause SIPs on average 3–4 times in a 20-year run. Model your SIP return with that in mind — either use conservative assumptions, or set up an <a href="/step-up-sip-calculator/">annual step-up</a> that offsets missed months in later years.</p>
+
+    <h2>SIP Return vs Fixed Deposit — The Real Post-Tax Comparison</h2>
+    <p>People compare a 12% SIP return to a 7% FD return and see 5% extra. Post-tax, the gap is smaller than that: a 12% equity SIP after LTCG works out to roughly 10.5% effective. A 7% FD, taxed at 30% slab, is only 4.9% effective. So the real gap is closer to 5.6%, not the raw 5% headline. See our <a href="sip-vs-fd-calculator.html">SIP vs Fixed Deposit calculator</a> for the full side-by-side.</p>
+
+    <h2>How to Actually Use a SIP Return Calculator</h2>
+    <ol>
+      <li><strong>Start with the goal, not the SIP amount.</strong> "I want ₹1 crore in 20 years in today's money" — inflated at 6%, that's ₹3.2 crore nominal. Now solve for the SIP.</li>
+      <li><strong>Run three return scenarios</strong> (8%, 10%, 12%). Plan against the middle.</li>
+      <li><strong>Add a 10% step-up.</strong> Match your SIP increment to your annual salary hike. Uses our <a href="/step-up-sip-calculator/">Step-Up SIP Calculator</a>.</li>
+      <li><strong>Subtract LTCG tax from the target.</strong> Aim for goal + ~10% buffer.</li>
+      <li><strong>Re-check every year.</strong> Life, income, and markets all change; your assumptions should too.</li>
+    </ol>
+
+    <div class="highlight-box"><strong>Bottom line:</strong> A SIP return calculator is a projection tool, not a promise. The formula is exact; the return rate is a guess. The best users treat the calculator's output as a <em>range</em>, plan against the low end, and adjust every year based on how their actual portfolio is performing.</div>
+
+    <p>Ready to run your numbers? Try our <a href="sip-calculator.html">main SIP calculator</a> for a monthly SIP projection, or the <a href="/step-up-sip-calculator/">Step-Up SIP Calculator</a> if you want to model annual increments.</p>
+
+    <div style="text-align:center;margin-top:32px">
+      <a class="calc-link-btn" href="sip-calculator.html">🧮 Open the SIP Calculator</a>
+    </div>
+  </div>
+</div>
+
+<div class="related-guides">
+  <h2>Related SIP Guides</h2>
+  <div class="rg-grid">
+    <a class="rg-card" href="sip-calculator-monthly.html">
+      <span class="art-cat cat-sip">📈 SIP</span>
+      <div class="rg-title">SIP Calculator Monthly</div>
+      <div class="rg-x">How much per month to reach your goal</div>
+    </a>
+    <a class="rg-card" href="sip-emi-calculator.html">
+      <span class="art-cat cat-sip">📈 SIP</span>
+      <div class="rg-title">SIP EMI Calculator</div>
+      <div class="rg-x">Managing SIP alongside loan EMIs</div>
+    </a>
+    <a class="rg-card" href="sip-vs-fd-calculator.html">
+      <span class="art-cat cat-sip">📈 SIP</span>
+      <div class="rg-title">SIP vs Fixed Deposit</div>
+      <div class="rg-x">Post-tax return comparison</div>
+    </a>
+    <a class="rg-card" href="indian-bank-sip-calculator.html">
+      <span class="art-cat cat-sip">📈 SIP</span>
+      <div class="rg-title">Indian Bank SIP Calculator</div>
+      <div class="rg-x">RD plans and mutual fund SIP setup</div>
+    </a>
+    <a class="rg-card" href="/step-up-sip-calculator/">
+      <span class="art-cat cat-sip">📈 SIP</span>
+      <div class="rg-title">Step-Up SIP Calculator</div>
+      <div class="rg-x">Increase your SIP with salary hikes</div>
+    </a>
+    <a class="rg-card" href="/lumpsum-calculator/">
+      <span class="art-cat cat-sip">📈 SIP</span>
+      <div class="rg-title">Lumpsum Calculator</div>
+      <div class="rg-x">One-time investment with inflation view</div>
+    </a>
+  </div>
+</div>
+
+<section class="footer-links-section"><div class="wrap"><div class="footer-links-grid">
+  <div class="footer-col"><h3 class="footer-heading">🏠 EMI &amp; Home Loans</h3><a href="emi-calculator.html">EMI Calculator</a><a href="sbi-home-loan-emi-calculator.html">SBI Home Loan EMI</a><a href="hdfc-home-loan-emi-calculator.html">HDFC Home Loan EMI</a></div>
+  <div class="footer-col"><h3 class="footer-heading">📈 SIP &amp; Investment</h3><a href="sip-calculator.html">SIP Calculator</a><a href="/step-up-sip-calculator/">Step-Up SIP</a><a href="/lumpsum-calculator/">Lumpsum</a><a href="/ppf-calculator/">PPF Calculator</a></div>
+  <div class="footer-col"><h3 class="footer-heading">💼 Salary &amp; HR</h3><a href="salary-calculator.html">Salary Calculator</a><a href="hra-calculator.html">HRA Calculator</a></div>
+  <div class="footer-col"><h3 class="footer-heading">💰 Tax &amp; Business</h3><a href="/income-tax-calculator/ay-2026-27/">Income Tax Calculator</a><a href="gst-calculator.html">GST Calculator</a><a href="blog.html">Finance Blog</a></div>
+</div></div></section>
+<footer><span>© 2026 IndiCalculator · Informational purposes only · Not financial advice</span><div class="footer-bottom-links"><a href="/">Home</a><a href="blog.html">Blog</a><a href="about.html">About</a><a href="privacy-policy.html">Privacy</a></div></footer>
+<script src="shared.min.js"></script>
+<script>
+  let scriptsLoaded=false;
+  function loadScripts(){if(scriptsLoaded)return;scriptsLoaded=true;
+    let ga=document.createElement('script');ga.src="https://www.googletagmanager.com/gtag/js?id=G-62K8SJ29WC";ga.async=true;document.head.appendChild(ga);
+    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-62K8SJ29WC');
+  }
+  ['scroll','mousemove','touchstart','keydown'].forEach(e=>window.addEventListener(e,loadScripts,{once:true,passive:true}));
+  setTimeout(loadScripts,5000);
+</script>
+<script>if(typeof initMobileMenu==='function')initMobileMenu();</script>
+</body>
+</html>
